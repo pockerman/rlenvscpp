@@ -32,6 +32,11 @@ typedef float float_t;
 typedef int int_t;
 
 ///
+/// \brief long int type
+///
+typedef long int lint_t;
+
+///
 /// \brief uint_t
 ///
 typedef std::size_t uint_t;
@@ -113,16 +118,15 @@ struct RealRange
 };
 
 
-
-
-#ifdef USE_PYTORCH
-	typedef torch::Tensor torch_tensor_t;
-#endif
-
 ///
 /// \brief Null placeholder
 ///
 struct Null{};
+
+///
+/// \brief Device type
+///
+enum class DeviceType {INVALID_TYPE=0, CPU=1, GPU=2} ;
 
 }
 
