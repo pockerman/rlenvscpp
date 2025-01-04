@@ -1,4 +1,5 @@
 #include "rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h"
+#include "rlenvs/envs/api_server/apiserver.h"
 #include "rlenvs/rlenvs_types_v2.h"
 
 #include <gtest/gtest.h>
@@ -10,14 +11,16 @@ namespace{
 
 using rlenvscpp::uint_t;
 using rlenvscpp::real_t;
-
+using rlenvscpp::envs::RESTApiServerWrapper;
 const std::string SERVER_URL = "http://0.0.0.0:8001/api";
 
+RESTApiServerWrapper server(SERVER_URL);
 }
 
 TEST(TestFrozenLake, TestConstructor4x4) {
 
-    rlenvscpp::envs::gymnasium::FrozenLake<4> env(SERVER_URL);
+	
+    rlenvscpp::envs::gymnasium::FrozenLake<4> env(server);
 
     ASSERT_EQ(env.n_states(), static_cast<uint_t>(16));
     ASSERT_EQ(env.n_actions(), static_cast<uint_t>(4));
@@ -27,14 +30,14 @@ TEST(TestFrozenLake, TestConstructor4x4) {
 
 TEST(TestFrozenLake, TestConstructor8x8) {
 
-    rlenvscpp::envs::gymnasium::FrozenLake<8> env(SERVER_URL);
+    rlenvscpp::envs::gymnasium::FrozenLake<8> env(server);
     ASSERT_EQ(env.n_states(), static_cast<uint_t>(64));
     ASSERT_EQ(env.n_actions(), static_cast<uint_t>(4));
     ASSERT_EQ(env.map_type(),"8x8");
 }
 
 TEST(TestFrozenLake, Test_Make){
-    rlenvscpp::envs::gymnasium::FrozenLake<8> env(SERVER_URL);
+    rlenvscpp::envs::gymnasium::FrozenLake<8> env(server);
 
     std::unordered_map<std::string, std::any> options;
     env.make("v1", options);
@@ -43,7 +46,7 @@ TEST(TestFrozenLake, Test_Make){
 
 TEST(TestFrozenLake, Test_Reset){
 
-    rlenvscpp::envs::gymnasium::FrozenLake<8> env(SERVER_URL);
+    rlenvscpp::envs::gymnasium::FrozenLake<8> env(server);
 
     std::unordered_map<std::string, std::any> options;
     env.make("v1", options);
@@ -56,7 +59,7 @@ TEST(TestFrozenLake, Test_Reset){
 TEST(TestFrozenLake, Test_Step)
 {
 
-    rlenvscpp::envs::gymnasium::FrozenLake<8> env(SERVER_URL);
+    rlenvscpp::envs::gymnasium::FrozenLake<8> env(server);
 
     std::unordered_map<std::string, std::any> options;
     env.make("v1", options);
@@ -70,7 +73,7 @@ TEST(TestFrozenLake, Test_Step)
 
 TEST(TestFrozenLake, Test_Get_Dynamics){
 
-    rlenvscpp::envs::gymnasium::FrozenLake<8> env(SERVER_URL);
+    rlenvscpp::envs::gymnasium::FrozenLake<8> env(server);
 
     std::unordered_map<std::string, std::any> options;
     env.make("v1", options);
