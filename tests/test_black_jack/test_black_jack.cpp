@@ -1,4 +1,5 @@
 #include "rlenvs/envs/gymnasium/toy_text/black_jack_env.h"
+#include "rlenvs/envs/api_server/apiserver.h"
 #include "rlenvs/rlenvs_types_v2.h"
 
 
@@ -11,13 +12,16 @@ namespace{
 const std::string SERVER_URL = "http://0.0.0.0:8001/api";
 using rlenvscpp::uint_t;
 using rlenvscpp::real_t;
+using rlenvscpp::envs::RESTApiServerWrapper;
 using rlenvscpp::envs::gymnasium::BlackJack;
+
+RESTApiServerWrapper server(SERVER_URL);
 
 }
 
 TEST(TestBlackJack, TestConstructor) {
 
-         BlackJack env(SERVER_URL);
+         BlackJack env(server);
          ASSERT_EQ(env.n_actions(), static_cast<uint_t>(2));
          ASSERT_EQ(env.name, "BlackJack");
 
@@ -25,7 +29,7 @@ TEST(TestBlackJack, TestConstructor) {
 
 TEST(TestBlackJack, Test_Make_NO_NATURAL){
 
-    BlackJack env(SERVER_URL);
+    BlackJack env(server);
     std::unordered_map<std::string, std::any> options;
     options["natural"] = false;
     env.make("v1", options);
@@ -34,7 +38,7 @@ TEST(TestBlackJack, Test_Make_NO_NATURAL){
 }
 
 TEST(TestBlackJack, Test_Make_NATURAL){
-    BlackJack env(SERVER_URL);
+    BlackJack env(server);
     std::unordered_map<std::string, std::any> options;
     options["natural"] = true;
     env.make("v1", options);
@@ -43,7 +47,7 @@ TEST(TestBlackJack, Test_Make_NATURAL){
 }
 
 TEST(TestBlackJack, Test_Reset){
-    BlackJack env(SERVER_URL);
+    BlackJack env(server);
     std::unordered_map<std::string, std::any> options;
     options["natural"] = true;
     env.make("v1", options);
@@ -55,7 +59,7 @@ TEST(TestBlackJack, Test_Reset){
 TEST(TestBlackJack, Test_Step)
 {
 
-    BlackJack env(SERVER_URL);
+    BlackJack env(server);
     std::unordered_map<std::string, std::any> options;
     options["natural"] = true;
     env.make("v1", options);

@@ -193,6 +193,7 @@ describe the dynamics of some popular rigid bodies:
 | :----------------      | :----------------------------------------------------------: | 
 | Environment trajectory |  <a href="examples/example_3/example_3.cpp">example_3</a>    |
 | WaypointTrajectory     |  <a href="examples/example_11/example_11.cpp">example_11</a> |
+| TensorboardServer      |  <a href="examples/example_12/example_12.cpp">example_12</a> |
 
 ## Dependencies
 
