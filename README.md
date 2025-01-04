@@ -146,7 +146,7 @@ int main(){
 
 ```
 
-In general, the environments exposed by the library  follow the  <a href="https://github.com/deepmind/dm_env/blob/master/docs/index.md">dm_env</a> specification.
+In general, the environments exposed by the library  follow the semantics in <a href="https://github.com/deepmind/dm_env/blob/master/docs/index.md">Environment API and Semantics</a> specification.
 For more details see the <a href="doc/env_spec.md">```rlenvscpp``` environment specification</a> document.
 
 The general use case is to build the library and link it with your driver code to access its functionality.
