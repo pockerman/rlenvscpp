@@ -186,6 +186,7 @@ describe the dynamics of some popular rigid bodies:
 | :----------------   | :----------------------------------------------------------: | 
 | Differential drive  |  <a href="examples/example_9/example_9.cpp">example_9</a>    |
 | Quadrotor           |  <a href="examples/example_10/example_10.cpp">example_10</a> |
+| Bicycle vehicle     |  TODO                                                        |
 
 ## Miscellaneous
 
