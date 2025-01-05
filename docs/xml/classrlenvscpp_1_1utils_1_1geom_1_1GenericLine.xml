@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine" kind="class" language="C++" prot="public">
+    <compoundname>rlenvscpp::utils::geom::GenericLine</compoundname>
+    <derivedcompoundref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink" prot="private" virt="non-virtual">rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;</derivedcompoundref>
+    <includes refid="generic__line_8h" local="no">generic_line.h</includes>
+    <templateparamlist>
+      <param>
+        <type>int</type>
+        <declname>dim</declname>
+        <defname>dim</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1ad8d0af25ee84b982deacfcb12d65a66c" prot="public" static="no">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref>&lt; dim &gt;</type>
+        <definition>typedef GeomPoint&lt;dim&gt; rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::vertex_type</definition>
+        <argsstring></argsstring>
+        <name>vertex_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="30" column="23" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a09e0b076042faa66cafeb621d283eb76" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::dimension</definition>
+        <argsstring></argsstring>
+        <name>dimension</name>
+        <initializer>= dim</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="28" column="22" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a46f1f10afe79fb169b33c0883f6398aa" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>uint_t rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::id_</definition>
+        <argsstring></argsstring>
+        <name>id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="96" column="8" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1af9797750f752f81b8a3f66cc5fb824a9" prot="private" static="no" mutable="no">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">vertex_type</ref></type>
+        <definition>vertex_type rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::start_</definition>
+        <argsstring></argsstring>
+        <name>start_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="97" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a3cbc6963b8d0f7748fd2c775e266fcbc" prot="private" static="no" mutable="no">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">vertex_type</ref></type>
+        <definition>vertex_type rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::end_</definition>
+        <argsstring></argsstring>
+        <name>end_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="98" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a7ed46f202a1c6a069c4ea79ab5fae24f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::GenericLine</definition>
+        <argsstring>()</argsstring>
+        <name>GenericLine</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="35" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="103" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a578a7f738d3ac004584e5e5b9bfd283b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::GenericLine</definition>
+        <argsstring>(const vertex_type &amp;p1, const vertex_type &amp;p2)</argsstring>
+        <name>GenericLine</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">vertex_type</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">vertex_type</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="40" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="119" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a30a2b82cacf5a05f3fec202cce9f7b00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::GenericLine</definition>
+        <argsstring>(const vertex_type &amp;p1, const vertex_type &amp;p2, uint_t id)</argsstring>
+        <name>GenericLine</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">vertex_type</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">vertex_type</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="45" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="111" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a34d63297b6e6b4ac18ea19e9f129b941" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">vertex_type</ref> &amp;</type>
+        <definition>const GenericLine&lt; dim &gt;::vertex_type &amp; rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::get_vertex</definition>
+        <argsstring>(uint_t v) const</argsstring>
+        <name>get_vertex</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Returns the v-th vertex of the segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="50" column="23" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="126" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1afc4920aa6949be71cfc3c9fb78ab4dfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">vertex_type</ref> &amp;</type>
+        <definition>GenericLine&lt; dim &gt;::vertex_type &amp; rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::get_vertex</definition>
+        <argsstring>(uint_t v)</argsstring>
+        <name>get_vertex</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Returns the v-th vertex of the segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="55" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="141" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a7304eff0e844c0c527a6f9f2e2ab984a" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::has_valid_id</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>has_valid_id</name>
+        <briefdescription>
+<para>Returns true iff id_ != rlenvscpp::consts::INVALID_ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="60" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a82f949539213ebaf6f197395abce45f8" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>uint_t rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::get_id</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_id</name>
+        <briefdescription>
+<para>Returns the id of the line. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="65" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a442f57274de5eeb50e1e2dfe0dd9f97d" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::set_id</definition>
+        <argsstring>(uint_t id) noexcept</argsstring>
+        <name>set_id</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Set the id of the line. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="70" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a0eef2fd3edaec37af98eb1d4726321fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+        <definition>real_t rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::slope</definition>
+        <argsstring>() const</argsstring>
+        <name>slope</name>
+        <briefdescription>
+<para>The slope of the line. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="75" column="8" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1afc8e53fdfc9a57c29ffbbd3d75f515bf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+        <definition>real_t rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::factor</definition>
+        <argsstring>() const</argsstring>
+        <name>factor</name>
+        <briefdescription>
+<para>Returns the constant factor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="81" column="8" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="162" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1ae2277c47254a622c777b551c90601623" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+        <definition>real_t rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::distance</definition>
+        <argsstring>(const vertex_type &amp;n) const</argsstring>
+        <name>distance</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">vertex_type</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Returns the perpendicular distance from the line to the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="87" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a01562aa2aefc353af9c2b3a9180b268b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+        <definition>real_t rlenvscpp::utils::geom::GenericLine&lt; dim &gt;::length</definition>
+        <argsstring>() const</argsstring>
+        <name>length</name>
+        <briefdescription>
+<para>Calculate the length of the line. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="92" column="8" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1abfee3e4936c269342ba2d1e29ffa3ff1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+        <definition>real_t rlenvscpp::utils::geom::GenericLine&lt; 2 &gt;::distance</definition>
+        <argsstring>(const GenericLine&lt; 2 &gt;::vertex_type &amp;n) const</argsstring>
+        <name>distance</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine" kindref="compound">GenericLine</ref>&lt; 2 &gt;::<ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">vertex_type</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="169" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="169" bodyend="180"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>class <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine" kindref="compound">GenericLine</ref>. Represents a generic line with vertex VertexType The equation of a linein l=Ax + By + C </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>rlenvscpp::utils::geom::GenericLine&lt; dim &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine"/>
+      </node>
+      <node id="2">
+        <label>rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" line="24" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h" bodystart="25" bodyend="100"/>
+    <listofallmembers>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a09e0b076042faa66cafeb621d283eb76" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>dimension</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1ae2277c47254a622c777b551c90601623" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>distance</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1abfee3e4936c269342ba2d1e29ffa3ff1" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>distance</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a3cbc6963b8d0f7748fd2c775e266fcbc" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>end_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1afc8e53fdfc9a57c29ffbbd3d75f515bf" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>factor</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a7ed46f202a1c6a069c4ea79ab5fae24f" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>GenericLine</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a578a7f738d3ac004584e5e5b9bfd283b" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>GenericLine</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a30a2b82cacf5a05f3fec202cce9f7b00" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>GenericLine</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a82f949539213ebaf6f197395abce45f8" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>get_id</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a34d63297b6e6b4ac18ea19e9f129b941" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>get_vertex</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1afc4920aa6949be71cfc3c9fb78ab4dfb" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>get_vertex</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a7304eff0e844c0c527a6f9f2e2ab984a" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>has_valid_id</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a46f1f10afe79fb169b33c0883f6398aa" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>id_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a01562aa2aefc353af9c2b3a9180b268b" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>length</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a442f57274de5eeb50e1e2dfe0dd9f97d" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>set_id</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1a0eef2fd3edaec37af98eb1d4726321fb" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>slope</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1af9797750f752f81b8a3f66cc5fb824a9" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>start_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine_1ad8d0af25ee84b982deacfcb12d65a66c" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GenericLine</scope><name>vertex_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

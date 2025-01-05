@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1priority__tag_3_010_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>detail::priority_tag&lt; 0 &gt;</compoundname>
+    <templateparamlist>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3207" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3207" bodyend="3207"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

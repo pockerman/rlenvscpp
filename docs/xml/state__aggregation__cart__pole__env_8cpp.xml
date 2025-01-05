@@ -1,0 +1,682 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="state__aggregation__cart__pole__env_8cpp" kind="file" language="C++">
+    <compoundname>state_aggregation_cart_pole_env.cpp</compoundname>
+    <includes refid="state__aggregation__cart__pole__env_8h" local="yes">rlenvs/envs/gymnasium/classic_control/state_aggregation_cart_pole_env.h</includes>
+    <incdepgraph>
+      <node id="32">
+        <label>valarray</label>
+      </node>
+      <node id="60">
+        <label>sys/select.h</label>
+      </node>
+      <node id="58">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="55">
+        <label>system_error</label>
+      </node>
+      <node id="47">
+        <label>iomanip</label>
+      </node>
+      <node id="21">
+        <label>functional</label>
+      </node>
+      <node id="37">
+        <label>limits</label>
+      </node>
+      <node id="53">
+        <label>rlenvs/extern/HTTPRequest.hpp</label>
+        <link refid="HTTPRequest_8hpp_source"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>iterator</label>
+      </node>
+      <node id="48">
+        <label>rlenvs/envs/env_base.h</label>
+        <link refid="env__base_8h_source"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>rlenvs/extern/nlohmann/json/json.hpp</label>
+        <link refid="json_8hpp_source"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>cstdint</label>
+      </node>
+      <node id="50">
+        <label>rlenvs/envs/synchronized_env_mixin.h</label>
+        <link refid="synchronized__env__mixin_8h_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>rlenvs/envs/state_aggregation_env_base.h</label>
+        <link refid="state__aggregation__env__base_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>rlenvs/envs/api_server/apiserver.h</label>
+        <link refid="apiserver_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>cmath</label>
+      </node>
+      <node id="56">
+        <label>errno.h</label>
+      </node>
+      <node id="36">
+        <label>cassert</label>
+      </node>
+      <node id="17">
+        <label>stdexcept</label>
+      </node>
+      <node id="57">
+        <label>fcntl.h</label>
+      </node>
+      <node id="41">
+        <label>numeric</label>
+      </node>
+      <node id="18">
+        <label>rlenvs/envs/gymnasium/gymnasium_env_base.h</label>
+        <link refid="gymnasium__env__base_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/state_aggregation_cart_pole_env.cpp</label>
+        <link refid="state__aggregation__cart__pole__env_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="51">
+        <label>boost/noncopyable.hpp</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="29">
+        <label>map</label>
+      </node>
+      <node id="49">
+        <label>rlenvs/rlenvs_consts.h</label>
+        <link refid="rlenvs__consts_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>exception</label>
+      </node>
+      <node id="59">
+        <label>netdb.h</label>
+      </node>
+      <node id="14">
+        <label>ostream</label>
+      </node>
+      <node id="4">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="66">
+        <label>rlenvs/envs/space_type.h</label>
+        <link refid="space__type_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>any</label>
+      </node>
+      <node id="67">
+        <label>random</label>
+      </node>
+      <node id="64">
+        <label>string_view</label>
+      </node>
+      <node id="62">
+        <label>sys/types.h</label>
+      </node>
+      <node id="46">
+        <label>ios</label>
+      </node>
+      <node id="13">
+        <label>rlenvs/utils/io/io_utils.h</label>
+        <link refid="io__utils_8h_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>cstdio</label>
+      </node>
+      <node id="30">
+        <label>tuple</label>
+      </node>
+      <node id="10">
+        <label>rlenvs/envs/gymnasium/classic_control/cart_pole_env.h</label>
+        <link refid="cart__pole__env_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>unistd.h</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/envs/gymnasium/classic_control/state_aggregation_cart_pole_env.h</label>
+        <link refid="state__aggregation__cart__pole__env_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>utility</label>
+      </node>
+      <node id="27">
+        <label>array</label>
+      </node>
+      <node id="23">
+        <label>iosfwd</label>
+      </node>
+      <node id="45">
+        <label>cerrno</label>
+      </node>
+      <node id="35">
+        <label>cstdlib</label>
+      </node>
+      <node id="43">
+        <label>clocale</label>
+      </node>
+      <node id="44">
+        <label>cctype</label>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cstddef</label>
+      </node>
+      <node id="16">
+        <label>unordered_map</label>
+      </node>
+      <node id="11">
+        <label>rlenvs/envs/time_step.h</label>
+        <link refid="time__step_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>chrono</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="61">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="31">
+        <label>type_traits</label>
+      </node>
+      <node id="28">
+        <label>forward_list</label>
+      </node>
+      <node id="20">
+        <label>algorithm</label>
+      </node>
+      <node id="38">
+        <label>cstring</label>
+      </node>
+      <node id="25">
+        <label>memory</label>
+      </node>
+      <node id="42">
+        <label>istream</label>
+      </node>
+      <node id="22">
+        <label>initializer_list</label>
+      </node>
+      <node id="12">
+        <label>rlenvs/envs/time_step_type.h</label>
+        <link refid="time__step__type_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>rlenvs/envs/env_types.h</label>
+        <link refid="env__types_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1envs">rlenvscpp::envs</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1envs_1_1gymnasium">rlenvscpp::envs::gymnasium</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;rlenvs/envs/gymnasium/classic_control/state_aggregation_cart_pole_env.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;rlenvs/time_step_type.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;rlenvs/time_step.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">envs{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">gymnasium{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/*StateAggregationCartPole::StateAggregationCartPole(const<sp/>std::string<sp/>version,<sp/>obj_t<sp/>main_namespace,<sp/>uint_t<sp/>n_states,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint_t<sp/>state_idx,<sp/>const<sp/>StateAggregationCartPoleBoundaries&amp;<sp/>boundaries)</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>StateAggregationEnvBase&lt;CartPole,<sp/>std::tuple&lt;uint_t,<sp/>uint_t,<sp/>uint_t,<sp/>uint_t&gt;&gt;(version,<sp/>main_namespace,<sp/>n_states),</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>state_idx_(state_idx),</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>boundaries_(boundaries),</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>pole_theta_space_(),</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>pole_theta_velocity_space_(),</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>cart_pos_space_(),</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>cart_vel_space_()</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">{}</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">StateAggregationCartPole::time_step_type</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">StateAggregationCartPole::reset(){</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"></highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>step<sp/>=<sp/>env_.reset();</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"></highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>discrete_step<sp/>=<sp/>get_state(step.observation());</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"></highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/>current_state_<sp/>=<sp/>time_step_type(TimeStepTp::FIRST,<sp/>step.reward(),<sp/>discrete_step,<sp/>1.0);</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>current_state_;</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">void</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">StateAggregationCartPole::make(){</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"></highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/>this-&gt;StateAggregationEnvBase&lt;CartPole,<sp/>std::tuple&lt;uint_t,<sp/>uint_t,<sp/>uint_t,<sp/>uint_t&gt;&gt;::make();</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/>create_states_();</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"></highlight></codeline>
+<codeline lineno="38"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"></highlight></codeline>
+<codeline lineno="40"><highlight class="comment">StateAggregationCartPole::time_step_type</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">StateAggregationCartPole::step(const<sp/>action_type&amp;<sp/>action){</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"></highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>step<sp/>=<sp/>env_.step(action);</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"></highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>discrete_step<sp/>=<sp/>get_state(step.observation());</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"></highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/>current_state_<sp/>=<sp/>time_step_type(step.type(),<sp/>step.reward(),<sp/>discrete_step,<sp/>1.0);</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>current_state_;</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"></highlight></codeline>
+<codeline lineno="51"><highlight class="comment"></highlight></codeline>
+<codeline lineno="52"><highlight class="comment">StateAggregationCartPole::state_type</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">StateAggregationCartPole::get_state(const<sp/>CartPole::state_type&amp;<sp/>obs)const{</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"></highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>cart_x<sp/>=<sp/>obs[0];</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>cart_x_dot<sp/>=<sp/>obs[1];</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>cart_theta<sp/>=<sp/>obs[2];</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>cart_theta_dot<sp/>=<sp/>obs[3];</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"></highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/>if(state_idx_<sp/>==<sp/>4){</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auto<sp/>cart_x_int<sp/>=<sp/>digitize(cart_x,<sp/>cart_pos_space_);</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auto<sp/>cart_x_dot_int<sp/>=<sp/>digitize(cart_x_dot,<sp/>cart_vel_space_);</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auto<sp/>cart_theta_int<sp/>=<sp/>digitize(cart_theta,<sp/>pole_theta_space_);</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auto<sp/>cart_theta_dot_int<sp/>=<sp/>digitize(cart_theta_dot,<sp/>pole_theta_velocity_space_);</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"></highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>std::make_tuple(cart_x_int,<sp/>cart_x_dot_int,<sp/>cart_theta_int,<sp/>cart_theta_dot_int);</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(state_idx_<sp/>==<sp/>0<sp/>){</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>std::make_tuple(digitize(cart_x,<sp/>cart_pos_space_),<sp/>this-&gt;n_states()<sp/>+<sp/>1,<sp/>this-&gt;n_states()<sp/>+<sp/>1,<sp/>this-&gt;n_states()<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(state_idx_<sp/>==<sp/>1){</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>std::make_tuple(this-&gt;n_states()<sp/>+<sp/>1,<sp/>digitize(cart_x_dot,<sp/>cart_vel_space_),<sp/>this-&gt;n_states()<sp/>+<sp/>1,<sp/>this-&gt;n_states()<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if(<sp/>state_idx_<sp/>==<sp/>2<sp/>){</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>std::make_tuple(this-&gt;n_states()<sp/>+<sp/>1,<sp/>this-&gt;n_states()<sp/>+<sp/>1,<sp/>digitize(cart_theta,<sp/>pole_theta_space_),<sp/>this-&gt;n_states()<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(state_idx_<sp/>==<sp/>3){</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>std::make_tuple(this-&gt;n_states()<sp/>+<sp/>1,<sp/>this-&gt;n_states()<sp/>+<sp/>1,<sp/>this-&gt;n_states()<sp/>+<sp/>1,<sp/>digitize(cart_theta_dot,<sp/>pole_theta_velocity_space_));</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"></highlight></codeline>
+<codeline lineno="82"><highlight class="comment">void</highlight></codeline>
+<codeline lineno="83"><highlight class="comment">StateAggregationCartPole::create_bins(){</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"></highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/>if(state_idx_<sp/>==<sp/>4){</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>build_pole_theta_velocity_space_();</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>build_pole_theta_space_();</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>build_cart_position_space_();</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>build_cart_velocity_space_();</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if(state_idx_<sp/>==<sp/>2<sp/>){</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>build_pole_theta_velocity_space_();</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if(<sp/>state_idx_<sp/>==<sp/>0<sp/>){</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>build_cart_position_space_();</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if(<sp/>state_idx_<sp/>==<sp/>1){</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>build_cart_velocity_space_();</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/><sp/><sp/><sp/>else<sp/>if(<sp/>state_idx_<sp/>==<sp/>3){</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>build_pole_theta_velocity_space_();</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"></highlight></codeline>
+<codeline lineno="105"><highlight class="comment">void</highlight></codeline>
+<codeline lineno="106"><highlight class="comment">StateAggregationCartPole::create_states_(){</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"></highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/>if(state_idx_<sp/>==<sp/>4){</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(uint_t<sp/>i=0;<sp/>i<sp/>&lt;<sp/>cart_pos_space_.size()<sp/>+<sp/>1;<sp/>++i){</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(uint_t<sp/>j=0;<sp/>j<sp/>&lt;<sp/>cart_vel_space_.size()<sp/>+<sp/>1;<sp/>++j){</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(uint_t<sp/>k=0;<sp/>k<sp/>&lt;<sp/>pole_theta_space_.size()<sp/>+<sp/>1;<sp/>++k){</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(uint_t<sp/>l=0;<sp/>l<sp/>&lt;<sp/>pole_theta_velocity_space_.size()<sp/>+<sp/>1;<sp/>++l){</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>discrete_observation_space_.push_back(std::make_tuple(i,<sp/>j,<sp/>k,<sp/>l));</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/>else{</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(uint_t<sp/>l=0;<sp/>l<sp/>&lt;<sp/>n_states()<sp/>+<sp/>1;<sp/>++l){</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>discrete_observation_space_.push_back(std::make_tuple(l,<sp/>0,<sp/>0,<sp/>0));</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"></highlight></codeline>
+<codeline lineno="125"><highlight class="comment"></highlight></codeline>
+<codeline lineno="126"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"></highlight></codeline>
+<codeline lineno="128"><highlight class="comment">void</highlight></codeline>
+<codeline lineno="129"><highlight class="comment">StateAggregationCartPole::build_cart_position_space_(){</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"></highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>low<sp/>=<sp/>boundaries_.cart_pole_pos.first;</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>high<sp/>=<sp/>boundaries_.cart_pole_pos.second;</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/>cart_pos_space_<sp/>=<sp/>linspace(low,<sp/>high,<sp/>this-&gt;n_states());</highlight></codeline>
+<codeline lineno="134"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"></highlight></codeline>
+<codeline lineno="136"><highlight class="comment">void</highlight></codeline>
+<codeline lineno="137"><highlight class="comment">StateAggregationCartPole::build_cart_velocity_space_(){</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"></highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>low<sp/>=<sp/>boundaries_.cart_pole_vel.first;</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>high<sp/>=<sp/>boundaries_.cart_pole_vel.second;</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/>cart_vel_space_<sp/>=<sp/>linspace(low,<sp/>high,<sp/>this-&gt;n_states());</highlight></codeline>
+<codeline lineno="142"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"></highlight></codeline>
+<codeline lineno="144"><highlight class="comment">void</highlight></codeline>
+<codeline lineno="145"><highlight class="comment">StateAggregationCartPole::build_pole_theta_space_(){</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"></highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>low<sp/>=<sp/>boundaries_.cart_pole_theta.first;</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>high<sp/>=<sp/>boundaries_.cart_pole_theta.second;</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/><sp/>pole_theta_space_<sp/>=<sp/>linspace(low,<sp/>high,<sp/>this-&gt;n_states());</highlight></codeline>
+<codeline lineno="150"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"></highlight></codeline>
+<codeline lineno="152"><highlight class="comment">void</highlight></codeline>
+<codeline lineno="153"><highlight class="comment">StateAggregationCartPole::build_pole_theta_velocity_space_(){</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"></highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>low<sp/>=<sp/>boundaries_.cart_pole_theta_vel.first;</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/><sp/><sp/><sp/>auto<sp/>high<sp/>=<sp/>boundaries_.cart_pole_theta_vel.second;</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/><sp/><sp/><sp/>pole_theta_velocity_space_<sp/>=<sp/>linspace(low,<sp/>high,<sp/>this-&gt;n_states());</highlight></codeline>
+<codeline lineno="158"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="159"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/state_aggregation_cart_pole_env.cpp"/>
+  </compounddef>
+</doxygen>

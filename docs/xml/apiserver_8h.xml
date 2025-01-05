@@ -1,0 +1,576 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="apiserver_8h" kind="file" language="C++">
+    <compoundname>apiserver.h</compoundname>
+    <includes refid="rlenvs__types__v2_8h" local="yes">rlenvs/rlenvs_types_v2.h</includes>
+    <includes refid="rlenvs__consts_8h" local="yes">rlenvs/rlenvs_consts.h</includes>
+    <includes refid="json_8hpp" local="yes">rlenvs/extern/nlohmann/json/json.hpp</includes>
+    <includes refid="HTTPRequest_8hpp" local="yes">rlenvs/extern/HTTPRequest.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">any</includes>
+    <includes local="no">unordered_map</includes>
+    <includedby refid="apiserver_8cpp" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp</includedby>
+    <includedby refid="acrobot__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/acrobot_env.h</includedby>
+    <includedby refid="cart__pole__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/cart_pole_env.h</includedby>
+    <includedby refid="mountain__car__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/mountain_car_env.h</includedby>
+    <includedby refid="pendulum__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/pendulum_env.h</includedby>
+    <includedby refid="acrobot__vec__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/vector/acrobot_vec_env.h</includedby>
+    <includedby refid="gymnasium__env__base_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/gymnasium_env_base.h</includedby>
+    <includedby refid="gymnasium__vector__env__base_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/gymnasium_vector_env_base.h</includedby>
+    <includedby refid="black__jack__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/black_jack_env.h</includedby>
+    <includedby refid="cliff__world__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/cliff_world_env.h</includedby>
+    <includedby refid="frozen__lake__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h</includedby>
+    <includedby refid="taxi__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/taxi_env.h</includedby>
+    <includedby refid="toy__text__base_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/toy_text_base.h</includedby>
+    <incdepgraph>
+      <node id="24">
+        <label>valarray</label>
+      </node>
+      <node id="49">
+        <label>sys/select.h</label>
+      </node>
+      <node id="47">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="44">
+        <label>system_error</label>
+      </node>
+      <node id="41">
+        <label>iomanip</label>
+      </node>
+      <node id="12">
+        <label>functional</label>
+      </node>
+      <node id="30">
+        <label>limits</label>
+      </node>
+      <node id="42">
+        <label>rlenvs/extern/HTTPRequest.hpp</label>
+        <link refid="HTTPRequest_8hpp_source"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>iterator</label>
+      </node>
+      <node id="10">
+        <label>rlenvs/extern/nlohmann/json/json.hpp</label>
+        <link refid="json_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>cstdint</label>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h</label>
+        <link refid="apiserver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>cmath</label>
+      </node>
+      <node id="45">
+        <label>errno.h</label>
+      </node>
+      <node id="29">
+        <label>cassert</label>
+      </node>
+      <node id="26">
+        <label>stdexcept</label>
+      </node>
+      <node id="46">
+        <label>fcntl.h</label>
+      </node>
+      <node id="34">
+        <label>numeric</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="20">
+        <label>map</label>
+      </node>
+      <node id="9">
+        <label>rlenvs/rlenvs_consts.h</label>
+        <link refid="rlenvs__consts_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>exception</label>
+      </node>
+      <node id="48">
+        <label>netdb.h</label>
+      </node>
+      <node id="40">
+        <label>ostream</label>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="53">
+        <label>any</label>
+      </node>
+      <node id="51">
+        <label>sys/types.h</label>
+      </node>
+      <node id="39">
+        <label>ios</label>
+      </node>
+      <node id="33">
+        <label>cstdio</label>
+      </node>
+      <node id="21">
+        <label>tuple</label>
+      </node>
+      <node id="52">
+        <label>unistd.h</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="17">
+        <label>utility</label>
+      </node>
+      <node id="18">
+        <label>array</label>
+      </node>
+      <node id="14">
+        <label>iosfwd</label>
+      </node>
+      <node id="38">
+        <label>cerrno</label>
+      </node>
+      <node id="28">
+        <label>cstdlib</label>
+      </node>
+      <node id="36">
+        <label>clocale</label>
+      </node>
+      <node id="37">
+        <label>cctype</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="23">
+        <label>unordered_map</label>
+      </node>
+      <node id="43">
+        <label>chrono</label>
+      </node>
+      <node id="4">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="50">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="22">
+        <label>type_traits</label>
+      </node>
+      <node id="19">
+        <label>forward_list</label>
+      </node>
+      <node id="11">
+        <label>algorithm</label>
+      </node>
+      <node id="31">
+        <label>cstring</label>
+      </node>
+      <node id="16">
+        <label>memory</label>
+      </node>
+      <node id="35">
+        <label>istream</label>
+      </node>
+      <node id="13">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="14">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/taxi_env.h</label>
+        <link refid="taxi__env_8h_source"/>
+      </node>
+      <node id="7">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/vector/acrobot_vec_env.h</label>
+        <link refid="acrobot__vec__env_8h_source"/>
+      </node>
+      <node id="9">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/gymnasium_vector_env_base.h</label>
+        <link refid="gymnasium__vector__env__base_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/black_jack_env.h</label>
+        <link refid="black__jack__env_8h_source"/>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h</label>
+        <link refid="apiserver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/gymnasium_env_base.h</label>
+        <link refid="gymnasium__env__base_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/cliff_world_env.h</label>
+        <link refid="cliff__world__env_8h_source"/>
+      </node>
+      <node id="13">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h</label>
+        <link refid="frozen__lake__env_8h_source"/>
+      </node>
+      <node id="3">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/cart_pole_env.h</label>
+        <link refid="cart__pole__env_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/state_aggregation_cart_pole_env.h</label>
+        <link refid="state__aggregation__cart__pole__env_8h_source"/>
+      </node>
+      <node id="5">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/mountain_car_env.h</label>
+        <link refid="mountain__car__env_8h_source"/>
+      </node>
+      <node id="10">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/toy_text_base.h</label>
+        <link refid="toy__text__base_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/acrobot_env.h</label>
+        <link refid="acrobot__env_8h_source"/>
+      </node>
+      <node id="6">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/pendulum_env.h</label>
+        <link refid="pendulum__env_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper" prot="public">rlenvscpp::envs::RESTApiServerWrapper</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1envs">rlenvscpp::envs</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>APISERVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APISERVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_types_v2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_consts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/extern/nlohmann/json/json.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/extern/HTTPRequest.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;any&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">envs{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper" kindref="compound">RESTApiServerWrapper</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a8c0ba711ade7d1be19e35c82d74cb913" kindref="member">RESTApiServerWrapper</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>url=</highlight><highlight class="stringliteral">&quot;http://0.0.0.0:8001/api&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>initialize=</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a9490e650bfa9d9f10ee91bc338e39f69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a9490e650bfa9d9f10ee91bc338e39f69" kindref="member">is_inisialised</ref>()const<sp/>noexcept{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>is_init_;}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a3bdd22fea7c8610f5c77546787edff59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a3bdd22fea7c8610f5c77546787edff59" kindref="member">get_url</ref>()const<sp/>noexcept{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>url_;}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a26c820349eb2dd73ee80858b72276c95" kindref="member">get_env_url</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a7e29ab238fb33987c338ee19ebbd1660" kindref="member">get_uri</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1aad0c956188e6b0eb94dd1ea3522fde7a" kindref="member">register_new</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>uri);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a70b8e7b2e5dc0aa7049cee95c9f84e8d" kindref="member">register_if_not</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>uri);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>nlohmann::json<sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1ae34f4622f280c99e6e1c2e39272dc5b2" kindref="member">is_alive</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>env_name,<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>cidx)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>nlohmann::json<sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a4a0264b16545f76d24bc18d98b089038" kindref="member">close</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>env_name,<sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>cidx)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ActionType&gt;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>nlohmann::json<sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1ad59cb8f620d1db38bebf44c7cb893d13" kindref="member">step</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>env_name,<sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>cidx,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ActionType&amp;<sp/>action)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>nlohmann::json<sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a871a66ba1453db60cd7dbaf86f898017" kindref="member">reset</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>env_name,<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>cidx,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>seed,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nlohmann::json&amp;<sp/>options)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>nlohmann::json<sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a4d518be0298e382df9e60c1cfc13b10d" kindref="member">make</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>env_name,<sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>cidx,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>version,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nlohmann::json&amp;<sp/>options)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>nlohmann::json<sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1aaf472fc2594f627b9b9bad8b613fc184" kindref="member">dynamics</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>env_name,<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>cidx,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>sidx,<sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>aidx)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="136" refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a87b877a19b1120a212cec956e4aeb48a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>nlohmann::json<sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a87b877a19b1120a212cec956e4aeb48a" kindref="member">copy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>env_name,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>cidx,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>version,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nlohmann::json&amp;<sp/>options)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a4d518be0298e382df9e60c1cfc13b10d" kindref="member">make</ref>(env_name,<sp/>cidx,<sp/>version,<sp/>options);}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>has_gymnasium()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>gymnasium_envs()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>url_;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_init_{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unordered_map&lt;std::string,<sp/>std::string&gt;<sp/>envs_;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ActionType&gt;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">nlohmann::json<sp/></highlight></codeline>
+<codeline lineno="178" refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1ad59cb8f620d1db38bebf44c7cb893d13" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1ad59cb8f620d1db38bebf44c7cb893d13" kindref="member">RESTApiServerWrapper::step</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>env_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>cidx,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ActionType&amp;<sp/>action)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>find<sp/>the<sp/>source</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>url_<sp/>=<sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a26c820349eb2dd73ee80858b72276c95" kindref="member">get_env_url</ref>(env_name);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(url_<sp/>==<sp/>rlenvscpp::consts::INVALID_STR){</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;Environment:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>env_name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>not<sp/>registered&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>request_url<sp/>=<sp/>url_<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/step&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhttp_1_1Request" kindref="compound">http::Request</ref><sp/>request{request_url};</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>nlohmann::json<sp/>body;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>body[</highlight><highlight class="stringliteral">&quot;cidx&quot;</highlight><highlight class="normal">]<sp/>=<sp/>cidx;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>body[</highlight><highlight class="stringliteral">&quot;action&quot;</highlight><highlight class="normal">]<sp/>=<sp/>action;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>response<sp/>=<sp/>request.send(</highlight><highlight class="stringliteral">&quot;POST&quot;</highlight><highlight class="normal">,<sp/>body.dump());</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(response.status.code<sp/>!=<sp/>202){</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Environment<sp/>server<sp/>failed<sp/>to<sp/>step<sp/>environment&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>str_response<sp/>=<sp/>std::string(response.body.begin(),<sp/>response.body.end());</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>nlohmann::json<sp/>j<sp/>=<sp/>nlohmann::json::parse(str_response);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>j;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>APISERVER_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdetail_1_1primitive__iterator__t" kind="class" language="C++" prot="public">
+    <compoundname>detail::primitive_iterator_t</compoundname>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classdetail_1_1primitive__iterator__t_1af276ab0e7f7cbdb869a72cd74d6a987d" prot="private" static="no">
+        <type>std::ptrdiff_t</type>
+        <definition>using detail::primitive_iterator_t::difference_type =  std::ptrdiff_t</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12736" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12736" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classdetail_1_1primitive__iterator__t_1a6e106b69391c2561bb4d517a20e2ef43" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr difference_type</type>
+        <definition>constexpr difference_type detail::primitive_iterator_t::begin_value</definition>
+        <argsstring></argsstring>
+        <name>begin_value</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12737" column="38" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12737" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdetail_1_1primitive__iterator__t_1a189cd591764ff7cfa43dd93f331d1773" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr difference_type</type>
+        <definition>constexpr difference_type detail::primitive_iterator_t::end_value</definition>
+        <argsstring></argsstring>
+        <name>end_value</name>
+        <initializer>= begin_value + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12738" column="38" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12738" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdetail_1_1primitive__iterator__t_1a28f49fc62338aae07dd7b361ae0fa239" prot="private" static="no" mutable="no">
+        <type>JSON_PRIVATE_UNLESS_TESTED</type>
+        <definition>JSON_PRIVATE_UNLESS_TESTED detail::primitive_iterator_t::__pad0__</definition>
+        <argsstring></argsstring>
+        <name>__pad0__</name>
+        <bitfield> difference_type m_it = (std::numeric_limits&lt;std::ptrdiff_t&gt;::min)()</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12740" column="3" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12742" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdetail_1_1primitive__iterator__t_1abc361e982ed6a4545dde3a30f9212d9b" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr difference_type</type>
+        <definition>constexpr difference_type detail::primitive_iterator_t::get_value</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12745" column="31" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12745" bodyend="12748"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1primitive__iterator__t_1ae05402e355829cd46a9b31365a7b1a49" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::primitive_iterator_t::set_begin</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>set_begin</name>
+        <briefdescription>
+<para>set iterator to a defined beginning </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12751" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12751" bodyend="12754"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1primitive__iterator__t_1a761383c368d1c32f11bbeb31a04e6488" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::primitive_iterator_t::set_end</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>set_end</name>
+        <briefdescription>
+<para>set iterator to a defined past the end </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12757" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12757" bodyend="12760"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1primitive__iterator__t_1a46f7197f0ba0ef7c1f24caf3f7f52d6b" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool detail::primitive_iterator_t::is_begin</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_begin</name>
+        <briefdescription>
+<para>return whether the iterator can be dereferenced </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12763" column="20" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12763" bodyend="12766"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1primitive__iterator__t_1a9b8509ec7a7cbd4b1da3726be658f5a0" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool detail::primitive_iterator_t::is_end</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_end</name>
+        <briefdescription>
+<para>return whether the iterator is at end </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12769" column="20" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12769" bodyend="12772"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1primitive__iterator__t_1acc22136675807ea8caccb944264ea918" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref></type>
+        <definition>primitive_iterator_t detail::primitive_iterator_t::operator+</definition>
+        <argsstring>(difference_type n) noexcept</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>difference_type</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12784" column="26" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12784" bodyend="12789"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1primitive__iterator__t_1a6b3042d67ccceba681386de3a64b0747" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref> &amp;</type>
+        <definition>primitive_iterator_t&amp; detail::primitive_iterator_t::operator++</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>operator++</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12796" column="26" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12796" bodyend="12800"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1primitive__iterator__t_1aa2898a585da8dc77207b15ac9e703863" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref></type>
+        <definition>primitive_iterator_t detail::primitive_iterator_t::operator++</definition>
+        <argsstring>(int) &amp;noexcept</argsstring>
+        <name>operator++</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12802" column="26" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12802" bodyend="12807"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1primitive__iterator__t_1a430f290a7c53db90624ca165a5c811ab" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref> &amp;</type>
+        <definition>primitive_iterator_t&amp; detail::primitive_iterator_t::operator--</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>operator--</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12809" column="26" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12809" bodyend="12813"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1primitive__iterator__t_1ae0c3dbc516ad0ac75e7d14556e8c80b7" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref></type>
+        <definition>primitive_iterator_t detail::primitive_iterator_t::operator--</definition>
+        <argsstring>(int) &amp;noexcept</argsstring>
+        <name>operator--</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12815" column="26" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12815" bodyend="12820"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1primitive__iterator__t_1a2f49c731f7f5a8c174e0f44bc63dccc7" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref> &amp;</type>
+        <definition>primitive_iterator_t&amp; detail::primitive_iterator_t::operator+=</definition>
+        <argsstring>(difference_type n) noexcept</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>difference_type</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12822" column="26" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12822" bodyend="12826"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1primitive__iterator__t_1ace5c67be27584e47ce430858ba7d7bc0" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref> &amp;</type>
+        <definition>primitive_iterator_t&amp; detail::primitive_iterator_t::operator-=</definition>
+        <argsstring>(difference_type n) noexcept</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>difference_type</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12828" column="26" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12828" bodyend="12832"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdetail_1_1primitive__iterator__t_1af58da4713ea9010912f3da6b22aeee51" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr friend bool</type>
+        <definition>constexpr friend bool operator==</definition>
+        <argsstring>(primitive_iterator_t lhs, primitive_iterator_t rhs) noexcept</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref></type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12774" column="27" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12774" bodyend="12777"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdetail_1_1primitive__iterator__t_1a6b032074795534fe7144a4f1c86ead2f" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr friend bool</type>
+        <definition>constexpr friend bool operator&lt;</definition>
+        <argsstring>(primitive_iterator_t lhs, primitive_iterator_t rhs) noexcept</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref></type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12779" column="22" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12779" bodyend="12782"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdetail_1_1primitive__iterator__t_1a86a249e92a5274dec7ea20e52b0cc878" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr friend difference_type</type>
+        <definition>constexpr friend difference_type operator-</definition>
+        <argsstring>(primitive_iterator_t lhs, primitive_iterator_t rhs) noexcept</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref></type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classdetail_1_1primitive__iterator__t" kindref="compound">primitive_iterator_t</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12791" column="38" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12791" bodyend="12794"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="12733" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="12734" bodyend="12833"/>
+    <listofallmembers>
+      <member refid="classdetail_1_1primitive__iterator__t_1a28f49fc62338aae07dd7b361ae0fa239" prot="private" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>__pad0__</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1a6e106b69391c2561bb4d517a20e2ef43" prot="private" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>begin_value</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1af276ab0e7f7cbdb869a72cd74d6a987d" prot="private" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>difference_type</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1a189cd591764ff7cfa43dd93f331d1773" prot="private" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>end_value</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1abc361e982ed6a4545dde3a30f9212d9b" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>get_value</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1a46f7197f0ba0ef7c1f24caf3f7f52d6b" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>is_begin</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1a9b8509ec7a7cbd4b1da3726be658f5a0" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>is_end</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1acc22136675807ea8caccb944264ea918" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>operator+</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1a6b3042d67ccceba681386de3a64b0747" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>operator++</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1aa2898a585da8dc77207b15ac9e703863" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>operator++</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1a2f49c731f7f5a8c174e0f44bc63dccc7" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>operator+=</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1a86a249e92a5274dec7ea20e52b0cc878" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>operator-</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1a430f290a7c53db90624ca165a5c811ab" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>operator--</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1ae0c3dbc516ad0ac75e7d14556e8c80b7" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>operator--</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1ace5c67be27584e47ce430858ba7d7bc0" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>operator-=</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1a6b032074795534fe7144a4f1c86ead2f" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>operator&lt;</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1af58da4713ea9010912f3da6b22aeee51" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>operator==</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1ae05402e355829cd46a9b31365a7b1a49" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>set_begin</name></member>
+      <member refid="classdetail_1_1primitive__iterator__t_1a761383c368d1c32f11bbeb31a04e6488" prot="public" virt="non-virtual"><scope>detail::primitive_iterator_t</scope><name>set_end</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

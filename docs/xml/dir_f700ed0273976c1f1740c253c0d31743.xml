@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_f700ed0273976c1f1740c253c0d31743" kind="dir">
+    <compoundname>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control</compoundname>
+    <innerdir refid="dir_c19b3f6c9d8655b413856e60ceee717b">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/vector</innerdir>
+    <innerfile refid="acrobot__env_8cpp">acrobot_env.cpp</innerfile>
+    <innerfile refid="acrobot__env_8h">acrobot_env.h</innerfile>
+    <innerfile refid="cart__pole__env_8cpp">cart_pole_env.cpp</innerfile>
+    <innerfile refid="cart__pole__env_8h">cart_pole_env.h</innerfile>
+    <innerfile refid="mountain__car__env_8cpp">mountain_car_env.cpp</innerfile>
+    <innerfile refid="mountain__car__env_8h">mountain_car_env.h</innerfile>
+    <innerfile refid="pendulum__env_8cpp">pendulum_env.cpp</innerfile>
+    <innerfile refid="pendulum__env_8h">pendulum_env.h</innerfile>
+    <innerfile refid="state__aggregation__cart__pole__env_8cpp">state_aggregation_cart_pole_env.cpp</innerfile>
+    <innerfile refid="state__aggregation__cart__pole__env_8h">state_aggregation_cart_pole_env.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/"/>
+  </compounddef>
+</doxygen>

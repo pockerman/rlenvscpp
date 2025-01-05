@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacerlenvscpp_1_1utils_1_1trajectory" kind="namespace" language="C++">
+    <compoundname>rlenvscpp::utils::trajectory</compoundname>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink" prot="public">rlenvscpp::utils::trajectory::LineSegmentLink</innerclass>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint" prot="public">rlenvscpp::utils::trajectory::WayPoint</innerclass>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory" prot="public">rlenvscpp::utils::trajectory::WaypointTrajectory</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="7" column="1"/>
+  </compounddef>
+</doxygen>

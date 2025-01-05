@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1is__json__iterator__of_3_01BasicJsonType_00_01typename_01BasicJsonType_1_1iterator_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>detail::is_json_iterator_of&lt; BasicJsonType, typename BasicJsonType::iterator &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::true_type</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename BasicJsonType</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::true_type</label>
+      </node>
+      <node id="1">
+        <label>detail::is_json_iterator_of&lt; BasicJsonType, typename BasicJsonType::iterator &gt;</label>
+        <link refid="structdetail_1_1is__json__iterator__of_3_01BasicJsonType_00_01typename_01BasicJsonType_1_1iterator_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::true_type</label>
+      </node>
+      <node id="1">
+        <label>detail::is_json_iterator_of&lt; BasicJsonType, typename BasicJsonType::iterator &gt;</label>
+        <link refid="structdetail_1_1is__json__iterator__of_3_01BasicJsonType_00_01typename_01BasicJsonType_1_1iterator_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3959" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3959" bodyend="3959"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

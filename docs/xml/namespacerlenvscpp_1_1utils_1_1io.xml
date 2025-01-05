@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacerlenvscpp_1_1utils_1_1io" kind="namespace" language="C++">
+    <compoundname>rlenvscpp::utils::io</compoundname>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1io_1_1CSVFileReader" prot="public">rlenvscpp::utils::io::CSVFileReader</innerclass>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1io_1_1CSVWriter" prot="public">rlenvscpp::utils::io::CSVWriter</innerclass>
+    <innerclass refid="structrlenvscpp_1_1utils_1_1io_1_1FileFormats" prot="public">rlenvscpp::utils::io::FileFormats</innerclass>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase" prot="public">rlenvscpp::utils::io::FileHandlerBase</innerclass>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1io_1_1FileReaderBase" prot="public">rlenvscpp::utils::io::FileReaderBase</innerclass>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase" prot="public">rlenvscpp::utils::io::FileWriterBase</innerclass>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1io_1_1JSONFileReader" prot="public">rlenvscpp::utils::io::JSONFileReader</innerclass>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer" prot="public">rlenvscpp::utils::io::TensorboardServer</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="io__utils_8h_1a2c8ad63ca9de7eaf2f07f636a752f461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; rlenvscpp::utils::io::print_vector</definition>
+        <argsstring>(std::ostream &amp;out, const std::vector&lt; T &gt; &amp;obs)</argsstring>
+        <name>print_vector</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>obs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/io_utils.h" line="12" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/io_utils.h" bodystart="12" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="io__utils_8h_1adde6f187dd6a70f14b68df4d46332381" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; rlenvscpp::utils::io::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const std::vector&lt; T &gt; &amp;obs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>obs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/io_utils.h" line="32" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/io_utils.h" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/csv_file_reader.cpp" line="14" column="1"/>
+  </compounddef>
+</doxygen>

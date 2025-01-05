@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper" kind="class" language="C++" prot="public">
+    <compoundname>rlenvscpp::envs::RESTApiServerWrapper</compoundname>
+    <includes refid="apiserver_8h" local="no">apiserver.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a4dcf15a0a5ec5b62ce68abdfe9ac7fb9" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string rlenvscpp::envs::RESTApiServerWrapper::url_</definition>
+        <argsstring></argsstring>
+        <name>url_</name>
+        <briefdescription>
+<para>The source url of the remote server. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="156" column="23" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a0913f9a2039e8589c518228a02e9a106" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool rlenvscpp::envs::RESTApiServerWrapper::is_init_</definition>
+        <argsstring></argsstring>
+        <name>is_init_</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+<para>Flag indicating if the underlying environments have been initialised. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="162" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1abf5a81a98cbaab834bbea6258c1c81c8" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::string &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::string&gt; rlenvscpp::envs::RESTApiServerWrapper::envs_</definition>
+        <argsstring></argsstring>
+        <name>envs_</name>
+        <briefdescription>
+<para>Map that holds the environment names and their respective URI on the remote server. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="168" column="20" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a8c0ba711ade7d1be19e35c82d74cb913" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::envs::RESTApiServerWrapper::RESTApiServerWrapper</definition>
+        <argsstring>(const std::string &amp;url=&quot;http://0.0.0.0:8001/api&quot;, const bool initialize=true)</argsstring>
+        <name>RESTApiServerWrapper</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>url</declname>
+          <defval>&quot;http://0.0.0.0:8001/api&quot;</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>initialize</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="35" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="12" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a9490e650bfa9d9f10ee91bc338e39f69" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rlenvscpp::envs::RESTApiServerWrapper::is_inisialised</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_inisialised</name>
+        <briefdescription>
+<para>Returns true if the server is initialised. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="41" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a3bdd22fea7c8610f5c77546787edff59" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string rlenvscpp::envs::RESTApiServerWrapper::get_url</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_url</name>
+        <briefdescription>
+<para>Returns the remote url. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="46" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a26c820349eb2dd73ee80858b72276c95" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string rlenvscpp::envs::RESTApiServerWrapper::get_env_url</definition>
+        <argsstring>(const std::string &amp;name) const noexcept</argsstring>
+        <name>get_env_url</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Return the url for the environment with the given name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="52" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="79" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a7e29ab238fb33987c338ee19ebbd1660" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string rlenvscpp::envs::RESTApiServerWrapper::get_uri</definition>
+        <argsstring>(const std::string &amp;name) const noexcept</argsstring>
+        <name>get_uri</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Returns the URI of the environment with the given name Returns INVALID_STR if the environment is not registered. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="59" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="67" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1aad0c956188e6b0eb94dd1ea3522fde7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::envs::RESTApiServerWrapper::register_new</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;uri)</argsstring>
+        <name>register_new</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>uri</declname>
+        </param>
+        <briefdescription>
+<para>Register a new environment. Throws std::logic_error if the environment name already exists. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="65" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="40" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a70b8e7b2e5dc0aa7049cee95c9f84e8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::envs::RESTApiServerWrapper::register_if_not</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;uri)</argsstring>
+        <name>register_if_not</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>uri</declname>
+        </param>
+        <briefdescription>
+<para>Same as register_new but swallows the thrown exception. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="70" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="54" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1ae34f4622f280c99e6e1c2e39272dc5b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json rlenvscpp::envs::RESTApiServerWrapper::is_alive</definition>
+        <argsstring>(const std::string &amp;env_name, const uint_t cidx) const</argsstring>
+        <name>is_alive</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>env_name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>cidx</declname>
+        </param>
+        <briefdescription>
+<para>Queries the remote server if the environment with the given cidx is alive Throws std::logic_error is the environment is not registered. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="78" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="91" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a4a0264b16545f76d24bc18d98b089038" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json rlenvscpp::envs::RESTApiServerWrapper::close</definition>
+        <argsstring>(const std::string &amp;env_name, const uint_t cidx) const</argsstring>
+        <name>close</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>env_name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>cidx</declname>
+        </param>
+        <briefdescription>
+<para>Close the environment with the given name. Throws std::logic_error is the environment is not registered Throws std::runtime_error if the server response is not 201. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="86" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="114" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1ad59cb8f620d1db38bebf44c7cb893d13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ActionType</type>
+          </param>
+        </templateparamlist>
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json rlenvscpp::envs::RESTApiServerWrapper::step</definition>
+        <argsstring>(const std::string &amp;env_name, const uint_t cidx, const ActionType &amp;action) const</argsstring>
+        <name>step</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>env_name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>cidx</declname>
+        </param>
+        <param>
+          <type>const ActionType &amp;</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>Step in the environment with the given name and the given copy index executing action. ActionType has to be JSON serializable Throws std::logic_error is the environment is not registered Throws std::runtime_error if the server response is not 201. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="97" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" bodystart="178" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a871a66ba1453db60cd7dbaf86f898017" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json rlenvscpp::envs::RESTApiServerWrapper::reset</definition>
+        <argsstring>(const std::string &amp;env_name, const uint_t cidx, const uint_t seed, const nlohmann::json &amp;options) const</argsstring>
+        <name>reset</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>env_name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>cidx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>const nlohmann::json &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Reset the the environment with the given name and the given copy index executing action. Throws std::logic_error is the environment is not registered Throws std::runtime_error if the server response is not 202. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="107" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="137" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a4d518be0298e382df9e60c1cfc13b10d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json rlenvscpp::envs::RESTApiServerWrapper::make</definition>
+        <argsstring>(const std::string &amp;env_name, const uint_t cidx, const std::string &amp;version, const nlohmann::json &amp;options) const</argsstring>
+        <name>make</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>env_name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>cidx</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>const nlohmann::json &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Make the the environment with the given name and the given copy index executing action. Throws std::logic_error is the environment is not registered Throws std::runtime_error if the server response is not 202. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="118" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="172" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1aaf472fc2594f627b9b9bad8b613fc184" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json rlenvscpp::envs::RESTApiServerWrapper::dynamics</definition>
+        <argsstring>(const std::string &amp;env_name, const uint_t cidx, const uint_t sidx, const uint_t aidx) const</argsstring>
+        <name>dynamics</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>env_name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>cidx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>sidx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>aidx</declname>
+        </param>
+        <briefdescription>
+<para>Get the dynamics of the environment. If the environment does not expose such an endpoint it returns 404. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="128" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="205" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a87b877a19b1120a212cec956e4aeb48a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json rlenvscpp::envs::RESTApiServerWrapper::copy</definition>
+        <argsstring>(const std::string &amp;env_name, const uint_t cidx, const std::string &amp;version, const nlohmann::json &amp;options) const</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>env_name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>cidx</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>const nlohmann::json &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Make the cidx copy of the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="136" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a471b8783689d56f19e3fd4d7baf6d49d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rlenvscpp::envs::RESTApiServerWrapper::has_gymnasium</definition>
+        <argsstring>() const</argsstring>
+        <name>has_gymnasium</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="144" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="229" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1ae19a4467623d1ec2053773b6e490b299" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; rlenvscpp::envs::RESTApiServerWrapper::gymnasium_envs</definition>
+        <argsstring>() const</argsstring>
+        <name>gymnasium_envs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="149" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="240" bodyend="255"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a79cfac19b63669b4758631585b032e21" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::envs::RESTApiServerWrapper::init_</definition>
+        <argsstring>()</argsstring>
+        <name>init_</name>
+        <briefdescription>
+<para>Initialzes the available environments. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="173" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp" bodystart="24" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility class to facilitate HTTP requests between the environments REST API and C++ drivers. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" line="28" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h" bodystart="29" bodyend="174"/>
+    <listofallmembers>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a4a0264b16545f76d24bc18d98b089038" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>close</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a87b877a19b1120a212cec956e4aeb48a" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>copy</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1aaf472fc2594f627b9b9bad8b613fc184" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>dynamics</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1abf5a81a98cbaab834bbea6258c1c81c8" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>envs_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a26c820349eb2dd73ee80858b72276c95" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>get_env_url</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a7e29ab238fb33987c338ee19ebbd1660" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>get_uri</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a3bdd22fea7c8610f5c77546787edff59" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>get_url</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1ae19a4467623d1ec2053773b6e490b299" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>gymnasium_envs</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a471b8783689d56f19e3fd4d7baf6d49d" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>has_gymnasium</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a79cfac19b63669b4758631585b032e21" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>init_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1ae34f4622f280c99e6e1c2e39272dc5b2" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>is_alive</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a9490e650bfa9d9f10ee91bc338e39f69" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>is_inisialised</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a0913f9a2039e8589c518228a02e9a106" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>is_init_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a4d518be0298e382df9e60c1cfc13b10d" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>make</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a70b8e7b2e5dc0aa7049cee95c9f84e8d" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>register_if_not</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1aad0c956188e6b0eb94dd1ea3522fde7a" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>register_new</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a871a66ba1453db60cd7dbaf86f898017" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>reset</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a8c0ba711ade7d1be19e35c82d74cb913" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>RESTApiServerWrapper</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1ad59cb8f620d1db38bebf44c7cb893d13" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>step</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a4dcf15a0a5ec5b62ce68abdfe9ac7fb9" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::RESTApiServerWrapper</scope><name>url_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

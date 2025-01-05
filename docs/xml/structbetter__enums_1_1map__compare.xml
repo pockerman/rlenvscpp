@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structbetter__enums_1_1map__compare" kind="struct" language="C++" prot="public">
+    <compoundname>better_enums::map_compare</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structbetter__enums_1_1map__compare_1acc484428961e669d7f3e6ac67e86aa52" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BETTER_ENUMS_CONSTEXPR_ bool</type>
+        <definition>static BETTER_ENUMS_CONSTEXPR_ bool better_enums::map_compare&lt; T &gt;::less</definition>
+        <argsstring>(const T &amp;a, const T &amp;b)</argsstring>
+        <name>less</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" line="1240" column="41" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" bodystart="1240" bodyend="1241"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" line="1239" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" bodystart="1239" bodyend="1242"/>
+    <listofallmembers>
+      <member refid="structbetter__enums_1_1map__compare_1acc484428961e669d7f3e6ac67e86aa52" prot="public" virt="non-virtual"><scope>better_enums::map_compare</scope><name>less</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

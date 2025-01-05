@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1external__constructor_3_01value__t_1_1object_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>detail::external_constructor&lt; value_t::object &gt;</compoundname>
+    <templateparamlist>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structdetail_1_1external__constructor_3_01value__t_1_1object_01_4_1a771012da86c322e238b83baf11689f8e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename BasicJsonType</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void detail::external_constructor&lt; value_t::object &gt;::construct</definition>
+        <argsstring>(BasicJsonType &amp;j, const typename BasicJsonType::object_t &amp;obj)</argsstring>
+        <name>construct</name>
+        <param>
+          <type>BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const typename BasicJsonType::object_t &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="5602" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="5602" bodyend="5609"/>
+      </memberdef>
+      <memberdef kind="function" id="structdetail_1_1external__constructor_3_01value__t_1_1object_01_4_1af767c889982008eb5f08b47b558dfa08" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename BasicJsonType</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void detail::external_constructor&lt; value_t::object &gt;::construct</definition>
+        <argsstring>(BasicJsonType &amp;j, typename BasicJsonType::object_t &amp;&amp;obj)</argsstring>
+        <name>construct</name>
+        <param>
+          <type>BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>typename BasicJsonType::object_t &amp;&amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="5612" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="5612" bodyend="5619"/>
+      </memberdef>
+      <memberdef kind="function" id="structdetail_1_1external__constructor_3_01value__t_1_1object_01_4_1a96a727d374af438440e4f9fe6f273e3f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename BasicJsonType</type>
+          </param>
+          <param>
+            <type>typename CompatibleObjectType</type>
+          </param>
+          <param>
+            <type>enable_if_t&lt; !std::is_same&lt; CompatibleObjectType, typename BasicJsonType::object_t &gt;::value, int &gt;</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void detail::external_constructor&lt; value_t::object &gt;::construct</definition>
+        <argsstring>(BasicJsonType &amp;j, const CompatibleObjectType &amp;obj)</argsstring>
+        <name>construct</name>
+        <param>
+          <type>BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const CompatibleObjectType &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="5623" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="5623" bodyend="5633"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="5599" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="5600" bodyend="5634"/>
+    <listofallmembers>
+      <member refid="structdetail_1_1external__constructor_3_01value__t_1_1object_01_4_1a771012da86c322e238b83baf11689f8e" prot="public" virt="non-virtual"><scope>detail::external_constructor&lt; value_t::object &gt;</scope><name>construct</name></member>
+      <member refid="structdetail_1_1external__constructor_3_01value__t_1_1object_01_4_1af767c889982008eb5f08b47b558dfa08" prot="public" virt="non-virtual"><scope>detail::external_constructor&lt; value_t::object &gt;</scope><name>construct</name></member>
+      <member refid="structdetail_1_1external__constructor_3_01value__t_1_1object_01_4_1a96a727d374af438440e4f9fe6f273e3f" prot="public" virt="non-virtual"><scope>detail::external_constructor&lt; value_t::object &gt;</scope><name>construct</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdetail_1_1output__string__adapter" kind="class" language="C++" prot="public">
+    <compoundname>detail::output_string_adapter</compoundname>
+    <basecompoundref refid="structdetail_1_1output__adapter__protocol" prot="public" virt="non-virtual">detail::output_adapter_protocol&lt; CharType &gt;</basecompoundref>
+    <includes refid="json_8hpp" local="no">json.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename CharType</type>
+      </param>
+      <param>
+        <type>typename StringType</type>
+        <defval>std::basic_string&lt;CharType&gt;</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdetail_1_1output__string__adapter_1a7f5d78b9cb6cdaa747c418e2672608ea" prot="private" static="no" mutable="no">
+        <type>StringType &amp;</type>
+        <definition>StringType&amp; detail::output_string_adapter&lt; CharType, StringType &gt;::str</definition>
+        <argsstring></argsstring>
+        <name>str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15033" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15033" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdetail_1_1output__string__adapter_1a1de17d313223c70c8d30186a6e3eb07e" prot="public" static="no" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>detail::output_string_adapter&lt; CharType, StringType &gt;::output_string_adapter</definition>
+        <argsstring>(StringType &amp;s) noexcept</argsstring>
+        <name>output_string_adapter</name>
+        <param>
+          <type>StringType &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15017" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15017" bodyend="15019"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1output__string__adapter_1a15ef2742beddbc80d2468755ecf0a21e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void detail::output_string_adapter&lt; CharType, StringType &gt;::write_character</definition>
+        <argsstring>(CharType c) override</argsstring>
+        <name>write_character</name>
+        <reimplements refid="structdetail_1_1output__adapter__protocol_1a57fbeab6c9e6dac2def4f0a7708b807a">write_character</reimplements>
+        <param>
+          <type>CharType</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15021" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15021" bodyend="15024"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1output__string__adapter_1aae38554067dbef5006db25256a702416" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void detail::output_string_adapter&lt; CharType, StringType &gt;::write_characters</definition>
+        <argsstring>(const CharType *s, std::size_t length) override</argsstring>
+        <name>write_characters</name>
+        <reimplements refid="structdetail_1_1output__adapter__protocol_1afefb88bb4c134a02e136aaf69d0ecee9">write_characters</reimplements>
+        <param>
+          <type>const CharType *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15027" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15027" bodyend="15030"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>output adapter for basic_string </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>detail::output_adapter_protocol&lt; CharType &gt;</label>
+        <link refid="structdetail_1_1output__adapter__protocol"/>
+      </node>
+      <node id="1">
+        <label>detail::output_string_adapter&lt; CharType, StringType &gt;</label>
+        <link refid="classdetail_1_1output__string__adapter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>detail::output_adapter_protocol&lt; CharType &gt;</label>
+        <link refid="structdetail_1_1output__adapter__protocol"/>
+      </node>
+      <node id="1">
+        <label>detail::output_string_adapter&lt; CharType, StringType &gt;</label>
+        <link refid="classdetail_1_1output__string__adapter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15014" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15015" bodyend="15034"/>
+    <listofallmembers>
+      <member refid="structdetail_1_1output__adapter__protocol_1ae2684c414aaa72a693d0810766e70083" prot="public" virt="non-virtual"><scope>detail::output_string_adapter</scope><name>operator=</name></member>
+      <member refid="structdetail_1_1output__adapter__protocol_1a0674a6aa1a081351c90b0646a20dc4be" prot="public" virt="non-virtual"><scope>detail::output_string_adapter</scope><name>operator=</name></member>
+      <member refid="structdetail_1_1output__adapter__protocol_1abc3c05de1a9637889969f59da9ba0a03" prot="public" virt="non-virtual"><scope>detail::output_string_adapter</scope><name>output_adapter_protocol</name></member>
+      <member refid="structdetail_1_1output__adapter__protocol_1a03466aec8b97f99d19e27f0f05c66655" prot="public" virt="non-virtual"><scope>detail::output_string_adapter</scope><name>output_adapter_protocol</name></member>
+      <member refid="structdetail_1_1output__adapter__protocol_1a641001ae666e338cb9753901a8a3ef91" prot="public" virt="non-virtual"><scope>detail::output_string_adapter</scope><name>output_adapter_protocol</name></member>
+      <member refid="classdetail_1_1output__string__adapter_1a1de17d313223c70c8d30186a6e3eb07e" prot="public" virt="non-virtual"><scope>detail::output_string_adapter</scope><name>output_string_adapter</name></member>
+      <member refid="classdetail_1_1output__string__adapter_1a7f5d78b9cb6cdaa747c418e2672608ea" prot="private" virt="non-virtual"><scope>detail::output_string_adapter</scope><name>str</name></member>
+      <member refid="classdetail_1_1output__string__adapter_1a15ef2742beddbc80d2468755ecf0a21e" prot="public" virt="virtual"><scope>detail::output_string_adapter</scope><name>write_character</name></member>
+      <member refid="classdetail_1_1output__string__adapter_1aae38554067dbef5006db25256a702416" prot="public" virt="virtual"><scope>detail::output_string_adapter</scope><name>write_characters</name></member>
+      <member refid="structdetail_1_1output__adapter__protocol_1a4c588cc9ce24c3a46460f33580dc5f11" prot="public" virt="virtual"><scope>detail::output_string_adapter</scope><name>~output_adapter_protocol</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

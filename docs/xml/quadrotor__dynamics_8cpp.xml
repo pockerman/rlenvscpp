@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="quadrotor__dynamics_8cpp" kind="file" language="C++">
+    <compoundname>quadrotor_dynamics.cpp</compoundname>
+    <includes refid="quadrotor__dynamics_8h" local="yes">rlenvs/dynamics/quadrotor_dynamics.h</includes>
+    <includes refid="rlenvs__consts_8h" local="yes">rlenvs/rlenvs_consts.h</includes>
+    <includes refid="math__utils_8h" local="yes">rlenvs/utils/math_utils.h</includes>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="21">
+        <label>rlenvs/dynamics/dynamics_matrix_descriptor.h</label>
+        <link refid="dynamics__matrix__descriptor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>iomanip</label>
+      </node>
+      <node id="10">
+        <label>rlenvs/dynamics/system_state.h</label>
+        <link refid="system__state_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>cmath</label>
+      </node>
+      <node id="15">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="19">
+        <label>boost/noncopyable.hpp</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="22">
+        <label>map</label>
+      </node>
+      <node id="18">
+        <label>rlenvs/rlenvs_consts.h</label>
+        <link refid="rlenvs__consts_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ostream</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/dynamics/quadrotor_dynamics.h</label>
+        <link refid="quadrotor__dynamics_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="23">
+        <label>any</label>
+      </node>
+      <node id="17">
+        <label>rlenvs/dynamics/motion_model_base.h</label>
+        <link refid="motion__model__base_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="12">
+        <label>utility</label>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.cpp</label>
+        <link refid="quadrotor__dynamics_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>array</label>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cstddef</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="13">
+        <label>algorithm</label>
+      </node>
+      <node id="24">
+        <label>rlenvs/utils/math_utils.h</label>
+        <link refid="math__utils_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1dynamics">rlenvscpp::dynamics</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;rlenvs/dynamics/quadrotor_dynamics.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_consts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/utils/math_utils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dynamics<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a2e0b670c2d5d68a9c78619855f7acfab" kindref="member">QuadrotorDynamics::QuadrotorDynamics</ref>(QuadrotorDynamicsConfig<sp/>config,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SysState&lt;12&gt;&amp;<sp/>state)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>MotionModelDynamicsBase&lt;SysState&lt;12&gt;,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DynamicsMatrixDescriptor,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1aae17d9ede748488c19706693aebac6bd" kindref="member">RealVec</ref>&gt;(state),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>config_(config)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>v_dot_<sp/>=<sp/>RealColVec3d::Zero(3);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>omega_dot_<sp/>=<sp/>RealColVec3d::Zero(3);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_dot_<sp/>=<sp/>RealColVec3d::Zero(3);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>rotation_mat_<sp/>=<sp/>RealMat3d::Zero();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_mat_<sp/>=<sp/>RealMat3d::Zero();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">QuadrotorDynamics::state_type&amp;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">QuadrotorDynamics::evaluate(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>input_type&amp;<sp/>input<sp/>){</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>integrate(input);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;get_state();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">QuadrotorDynamics::integrate(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RealVec&amp;<sp/>motor_w){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>translational_dynamics(motor_w);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>rotational_dynamics(motor_w);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>update_euler_angles_();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>update_rotation_matrix_();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>update_position_();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">QuadrotorDynamics::update_position_(){</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dt<sp/>=<sp/>config_.dt;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>old_p<sp/>=<sp/>get_position_from_state_();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>old_v<sp/>=<sp/>get_velocity_from_state_();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>p<sp/>=<sp/>dt<sp/>*<sp/>rotation_mat_<sp/>*<sp/>old_v<sp/>+<sp/>old_p;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>the<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>get_state().set(</highlight><highlight class="stringliteral">&quot;x&quot;</highlight><highlight class="normal">,<sp/>p[0]);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>get_state().set(</highlight><highlight class="stringliteral">&quot;y&quot;</highlight><highlight class="normal">,<sp/>p[1]);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>get_state().set(</highlight><highlight class="stringliteral">&quot;z&quot;</highlight><highlight class="normal">,<sp/>p[2]);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">QuadrotorDynamics::update_euler_angles_(){</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>euler_angles_old<sp/>=<sp/>get_euler_angles_from_state_();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>old_omega<sp/>=<sp/>get_angular_velocity_from_state_();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dt<sp/>=<sp/>config_.dt;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>phi<sp/>=<sp/>euler_angles_old[0];</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>theta<sp/>=<sp/>euler_angles_old[1];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>psi<sp/>=<sp/>euler_angles_old[2];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_mat_(0,<sp/>0)<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_mat_(0,<sp/>1)<sp/>=<sp/>std::sin(phi)<sp/>*<sp/>std::tan(theta);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_mat_(0,<sp/>2)<sp/>=<sp/>std::cos(phi)<sp/>*<sp/>std::tan(theta);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_mat_(1,<sp/>0)<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_mat_(1,<sp/>1)<sp/>=<sp/>std::cos(phi);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_mat_(1,<sp/>2)<sp/>=<sp/>-std::sin(phi);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_mat_(2,<sp/>0)<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_mat_(2,<sp/>1)<sp/>=<sp/>std::sin(phi)<sp/>/<sp/>std::cos(theta);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_mat_(2,<sp/>2)<sp/>=<sp/>std::cos(phi)<sp/>/<sp/>std::cos(theta);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>euler<sp/>=<sp/>dt<sp/>*<sp/>euler_mat_<sp/>*<sp/>old_omega<sp/>+<sp/>euler_angles_old;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>euler_dot_<sp/>=<sp/>(euler<sp/>-<sp/>euler_angles_old)<sp/>/<sp/>dt;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>set_state_property(</highlight><highlight class="stringliteral">&quot;phi&quot;</highlight><highlight class="normal">,<sp/>euler[0]);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>set_state_property(</highlight><highlight class="stringliteral">&quot;theta&quot;</highlight><highlight class="normal">,<sp/>euler[1]);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>set_state_property(</highlight><highlight class="stringliteral">&quot;psi&quot;</highlight><highlight class="normal">,<sp/>euler[2]);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">QuadrotorDynamics::update_rotation_matrix_(){</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>euler_angles_old<sp/>=<sp/>get_euler_angles_from_state_();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>phi<sp/>=<sp/>euler_angles_old[0];</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>theta<sp/>=<sp/>euler_angles_old[1];</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>psi<sp/>=<sp/>euler_angles_old[2];</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ctheta<sp/>=<sp/>std::cos(theta);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cpsi<sp/>=<sp/>std::cos(psi);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cphi<sp/>=<sp/>std::cos(phi);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>stheta<sp/>=<sp/>std::sin(theta);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>spsi<sp/>=<sp/>std::sin(psi);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sphi<sp/>=<sp/>std::sin(phi);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>rotation_mat_(0,0)<sp/>=<sp/>ctheta<sp/>*<sp/>cpsi;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>rotation_mat_(0,1)<sp/>=<sp/>spsi<sp/>*<sp/>stheta<sp/>*<sp/>cpsi<sp/>-<sp/>cphi<sp/>*<sp/>spsi;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>rotation_mat_(0,2)<sp/>=<sp/>cphi<sp/>*<sp/>stheta<sp/>*<sp/>cpsi<sp/>+<sp/>sphi<sp/>*<sp/>spsi;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>rotation_mat_(1,0)<sp/>=<sp/>ctheta<sp/>*<sp/>spsi;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>rotation_mat_(1,1)<sp/>=<sp/>sphi<sp/>*<sp/>stheta<sp/>*<sp/>spsi<sp/>+<sp/>cphi<sp/>*<sp/>cpsi;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>rotation_mat_(1,2)<sp/>=<sp/>cphi<sp/>*<sp/>stheta<sp/>*<sp/>spsi<sp/>-<sp/>sphi<sp/>*<sp/>cpsi;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>rotation_mat_(0,0)<sp/>=<sp/>stheta;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>rotation_mat_(0,1)<sp/>=<sp/>-sphi<sp/>*<sp/>ctheta;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>rotation_mat_(0,2)<sp/>=<sp/>-cphi<sp/>*<sp/>ctheta;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">QuadrotorDynamics::rotational_dynamics(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RealVec&amp;<sp/>motor_w){</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>l<sp/>=<sp/>config_.l;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>k_1<sp/>=<sp/>config_.k_1;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>k_2<sp/>=<sp/>config_.k_2;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dt<sp/>=<sp/>config_.dt;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>old_omega<sp/>=<sp/>get_angular_velocity_from_state_();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>old_omega[0];</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>q<sp/>=<sp/>old_omega[1];</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>old_omega[2];</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>Jx<sp/>=<sp/>config_.Jx;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>Jy<sp/>=<sp/>config_.Jy;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>Jz<sp/>=<sp/>config_.Jz;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>omega_cross_h<sp/>=<sp/>RealColVec3d::Zero(3);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>omega_cross_h[0]<sp/>=<sp/>((Jy<sp/>-<sp/>Jz)<sp/>/<sp/>Jx)<sp/>*<sp/>q<sp/>*<sp/>r;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>omega_cross_h[1]<sp/>=<sp/>((Jz<sp/>-<sp/>Jx)<sp/>/<sp/>Jy)<sp/>*<sp/>p<sp/>*<sp/>r;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>omega_cross_h[2]<sp/>=<sp/>((Jx<sp/>-<sp/>Jy)<sp/>/<sp/>Jz)<sp/>*<sp/>p<sp/>*<sp/>q;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>torque<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>tau<sp/>=<sp/>RealColVec3d::Zero(3);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>tau_phi<sp/>=<sp/>l*K_T*((omeag_4)^2<sp/>-<sp/>(omeag_2)^2)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>tau[0]<sp/>=<sp/>l<sp/>*<sp/>k_1*<sp/>(rlenvscpp::utils::maths::sqr(motor_w[3])<sp/>-<sp/>rlenvscpp::utils::maths::sqr(motor_w[1]));</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>tau[0]<sp/>*=<sp/>1.0<sp/>/<sp/>Jx;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>tau_theta<sp/>=<sp/>l*K_T*((omeag_1)^2<sp/>-<sp/>(omeag_3)^2)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>tau[1]<sp/>=<sp/>l<sp/>*<sp/>k_1*<sp/>(rlenvscpp::utils::maths::sqr(motor_w[0])<sp/>-<sp/>rlenvscpp::utils::maths::sqr(motor_w[2]));</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>tau[1]<sp/>=<sp/>1.0<sp/>/<sp/>Jy;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>tau_psi<sp/>=<sp/>Kd((omega_1)^2<sp/>-<sp/>(omega_2)^2<sp/>+<sp/>(omega_3)^2<sp/>-<sp/>(omega_4)^2)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>tau[2]<sp/>=<sp/>k_2*<sp/>(rlenvscpp::utils::maths::sqr(motor_w[0])<sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>rlenvscpp::utils::maths::sqr(motor_w[1])</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>rlenvscpp::utils::maths::sqr(motor_w[2])<sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>rlenvscpp::utils::maths::sqr(motor_w[3]));</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>tau[2]<sp/>*=<sp/>1.0<sp/>/<sp/>Jz;<sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>omega<sp/>=<sp/>dt<sp/>*<sp/>omega_cross_h<sp/>+<sp/>dt<sp/>*<sp/>tau<sp/>-<sp/>old_omega;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>omega_dot_<sp/>=<sp/>(omega<sp/>-<sp/>old_omega)<sp/>/<sp/>dt;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>the<sp/>angular<sp/>velocity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>set_state_property(</highlight><highlight class="stringliteral">&quot;p&quot;</highlight><highlight class="normal">,<sp/>omega[0]);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>set_state_property(</highlight><highlight class="stringliteral">&quot;q&quot;</highlight><highlight class="normal">,<sp/>omega[1]);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>set_state_property(</highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">,<sp/>omega[2]);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">QuadrotorDynamics::translational_dynamics(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RealVec&amp;<sp/>motor_w){</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mass<sp/>=<sp/>config_.mass;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dt<sp/>=<sp/>config_.dt;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>the<sp/>gravity<sp/>force</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>fg<sp/>=<sp/>RealColVec3d::Zero(3);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(config_.use_gravity){</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fg[2]<sp/>=<sp/>mass<sp/>*<sp/>rlenvscpp::consts::maths::G;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>the<sp/>total<sp/>thurst<sp/>force</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>ft<sp/>=<sp/>RealColVec3d::Zero(3);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>ft[2]<sp/>=<sp/>config_.k_1<sp/>*<sp/>rlenvscpp::utils::maths::sum_sqr(motor_w);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>old_v<sp/>=<sp/>get_velocity_from_state_();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>old_omega<sp/>=<sp/>get_angular_velocity_from_state_();</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>form<sp/>the<sp/>vector<sp/>ωb/i<sp/>×<sp/>v</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/><sp/>omega_cross_v<sp/>=<sp/>old_omega.cross(old_v);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>the<sp/>velocity<sp/>increment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>v<sp/>=<sp/>dt<sp/>*<sp/>omega_cross_v<sp/><sp/>+<sp/>(1.0<sp/>/<sp/>mass<sp/>)<sp/>*<sp/>dt<sp/>*<sp/><sp/>fg<sp/>-<sp/>(1.0<sp/>/<sp/>mass<sp/>)<sp/>*<sp/>dt<sp/>*<sp/>ft<sp/>-<sp/>old_v;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>the<sp/>time<sp/>velocity<sp/>derivative</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>v_dot_<sp/>=<sp/>(v<sp/>-<sp/>old_v)<sp/>/<sp/>dt;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>the<sp/>old<sp/>velocity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>set_state_property(</highlight><highlight class="stringliteral">&quot;u&quot;</highlight><highlight class="normal">,<sp/>v[0]);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>set_state_property(</highlight><highlight class="stringliteral">&quot;v&quot;</highlight><highlight class="normal">,<sp/>v[1]);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>set_state_property(</highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">,<sp/>v[2]);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.cpp"/>
+  </compounddef>
+</doxygen>

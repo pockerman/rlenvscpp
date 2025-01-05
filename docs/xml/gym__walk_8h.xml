@@ -1,0 +1,623 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="gym__walk_8h" kind="file" language="C++">
+    <compoundname>gym_walk.h</compoundname>
+    <includes refid="rlenvscpp__config_8h" local="yes">rlenvs/rlenvscpp_config.h</includes>
+    <includes refid="rlenvs__types__v2_8h" local="yes">rlenvs/rlenvs_types_v2.h</includes>
+    <includes refid="time__step_8h" local="yes">rlenvs/envs/time_step.h</includes>
+    <includes refid="env__types_8h" local="yes">rlenvs/envs/env_types.h</includes>
+    <includes refid="env__base_8h" local="yes">rlenvs/envs/env_base.h</includes>
+    <includes refid="json_8hpp" local="yes">rlenvs/extern/nlohmann/json/json.hpp</includes>
+    <includes local="no">boost/noncopyable.hpp</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">string</includes>
+    <includes local="no">any</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">memory</includes>
+    <incdepgraph>
+      <node id="36">
+        <label>valarray</label>
+      </node>
+      <node id="51">
+        <label>iomanip</label>
+      </node>
+      <node id="27">
+        <label>functional</label>
+      </node>
+      <node id="41">
+        <label>limits</label>
+      </node>
+      <node id="30">
+        <label>iterator</label>
+      </node>
+      <node id="20">
+        <label>rlenvs/envs/env_base.h</label>
+        <link refid="env__base_8h_source"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>rlenvs/extern/nlohmann/json/json.hpp</label>
+        <link refid="json_8hpp_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>cstdint</label>
+      </node>
+      <node id="22">
+        <label>rlenvs/envs/synchronized_env_mixin.h</label>
+        <link refid="synchronized__env__mixin_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>cmath</label>
+      </node>
+      <node id="40">
+        <label>cassert</label>
+      </node>
+      <node id="15">
+        <label>stdexcept</label>
+      </node>
+      <node id="45">
+        <label>numeric</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="23">
+        <label>boost/noncopyable.hpp</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="34">
+        <label>map</label>
+      </node>
+      <node id="21">
+        <label>rlenvs/rlenvs_consts.h</label>
+        <link refid="rlenvs__consts_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>exception</label>
+      </node>
+      <node id="12">
+        <label>ostream</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="17">
+        <label>rlenvs/envs/space_type.h</label>
+        <link refid="space__type_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>any</label>
+      </node>
+      <node id="18">
+        <label>random</label>
+      </node>
+      <node id="50">
+        <label>ios</label>
+      </node>
+      <node id="11">
+        <label>rlenvs/utils/io/io_utils.h</label>
+        <link refid="io__utils_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>cstdio</label>
+      </node>
+      <node id="35">
+        <label>tuple</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="31">
+        <label>utility</label>
+      </node>
+      <node id="32">
+        <label>array</label>
+      </node>
+      <node id="29">
+        <label>iosfwd</label>
+      </node>
+      <node id="49">
+        <label>cerrno</label>
+      </node>
+      <node id="39">
+        <label>cstdlib</label>
+      </node>
+      <node id="47">
+        <label>clocale</label>
+      </node>
+      <node id="48">
+        <label>cctype</label>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="14">
+        <label>unordered_map</label>
+      </node>
+      <node id="9">
+        <label>rlenvs/envs/time_step.h</label>
+        <link refid="time__step_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gdrl/gym_walk.h</label>
+        <link refid="gym__walk_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="19">
+        <label>type_traits</label>
+      </node>
+      <node id="33">
+        <label>forward_list</label>
+      </node>
+      <node id="26">
+        <label>algorithm</label>
+      </node>
+      <node id="42">
+        <label>cstring</label>
+      </node>
+      <node id="24">
+        <label>memory</label>
+      </node>
+      <node id="46">
+        <label>istream</label>
+      </node>
+      <node id="28">
+        <label>initializer_list</label>
+      </node>
+      <node id="10">
+        <label>rlenvs/envs/time_step_type.h</label>
+        <link refid="time__step__type_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>rlenvs/envs/env_types.h</label>
+        <link refid="env__types_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" prot="public">rlenvscpp::envs::gdrl::GymWalk</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1envs">rlenvscpp::envs</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1envs_1_1gdrl">rlenvscpp::envs::gdrl</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>GymWalk<sp/>environment<sp/>from</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>&lt;a<sp/>href=&quot;https://github.com/mimoralea/gym-walk2&quot;&gt;gym_walk&lt;/a&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GYM_WALK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GYM_WALK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvscpp_config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_types_v2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/envs/time_step.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/envs/env_types.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/envs/env_base.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/extern/nlohmann/json/json.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/noncopyable.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;any&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>RLENVSCPP_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">envs{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">gdrl{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="40" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" kindref="compound">GymWalk</ref><sp/>final:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase" kindref="compound">EnvBase</ref>&lt;TimeStep&lt;uint_t&gt;,<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ScalarDiscreteEnv&lt;state_size,<sp/>2,<sp/>0,<sp/>0&gt;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a3a8d34d2ae95749b85e8d22867aa6b0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a3a8d34d2ae95749b85e8d22867aa6b0e" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a021ab12bd20805e595c3e3714b3f33e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a021ab12bd20805e595c3e3714b3f33e1" kindref="member">URI</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase" kindref="compound">EnvBase&lt;TimeStep&lt;uint_t&gt;</ref>,<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv" kindref="compound">ScalarDiscreteEnv&lt;state_size, 2, 0, 0&gt;</ref></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;<sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase" kindref="compound">base_type</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a30858d85354349bd8c1f3f14ef139cdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1TimeStep" kindref="compound">base_type::time_step_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a30858d85354349bd8c1f3f14ef139cdc" kindref="member">time_step_type</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a97d1b94508f8fc10b9d54ced90adc16c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a32b57a9f7a72fdac0033d15159fcdfa8" kindref="member">base_type::state_space_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a97d1b94508f8fc10b9d54ced90adc16c" kindref="member">state_space_type</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1af064852fcfb741b1880e282b181fabe9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a1bc17d6a838f0eb39347c104f0c25e88" kindref="member">base_type::action_space_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1af064852fcfb741b1880e282b181fabe9" kindref="member">action_space_type</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1af0b68c4febc4f2f464ad476e635684fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a45feccee92313b3a3d636cb288488242" kindref="member">base_type::action_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1af0b68c4febc4f2f464ad476e635684fc" kindref="member">action_type</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1aa198bf03647c5aa2dd604be1b2c332ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a75f678ad7dc1367058734619e78de120" kindref="member">base_type::state_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1aa198bf03647c5aa2dd604be1b2c332ca" kindref="member">state_type</ref>;<sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a7cf97835c27a643151125c376cb2cd7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;std::tuple&lt;real_t,<sp/>uint_t,<sp/>real_t,<sp/>bool&gt;&gt;<sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a7cf97835c27a643151125c376cb2cd7a" kindref="member">dynamics_t</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1acee77ab2d9a21d4917bcb8de802ac48f" kindref="member">GymWalk</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper" kindref="compound">RESTApiServerWrapper</ref>&amp;<sp/>api_server);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1acee77ab2d9a21d4917bcb8de802ac48f" kindref="member">GymWalk</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper" kindref="compound">RESTApiServerWrapper</ref>&amp;<sp/>api_server,<sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a1897dd501bc1980e1cde04b60c012ca8" kindref="member">cidx</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1acee77ab2d9a21d4917bcb8de802ac48f" kindref="member">GymWalk</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" kindref="compound">GymWalk</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1ac94ce6e4888f8a07da0759bf511b5052" kindref="member">make</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1aa7ef6b01e649a3bed482e92efc4eee4f" kindref="member">version</ref>,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>std::any&gt;&amp;<sp/>options)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_alive()const<sp/>override<sp/>final;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1afd9c3ee1b8fc09fad28164cb6b8de0ce" kindref="member">close</ref>()<sp/>override<sp/>final;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/><ref refid="classrlenvscpp_1_1TimeStep" kindref="compound">time_step_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1ab8c77ac759752bdca809c60eb423d3f3" kindref="member">step</ref>(const<sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1aa18d718ab41eec941ae04c118ef6c2e6" kindref="member">action_type</ref>&amp;<sp/>action)<sp/>override<sp/>final;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/><ref refid="classrlenvscpp_1_1TimeStep" kindref="compound">time_step_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a0dc609f93cc8dffa2b9ecf65c051ae66" kindref="member">reset</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>seed,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>std::unordered_map&lt;std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/>std::any&gt;&amp;<sp/>options)override<sp/>final;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>std::unique_ptr&lt;<ref refid="classrlenvscpp_1_1envs_1_1EnvBase" kindref="compound">base_type</ref>&gt;<sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a04a4843dfd6cf6266879dddbce59ee76" kindref="member">make_copy</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a1897dd501bc1980e1cde04b60c012ca8" kindref="member">cidx</ref>)const<sp/>override<sp/>final;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a1641db926d24e2af5fc9eefe29fe1ff8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a1641db926d24e2af5fc9eefe29fe1ff8" kindref="member">n_states</ref>()const<sp/>noexcept{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state_space_type::size;<sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1aee2384159f6ff5bc82d952006b1dd1d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1aee2384159f6ff5bc82d952006b1dd1d5" kindref="member">n_actions</ref>()const<sp/>noexcept{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>action_space_type::size;}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a7cf97835c27a643151125c376cb2cd7a" kindref="member">dynamics_t</ref><sp/>build_dynamics_from_response_(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nlohmann::json&amp;<sp/>response)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a30858d85354349bd8c1f3f14ef139cdc" kindref="member">time_step_type</ref><sp/>create_time_step_from_response_(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nlohmann::json&amp;<sp/>response)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper" kindref="compound">RESTApiServerWrapper</ref><sp/>api_server_;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a3a8d34d2ae95749b85e8d22867aa6b0e" kindref="member">GymWalk&lt;state_size&gt;::name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;GymWalk&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a021ab12bd20805e595c3e3714b3f33e1" kindref="member">GymWalk&lt;state_size&gt;::URI</ref><sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;/gdrl/gym-walk-env&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="179" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1acee77ab2d9a21d4917bcb8de802ac48f" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1acee77ab2d9a21d4917bcb8de802ac48f" kindref="member">GymWalk&lt;state_size&gt;::GymWalk</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper" kindref="compound">RESTApiServerWrapper</ref>&amp;<sp/>api_server)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">:</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1EnvBase" kindref="compound">EnvBase</ref>&lt;<ref refid="classrlenvscpp_1_1TimeStep" kindref="compound">TimeStep</ref>&lt;<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref>&gt;,<sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv" kindref="compound">ScalarDiscreteEnv</ref>&lt;state_size,<sp/>2,<sp/>0,<sp/>0&gt;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;(0,<sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" kindref="compound">GymWalk</ref>&lt;state_size&gt;::name),</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">api_server_(api_server_)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>api_server_.<ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a70b8e7b2e5dc0aa7049cee95c9f84e8d" kindref="member">register_if_not</ref>(<ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" kindref="compound">GymWalk&lt;state_size&gt;::name</ref>,<sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" kindref="compound">GymWalk&lt;state_size&gt;::URI</ref>);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="190" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1ae8ba108935b7dc552876cdaf39f6a864" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1acee77ab2d9a21d4917bcb8de802ac48f" kindref="member">GymWalk&lt;state_size&gt;::GymWalk</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper" kindref="compound">RESTApiServerWrapper</ref>&amp;<sp/>api_server,<sp/></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>cidx)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">:</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1EnvBase" kindref="compound">EnvBase</ref>&lt;<ref refid="classrlenvscpp_1_1TimeStep" kindref="compound">TimeStep</ref>&lt;<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref>&gt;,<sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv" kindref="compound">ScalarDiscreteEnv</ref>&lt;state_size,<sp/>2,<sp/>0,<sp/>0&gt;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;(cidx,<sp/></highlight><highlight class="stringliteral">&quot;GymWalk&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">api_server_(api_server)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>api_server_.<ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper_1a70b8e7b2e5dc0aa7049cee95c9f84e8d" kindref="member">register_if_not</ref>(<ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" kindref="compound">GymWalk&lt;state_size&gt;::name</ref>,<sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" kindref="compound">GymWalk&lt;state_size&gt;::URI</ref>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="203" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1ab9b1682c623cd6d268c175bb8d2eb948" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1acee77ab2d9a21d4917bcb8de802ac48f" kindref="member">GymWalk&lt;state_size&gt;::GymWalk</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" kindref="compound">GymWalk&lt;state_size&gt;</ref>&amp;<sp/>other)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">:</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1EnvBase" kindref="compound">EnvBase</ref>&lt;<ref refid="classrlenvscpp_1_1TimeStep" kindref="compound">TimeStep</ref>&lt;<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref>&gt;,<sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv" kindref="compound">ScalarDiscreteEnv</ref>&lt;state_size,<sp/>2,<sp/>0,<sp/>0&gt;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;(other),</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">api_server_(other.api_server_)</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a7cf97835c27a643151125c376cb2cd7a" kindref="member">GymWalk&lt;state_size&gt;::dynamics_t</ref></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" kindref="compound">GymWalk&lt;state_size&gt;::build_dynamics_from_response_</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nlohmann::json&amp;<sp/>response)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dynamics<sp/>=<sp/>response[</highlight><highlight class="stringliteral">&quot;dynamics&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dynamics;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a30858d85354349bd8c1f3f14ef139cdc" kindref="member">GymWalk&lt;state_size&gt;::time_step_type</ref></highlight></codeline>
+<codeline lineno="220"><highlight class="normal">GymWalk&lt;state_size&gt;::create_time_step_from_response_(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nlohmann::json&amp;<sp/>response)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>step_type<sp/><sp/><sp/>=<sp/>response[</highlight><highlight class="stringliteral">&quot;time_step&quot;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&quot;step_type&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>reward<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>response[</highlight><highlight class="stringliteral">&quot;time_step&quot;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&quot;reward&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>discount<sp/><sp/><sp/><sp/>=<sp/>response[</highlight><highlight class="stringliteral">&quot;time_step&quot;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&quot;discount&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>observation<sp/>=<sp/>response[</highlight><highlight class="stringliteral">&quot;time_step&quot;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&quot;observation&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>info<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>response[</highlight><highlight class="stringliteral">&quot;time_step&quot;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&quot;info&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a30858d85354349bd8c1f3f14ef139cdc" kindref="member">GymWalk::time_step_type</ref>(time_step_type_from_int(step_type),</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reward,<sp/>observation,<sp/>discount,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_map&lt;std::string,<sp/>std::any&gt;());</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1ac94ce6e4888f8a07da0759bf511b5052" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1ac94ce6e4888f8a07da0759bf511b5052" kindref="member">GymWalk&lt;state_size&gt;::make</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>version,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>std::any&gt;&amp;<sp/>options){</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;is_created()){</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>response<sp/>=<sp/>api_server_.make(this-&gt;env_name(),</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;cidx(),</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>version,</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ops);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;set_version_(version);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;make_created_();</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1TimeStep" kindref="compound">GymWalk&lt;state_size&gt;::time_step_type</ref></highlight></codeline>
+<codeline lineno="252" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1ab8c77ac759752bdca809c60eb423d3f3" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1ab8c77ac759752bdca809c60eb423d3f3" kindref="member">GymWalk&lt;state_size&gt;::step</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1aa18d718ab41eec941ae04c118ef6c2e6" kindref="member">action_type</ref>&amp;<sp/><sp/>action){</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>RLENVSCPP_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>assert(this-&gt;is_created()<sp/>&amp;&amp;<sp/></highlight><highlight class="stringliteral">&quot;Environment<sp/>has<sp/>not<sp/>been<sp/>created&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;get_current_time_step_().last()){</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;reset(42,<sp/>std::unordered_map&lt;std::string,<sp/>std::any&gt;());</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>response<sp/><sp/>=<sp/>api_server_.step(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>env_name(),</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>cidx(),</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;get_current_time_step_()<sp/>=<sp/>this-&gt;create_time_step_from_response_(response);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;get_current_time_step_();</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" kindref="compound">GymWalk&lt;state_size&gt;::is_alive</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>response<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>api_server_.is_alive(this-&gt;env_name(),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>cidx());</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>response[</highlight><highlight class="stringliteral">&quot;result&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1afd9c3ee1b8fc09fad28164cb6b8de0ce" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1afd9c3ee1b8fc09fad28164cb6b8de0ce" kindref="member">GymWalk&lt;state_size&gt;::close</ref>(){</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!this-&gt;is_created()){</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>response<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>api_server_.close(this-&gt;env_name(),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>cidx());</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>invalidate_is_created_flag_();</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1TimeStep" kindref="compound">GymWalk&lt;state_size&gt;::time_step_type</ref></highlight></codeline>
+<codeline lineno="292" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1adf9f019e69b8ef96f567c0452006d34b" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a0dc609f93cc8dffa2b9ecf65c051ae66" kindref="member">GymWalk&lt;state_size&gt;::reset</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>seed,</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>std::any&gt;&amp;<sp/></highlight><highlight class="comment">/*options*/</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!this-&gt;is_created()){</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>RLENVSCPP_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>assert(this-&gt;is_created()<sp/>&amp;&amp;<sp/></highlight><highlight class="stringliteral">&quot;Environment<sp/>has<sp/>not<sp/>been<sp/>created&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1TimeStep" kindref="compound">time_step_type</ref>();</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>response<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>api_server_.reset(this-&gt;env_name(),<sp/></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>cidx(),<sp/>seed,</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nlohmann::json());</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;create_time_step_from_response_(response);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>get_current_time_step_();</highlight></codeline>
+<codeline lineno="308"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_size&gt;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" kindref="compound">GymWalk&lt;state_size&gt;</ref></highlight></codeline>
+<codeline lineno="312" refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a04a4843dfd6cf6266879dddbce59ee76" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1a04a4843dfd6cf6266879dddbce59ee76" kindref="member">GymWalk&lt;state_size&gt;::make_copy</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>cidx)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk" kindref="compound">GymWalk&lt;state_size&gt;</ref><sp/>copy(api_server_<sp/>,cidx);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unordered_map&lt;std::string,<sp/>std::any&gt;<sp/>ops;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>version<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/>version();</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>copy.<ref refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1ac94ce6e4888f8a07da0759bf511b5052" kindref="member">make</ref>(version,<sp/>ops);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>copy;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>GYM_WALK_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gdrl/gym_walk.h"/>
+  </compounddef>
+</doxygen>

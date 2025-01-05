@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdetail_1_1exception" kind="class" language="C++" prot="public">
+    <compoundname>detail::exception</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::exception</basecompoundref>
+    <derivedcompoundref refid="classdetail_1_1invalid__iterator" prot="public" virt="non-virtual">detail::invalid_iterator</derivedcompoundref>
+    <derivedcompoundref refid="classdetail_1_1other__error" prot="public" virt="non-virtual">detail::other_error</derivedcompoundref>
+    <derivedcompoundref refid="classdetail_1_1out__of__range" prot="public" virt="non-virtual">detail::out_of_range</derivedcompoundref>
+    <derivedcompoundref refid="classdetail_1_1parse__error" prot="public" virt="non-virtual">detail::parse_error</derivedcompoundref>
+    <derivedcompoundref refid="classdetail_1_1type__error" prot="public" virt="non-virtual">detail::type_error</derivedcompoundref>
+    <includes refid="json_8hpp" local="no">json.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classdetail_1_1exception_1a63b819fbb2ef34df9dad1e309207fa24" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int detail::exception::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+<para>the id of the exception </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4381" column="15" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4381" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdetail_1_1exception_1a6f86cee7b7a4938d4d758036dc4deed9" prot="private" static="no" mutable="no">
+        <type>std::runtime_error</type>
+        <definition>std::runtime_error detail::exception::m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <briefdescription>
+<para>an exception object as storage for error messages </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4464" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4464" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdetail_1_1exception_1a7a50109c734c69d4521730a898be08f9" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* detail::exception::what</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>what</name>
+        <briefdescription>
+<para>returns the explanatory string </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4375" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4375" bodyend="4378"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdetail_1_1exception_1a528d6bc77e88490bbb84cde2222b7ff0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>detail::exception::exception</definition>
+        <argsstring>(int id_, const char *what_arg)</argsstring>
+        <name>exception</name>
+        <param>
+          <type>int</type>
+          <declname>id_</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>what_arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4385" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4385" bodyend="4385"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classdetail_1_1exception_1a8f1eb56b9964c8dd84d89d0da98d883b" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string detail::exception::name</definition>
+        <argsstring>(const std::string &amp;ename, int id_)</argsstring>
+        <name>name</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4387" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4387" bodyend="4390"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1exception_1a6b4a786b5c1c25dd3edaceb1bf2d5120" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string detail::exception::diagnostics</definition>
+        <argsstring>(std::nullptr_t)</argsstring>
+        <name>diagnostics</name>
+        <param>
+          <type>std::nullptr_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4392" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4392" bodyend="4395"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1exception_1af3739c53fe56a1712754d13dfa561f80" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename BasicJsonType</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>static std::string detail::exception::diagnostics</definition>
+        <argsstring>(const BasicJsonType *leaf_element)</argsstring>
+        <name>diagnostics</name>
+        <param>
+          <type>const BasicJsonType *</type>
+          <declname>leaf_element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4398" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4398" bodyend="4460"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>general exception of the <ref refid="classbasic__json" kindref="compound">basic_json</ref> class </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://json.nlohmann.me/api/basic_json/exception/">https://json.nlohmann.me/api/basic_json/exception/</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>detail::type_error</label>
+        <link refid="classdetail_1_1type__error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>detail::out_of_range</label>
+        <link refid="classdetail_1_1out__of__range"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>detail::other_error</label>
+        <link refid="classdetail_1_1other__error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+      <node id="6">
+        <label>detail::parse_error</label>
+        <link refid="classdetail_1_1parse__error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>detail::exception</label>
+        <link refid="classdetail_1_1exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>detail::invalid_iterator</label>
+        <link refid="classdetail_1_1invalid__iterator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+      <node id="1">
+        <label>detail::exception</label>
+        <link refid="classdetail_1_1exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4371" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4372" bodyend="4465"/>
+    <listofallmembers>
+      <member refid="classdetail_1_1exception_1a6b4a786b5c1c25dd3edaceb1bf2d5120" prot="protected" virt="non-virtual"><scope>detail::exception</scope><name>diagnostics</name></member>
+      <member refid="classdetail_1_1exception_1af3739c53fe56a1712754d13dfa561f80" prot="protected" virt="non-virtual"><scope>detail::exception</scope><name>diagnostics</name></member>
+      <member refid="classdetail_1_1exception_1a528d6bc77e88490bbb84cde2222b7ff0" prot="protected" virt="non-virtual"><scope>detail::exception</scope><name>exception</name></member>
+      <member refid="classdetail_1_1exception_1a63b819fbb2ef34df9dad1e309207fa24" prot="public" virt="non-virtual"><scope>detail::exception</scope><name>id</name></member>
+      <member refid="classdetail_1_1exception_1a6f86cee7b7a4938d4d758036dc4deed9" prot="private" virt="non-virtual"><scope>detail::exception</scope><name>m</name></member>
+      <member refid="classdetail_1_1exception_1a8f1eb56b9964c8dd84d89d0da98d883b" prot="protected" virt="non-virtual"><scope>detail::exception</scope><name>name</name></member>
+      <member refid="classdetail_1_1exception_1a7a50109c734c69d4521730a898be08f9" prot="public" virt="non-virtual"><scope>detail::exception</scope><name>what</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,558 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>rlenvscpp::envs::connect2::Connect2</compoundname>
+    <basecompoundref refid="classrlenvscpp_1_1envs_1_1EnvBase" prot="public" virt="non-virtual">rlenvscpp::envs::EnvBase&lt; TimeStep&lt; std::vector&lt; uint_t &gt; &gt;, DiscreteVectorStateDiscreteActionEnv&lt; 53, 0, 4, uint_t &gt; &gt;</basecompoundref>
+    <includes refid="connect2__env_8h" local="no">connect2_env.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a95cbbffcf1505f885a95ee211d885c76" prot="public" static="no">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1EnvBase" kindref="compound">EnvBase</ref>&lt; <ref refid="classrlenvscpp_1_1TimeStep" kindref="compound">TimeStep</ref>&lt; std::vector&lt; <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref> &gt; &gt;, <ref refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv" kindref="compound">DiscreteVectorStateDiscreteActionEnv</ref>&lt; 53, 0, 4, <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref> &gt; &gt;</type>
+        <definition>typedef EnvBase&lt;TimeStep&lt;std::vector&lt;uint_t&gt; &gt;, DiscreteVectorStateDiscreteActionEnv&lt;53, 0, 4, uint_t &gt; &gt; rlenvscpp::envs::connect2::Connect2::base_type</definition>
+        <argsstring></argsstring>
+        <name>base_type</name>
+        <briefdescription>
+<para>The base type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="48" column="2" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a987dfd189029d93db8bf57e9fe06965e" prot="public" static="no">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a9d7b5e362a2acd20f6a2e4eb85359a28" kindref="member">base_type::time_step_type</ref></type>
+        <definition>typedef base_type::time_step_type rlenvscpp::envs::connect2::Connect2::time_step_type</definition>
+        <argsstring></argsstring>
+        <name>time_step_type</name>
+        <briefdescription>
+<para>The type of the time step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="54" column="48" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a57323837cb51ed80bd6b5d1bc451b68f" prot="public" static="no">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a32b57a9f7a72fdac0033d15159fcdfa8" kindref="member">base_type::state_space_type</ref></type>
+        <definition>typedef base_type::state_space_type rlenvscpp::envs::connect2::Connect2::state_space_type</definition>
+        <argsstring></argsstring>
+        <name>state_space_type</name>
+        <briefdescription>
+<para>The type describing the state space for the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="59" column="46" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a6af07b0d4ca80945d52882bd899ffe66" prot="public" static="no">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a1bc17d6a838f0eb39347c104f0c25e88" kindref="member">base_type::action_space_type</ref></type>
+        <definition>typedef base_type::action_space_type rlenvscpp::envs::connect2::Connect2::action_space_type</definition>
+        <argsstring></argsstring>
+        <name>action_space_type</name>
+        <briefdescription>
+<para>The type of the action space for the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="64" column="47" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a96623935e05421f4a4d0f97a1215c322" prot="public" static="no">
+        <type><ref refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a2a100f470479212b64fd2d99449eae1c" kindref="member">base_type::action_type</ref></type>
+        <definition>typedef base_type::action_type rlenvscpp::envs::connect2::Connect2::action_type</definition>
+        <argsstring></argsstring>
+        <name>action_type</name>
+        <briefdescription>
+<para>The type of the action to be undertaken in the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="69" column="45" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a968936f9590b850d376a8231ff8c8972" prot="public" static="no">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a75f678ad7dc1367058734619e78de120" kindref="member">base_type::state_type</ref></type>
+        <definition>typedef base_type::state_type rlenvscpp::envs::connect2::Connect2::state_type</definition>
+        <argsstring></argsstring>
+        <name>state_type</name>
+        <briefdescription>
+<para>The state type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="74" column="40" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a928629f261c0af113bc4e76a805b8bf7" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string rlenvscpp::envs::connect2::Connect2::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <initializer>= &quot;Connect2&quot;</initializer>
+        <briefdescription>
+<para>name </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="42" column="31" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a6259c151fa703a5c30f109f3b470ad03" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+        <definition>real_t rlenvscpp::envs::connect2::Connect2::discount_</definition>
+        <argsstring></argsstring>
+        <name>discount_</name>
+        <briefdescription>
+<para>The discount factor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="165" column="8" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a72486083ec1ce61986de1ad5a8bfe744" prot="private" static="no" mutable="no">
+        <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>const uint_t rlenvscpp::envs::connect2::Connect2::player_id_1_</definition>
+        <argsstring></argsstring>
+        <name>player_id_1_</name>
+        <initializer>{1}</initializer>
+        <briefdescription>
+<para>The id of player 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="170" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a3aa948274e336a213cb6fcc7eb99ed64" prot="private" static="no" mutable="no">
+        <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>const uint_t rlenvscpp::envs::connect2::Connect2::player_id_2_</definition>
+        <argsstring></argsstring>
+        <name>player_id_2_</name>
+        <initializer>{2}</initializer>
+        <briefdescription>
+<para>The id of player 2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="175" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1af80908b389e0335443a05f59670c514d" prot="private" static="no" mutable="no">
+        <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>const uint_t rlenvscpp::envs::connect2::Connect2::win_val_</definition>
+        <argsstring></argsstring>
+        <name>win_val_</name>
+        <initializer>{2}</initializer>
+        <briefdescription>
+<para>The wining value for a player. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="180" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a71ccdfdb2808b8219a09e2cef3c5c281" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref> &gt;</type>
+        <definition>std::vector&lt;uint_t&gt; rlenvscpp::envs::connect2::Connect2::board_</definition>
+        <argsstring></argsstring>
+        <name>board_</name>
+        <briefdescription>
+<para>The representation of the board. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="185" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a3d7961aab4d0318ff72d265f62a21971" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool rlenvscpp::envs::connect2::Connect2::is_finished_</definition>
+        <argsstring></argsstring>
+        <name>is_finished_</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+<para>Flag indicating if the game is finished. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="190" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1aa0b8b1aba4b6556c46936a36db8a7905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::envs::connect2::Connect2::Connect2</definition>
+        <argsstring>()</argsstring>
+        <name>Connect2</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="84" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.cpp" bodystart="18" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a237a6c2349c40fcee013105b1ec061d8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::envs::connect2::Connect2::Connect2</definition>
+        <argsstring>(uint_t cidx)</argsstring>
+        <name>Connect2</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>cidx</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="89" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.cpp" bodystart="26" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a64e989c59769665fcc53f4c7fee4f01c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::envs::connect2::Connect2::Connect2</definition>
+        <argsstring>(const Connect2 &amp;other)</argsstring>
+        <name>Connect2</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2" kindref="compound">Connect2</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="94" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.cpp" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1ac4417aec73a11a8aa0ce14cdc0a35a5b" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::envs::connect2::Connect2::make</definition>
+        <argsstring>(const std::string &amp;version, const std::unordered_map&lt; std::string, std::any &gt; &amp;options) override final</argsstring>
+        <name>make</name>
+        <reimplements refid="classrlenvscpp_1_1envs_1_1EnvBase_1aaea68c03f14ca20de8b1617eaadfa422">make</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>const std::unordered_map&lt; std::string, std::any &gt; &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>make. Builds the environment. Optionally we can choose if the environment will be slippery </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="100" column="18" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.cpp" bodystart="44" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a288b899f076a11acaf1a38454b59cb3f" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a987dfd189029d93db8bf57e9fe06965e" kindref="member">time_step_type</ref></type>
+        <definition>Connect2::time_step_type rlenvscpp::envs::connect2::Connect2::step</definition>
+        <argsstring>(const action_type &amp;action) override final</argsstring>
+        <name>step</name>
+        <reimplements refid="classrlenvscpp_1_1envs_1_1EnvBase_1a685d86116135ed7cb368c329add2147e">step</reimplements>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a96623935e05421f4a4d0f97a1215c322" kindref="member">action_type</ref> &amp;</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>step. Move in the environment with the given action This function always moves player_1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="109" column="28" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.cpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a5c4325dbfddb51c318cc3f124c54f2ee" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::envs::connect2::Connect2::close</definition>
+        <argsstring>() override final</argsstring>
+        <name>close</name>
+        <reimplements refid="classrlenvscpp_1_1envs_1_1EnvBase_1a53051d4a4dfb0adbb14b0d256f6c25d1">close</reimplements>
+        <briefdescription>
+<para>close </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="114" column="18" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="196" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a563ee3875007f3ab1a2170e5301ecd83" prot="public" static="no" const="no" explicit="no" inline="no" final="yes" virt="virtual">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a987dfd189029d93db8bf57e9fe06965e" kindref="member">time_step_type</ref></type>
+        <definition>Connect2::time_step_type rlenvscpp::envs::connect2::Connect2::reset</definition>
+        <argsstring>(uint_t, const std::unordered_map&lt; std::string, std::any &gt; &amp;) override final</argsstring>
+        <name>reset</name>
+        <reimplements refid="classrlenvscpp_1_1envs_1_1EnvBase_1ad9caf8e016d511f258ecda9268d9e9c3">reset</reimplements>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        </param>
+        <param>
+          <type>const std::unordered_map&lt; std::string, std::any &gt; &amp;</type>
+        </param>
+        <briefdescription>
+<para>Reset the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="119" column="28" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.cpp" bodystart="60" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1aa5c667128cd48530b6a9353c52998048" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2" kindref="compound">Connect2</ref></type>
+        <definition>Connect2 rlenvscpp::envs::connect2::Connect2::make_copy</definition>
+        <argsstring>(uint_t cidx) const</argsstring>
+        <name>make_copy</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>cidx</declname>
+        </param>
+        <briefdescription>
+<para>Create a new copy of the environment with the given copy index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="126" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.cpp" bodystart="178" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a35dbf2972f8cd48496873be2676fc805" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>uint_t rlenvscpp::envs::connect2::Connect2::n_states</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>n_states</name>
+        <briefdescription>
+<para>n_states. Returns the number of states </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="131" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="131" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1aed5d1f3f234c645952fd7b791c55a1e0" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>uint_t rlenvscpp::envs::connect2::Connect2::n_actions</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>n_actions</name>
+        <briefdescription>
+<para>n_actions. Returns the number of actions </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="136" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a910d47fdd3e9173eb0906d709d2d13bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a987dfd189029d93db8bf57e9fe06965e" kindref="member">time_step_type</ref></type>
+        <definition>Connect2::time_step_type rlenvscpp::envs::connect2::Connect2::move</definition>
+        <argsstring>(const uint_t pid, const action_type &amp;action)</argsstring>
+        <name>move</name>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>pid</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a96623935e05421f4a4d0f97a1215c322" kindref="member">action_type</ref> &amp;</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>Make a move for the player with the given id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="141" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.cpp" bodystart="112" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a08e94a3450acc0b708d31aa307b82f45" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rlenvscpp::envs::connect2::Connect2::is_win</definition>
+        <argsstring>(uint_t player) const noexcept</argsstring>
+        <name>is_win</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the player wins. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="146" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.cpp" bodystart="69" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a6dbd5464a98fd0401318e079213c65c6" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rlenvscpp::envs::connect2::Connect2::has_legal_moves</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>has_legal_moves</name>
+        <briefdescription>
+<para>Returns true if there are still legal moves to do. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="151" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.cpp" bodystart="99" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1ae61f5af2e16ca7393910ee9aeb857dac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref> &gt;</type>
+        <definition>std::vector&lt; uint_t &gt; rlenvscpp::envs::connect2::Connect2::get_valid_moves</definition>
+        <argsstring>() const</argsstring>
+        <name>get_valid_moves</name>
+        <briefdescription>
+<para>Get the valid moves. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="156" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.cpp" bodystart="84" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of <ref refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2" kindref="compound">Connect2</ref> environment from <ulink url="https://github.com/JoshVarty/AlphaZeroSimple">https://github.com/JoshVarty/AlphaZeroSimple</ulink> Initially the environment has all its positions set to zero. When a player makes a move then the position corresponding to this move. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>rlenvscpp::envs::synchronized_env_mixin</label>
+        <link refid="structrlenvscpp_1_1envs_1_1synchronized__env__mixin"/>
+      </node>
+      <node id="3">
+        <label>rlenvscpp::envs::DiscreteVectorStateDiscreteActionEnv&lt; StateSpaceSize, AS, AE, StateSpaceItemType &gt;</label>
+        <link refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv"/>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::envs::connect2::Connect2</label>
+        <link refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rlenvscpp::envs::EnvBase&lt; TimeStep&lt; std::vector&lt; uint_t &gt; &gt;, DiscreteVectorStateDiscreteActionEnv&lt; 53, 0, 4, uint_t &gt; &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1EnvBase"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>rlenvscpp::envs::synchronized_env_mixin</label>
+        <link refid="structrlenvscpp_1_1envs_1_1synchronized__env__mixin"/>
+      </node>
+      <node id="3">
+        <label>rlenvscpp::envs::DiscreteVectorStateDiscreteActionEnv&lt; StateSpaceSize, AS, AE, StateSpaceItemType &gt;</label>
+        <link refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv"/>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::envs::connect2::Connect2</label>
+        <link refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rlenvscpp::envs::EnvBase&lt; TimeStep&lt; std::vector&lt; uint_t &gt; &gt;, DiscreteVectorStateDiscreteActionEnv&lt; 53, 0, 4, uint_t &gt; &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1EnvBase"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" line="33" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h" bodystart="35" bodyend="192"/>
+    <listofallmembers>
+      <member refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a59e3793303b6d2a16f2f9056bf66bd56" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>action_space</name></member>
+      <member refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a7de18fb157d98c5dc819d56aa6d5c929" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>ACTION_SPACE_SIZE</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a6af07b0d4ca80945d52882bd899ffe66" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>action_space_type</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a96623935e05421f4a4d0f97a1215c322" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>action_type</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a95cbbffcf1505f885a95ee211d885c76" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>base_type</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a71ccdfdb2808b8219a09e2cef3c5c281" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>board_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a1897dd501bc1980e1cde04b60c012ca8" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>cidx</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a5c4325dbfddb51c318cc3f124c54f2ee" prot="public" virt="virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>close</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1aa0b8b1aba4b6556c46936a36db8a7905" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>Connect2</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a237a6c2349c40fcee013105b1ec061d8" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>Connect2</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a64e989c59769665fcc53f4c7fee4f01c" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>Connect2</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a568ded9bca962f3ea71727c28f0e3d9f" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>DEFAULT_ENV_SEED</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a6259c151fa703a5c30f109f3b470ad03" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>discount_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a4c3153c80c82e905471cfe9598f92508" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>env_name</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a4cb0d72b75df62411b8b7c8820c3a918" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>EnvBase</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1aa7eb0ff71af94db1f48c1b39ebcc29c3" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>EnvBase</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1ab249d79efbef8ac3e1c517736f7fe66a" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>get_current_time_step_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a85b7be84d926406055a60d949a3fe613" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>get_current_time_step_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1ae61f5af2e16ca7393910ee9aeb857dac" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>get_valid_moves</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a6dbd5464a98fd0401318e079213c65c6" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>has_legal_moves</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1ad6b7d4737dfa8d6b73554d757e6f01b0" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>invalidate_is_created_flag_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1afb93f499d7eeb57a6f31fef89fa6b645" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>is_created</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a3d7961aab4d0318ff72d265f62a21971" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>is_finished_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a08e94a3450acc0b708d31aa307b82f45" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>is_win</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1ac4417aec73a11a8aa0ce14cdc0a35a5b" prot="public" virt="virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>make</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1aa5c667128cd48530b6a9353c52998048" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>make_copy</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1ac7ba403c4c5046865d373a366ff3fd58" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>make_created_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a910d47fdd3e9173eb0906d709d2d13bc" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>move</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1aed5d1f3f234c645952fd7b791c55a1e0" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>n_actions</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a35dbf2972f8cd48496873be2676fc805" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>n_states</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a928629f261c0af113bc4e76a805b8bf7" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>name</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a72486083ec1ce61986de1ad5a8bfe744" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>player_id_1_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a3aa948274e336a213cb6fcc7eb99ed64" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>player_id_2_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a563ee3875007f3ab1a2170e5301ecd83" prot="public" virt="virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>reset</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a0dc609f93cc8dffa2b9ecf65c051ae66" prot="public" virt="non-virtual" ambiguityscope="EnvBase&lt; TimeStep&lt; std::vector&lt; uint_t &gt; &gt;, DiscreteVectorStateDiscreteActionEnv&lt; 53, 0, 4, uint_t &gt; &gt;::"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>reset</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a3aad75c2321c714eb15d11ddab75ba86" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>set_version_</name></member>
+      <member refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a3ba86ca02fb39177b40f80fbd8594f0c" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>state_space</name></member>
+      <member refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1afdf48b4a975df7d7db4967671eba49db" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>STATE_SPACE_SIZE</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a57323837cb51ed80bd6b5d1bc451b68f" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>state_space_type</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a968936f9590b850d376a8231ff8c8972" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>state_type</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a288b899f076a11acaf1a38454b59cb3f" prot="public" virt="virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>step</name></member>
+      <member refid="structrlenvscpp_1_1envs_1_1synchronized__env__mixin_1a088ce5412a694ee0844498cf091efcf2" prot="public" virt="virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>sync</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a987dfd189029d93db8bf57e9fe06965e" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>time_step_type</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1aa7ef6b01e649a3bed482e92efc4eee4f" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>version</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1af80908b389e0335443a05f59670c514d" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>win_val_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a918429c30af06db020d87543478ec6df" prot="public" virt="virtual"><scope>rlenvscpp::envs::connect2::Connect2</scope><name>~EnvBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

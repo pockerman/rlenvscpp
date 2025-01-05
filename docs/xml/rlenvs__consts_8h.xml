@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="rlenvs__consts_8h" kind="file" language="C++">
+    <compoundname>rlenvs_consts.h</compoundname>
+    <includes refid="rlenvs__types__v2_8h" local="yes">rlenvs/rlenvs_types_v2.h</includes>
+    <includes local="no">string</includes>
+    <includedby refid="diff__drive__dynamics_8cpp" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/diff_drive_dynamics.cpp</includedby>
+    <includedby refid="motion__model__base_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/motion_model_base.h</includedby>
+    <includedby refid="quadrotor__dynamics_8cpp" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.cpp</includedby>
+    <includedby refid="apiserver_8cpp" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.cpp</includedby>
+    <includedby refid="apiserver_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h</includedby>
+    <includedby refid="env__base_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h</includedby>
+    <includedby refid="grid__world__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/grid_world/grid_world_env.h</includedby>
+    <includedby refid="generic__line_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h</includedby>
+    <includedby refid="circle_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/shapes/circle.h</includedby>
+    <includedby refid="tensorboard__server_8cpp" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.cpp</includedby>
+    <includedby refid="tensorboard__server_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h</includedby>
+    <includedby refid="normal__dist_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h</includedby>
+    <includedby refid="line__segment__link_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h</includedby>
+    <includedby refid="waypoint_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h</includedby>
+    <includedby refid="unit__converter_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/unit_converter.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_consts.h</label>
+        <link refid="rlenvs__consts_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="19">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/taxi_env.h</label>
+        <link refid="taxi__env_8h_source"/>
+      </node>
+      <node id="26">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h</label>
+        <link refid="line__segment__link_8h_source"/>
+      </node>
+      <node id="12">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/vector/acrobot_vec_env.h</label>
+        <link refid="acrobot__vec__env_8h_source"/>
+      </node>
+      <node id="24">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gym_pybullet_drones/quadcopter_sim_env.h</label>
+        <link refid="quadcopter__sim__env_8h_source"/>
+      </node>
+      <node id="21">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h</label>
+        <link refid="connect2__env_8h_source"/>
+      </node>
+      <node id="20">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h</label>
+        <link refid="env__base_8h_source"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/shapes/circle.h</label>
+        <link refid="circle_8h_source"/>
+      </node>
+      <node id="14">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/gymnasium_vector_env_base.h</label>
+        <link refid="gymnasium__vector__env__base_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/black_jack_env.h</label>
+        <link refid="black__jack__env_8h_source"/>
+      </node>
+      <node id="6">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/api_server/apiserver.h</label>
+        <link refid="apiserver_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/gymnasium_env_base.h</label>
+        <link refid="gymnasium__env__base_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h</label>
+        <link refid="normal__dist_8h_source"/>
+      </node>
+      <node id="17">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/cliff_world_env.h</label>
+        <link refid="cliff__world__env_8h_source"/>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_consts.h</label>
+        <link refid="rlenvs__consts_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/grid_world/grid_world_env.h</label>
+        <link refid="grid__world__env_8h_source"/>
+      </node>
+      <node id="30">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h</label>
+        <link refid="waypoint_8h_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h</label>
+        <link refid="quadrotor__dynamics_8h_source"/>
+      </node>
+      <node id="18">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h</label>
+        <link refid="frozen__lake__env_8h_source"/>
+      </node>
+      <node id="4">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/diff_drive_dynamics.h</label>
+        <link refid="diff__drive__dynamics_8h_source"/>
+      </node>
+      <node id="2">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/motion_model_base.h</label>
+        <link refid="motion__model__base_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h</label>
+        <link refid="bicycle__vehicle__model__dynamics_8h_source"/>
+      </node>
+      <node id="8">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/cart_pole_env.h</label>
+        <link refid="cart__pole__env_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/state_aggregation_cart_pole_env.h</label>
+        <link refid="state__aggregation__cart__pole__env_8h_source"/>
+      </node>
+      <node id="10">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/mountain_car_env.h</label>
+        <link refid="mountain__car__env_8h_source"/>
+      </node>
+      <node id="15">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/toy_text_base.h</label>
+        <link refid="toy__text__base_8h_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/acrobot_env.h</label>
+        <link refid="acrobot__env_8h_source"/>
+      </node>
+      <node id="25">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/generic_line.h</label>
+        <link refid="generic__line_8h_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/pendulum_env.h</label>
+        <link refid="pendulum__env_8h_source"/>
+      </node>
+      <node id="22">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gdrl/gym_walk.h</label>
+        <link refid="gym__walk_8h_source"/>
+      </node>
+      <node id="31">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/unit_converter.h</label>
+        <link refid="unit__converter_8h_source"/>
+      </node>
+      <node id="28">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h</label>
+        <link refid="tensorboard__server_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1consts">rlenvscpp::consts</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1consts_1_1maths">rlenvscpp::consts::maths</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GYMFCPP_CONSTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GYMFCPP_CONSTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_types_v2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">consts{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>INVALID_ID<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(-1);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>INVALID_STR<sp/>=<sp/>std::string(</highlight><highlight class="stringliteral">&quot;INVALID&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>TOLERANCE<sp/>=<sp/>1.0e-8;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">maths{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>PI<sp/>=<sp/>3.14159265359;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>G<sp/>=<sp/>9.82;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>GYMFCPP_CONSTS_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_consts.h"/>
+  </compounddef>
+</doxygen>

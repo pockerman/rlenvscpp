@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint" kind="class" language="C++" prot="public">
+    <compoundname>rlenvscpp::utils::trajectory::WayPoint</compoundname>
+    <basecompoundref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" prot="public" virt="non-virtual">rlenvscpp::utils::geom::GeomPoint&lt; dim &gt;</basecompoundref>
+    <includes refid="waypoint_8h" local="no">waypoint.h</includes>
+    <templateparamlist>
+      <param>
+        <type>int</type>
+        <declname>dim</declname>
+        <defname>dim</defname>
+      </param>
+      <param>
+        <type>typename Data</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1af445c499109948a3e4b9dc23d5bd7b2f" prot="public" static="no">
+        <type>Data</type>
+        <definition>typedef Data rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;::data_type</definition>
+        <argsstring></argsstring>
+        <name>data_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" line="23" column="18" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1a9fcbc2f35fcef945fc7d2476aac6b813" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>uint_t rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;::id_</definition>
+        <argsstring></argsstring>
+        <name>id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" line="58" column="8" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1ae629e6e603250befb179e0e8c971147b" prot="private" static="no" mutable="no">
+        <type>data_type</type>
+        <definition>data_type rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" line="59" column="15" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1ac39331c297cc0e0dcaf4c9e17ba14795" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;::is_active_point_</definition>
+        <argsstring></argsstring>
+        <name>is_active_point_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" line="60" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1a448b5d2e88cdd61d13d6bf4ff54359df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;::WayPoint</definition>
+        <argsstring>()</argsstring>
+        <name>WayPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" line="28" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1ac0175e8369ef28f1eec6f16b73268791" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;::WayPoint</definition>
+        <argsstring>(const GeomPoint&lt; dim &gt; &amp;p, uint_t id, const data_type &amp;data_=data_type())</argsstring>
+        <name>WayPoint</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref>&lt; dim &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const data_type &amp;</type>
+          <declname>data_</declname>
+          <defval>data_type()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1a5a2c93af56d392135993451d32850508" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>uint_t rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;::get_id</definition>
+        <argsstring>() const</argsstring>
+        <name>get_id</name>
+        <briefdescription>
+<para>Return the id of the point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" line="39" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1a4ab0cf1b32a3167960dafbd49e6fe39c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>data_type &amp;</type>
+        <definition>data_type&amp; rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;::get_data</definition>
+        <argsstring>()</argsstring>
+        <name>get_data</name>
+        <briefdescription>
+<para>Writable reference to the data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" line="44" column="15" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1a92b5156e43c4a633de3fa0ec05c07abe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const data_type &amp;</type>
+        <definition>const data_type&amp; rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;::get_data</definition>
+        <argsstring>() const</argsstring>
+        <name>get_data</name>
+        <briefdescription>
+<para>Read reference to the data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" line="49" column="21" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1aee7c3406c3fa09557b9dbe4bb44542a7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;::is_active</definition>
+        <argsstring>() const</argsstring>
+        <name>is_active</name>
+        <briefdescription>
+<para>Returns true if the waypoint is active. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" line="54" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper class to represent a waypoint. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint"/>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint"/>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" line="18" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint.h" bodystart="19" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a68cd15c51878b7d0ea9b610f319981e8" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>add_scaled</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a3a12623758ece91dd026140aae18d638" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>coordinates</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1ae629e6e603250befb179e0e8c971147b" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>data_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1af445c499109948a3e4b9dc23d5bd7b2f" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>data_type</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1aa511dbd85fc5dcd1ebe5c4f535aa3133" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>dimension</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a05fa5f3d4b27e626ea98bf82762f5268" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>distance</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1afa1dfa2507351e26bb8058be11ea4db0" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>dot</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a20ba1d291e09a1d27ffaf390f3895dfe" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>entry</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a963ab2be7472d8cd0974a761eab13d28" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>GeomPoint</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a6cebdc0d28a6ac15c4b6eeb206841dd0" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>GeomPoint</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1ab86b7d5ab9d691248e1d9e933934a512" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>GeomPoint</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1af4b4f933f521592d2537f28e5479ebbc" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>GeomPoint</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1a4ab0cf1b32a3167960dafbd49e6fe39c" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>get_data</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1a92b5156e43c4a633de3fa0ec05c07abe" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>get_data</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1a5a2c93af56d392135993451d32850508" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>get_id</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1a9fcbc2f35fcef945fc7d2476aac6b813" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>id_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1aee7c3406c3fa09557b9dbe4bb44542a7" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>is_active</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1ac39331c297cc0e0dcaf4c9e17ba14795" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>is_active_point_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a3fbb031052d6eacdd5388c5e0c28924f" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>L2_norm</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a257f3172f84f4796cf0760117e1d8795" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>max</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a06c8e8ee0e33c972c376f728014b0f89" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>min</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a4c8ef701d6d145f1ee88df6fc0f5a61b" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>operator*=</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a747a1f20948f6c292d974a4f028713a9" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>operator+=</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a945350b7a34b4fa951134c1ce560703f" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>operator-=</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1ad741c0cab9abcc4227a5803c6f5b71a8" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>operator/=</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a6e81c058cbd51353e459a4abe528bf01" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>operator=</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1aa46f14e52a48f2d455b9d563bd5966ef" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>operator=</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1af3343caeb2afa7deffd8f79b6c520151" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>operator[]</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a758c0e9031b3777715c8a71aa1bbad14" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>operator[]</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1ae406f0a070ef2d7544cd0a616ba443b2" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>print_point_info</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a164afb8d21954ae66cbb0d0b56a90e60" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>scale</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a9a3bf2de057d35fc83b9c750555f7010" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>scale</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a979b8edaca58e391883670d09df1de1c" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>square_sum</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a9f226bb45e1df35cdea6091e93c7bee1" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>to_string</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a7b124d738791846372a0e69410bac1c7" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>value_type</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1a448b5d2e88cdd61d13d6bf4ff54359df" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>WayPoint</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint_1ac0175e8369ef28f1eec6f16b73268791" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>WayPoint</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a285e1d6bd03207a74190ee02043cdad6" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>zero</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1aca62c56a5cbbd16dd41db4479a49fb1f" prot="public" virt="virtual"><scope>rlenvscpp::utils::trajectory::WayPoint</scope><name>~GeomPoint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_441a62becd9d6664881a4e5994fc0d7b" kind="dir">
+    <compoundname>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium</compoundname>
+    <innerdir refid="dir_f700ed0273976c1f1740c253c0d31743">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control</innerdir>
+    <innerdir refid="dir_284bb44d9791c23f08184322e3098be1">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text</innerdir>
+    <innerfile refid="gymnasium__env__base_8h">gymnasium_env_base.h</innerfile>
+    <innerfile refid="gymnasium__vector__env__base_8h">gymnasium_vector_env_base.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/"/>
+  </compounddef>
+</doxygen>

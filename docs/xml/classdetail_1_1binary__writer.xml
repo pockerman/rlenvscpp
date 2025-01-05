@@ -1,0 +1,1202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdetail_1_1binary__writer" kind="class" language="C++" prot="public">
+    <compoundname>detail::binary_writer</compoundname>
+    <includes refid="json_8hpp" local="no">json.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename BasicJsonType</type>
+      </param>
+      <param>
+        <type>typename CharType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classdetail_1_1binary__writer_1a1dff4172c549dc614b2f15715966b101" prot="private" static="no">
+        <type>typename BasicJsonType::string_t</type>
+        <definition>using detail::binary_writer&lt; BasicJsonType, CharType &gt;::string_t =  typename BasicJsonType::string_t</definition>
+        <argsstring></argsstring>
+        <name>string_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15081" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15081" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classdetail_1_1binary__writer_1a1bed62ac592abf5c247b66f8ed1dbcdc" prot="private" static="no">
+        <type>typename BasicJsonType::binary_t</type>
+        <definition>using detail::binary_writer&lt; BasicJsonType, CharType &gt;::binary_t =  typename BasicJsonType::binary_t</definition>
+        <argsstring></argsstring>
+        <name>binary_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15082" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15082" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classdetail_1_1binary__writer_1ab02b25aae50e9016a4cecb945465b31e" prot="private" static="no">
+        <type>typename BasicJsonType::number_float_t</type>
+        <definition>using detail::binary_writer&lt; BasicJsonType, CharType &gt;::number_float_t =  typename BasicJsonType::number_float_t</definition>
+        <argsstring></argsstring>
+        <name>number_float_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15083" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15083" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdetail_1_1binary__writer_1af56f3d5b2ac90e06cc43ec1ff7ae4bca" prot="private" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool detail::binary_writer&lt; BasicJsonType, CharType &gt;::is_little_endian</definition>
+        <argsstring></argsstring>
+        <name>is_little_endian</name>
+        <initializer>= little_endianness()</initializer>
+        <briefdescription>
+<para>whether we can assume little endianness </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16871" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16871" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdetail_1_1binary__writer_1ae237dddfb00736854f4ceaee2164156b" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacedetail_1a160eb5d333fe01b259af32d3d4798a7b" kindref="member">output_adapter_t</ref>&lt; CharType &gt;</type>
+        <definition>output_adapter_t&lt;CharType&gt; detail::binary_writer&lt; BasicJsonType, CharType &gt;::oa</definition>
+        <argsstring></argsstring>
+        <name>oa</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>the output </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16874" column="22" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16874" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a5b4f1bfcd0f3f7b57060c059e008c45b" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>detail::binary_writer&lt; BasicJsonType, CharType &gt;::binary_writer</definition>
+        <argsstring>(output_adapter_t&lt; CharType &gt; adapter)</argsstring>
+        <name>binary_writer</name>
+        <param>
+          <type><ref refid="namespacedetail_1a160eb5d333fe01b259af32d3d4798a7b" kindref="member">output_adapter_t</ref>&lt; CharType &gt;</type>
+          <declname>adapter</declname>
+        </param>
+        <briefdescription>
+<para>create a binary writer </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">adapter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output adapter to write to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15091" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15091" bodyend="15094"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a1aae361b7492825979cbb80245b9c0d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson</definition>
+        <argsstring>(const BasicJsonType &amp;j)</argsstring>
+        <name>write_bson</name>
+        <param>
+          <type>const BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JSON value to serialize </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="pre"><para>j.type() == <ref refid="namespacedetail_1a917c3efabea8a20dc72d9ae2c673d632aa8cfde6331bd59eb2ac96f8911c4b666" kindref="member">value_t::object</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15100" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15100" bodyend="15124"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1ae6ab36b61e8ad346e75d9f9abc983d4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_cbor</definition>
+        <argsstring>(const BasicJsonType &amp;j)</argsstring>
+        <name>write_cbor</name>
+        <param>
+          <type>const BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JSON value to serialize </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15129" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15129" bodyend="15448"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1adc3dbefa80134d3530a1b3f1c9629586" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_msgpack</definition>
+        <argsstring>(const BasicJsonType &amp;j)</argsstring>
+        <name>write_msgpack</name>
+        <param>
+          <type>const BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JSON value to serialize </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15453" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15453" bodyend="15770"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a972bec9688cbc5673bb482bbe9543e2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_ubjson</definition>
+        <argsstring>(const BasicJsonType &amp;j, const bool use_count, const bool use_type, const bool add_prefix=true, const bool use_bjdata=false)</argsstring>
+        <name>write_ubjson</name>
+        <param>
+          <type>const BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>use_count</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>use_type</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>add_prefix</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>use_bjdata</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JSON value to serialize </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">use_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether to use &apos;#&apos; prefixes (optimized format) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">use_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether to use &apos;$&apos; prefixes (optimized format) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">add_prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether prefixes need to be used for this value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">use_bjdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether write in BJData format, default is false </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15779" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15779" bodyend="15989"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1aad96b5f9b144981e2bbeac6621830d00" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static std::size_t detail::binary_writer&lt; BasicJsonType, CharType &gt;::calc_bson_entry_header_size</definition>
+        <argsstring>(const string_t &amp;name, const BasicJsonType &amp;j)</argsstring>
+        <name>calc_bson_entry_header_size</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The size of a BSON document entry header, including the id marker and the entry name size (and its null-terminator). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16000" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16000" bodyend="16010"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1aa5bf4b6949fd349197afb2fbda698eaa" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static std::size_t detail::binary_writer&lt; BasicJsonType, CharType &gt;::calc_bson_string_size</definition>
+        <argsstring>(const string_t &amp;value)</argsstring>
+        <name>calc_bson_string_size</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The size of the BSON-encoded string in <emphasis>value</emphasis> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16047" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16047" bodyend="16050"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1aff00422b8c743de598277c79268970e3" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static std::size_t detail::binary_writer&lt; BasicJsonType, CharType &gt;::calc_bson_integer_size</definition>
+        <argsstring>(const std::int64_t value)</argsstring>
+        <name>calc_bson_integer_size</name>
+        <param>
+          <type>const std::int64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The size of the BSON-encoded integer <emphasis>value</emphasis> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16077" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16077" bodyend="16082"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a31b027931d741fb332ca54071b5c9ca0" prot="private" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr std::size_t</type>
+        <definition>static constexpr std::size_t detail::binary_writer&lt; BasicJsonType, CharType &gt;::calc_bson_unsigned_size</definition>
+        <argsstring>(const std::uint64_t value) noexcept</argsstring>
+        <name>calc_bson_unsigned_size</name>
+        <param>
+          <type>const std::uint64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The size of the BSON-encoded unsigned integer in <emphasis>j</emphasis> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16105" column="34" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16105" bodyend="16110"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1af8d6408cc5daa2e485d3f7d6cdb0eb58" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static std::size_t detail::binary_writer&lt; BasicJsonType, CharType &gt;::calc_bson_array_size</definition>
+        <argsstring>(const typename BasicJsonType::array_t &amp;value)</argsstring>
+        <name>calc_bson_array_size</name>
+        <param>
+          <type>const typename BasicJsonType::array_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The size of the BSON-encoded array <emphasis>value</emphasis> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16147" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16147" bodyend="16157"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1ab69ca812898ed26caf0a54dcd95f894f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static std::size_t detail::binary_writer&lt; BasicJsonType, CharType &gt;::calc_bson_binary_size</definition>
+        <argsstring>(const typename BasicJsonType::binary_t &amp;value)</argsstring>
+        <name>calc_bson_binary_size</name>
+        <param>
+          <type>const typename BasicJsonType::binary_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The size of the BSON-encoded binary array <emphasis>value</emphasis> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16162" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16162" bodyend="16165"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1accdf775201461343bd5a2c420b4d6db9" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static std::size_t detail::binary_writer&lt; BasicJsonType, CharType &gt;::calc_bson_element_size</definition>
+        <argsstring>(const string_t &amp;name, const BasicJsonType &amp;j)</argsstring>
+        <name>calc_bson_element_size</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the size necessary to serialize the JSON value <emphasis>j</emphasis> with its <emphasis>name</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The calculated size for the BSON document entry for <emphasis>j</emphasis> with the given <emphasis>name</emphasis>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16204" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16204" bodyend="16244"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1adc40d21af75e25e8c38747e3e92046ca" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static std::size_t detail::binary_writer&lt; BasicJsonType, CharType &gt;::calc_bson_object_size</definition>
+        <argsstring>(const typename BasicJsonType::object_t &amp;value)</argsstring>
+        <name>calc_bson_object_size</name>
+        <param>
+          <type>const typename BasicJsonType::object_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the size of the BSON serialization of the given JSON-object <emphasis>j</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JSON value to serialize </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="pre"><para>value.type() == <ref refid="namespacedetail_1a917c3efabea8a20dc72d9ae2c673d632aa8cfde6331bd59eb2ac96f8911c4b666" kindref="member">value_t::object</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16299" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16299" bodyend="16308"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1aeac61e27c0d1b834a8e0114170511a97" prot="private" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr CharType</type>
+        <definition>static constexpr CharType detail::binary_writer&lt; BasicJsonType, CharType &gt;::get_cbor_float_prefix</definition>
+        <argsstring>(float)</argsstring>
+        <name>get_cbor_float_prefix</name>
+        <param>
+          <type>float</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16330" column="31" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16330" bodyend="16333"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a56a61a6c22a3b3f7a4ac40a20b7f518f" prot="private" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr CharType</type>
+        <definition>static constexpr CharType detail::binary_writer&lt; BasicJsonType, CharType &gt;::get_cbor_float_prefix</definition>
+        <argsstring>(double)</argsstring>
+        <name>get_cbor_float_prefix</name>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16335" column="31" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16335" bodyend="16338"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1af199e07c12948a357eb8dfe9471f5453" prot="private" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr CharType</type>
+        <definition>static constexpr CharType detail::binary_writer&lt; BasicJsonType, CharType &gt;::get_msgpack_float_prefix</definition>
+        <argsstring>(float)</argsstring>
+        <name>get_msgpack_float_prefix</name>
+        <param>
+          <type>float</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16344" column="31" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16344" bodyend="16347"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a71dfa0adffeb52759f91223208f08937" prot="private" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr CharType</type>
+        <definition>static constexpr CharType detail::binary_writer&lt; BasicJsonType, CharType &gt;::get_msgpack_float_prefix</definition>
+        <argsstring>(double)</argsstring>
+        <name>get_msgpack_float_prefix</name>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16349" column="31" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16349" bodyend="16352"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1ab695ec5f8626b333a681c15adf5ab5e4" prot="private" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr CharType</type>
+        <definition>static constexpr CharType detail::binary_writer&lt; BasicJsonType, CharType &gt;::get_ubjson_float_prefix</definition>
+        <argsstring>(float)</argsstring>
+        <name>get_ubjson_float_prefix</name>
+        <param>
+          <type>float</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16645" column="31" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16645" bodyend="16648"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a60d49c47a03c575a985460a56f637f71" prot="private" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr CharType</type>
+        <definition>static constexpr CharType detail::binary_writer&lt; BasicJsonType, CharType &gt;::get_ubjson_float_prefix</definition>
+        <argsstring>(double)</argsstring>
+        <name>get_ubjson_float_prefix</name>
+        <param>
+          <type>double</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16650" column="31" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16650" bodyend="16653"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1aec35b5420c48539db2959ef88ae296d5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson_entry_header</definition>
+        <argsstring>(const string_t &amp;name, const std::uint8_t element_type)</argsstring>
+        <name>write_bson_entry_header</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::uint8_t</type>
+          <declname>element_type</declname>
+        </param>
+        <briefdescription>
+<para>Writes the given <emphasis>element_type</emphasis> and <emphasis>name</emphasis> to the output adapter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16015" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16015" bodyend="16022"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a1981a99a95f67eb1d433077e736b0f74" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson_boolean</definition>
+        <argsstring>(const string_t &amp;name, const bool value)</argsstring>
+        <name>write_bson_boolean</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes a BSON element with key <emphasis>name</emphasis> and boolean value <emphasis>value</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16027" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16027" bodyend="16032"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a9bd4a3aae88527f267ffd607d89f4a57" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson_double</definition>
+        <argsstring>(const string_t &amp;name, const double value)</argsstring>
+        <name>write_bson_double</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes a BSON element with key <emphasis>name</emphasis> and double value <emphasis>value</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16037" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16037" bodyend="16042"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a5aa8c085600b442cbb13acea438a2ce1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson_string</definition>
+        <argsstring>(const string_t &amp;name, const string_t &amp;value)</argsstring>
+        <name>write_bson_string</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes a BSON element with key <emphasis>name</emphasis> and string value <emphasis>value</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16055" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16055" bodyend="16064"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1aaf86b30c0beb86fafdb0cad5573ce753" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson_null</definition>
+        <argsstring>(const string_t &amp;name)</argsstring>
+        <name>write_bson_null</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Writes a BSON element with key <emphasis>name</emphasis> and null value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16069" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16069" bodyend="16072"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a1c1c00c936b40970ec1305dce7e266e3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson_integer</definition>
+        <argsstring>(const string_t &amp;name, const std::int64_t value)</argsstring>
+        <name>write_bson_integer</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::int64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes a BSON element with key <emphasis>name</emphasis> and integer <emphasis>value</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16087" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16087" bodyend="16100"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1ab58b6af7866fc56b9c4b326b4db62e12" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson_unsigned</definition>
+        <argsstring>(const string_t &amp;name, const BasicJsonType &amp;j)</argsstring>
+        <name>write_bson_unsigned</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Writes a BSON element with key <emphasis>name</emphasis> and unsigned <emphasis>value</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16115" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16115" bodyend="16132"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1aec965617342a951a3b60f89fcf2e633d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson_object_entry</definition>
+        <argsstring>(const string_t &amp;name, const typename BasicJsonType::object_t &amp;value)</argsstring>
+        <name>write_bson_object_entry</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const typename BasicJsonType::object_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes a BSON element with key <emphasis>name</emphasis> and object <emphasis>value</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16137" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16137" bodyend="16142"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a3da500027916d93a83e7922006ddc331" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson_array</definition>
+        <argsstring>(const string_t &amp;name, const typename BasicJsonType::array_t &amp;value)</argsstring>
+        <name>write_bson_array</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const typename BasicJsonType::array_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes a BSON element with key <emphasis>name</emphasis> and array <emphasis>value</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16170" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16170" bodyend="16184"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a15de15c0a19048ca8377b0d076b4a785" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson_binary</definition>
+        <argsstring>(const string_t &amp;name, const binary_t &amp;value)</argsstring>
+        <name>write_bson_binary</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const binary_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes a BSON element with key <emphasis>name</emphasis> and binary value <emphasis>value</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16189" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16189" bodyend="16198"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a882debd723dd172f42e0690f84d4b94f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson_element</definition>
+        <argsstring>(const string_t &amp;name, const BasicJsonType &amp;j)</argsstring>
+        <name>write_bson_element</name>
+        <param>
+          <type>const string_t &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Serializes the JSON value <emphasis>j</emphasis> to BSON and associates it with the key <emphasis>name</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name to associate with the JSON entity <emphasis>j</emphasis> within the current BSON document </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16252" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16252" bodyend="16291"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a93441bda8d804f4e93742f3cf3868da4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bson_object</definition>
+        <argsstring>(const typename BasicJsonType::object_t &amp;value)</argsstring>
+        <name>write_bson_object</name>
+        <param>
+          <type>const typename BasicJsonType::object_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JSON value to serialize </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="pre"><para>value.type() == <ref refid="namespacedetail_1a917c3efabea8a20dc72d9ae2c673d632aa8cfde6331bd59eb2ac96f8911c4b666" kindref="member">value_t::object</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16314" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16314" bodyend="16324"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a6df4a13e59faa87a72b0fbe8c5f838ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename NumberType</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; std::is_floating_point&lt; NumberType &gt;::value, int &gt;::type</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_number_with_ubjson_prefix</definition>
+        <argsstring>(const NumberType n, const bool add_prefix, const bool use_bjdata)</argsstring>
+        <name>write_number_with_ubjson_prefix</name>
+        <param>
+          <type>const NumberType</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>add_prefix</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>use_bjdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16361" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16361" bodyend="16370"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a6df4a13e59faa87a72b0fbe8c5f838ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename NumberType</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; std::is_unsigned&lt; NumberType &gt;::value, int &gt;::type</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_number_with_ubjson_prefix</definition>
+        <argsstring>(const NumberType n, const bool add_prefix, const bool use_bjdata)</argsstring>
+        <name>write_number_with_ubjson_prefix</name>
+        <param>
+          <type>const NumberType</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>add_prefix</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>use_bjdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16375" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16375" bodyend="16457"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a6df4a13e59faa87a72b0fbe8c5f838ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename NumberType</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; std::is_signed&lt; NumberType &gt;::value &amp;&amp;!std::is_floating_point&lt; NumberType &gt;::value, int &gt;::type</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_number_with_ubjson_prefix</definition>
+        <argsstring>(const NumberType n, const bool add_prefix, const bool use_bjdata)</argsstring>
+        <name>write_number_with_ubjson_prefix</name>
+        <param>
+          <type>const NumberType</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>add_prefix</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>use_bjdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16463" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16463" bodyend="16539"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1ab4f174660b2ad22a9ac900f9e7cce278" prot="private" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>CharType</type>
+        <definition>CharType detail::binary_writer&lt; BasicJsonType, CharType &gt;::ubjson_prefix</definition>
+        <argsstring>(const BasicJsonType &amp;j, const bool use_bjdata) const noexcept</argsstring>
+        <name>ubjson_prefix</name>
+        <param>
+          <type>const BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>use_bjdata</declname>
+        </param>
+        <briefdescription>
+<para>determine the type prefix of container values </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16544" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16544" bodyend="16643"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a449ad96e1066a6a0c75ca983a086f46c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_bjdata_ndarray</definition>
+        <argsstring>(const typename BasicJsonType::object_t &amp;value, const bool use_count, const bool use_type)</argsstring>
+        <name>write_bjdata_ndarray</name>
+        <param>
+          <type>const typename BasicJsonType::object_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>use_count</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>use_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>false if the object is successfully converted to a bjdata ndarray, true if the type or size is invalid </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16658" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16658" bodyend="16765"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1aab9bf30c969ca7694eed2bfd39d9274a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename NumberType</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_number</definition>
+        <argsstring>(const NumberType n, const bool OutputIsLittleEndian=false)</argsstring>
+        <name>write_number</name>
+        <param>
+          <type>const NumberType</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>OutputIsLittleEndian</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16785" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16785" bodyend="16799"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1ae17b8f4f14cdf533e19c170c1f67651a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::binary_writer&lt; BasicJsonType, CharType &gt;::write_compact_float</definition>
+        <argsstring>(const number_float_t n, detail::input_format_t format)</argsstring>
+        <name>write_compact_float</name>
+        <param>
+          <type>const number_float_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedetail_1a0ab3b338d0eadc6890b72cccef0ea04f" kindref="member">detail::input_format_t</ref></type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16801" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16801" bodyend="16826"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a2822d4a58bbb0dc2198686da430e8906" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename C</type>
+            <defval>CharType</defval>
+          </param>
+          <param>
+            <type>enable_if_t&lt; std::is_signed&lt; C &gt;::value &amp;&amp;std::is_signed&lt; char &gt;::value &gt; *</type>
+            <defval>nullptr</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr CharType</type>
+        <definition>static constexpr CharType detail::binary_writer&lt; BasicJsonType, CharType &gt;::to_char_type</definition>
+        <argsstring>(std::uint8_t x) noexcept</argsstring>
+        <name>to_char_type</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16835" column="31" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16835" bodyend="16838"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a4bc03434de56f9c9afd24702922a7ec8" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename C</type>
+            <defval>CharType</defval>
+          </param>
+          <param>
+            <type>enable_if_t&lt; std::is_signed&lt; C &gt;::value &amp;&amp;std::is_unsigned&lt; char &gt;::value &gt; *</type>
+            <defval>nullptr</defval>
+          </param>
+        </templateparamlist>
+        <type>CharType</type>
+        <definition>static CharType detail::binary_writer&lt; BasicJsonType, CharType &gt;::to_char_type</definition>
+        <argsstring>(std::uint8_t x) noexcept</argsstring>
+        <name>to_char_type</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16842" column="21" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16842" bodyend="16849"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a2822d4a58bbb0dc2198686da430e8906" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename C</type>
+            <defval>CharType</defval>
+          </param>
+          <param>
+            <type>enable_if_t&lt; std::is_unsigned&lt; C &gt;::value &gt; *</type>
+            <defval>nullptr</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr CharType</type>
+        <definition>static constexpr CharType detail::binary_writer&lt; BasicJsonType, CharType &gt;::to_char_type</definition>
+        <argsstring>(std::uint8_t x) noexcept</argsstring>
+        <name>to_char_type</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16853" column="31" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16853" bodyend="16856"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1binary__writer_1a91bfd3642a0f90c295f9ce79c9447be9" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename InputCharType</type>
+          </param>
+          <param>
+            <type>typename C</type>
+            <defval>CharType</defval>
+          </param>
+          <param>
+            <type>enable_if_t&lt; std::is_signed&lt; C &gt;::value &amp;&amp;std::is_signed&lt; char &gt;::value &amp;&amp;std::is_same&lt; char, typename std::remove_cv&lt; InputCharType &gt;::type &gt;::value &gt; *</type>
+            <defval>nullptr</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr CharType</type>
+        <definition>static constexpr CharType detail::binary_writer&lt; BasicJsonType, CharType &gt;::to_char_type</definition>
+        <argsstring>(InputCharType x) noexcept</argsstring>
+        <name>to_char_type</name>
+        <param>
+          <type>InputCharType</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16864" column="31" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16864" bodyend="16867"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>serialization to CBOR and MessagePack values </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="15079" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="15080" bodyend="16875"/>
+    <listofallmembers>
+      <member refid="classdetail_1_1binary__writer_1a1bed62ac592abf5c247b66f8ed1dbcdc" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>binary_t</name></member>
+      <member refid="classdetail_1_1binary__writer_1a5b4f1bfcd0f3f7b57060c059e008c45b" prot="public" virt="non-virtual"><scope>detail::binary_writer</scope><name>binary_writer</name></member>
+      <member refid="classdetail_1_1binary__writer_1af8d6408cc5daa2e485d3f7d6cdb0eb58" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>calc_bson_array_size</name></member>
+      <member refid="classdetail_1_1binary__writer_1ab69ca812898ed26caf0a54dcd95f894f" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>calc_bson_binary_size</name></member>
+      <member refid="classdetail_1_1binary__writer_1accdf775201461343bd5a2c420b4d6db9" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>calc_bson_element_size</name></member>
+      <member refid="classdetail_1_1binary__writer_1aad96b5f9b144981e2bbeac6621830d00" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>calc_bson_entry_header_size</name></member>
+      <member refid="classdetail_1_1binary__writer_1aff00422b8c743de598277c79268970e3" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>calc_bson_integer_size</name></member>
+      <member refid="classdetail_1_1binary__writer_1adc40d21af75e25e8c38747e3e92046ca" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>calc_bson_object_size</name></member>
+      <member refid="classdetail_1_1binary__writer_1aa5bf4b6949fd349197afb2fbda698eaa" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>calc_bson_string_size</name></member>
+      <member refid="classdetail_1_1binary__writer_1a31b027931d741fb332ca54071b5c9ca0" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>calc_bson_unsigned_size</name></member>
+      <member refid="classdetail_1_1binary__writer_1aeac61e27c0d1b834a8e0114170511a97" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>get_cbor_float_prefix</name></member>
+      <member refid="classdetail_1_1binary__writer_1a56a61a6c22a3b3f7a4ac40a20b7f518f" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>get_cbor_float_prefix</name></member>
+      <member refid="classdetail_1_1binary__writer_1af199e07c12948a357eb8dfe9471f5453" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>get_msgpack_float_prefix</name></member>
+      <member refid="classdetail_1_1binary__writer_1a71dfa0adffeb52759f91223208f08937" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>get_msgpack_float_prefix</name></member>
+      <member refid="classdetail_1_1binary__writer_1ab695ec5f8626b333a681c15adf5ab5e4" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>get_ubjson_float_prefix</name></member>
+      <member refid="classdetail_1_1binary__writer_1a60d49c47a03c575a985460a56f637f71" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>get_ubjson_float_prefix</name></member>
+      <member refid="classdetail_1_1binary__writer_1af56f3d5b2ac90e06cc43ec1ff7ae4bca" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>is_little_endian</name></member>
+      <member refid="classdetail_1_1binary__writer_1ab02b25aae50e9016a4cecb945465b31e" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>number_float_t</name></member>
+      <member refid="classdetail_1_1binary__writer_1ae237dddfb00736854f4ceaee2164156b" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>oa</name></member>
+      <member refid="classdetail_1_1binary__writer_1a1dff4172c549dc614b2f15715966b101" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>string_t</name></member>
+      <member refid="classdetail_1_1binary__writer_1a2822d4a58bbb0dc2198686da430e8906" prot="public" virt="non-virtual"><scope>detail::binary_writer</scope><name>to_char_type</name></member>
+      <member refid="classdetail_1_1binary__writer_1a4bc03434de56f9c9afd24702922a7ec8" prot="public" virt="non-virtual"><scope>detail::binary_writer</scope><name>to_char_type</name></member>
+      <member refid="classdetail_1_1binary__writer_1a2822d4a58bbb0dc2198686da430e8906" prot="public" virt="non-virtual"><scope>detail::binary_writer</scope><name>to_char_type</name></member>
+      <member refid="classdetail_1_1binary__writer_1a91bfd3642a0f90c295f9ce79c9447be9" prot="public" virt="non-virtual"><scope>detail::binary_writer</scope><name>to_char_type</name></member>
+      <member refid="classdetail_1_1binary__writer_1ab4f174660b2ad22a9ac900f9e7cce278" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>ubjson_prefix</name></member>
+      <member refid="classdetail_1_1binary__writer_1a449ad96e1066a6a0c75ca983a086f46c" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bjdata_ndarray</name></member>
+      <member refid="classdetail_1_1binary__writer_1a1aae361b7492825979cbb80245b9c0d6" prot="public" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson</name></member>
+      <member refid="classdetail_1_1binary__writer_1a3da500027916d93a83e7922006ddc331" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson_array</name></member>
+      <member refid="classdetail_1_1binary__writer_1a15de15c0a19048ca8377b0d076b4a785" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson_binary</name></member>
+      <member refid="classdetail_1_1binary__writer_1a1981a99a95f67eb1d433077e736b0f74" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson_boolean</name></member>
+      <member refid="classdetail_1_1binary__writer_1a9bd4a3aae88527f267ffd607d89f4a57" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson_double</name></member>
+      <member refid="classdetail_1_1binary__writer_1a882debd723dd172f42e0690f84d4b94f" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson_element</name></member>
+      <member refid="classdetail_1_1binary__writer_1aec35b5420c48539db2959ef88ae296d5" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson_entry_header</name></member>
+      <member refid="classdetail_1_1binary__writer_1a1c1c00c936b40970ec1305dce7e266e3" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson_integer</name></member>
+      <member refid="classdetail_1_1binary__writer_1aaf86b30c0beb86fafdb0cad5573ce753" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson_null</name></member>
+      <member refid="classdetail_1_1binary__writer_1a93441bda8d804f4e93742f3cf3868da4" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson_object</name></member>
+      <member refid="classdetail_1_1binary__writer_1aec965617342a951a3b60f89fcf2e633d" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson_object_entry</name></member>
+      <member refid="classdetail_1_1binary__writer_1a5aa8c085600b442cbb13acea438a2ce1" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson_string</name></member>
+      <member refid="classdetail_1_1binary__writer_1ab58b6af7866fc56b9c4b326b4db62e12" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_bson_unsigned</name></member>
+      <member refid="classdetail_1_1binary__writer_1ae6ab36b61e8ad346e75d9f9abc983d4c" prot="public" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_cbor</name></member>
+      <member refid="classdetail_1_1binary__writer_1ae17b8f4f14cdf533e19c170c1f67651a" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_compact_float</name></member>
+      <member refid="classdetail_1_1binary__writer_1adc3dbefa80134d3530a1b3f1c9629586" prot="public" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_msgpack</name></member>
+      <member refid="classdetail_1_1binary__writer_1aab9bf30c969ca7694eed2bfd39d9274a" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_number</name></member>
+      <member refid="classdetail_1_1binary__writer_1a6df4a13e59faa87a72b0fbe8c5f838ba" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_number_with_ubjson_prefix</name></member>
+      <member refid="classdetail_1_1binary__writer_1a6df4a13e59faa87a72b0fbe8c5f838ba" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_number_with_ubjson_prefix</name></member>
+      <member refid="classdetail_1_1binary__writer_1a6df4a13e59faa87a72b0fbe8c5f838ba" prot="private" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_number_with_ubjson_prefix</name></member>
+      <member refid="classdetail_1_1binary__writer_1a972bec9688cbc5673bb482bbe9543e2a" prot="public" virt="non-virtual"><scope>detail::binary_writer</scope><name>write_ubjson</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

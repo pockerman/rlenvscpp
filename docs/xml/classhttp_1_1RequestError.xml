@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classhttp_1_1RequestError" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>http::RequestError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::logic_error</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::logic_error</label>
+      </node>
+      <node id="1">
+        <label>http::RequestError</label>
+        <link refid="classhttp_1_1RequestError"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::logic_error</label>
+      </node>
+      <node id="1">
+        <label>http::RequestError</label>
+        <link refid="classhttp_1_1RequestError"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/HTTPRequest.hpp" line="55" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/HTTPRequest.hpp" bodystart="56" bodyend="59"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

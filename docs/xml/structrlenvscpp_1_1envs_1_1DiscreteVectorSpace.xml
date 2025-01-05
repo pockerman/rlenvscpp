@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structrlenvscpp_1_1envs_1_1DiscreteVectorSpace" kind="struct" language="C++" prot="public">
+    <compoundname>rlenvscpp::envs::DiscreteVectorSpace</compoundname>
+    <templateparamlist>
+      <param>
+        <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <declname>SpaceSize</declname>
+        <defname>SpaceSize</defname>
+      </param>
+      <param>
+        <type>typename T</type>
+        <defval><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structrlenvscpp_1_1envs_1_1DiscreteVectorSpace_1a4af80c3d827605d2802b70aea9a75ba7" prot="public" static="no">
+        <type>std::vector&lt; T &gt;</type>
+        <definition>typedef std::vector&lt;T&gt; rlenvscpp::envs::DiscreteVectorSpace&lt; SpaceSize, T &gt;::space_item_type</definition>
+        <argsstring></argsstring>
+        <name>space_item_type</name>
+        <briefdescription>
+<para>item_t </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/space_type.h" line="399" column="25" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/space_type.h" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structrlenvscpp_1_1envs_1_1DiscreteVectorSpace_1a711d5f50554acb85de2c2b2f91c9d7e0" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>constexpr uint_t rlenvscpp::envs::DiscreteVectorSpace&lt; SpaceSize, T &gt;::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <initializer>= SpaceSize</initializer>
+        <briefdescription>
+<para>size. The number of members in the space </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/space_type.h" line="405" column="29" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/space_type.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/space_type.h" line="392" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/space_type.h" bodystart="393" bodyend="406"/>
+    <listofallmembers>
+      <member refid="structrlenvscpp_1_1envs_1_1DiscreteVectorSpace_1a711d5f50554acb85de2c2b2f91c9d7e0" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::DiscreteVectorSpace</scope><name>size</name></member>
+      <member refid="structrlenvscpp_1_1envs_1_1DiscreteVectorSpace_1a4af80c3d827605d2802b70aea9a75ba7" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::DiscreteVectorSpace</scope><name>space_item_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

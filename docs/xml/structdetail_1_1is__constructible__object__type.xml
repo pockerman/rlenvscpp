@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1is__constructible__object__type" kind="struct" language="C++" prot="public">
+    <compoundname>detail::is_constructible_object_type</compoundname>
+    <basecompoundref refid="structdetail_1_1is__constructible__object__type__impl" prot="public" virt="non-virtual">detail::is_constructible_object_type_impl&lt; BasicJsonType, ConstructibleObjectType &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename BasicJsonType</type>
+      </param>
+      <param>
+        <type>typename ConstructibleObjectType</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>detail::is_constructible_object_type&lt; BasicJsonType, ConstructibleObjectType &gt;</label>
+        <link refid="structdetail_1_1is__constructible__object__type"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>detail::is_constructible_object_type_impl&lt; BasicJsonType, ConstructibleObjectType, typename &gt;</label>
+        <link refid="structdetail_1_1is__constructible__object__type__impl"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::false_type</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>detail::is_constructible_object_type&lt; BasicJsonType, ConstructibleObjectType &gt;</label>
+        <link refid="structdetail_1_1is__constructible__object__type"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>detail::is_constructible_object_type_impl&lt; BasicJsonType, ConstructibleObjectType, typename &gt;</label>
+        <link refid="structdetail_1_1is__constructible__object__type__impl"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::false_type</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3812" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3814" bodyend="3814"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacerlenvscpp_1_1utils_1_1unit__converter" kind="namespace" language="C++">
+    <compoundname>rlenvscpp::utils::unit_converter</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="unit__converter_8h_1a1f265a81d21f5c0a25e308262916e6df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+        <definition>real_t rlenvscpp::utils::unit_converter::rpm_to_angular_speed</definition>
+        <argsstring>(uint_t rpm)</argsstring>
+        <name>rpm_to_angular_speed</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>rpm</declname>
+        </param>
+        <briefdescription>
+<para>Convert RPM to angular speed in m/s. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/unit_converter.h" line="14" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/unit_converter.h" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="unit__converter_8h_1a77eb321eacd8a134f9df46627315d373" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+        <definition>real_t rlenvscpp::utils::unit_converter::angular_speed_to_linear_speed</definition>
+        <argsstring>(real_t r, real_t w)</argsstring>
+        <name>angular_speed_to_linear_speed</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+<para>Convert RPM to angular speed in m/s. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/unit_converter.h" line="19" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/unit_converter.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="unit__converter_8h_1ad8b79b3ba1d1e457bc0664557158101f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+        <definition>real_t rlenvscpp::utils::unit_converter::rad_to_degrees</definition>
+        <argsstring>(real_t rad)</argsstring>
+        <name>rad_to_degrees</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+          <declname>rad</declname>
+        </param>
+        <briefdescription>
+<para>Convert radians to degrees. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/unit_converter.h" line="24" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/unit_converter.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="unit__converter_8h_1a994e0750079c4e05e28fffdfc988a01e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+        <definition>real_t rlenvscpp::utils::unit_converter::degrees_to_rad</definition>
+        <argsstring>(real_t degs)</argsstring>
+        <name>degrees_to_rad</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+          <declname>degs</declname>
+        </param>
+        <briefdescription>
+<para>Convert degrees to radians. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/unit_converter.h" line="29" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/unit_converter.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/unit_converter.h" line="9" column="1"/>
+  </compounddef>
+</doxygen>

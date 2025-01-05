@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1value__in__range__of__impl1_3_01OfType_00_01T_00_01true_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>detail::value_in_range_of_impl1&lt; OfType, T, true &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename OfType</type>
+      </param>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structdetail_1_1value__in__range__of__impl1_3_01OfType_00_01T_00_01true_01_4_1a9500fc67099b8be6e6de79588271436c" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>static constexpr bool detail::value_in_range_of_impl1&lt; OfType, T, true &gt;::test</definition>
+        <argsstring>(T)</argsstring>
+        <name>test</name>
+        <param>
+          <type>T</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4143" column="27" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4143" bodyend="4146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4141" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4142" bodyend="4147"/>
+    <listofallmembers>
+      <member refid="structdetail_1_1value__in__range__of__impl1_3_01OfType_00_01T_00_01true_01_4_1a9500fc67099b8be6e6de79588271436c" prot="public" virt="non-virtual"><scope>detail::value_in_range_of_impl1&lt; OfType, T, true &gt;</scope><name>test</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

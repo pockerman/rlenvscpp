@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rlenvscpp environment specification &mdash; rlenvscpp 1.8.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=b51e6972"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            rlenvscpp
+          </a>
+              <div class="version">
+                1.8.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">rlenvscpp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">rlenvscpp</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">rlenvscpp</span></code> environment specification</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/env_spec.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rlenvscpp-environment-specification">
+<h1><code class="docutils literal notranslate"><span class="pre">rlenvscpp</span></code> environment specification<a class="headerlink" href="#rlenvscpp-environment-specification" title="Link to this heading"></a></h1>
+<p>This document discusses the specification of
+the environments exposed by <code class="docutils literal notranslate"><span class="pre">rlenvscpp</span></code> v1.6.0.</p>
+<p>Overall, the environments  in <code class="docutils literal notranslate"><span class="pre">rlenvscpp</span></code> expose a blend of semantics from<span class="raw-html-m2r"><br></span>
+<span class="raw-html-m2r"><a href="https://github.com/deepmind/dm_env/blob/master/docs/index.md">Environment API and Semantics</a></span>
+and <span class="raw-html-m2r"><a href="https://github.com/Farama-Foundation/Gymnasium/tree/main">Gymnasium</a></span>.</p>
+<section id="the-envbase-class">
+<h2>The <code class="docutils literal notranslate"><span class="pre">EnvBase</span></code> class<a class="headerlink" href="#the-envbase-class" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">EnvBase</span></code> class is a the base class for deriving RL environments.
+The interface exposed by the class is shown in the listing below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Listing 1.0: The EnvBase class API</span>
+
+<span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">TimeStepType</span><span class="p">,</span> <span class="n">typename</span> <span class="n">SpaceType</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">EnvBase</span><span class="p">:</span> <span class="n">public</span> <span class="n">SpaceType</span><span class="p">,</span> <span class="n">public</span> <span class="n">synchronized_env_mixin</span>
+<span class="p">{</span>
+<span class="n">public</span><span class="p">:</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">The</span> <span class="n">time</span> <span class="n">step</span> <span class="nb">type</span> <span class="n">we</span> <span class="k">return</span> <span class="n">every</span> <span class="n">time</span> <span class="n">a</span> <span class="n">step</span> <span class="ow">in</span> <span class="n">the</span>
+    <span class="o">///</span> <span class="n">environment</span> <span class="ow">is</span> <span class="n">performed</span>
+    <span class="n">typedef</span> <span class="n">TimeStepType</span> <span class="n">time_step_type</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">The</span> <span class="nb">type</span> <span class="n">describing</span> <span class="n">the</span> <span class="n">state</span> <span class="n">space</span> <span class="k">for</span> <span class="n">the</span> <span class="n">environment</span>
+    <span class="n">typedef</span> <span class="n">typename</span> <span class="n">SpaceType</span><span class="p">::</span><span class="n">state_space</span> <span class="n">state_space_type</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">The</span> <span class="nb">type</span> <span class="n">of</span> <span class="n">the</span> <span class="n">state</span>
+    <span class="n">typedef</span> <span class="n">typename</span> <span class="n">SpaceType</span><span class="p">::</span><span class="n">state_type</span> <span class="n">state_type</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">The</span> <span class="nb">type</span> <span class="n">of</span> <span class="n">the</span> <span class="n">action</span> <span class="n">space</span> <span class="k">for</span> <span class="n">the</span> <span class="n">environment</span>
+    <span class="n">typedef</span> <span class="n">typename</span> <span class="n">SpaceType</span><span class="p">::</span><span class="n">action_space</span> <span class="n">action_space_type</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">The</span> <span class="nb">type</span> <span class="n">of</span> <span class="n">the</span> <span class="n">action</span> <span class="n">to</span> <span class="n">be</span> <span class="n">undertaken</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">environment</span>
+    <span class="n">typedef</span> <span class="n">typename</span> <span class="n">SpaceType</span><span class="p">::</span><span class="n">action_type</span> <span class="n">action_type</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">dctor</span>
+    <span class="n">virtual</span> <span class="o">~</span><span class="n">EnvBase</span><span class="p">()</span><span class="o">=</span><span class="n">default</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">make</span><span class="o">.</span> <span class="n">Builds</span> <span class="n">the</span> <span class="n">environment</span><span class="o">.</span>
+    <span class="n">virtual</span> <span class="n">void</span> <span class="n">make</span><span class="p">(</span><span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">version</span><span class="p">,</span>
+                      <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="nb">any</span><span class="o">&gt;&amp;</span> <span class="n">options</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">close</span> <span class="n">the</span> <span class="n">environment</span>
+    <span class="n">virtual</span> <span class="n">void</span> <span class="n">close</span><span class="p">()</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">Reset</span> <span class="n">the</span> <span class="n">environment</span>
+    <span class="n">virtual</span> <span class="n">time_step_type</span> <span class="n">reset</span><span class="p">(</span><span class="n">uint_t</span> <span class="n">seed</span><span class="p">,</span>
+                                 <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="nb">any</span><span class="o">&gt;&amp;</span> <span class="n">options</span><span class="p">)</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">step</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">environment</span> <span class="n">by</span> <span class="n">performing</span> <span class="n">the</span> <span class="n">given</span> <span class="n">action</span>
+    <span class="o">///</span> \<span class="n">param</span> <span class="n">action</span> <span class="n">The</span> <span class="n">action</span> <span class="n">to</span> <span class="n">execute</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">environment</span>
+    <span class="o">///</span> \<span class="k">return</span> <span class="n">The</span> <span class="n">time</span> <span class="n">step</span>
+    <span class="n">virtual</span> <span class="n">time_step_type</span> <span class="n">step</span><span class="p">(</span><span class="n">const</span> <span class="n">action_type</span><span class="o">&amp;</span> <span class="n">action</span><span class="p">)</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">Reset</span> <span class="n">the</span> <span class="n">environment</span> <span class="n">always</span> <span class="n">using</span> <span class="n">the</span> <span class="n">same</span> <span class="n">seed</span>
+    <span class="n">time_step_type</span> <span class="n">reset</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">reset</span><span class="p">(</span><span class="n">DEFAULT_ENV_SEED</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="nb">any</span><span class="o">&gt;</span><span class="p">());}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">is_created</span> <span class="n">Returns</span> <span class="n">true</span> <span class="ow">is</span> <span class="n">make</span> <span class="n">has</span> <span class="n">been</span> <span class="n">called</span> <span class="n">successfully</span>
+    <span class="nb">bool</span> <span class="n">is_created</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">is_created_</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">version</span>
+    <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">version</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">version_</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">environment</span>
+    <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">env_name</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">name_</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">The</span> <span class="n">number</span> <span class="n">of</span> <span class="n">agents</span> <span class="n">acting</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">environment</span>
+    <span class="n">uint_t</span> <span class="n">cidx</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">cidx_</span><span class="p">;}</span>
+
+<span class="n">protected</span><span class="p">:</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">Constructor</span>
+    <span class="n">explicit</span> <span class="n">EnvBase</span><span class="p">(</span><span class="n">const</span> <span class="n">uint_t</span> <span class="n">cidx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                     <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="o">=</span><span class="n">rlenvscpp</span><span class="p">::</span><span class="n">consts</span><span class="p">::</span><span class="n">INVALID_STR</span><span class="p">);</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">Copy</span> <span class="n">constructor</span>
+    <span class="n">EnvBase</span><span class="p">(</span><span class="n">const</span> <span class="n">EnvBase</span><span class="o">&amp;</span><span class="p">);</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">Helper</span> <span class="n">function</span> <span class="n">to</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">version</span><span class="o">.</span> <span class="n">To</span> <span class="n">be</span> <span class="n">called</span> <span class="n">only</span> <span class="n">when</span> <span class="n">the</span> <span class="n">make</span> <span class="ow">is</span> <span class="n">called</span>
+    <span class="n">void</span> <span class="n">set_version_</span><span class="p">(</span><span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">version</span> <span class="p">)</span><span class="n">noexcept</span><span class="p">{</span><span class="n">version_</span> <span class="o">=</span> <span class="n">version</span><span class="p">;}</span>
+
+    <span class="n">void</span> <span class="n">invalidate_is_created_flag_</span><span class="p">()</span><span class="n">noexcept</span><span class="p">{</span><span class="n">is_created_</span> <span class="o">=</span> <span class="n">false</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">mark</span> <span class="n">the</span> <span class="n">environment</span> <span class="k">as</span> <span class="n">created</span>
+    <span class="n">void</span> <span class="n">make_created_</span><span class="p">()</span><span class="n">noexcept</span><span class="p">{</span><span class="n">is_created_</span><span class="o">=</span> <span class="n">true</span><span class="p">;}</span>
+
+    <span class="n">time_step_type</span><span class="o">&amp;</span> <span class="n">get_current_time_step_</span><span class="p">()</span><span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">current_state_</span><span class="p">;}</span>
+    <span class="n">const</span> <span class="n">time_step_type</span><span class="o">&amp;</span> <span class="n">get_current_time_step_</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">current_state_</span><span class="p">;}</span>
+
+<span class="o">...</span>
+
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The class requires two template parameters; the <code class="docutils literal notranslate"><span class="pre">TimeStepType</span></code> and the <code class="docutils literal notranslate"><span class="pre">SpaceType</span></code>.
+In most cases, the  <code class="docutils literal notranslate"><span class="pre">TimeStepType</span></code> will of type <code class="docutils literal notranslate"><span class="pre">TimeStep</span></code> or <code class="docutils literal notranslate"><span class="pre">VectorTimeStep</span></code>. The semantics
+of these two classes follow the semantics of the <code class="docutils literal notranslate"><span class="pre">TimeStep</span></code>
+in <span class="raw-html-m2r"><a href="https://github.com/deepmind/dm_env/blob/master/docs/index.md">Environment API and Semantics</a></span>.
+The <code class="docutils literal notranslate"><span class="pre">SpaceType</span></code> encapsulates both the state and action spaces in RL parlance. There are various variants
+of these spaces (see section Space types).</p>
+<section id="core-functions">
+<h3>Core functions<a class="headerlink" href="#core-functions" title="Link to this heading"></a></h3>
+<p>The core functions exposed by the <code class="docutils literal notranslate"><span class="pre">EnvBase</span></code> class are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">make(const</span> <span class="pre">std::string&amp;,</span> <span class="pre">const</span> <span class="pre">std::unordered_map&lt;std::string,</span> <span class="pre">std::any&gt;&amp;)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_step_type</span> <span class="pre">reset(uint_t,</span> <span class="pre">const</span> <span class="pre">std::unordered_map&lt;std::string,</span> <span class="pre">std::any&gt;&amp;)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_step_type</span> <span class="pre">step(const</span> <span class="pre">action_type&amp;)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">close()</span></code></p></li>
+</ul>
+<p>These are the functions that most likely RL solvers will use.
+These function follow to a large extent exposed by the environments in
+<span class="raw-html-m2r"><a href="https://github.com/Farama-Foundation/Gymnasium/tree/main">Gymnasium</a></span>.
+The implementation of these functions is environment dependent i.e. they are virtual functions
+in C++ parlance.</p>
+<hr class="docutils" />
+<p><strong>Remark</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">EnvBase</span></code> class does not expose a <code class="docutils literal notranslate"><span class="pre">render</span></code> function that allows
+visualisation of the agent acting on the environment.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-timestep-and-vectortimestep-classes">
+<h2>The <code class="docutils literal notranslate"><span class="pre">TimeStep</span></code> and <code class="docutils literal notranslate"><span class="pre">VectorTimeStep</span></code> classes<a class="headerlink" href="#the-timestep-and-vectortimestep-classes" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">TimeStep</span></code> class wraps the environment response when calling <code class="docutils literal notranslate"><span class="pre">reset</span></code> or <code class="docutils literal notranslate"><span class="pre">step</span></code>.
+The class exposes the following API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Listing 2.0: The TimeStep class API</span>
+
+<span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">StateTp</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">TimeStep</span>
+<span class="p">{</span>
+<span class="n">public</span><span class="p">:</span>
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">state_</span> <span class="n">Type</span> <span class="n">of</span> <span class="n">the</span> <span class="n">state</span>
+    <span class="n">typedef</span> <span class="n">StateTp</span> <span class="n">state_type</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">TimeStep</span>
+    <span class="n">TimeStep</span><span class="p">();</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">TimeStep</span><span class="o">.</span> <span class="n">Constructor</span>
+    <span class="n">TimeStep</span><span class="p">(</span><span class="n">TimeStepTp</span> <span class="nb">type</span><span class="p">,</span> <span class="n">real_t</span> <span class="n">reward</span><span class="p">,</span> <span class="n">const</span> <span class="n">state_type</span><span class="o">&amp;</span>  <span class="n">obs</span><span class="p">);</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">TimeStep</span><span class="o">.</span> <span class="n">Constructor</span>
+    <span class="n">TimeStep</span><span class="p">(</span><span class="n">TimeStepTp</span> <span class="nb">type</span><span class="p">,</span> <span class="n">real_t</span> <span class="n">reward</span><span class="p">,</span> <span class="n">const</span> <span class="n">state_type</span><span class="o">&amp;</span>  <span class="n">obs</span><span class="p">,</span> <span class="n">real_t</span> <span class="n">discount_factor</span><span class="p">);</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">TimeStep</span><span class="o">.</span> <span class="n">Constructor</span>
+    <span class="n">TimeStep</span><span class="p">(</span><span class="n">TimeStepTp</span> <span class="nb">type</span><span class="p">,</span> <span class="n">real_t</span> <span class="n">reward</span><span class="p">,</span> <span class="n">const</span> <span class="n">state_type</span><span class="o">&amp;</span> <span class="n">obs</span><span class="p">,</span>
+             <span class="n">real_t</span> <span class="n">discount_factor</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="nb">any</span><span class="o">&gt;&amp;&amp;</span> <span class="n">extra</span><span class="p">);</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">TimeStep</span>
+    <span class="n">TimeStep</span><span class="p">(</span><span class="n">const</span> <span class="n">TimeStep</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">Assignment</span> <span class="n">operator</span>
+    <span class="n">TimeStep</span><span class="o">&amp;</span> <span class="n">operator</span><span class="o">=</span><span class="p">(</span><span class="n">const</span> <span class="n">TimeStep</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">TimeStep</span>
+    <span class="n">TimeStep</span><span class="p">(</span><span class="n">TimeStep</span><span class="o">&amp;&amp;</span> <span class="n">other</span><span class="p">)</span><span class="n">noexcept</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">operator</span> <span class="o">=</span>
+    <span class="n">TimeStep</span><span class="o">&amp;</span> <span class="n">operator</span><span class="o">=</span><span class="p">(</span><span class="n">TimeStep</span><span class="o">&amp;&amp;</span> <span class="n">other</span><span class="p">)</span><span class="n">noexcept</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">first</span>
+    <span class="nb">bool</span> <span class="n">first</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">type_</span> <span class="o">==</span> <span class="n">TimeStepTp</span><span class="p">::</span><span class="n">FIRST</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">mid</span>
+    <span class="nb">bool</span> <span class="n">mid</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">type_</span> <span class="o">==</span> <span class="n">TimeStepTp</span><span class="p">::</span><span class="n">MID</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">last</span>
+    <span class="nb">bool</span> <span class="n">last</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">type_</span> <span class="o">==</span> <span class="n">TimeStepTp</span><span class="p">::</span><span class="n">LAST</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="nb">type</span>
+    <span class="n">TimeStepTp</span> <span class="nb">type</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">type_</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">observation</span>
+    <span class="n">state_type</span> <span class="n">observation</span><span class="p">()</span><span class="n">const</span><span class="p">{</span><span class="k">return</span> <span class="n">obs_</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">reward</span>
+    <span class="n">real_t</span> <span class="n">reward</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">reward_</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">discount</span><span class="o">.</span> <span class="n">Returns</span> <span class="n">the</span> <span class="n">discount</span> <span class="n">factor</span>
+    <span class="n">real_t</span> <span class="n">discount</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">discount_</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">done</span>
+    <span class="nb">bool</span> <span class="n">done</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">type_</span> <span class="o">==</span> <span class="n">TimeStepTp</span><span class="p">::</span><span class="n">LAST</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">clear</span>
+    <span class="n">void</span> <span class="n">clear</span><span class="p">()</span><span class="n">noexcept</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">get_extra</span>
+    <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+    <span class="n">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">get_extra</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span><span class="n">const</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">info</span>
+    <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="nb">any</span><span class="o">&gt;&amp;</span> <span class="n">info</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">extra_</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">info</span>
+    <span class="n">std</span><span class="p">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="nb">any</span><span class="o">&gt;&amp;</span> <span class="n">info</span><span class="p">()</span><span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">extra_</span><span class="p">;}</span>
+
+<span class="o">...</span>
+
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">VectorTimeStep</span></code> is the time step instance the is returned by the reset and step
+functions of vector environments. The API is shown in the listing below</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Listing 3.0: The VectorTimeStep class API</span>
+
+<span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">StateType</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">VectorTimeStep</span>
+<span class="p">{</span>
+
+<span class="n">public</span><span class="p">:</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">state_</span> <span class="n">Type</span> <span class="n">of</span> <span class="n">the</span> <span class="n">state</span>
+    <span class="n">typedef</span> <span class="n">StateType</span> <span class="n">state_type</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">Default</span> <span class="n">construcotr</span>
+    <span class="n">VectorTimeStep</span><span class="p">()</span><span class="o">=</span><span class="n">default</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">VectorTimeStep</span><span class="o">.</span> <span class="n">Constructor</span>
+    <span class="n">VectorTimeStep</span><span class="p">(</span><span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">TimeStepTp</span><span class="o">&gt;&amp;</span> <span class="n">types</span><span class="p">,</span>
+                   <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real_t</span><span class="o">&gt;&amp;</span> <span class="n">rewards</span><span class="p">,</span>
+                   <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">state_type</span><span class="o">&gt;&amp;</span>  <span class="n">obs</span><span class="p">);</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">VectorTimeStep</span><span class="o">.</span> <span class="n">Constructor</span>
+    <span class="n">VectorTimeStep</span><span class="p">(</span><span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">TimeStepTp</span><span class="o">&gt;&amp;</span> <span class="n">types</span><span class="p">,</span>
+                   <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real_t</span><span class="o">&gt;&amp;</span> <span class="n">rewards</span><span class="p">,</span>
+                   <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">state_type</span><span class="o">&gt;&amp;</span>  <span class="n">obs</span><span class="p">,</span>
+                   <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real_t</span><span class="o">&gt;&amp;</span> <span class="n">discount_factors</span><span class="p">);</span>
+
+    <span class="n">VectorTimeStep</span><span class="p">(</span><span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">TimeStepTp</span><span class="o">&gt;&amp;</span> <span class="n">types</span><span class="p">,</span>
+                   <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real_t</span><span class="o">&gt;&amp;</span> <span class="n">rewards</span><span class="p">,</span>
+                   <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">state_type</span><span class="o">&gt;&amp;</span>  <span class="n">obs</span><span class="p">,</span>
+                   <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real_t</span><span class="o">&gt;&amp;</span> <span class="n">discount_factors</span><span class="p">,</span>
+                   <span class="n">std</span><span class="p">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="nb">any</span><span class="o">&gt;&amp;&amp;</span> <span class="n">extra</span><span class="p">);</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">TimeStep</span>
+    <span class="n">VectorTimeStep</span><span class="p">(</span><span class="n">const</span> <span class="n">VectorTimeStep</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">Assignment</span> <span class="n">operator</span>
+    <span class="n">VectorTimeStep</span><span class="o">&amp;</span> <span class="n">operator</span><span class="o">=</span><span class="p">(</span><span class="n">const</span> <span class="n">VectorTimeStep</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">TimeStep</span>
+    <span class="n">VectorTimeStep</span><span class="p">(</span><span class="n">VectorTimeStep</span><span class="o">&amp;&amp;</span> <span class="n">other</span><span class="p">)</span><span class="n">noexcept</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">operator</span> <span class="o">=</span>
+    <span class="n">VectorTimeStep</span><span class="o">&amp;</span> <span class="n">operator</span><span class="o">=</span><span class="p">(</span><span class="n">VectorTimeStep</span><span class="o">&amp;&amp;</span> <span class="n">other</span><span class="p">)</span><span class="n">noexcept</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="nb">type</span>
+    <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">TimeStepTp</span><span class="o">&gt;&amp;</span> <span class="n">types</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">types_</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">observation</span>
+    <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">state_type</span><span class="o">&gt;&amp;</span> <span class="n">observations</span><span class="p">()</span><span class="n">const</span><span class="p">{</span><span class="k">return</span> <span class="n">obs_</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">reward</span>
+    <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real_t</span><span class="o">&gt;&amp;</span> <span class="n">rewards</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">rewards_</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">Returns</span> <span class="n">the</span> <span class="nb">sum</span> <span class="n">of</span> <span class="n">the</span> <span class="n">rewards</span> <span class="n">received</span>
+    <span class="n">real_t</span> <span class="n">reward</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">Returns</span> <span class="n">true</span> <span class="k">if</span> <span class="nb">any</span> <span class="n">time</span> <span class="n">step</span> <span class="ow">is</span> <span class="n">LAST</span>
+    <span class="nb">bool</span> <span class="n">done</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">;</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">discount</span><span class="o">.</span> <span class="n">Returns</span> <span class="n">the</span> <span class="n">discount</span> <span class="n">factor</span>
+    <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">real_t</span><span class="o">&gt;&amp;</span> <span class="n">discounts</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">{</span><span class="k">return</span> <span class="n">discounts_</span><span class="p">;}</span>
+
+    <span class="o">///</span> \<span class="n">brief</span> <span class="n">last</span>
+    <span class="nb">bool</span> <span class="n">last</span><span class="p">()</span><span class="n">const</span> <span class="n">noexcept</span><span class="p">;</span>
+
+<span class="o">...</span>
+
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="space-types">
+<h2>Space types<a class="headerlink" href="#space-types" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019, rlenvscpp Authors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

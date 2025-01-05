@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_c8b03b9a6233a73da4b9f0cc112e269f" kind="dir">
+    <compoundname>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory</compoundname>
+    <innerfile refid="line__segment__link_8h">line_segment_link.h</innerfile>
+    <innerfile refid="waypoint_8h">waypoint.h</innerfile>
+    <innerfile refid="waypoint__trajectory_8h">waypoint_trajectory.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/"/>
+  </compounddef>
+</doxygen>

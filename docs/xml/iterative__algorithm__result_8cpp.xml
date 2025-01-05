@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="iterative__algorithm__result_8cpp" kind="file" language="C++">
+    <compoundname>iterative_algorithm_result.cpp</compoundname>
+    <includes refid="iterative__algorithm__result_8h" local="yes">rlenvs/utils/iterative_algorithm_result.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/iterative_algorithm_result.cpp</label>
+        <link refid="iterative__algorithm__result_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>ostream</label>
+      </node>
+      <node id="4">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cstddef</label>
+      </node>
+      <node id="11">
+        <label>chrono</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/utils/iterative_algorithm_result.h</label>
+        <link refid="iterative__algorithm__result_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils">rlenvscpp::utils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;rlenvs/utils/iterative_algorithm_result.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">utils{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="structrlenvscpp_1_1utils_1_1IterativeAlgorithmResult_1afcbb01d66c6abc04aa6b3eff838eef7a" kindref="member">IterativeAlgorithmResult::IterativeAlgorithmResult</ref>(<ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>tol,<sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>res,</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>nitrs,<sp/>std::chrono::duration&lt;real_t&gt;<sp/>time)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>tolerance(tol),</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>residual(res),</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>num_iterations(nitrs),</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>total_time(time)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">std::ostream&amp;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">IterativeAlgorithmResult::<sp/>print(std::ostream&amp;<sp/>out)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;Converged...:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;std::boolalpha&lt;&lt;converged&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;Tolerance...:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;tolerance&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;Residual....:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;residual&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;Iterations..:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;num_iterations&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>out&lt;&lt;</highlight><highlight class="stringliteral">&quot;Total<sp/>time..:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;total_time.count()&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/iterative_algorithm_result.cpp"/>
+  </compounddef>
+</doxygen>

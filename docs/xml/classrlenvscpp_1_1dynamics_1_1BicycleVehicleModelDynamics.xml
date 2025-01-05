@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics" kind="class" language="C++" prot="public">
+    <compoundname>rlenvscpp::dynamics::BicycleVehicleModelDynamics</compoundname>
+    <basecompoundref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase" prot="public" virt="non-virtual">rlenvscpp::dynamics::MotionModelDynamicsBase&lt; SysState&lt; 3 &gt;, DynamicsMatrixDescriptor, std::map&lt; std::string, std::any &gt; &gt;</basecompoundref>
+    <includes refid="bicycle__vehicle__model__dynamics_8h" local="no">bicycle_vehicle_model_dynamics.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1aa3aebc061f411d05e523c05f39b0b3ce" prot="public" static="no">
+        <type><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase" kindref="compound">MotionModelDynamicsBase</ref>&lt; <ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">SysState</ref>&lt; 3 &gt;, <ref refid="classrlenvscpp_1_1dynamics_1_1DynamicsMatrixDescriptor" kindref="compound">DynamicsMatrixDescriptor</ref>, std::map&lt; std::string, std::any &gt; &gt;</type>
+        <definition>typedef MotionModelDynamicsBase&lt;SysState&lt;3&gt;, DynamicsMatrixDescriptor, std::map&lt;std::string, std::any&gt; &gt; rlenvscpp::dynamics::BicycleVehicleModelDynamics::base_type</definition>
+        <argsstring></argsstring>
+        <name>base_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="49" column="2" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a5796ab6dab0ea96c17af1327c757171f" prot="public" static="no">
+        <type><ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">base_type::state_type</ref></type>
+        <definition>typedef base_type::state_type rlenvscpp::dynamics::BicycleVehicleModelDynamics::state_type</definition>
+        <argsstring></argsstring>
+        <name>state_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="51" column="35" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a7de3af50c79095341d70fd4958201ad6" prot="public" static="no">
+        <type>base_type::input_type</type>
+        <definition>typedef base_type::input_type rlenvscpp::dynamics::BicycleVehicleModelDynamics::input_type</definition>
+        <argsstring></argsstring>
+        <name>input_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="52" column="35" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a42d484e05d09d925441e1782bede681a" prot="public" static="no">
+        <type><ref refid="classrlenvscpp_1_1dynamics_1_1DynamicsMatrixDescriptor" kindref="compound">base_type::matrix_descriptor_type</ref></type>
+        <definition>typedef base_type::matrix_descriptor_type rlenvscpp::dynamics::BicycleVehicleModelDynamics::matrix_descriptor_type</definition>
+        <argsstring></argsstring>
+        <name>matrix_descriptor_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="53" column="47" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1aea6e84f610208577516ac15c81e7e7be" prot="public" static="no">
+        <type>matrix_descriptor_type::matrix_type</type>
+        <definition>typedef matrix_descriptor_type::matrix_type rlenvscpp::dynamics::BicycleVehicleModelDynamics::matrix_type</definition>
+        <argsstring></argsstring>
+        <name>matrix_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="54" column="58" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a8e6cecf8a9d2bf66479ea18b7369404a" prot="public" static="no">
+        <type>matrix_descriptor_type::vector_type</type>
+        <definition>typedef matrix_descriptor_type::vector_type rlenvscpp::dynamics::BicycleVehicleModelDynamics::vector_type</definition>
+        <argsstring></argsstring>
+        <name>vector_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="55" column="58" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1af2474298a530675954bf73e5d33eeba1" prot="private" static="no" mutable="no">
+        <type><ref refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig" kindref="compound">BicycleVehicleModelDynamicsConfig</ref></type>
+        <definition>BicycleVehicleModelDynamicsConfig rlenvscpp::dynamics::BicycleVehicleModelDynamics::config_</definition>
+        <argsstring></argsstring>
+        <name>config_</name>
+        <briefdescription>
+<para>Configuration of the dynamics integrator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="100" column="35" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a4b131074e4d9c1097cd73db4adaea6a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::dynamics::BicycleVehicleModelDynamics::BicycleVehicleModelDynamics</definition>
+        <argsstring>(const BicycleVehicleModelDynamicsConfig config, SysState&lt; 3 &gt; &amp;init_state)</argsstring>
+        <name>BicycleVehicleModelDynamics</name>
+        <param>
+          <type>const <ref refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig" kindref="compound">BicycleVehicleModelDynamicsConfig</ref></type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">SysState</ref>&lt; 3 &gt; &amp;</type>
+          <declname>init_state</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="60" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.cpp" bodystart="8" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a6ab638edf33af7c563652bf7030a1991" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::dynamics::BicycleVehicleModelDynamics::integrate</definition>
+        <argsstring>(const input_type &amp;input)</argsstring>
+        <name>integrate</name>
+        <param>
+          <type>const input_type &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>integrate. Integrate the dynamics equations the model expects the following inputs the velocity of the vehicle v and the angle delta of the front wheel </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>before we do the integration update the matrices</para>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="68" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.cpp" bodystart="16" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a070ca7d87685f5d9faddf7895fcdc51a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">state_type</ref> &amp;</type>
+        <definition>BicycleVehicleModelDynamics::state_type &amp; rlenvscpp::dynamics::BicycleVehicleModelDynamics::evaluate</definition>
+        <argsstring>(const input_type &amp;input)</argsstring>
+        <name>evaluate</name>
+        <param>
+          <type>const input_type &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>evaluate </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="75" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1aa71d2511e034dc88e367ba2bf661c18c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::dynamics::BicycleVehicleModelDynamics::initialize_matrices</definition>
+        <argsstring>(const input_type &amp;input)</argsstring>
+        <name>initialize_matrices</name>
+        <param>
+          <type>const input_type &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>initialize_matrices. Initialize the matrix description of the dynamics </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="81" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.cpp" bodystart="53" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a51ae41ba615c79dac0919f9cf18f249d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::dynamics::BicycleVehicleModelDynamics::update_matrices</definition>
+        <argsstring>(const input_type &amp;input)</argsstring>
+        <name>update_matrices</name>
+        <param>
+          <type>const input_type &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>update_matrices. Update the matrix description of the dynamics </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="87" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.cpp" bodystart="57" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a2c01a3eb2e9aab233dec638d553d6383" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::dynamics::BicycleVehicleModelDynamics::load_from_json</definition>
+        <argsstring>(const std::string &amp;filename)</argsstring>
+        <name>load_from_json</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>load_from_json Load the description of the chassis from the given json file </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="93" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" bodystart="93" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics" kindref="compound">BicycleVehicleModelDynamics</ref> class. Implements the bicycle vehicle model dynamics. The implementation of the dynamics is taken from the paper: Deep Reinforcement Learning for Mobile Robot Path Planning by Hao Liu, Yi Shen, Shuangjiang Yu, Zijun Gao, Tong Wu The state of the model is described by the tuple (X, Y, Phi) where (X,Y) denotes the 2D position of the vehicle in the world coordinates and phi denotes the heading of the vehicle. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rlenvscpp::dynamics::MotionModelDynamicsBase&lt; SysState&lt; 3 &gt;, DynamicsMatrixDescriptor, std::map&lt; std::string, std::any &gt; &gt;</label>
+        <link refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>boost::noncopyable</label>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::dynamics::BicycleVehicleModelDynamics</label>
+        <link refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rlenvscpp::dynamics::MotionModelDynamicsBase&lt; SysState&lt; 3 &gt;, DynamicsMatrixDescriptor, std::map&lt; std::string, std::any &gt; &gt;</label>
+        <link refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>boost::noncopyable</label>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::dynamics::BicycleVehicleModelDynamics</label>
+        <link refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="41" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" bodystart="44" bodyend="102"/>
+    <listofallmembers>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a18ef8d12f92c19682a5ab610f4e9f98c" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>allows_matrix_updates</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1aa3aebc061f411d05e523c05f39b0b3ce" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>base_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a4b131074e4d9c1097cd73db4adaea6a0" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>BicycleVehicleModelDynamics</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1af2474298a530675954bf73e5d33eeba1" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>config_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ad0f26c623a77afb8903f0235dc8f0b36" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>dt_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a070ca7d87685f5d9faddf7895fcdc51a" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>evaluate</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ac37040c80f3cd72f14a3ad5dad7f3cf0" prot="public" virt="pure-virtual" ambiguityscope="MotionModelDynamicsBase&lt; SysState&lt; 3 &gt;, DynamicsMatrixDescriptor, std::map&lt; std::string, std::any &gt; &gt;::"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>evaluate</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a98d8a2462ced6f7affa9a71da8b12d27" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>get_matrix</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a35520c9f7045ef829ec789fbe376013d" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>get_matrix</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a08098e5d14d9af91a4bbb644e604eeba" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>get_state</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1aae3398753ff616aa4146f89e0bc3c474" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>get_state</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>get_state_property</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ae62f1512a79a45c6c930065a659080ef" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>get_state_variables_names</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a86de2f41cc4b0cb6e259daf7f5813a46" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>get_time_step</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a6cdd87d6a43b77a851fd20544a2bfe22" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>get_tolerance</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1afb13ec33d5be8104beb17cb5206ed30a" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>get_vector</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a7bf73427232b99581429d11f030419df" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>get_vector</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a1fc6d82a8f896f44897b3b5193b59f14" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>has_matrix</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1aa71d2511e034dc88e367ba2bf661c18c" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>initialize_matrices</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a7de3af50c79095341d70fd4958201ad6" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>input_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a6ab638edf33af7c563652bf7030a1991" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>integrate</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a2c01a3eb2e9aab233dec638d553d6383" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>load_from_json</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1af2b93f301fe76ec82374cc3c60ef68bb" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>matrix_description_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a42d484e05d09d925441e1782bede681a" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>matrix_descriptor_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1aea6e84f610208577516ac15c81e7e7be" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>matrix_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ab7973af3b5826d0cd6b43cee4ca47041" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>MotionModelDynamicsBase</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1afd2ec840791eab9fdd78872223f706f4" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>MotionModelDynamicsBase</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ad48f9ad639a987a458f452579bcf4946" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>output_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a8cf812ea6634771def813aa4b077fe7d" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>set_matrix</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a817e00f5480d3856afc41ec2482abe47" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>set_matrix_update_flag</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a13c1155415be9a77b0e03f56c58604d0" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>set_state_name_value</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a1f4b1b9269b3468c7e1b5c8184f993b6" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>set_state_name_value</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a2a639aaf2ff67d9ce244766355c3812e" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>set_state_property</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a94e0d15af2efada4499c7735fd386df4" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>set_time_step</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a3568c7fc57bd7ed8aaba67edf81e51e6" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>set_tolerance</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ac67646f4673903762fa4e6c7fb020386" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>set_vector</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1af26c8b9d7aa6acccb48388a45ea6878a" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>state_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ab505348dd7a8bd73146f304593b98982" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>state_dimension</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a5796ab6dab0ea96c17af1327c757171f" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>state_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a4a7df0d96d88180f6cbe2837663a7843" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>tol_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ad95cdfeb2540dd571c2092e73df6ad2f" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>update_description_matrices_on_evaluate_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a51ae41ba615c79dac0919f9cf18f249d" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>update_matrices</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a8e6cecf8a9d2bf66479ea18b7369404a" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>vector_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a15d52cd1347e650b36ee784322f8d2aa" prot="public" virt="virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamics</scope><name>~MotionModelDynamicsBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

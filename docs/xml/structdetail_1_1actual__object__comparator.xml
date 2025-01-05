@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1actual__object__comparator" kind="struct" language="C++" prot="public">
+    <compoundname>detail::actual_object_comparator</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename BasicJsonType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structdetail_1_1actual__object__comparator_1a11b9fbe86ee8fdaaf190a4985dfa1804" prot="public" static="no">
+        <type>typename BasicJsonType::object_t</type>
+        <definition>using detail::actual_object_comparator&lt; BasicJsonType &gt;::object_t =  typename BasicJsonType::object_t</definition>
+        <argsstring></argsstring>
+        <name>object_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3589" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3589" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structdetail_1_1actual__object__comparator_1a6a6bbffeaf8ac36afa8edb09b2f07d07" prot="public" static="no">
+        <type>typename BasicJsonType::default_object_comparator_t</type>
+        <definition>using detail::actual_object_comparator&lt; BasicJsonType &gt;::object_comparator_t =  typename BasicJsonType::default_object_comparator_t</definition>
+        <argsstring></argsstring>
+        <name>object_comparator_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3590" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3590" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structdetail_1_1actual__object__comparator_1ac60566678ca6c7b31cf7a0ee05da1915" prot="public" static="no">
+        <type>typename std::conditional&lt; <ref refid="structdetail_1_1has__key__compare" kindref="compound">has_key_compare</ref>&lt; object_t &gt;::value, typename object_t::key_compare, object_comparator_t &gt;::type</type>
+        <definition>using detail::actual_object_comparator&lt; BasicJsonType &gt;::type =  typename std::conditional &lt; has_key_compare&lt;object_t&gt;::value, typename object_t::key_compare, object_comparator_t&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3591" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3592" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3587" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3588" bodyend="3593"/>
+    <listofallmembers>
+      <member refid="structdetail_1_1actual__object__comparator_1a6a6bbffeaf8ac36afa8edb09b2f07d07" prot="public" virt="non-virtual"><scope>detail::actual_object_comparator</scope><name>object_comparator_t</name></member>
+      <member refid="structdetail_1_1actual__object__comparator_1a11b9fbe86ee8fdaaf190a4985dfa1804" prot="public" virt="non-virtual"><scope>detail::actual_object_comparator</scope><name>object_t</name></member>
+      <member refid="structdetail_1_1actual__object__comparator_1ac60566678ca6c7b31cf7a0ee05da1915" prot="public" virt="non-virtual"><scope>detail::actual_object_comparator</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

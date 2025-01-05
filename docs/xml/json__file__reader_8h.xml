@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="json__file__reader_8h" kind="file" language="C++">
+    <compoundname>json_file_reader.h</compoundname>
+    <includes refid="rlenvs__types__v2_8h" local="yes">rlenvs/rlenvs_types_v2.h</includes>
+    <includes refid="json_8hpp" local="yes">rlenvs/extern/nlohmann/json/json.hpp</includes>
+    <includes refid="file__reader__base_8h" local="yes">rlenvs/utils/io/file_reader_base.h</includes>
+    <includedby refid="json__file__reader_8cpp" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/json_file_reader.cpp</includedby>
+    <incdepgraph>
+      <node id="23">
+        <label>valarray</label>
+      </node>
+      <node id="40">
+        <label>iomanip</label>
+      </node>
+      <node id="11">
+        <label>functional</label>
+      </node>
+      <node id="29">
+        <label>limits</label>
+      </node>
+      <node id="14">
+        <label>iterator</label>
+      </node>
+      <node id="9">
+        <label>rlenvs/extern/nlohmann/json/json.hpp</label>
+        <link refid="json_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>rlenvs/utils//io/file_formats.h</label>
+        <link refid="file__formats_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>cstdint</label>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/json_file_reader.h</label>
+        <link refid="json__file__reader_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>rlenvs/utils/io/file_reader_base.h</label>
+        <link refid="file__reader__base_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>cmath</label>
+      </node>
+      <node id="28">
+        <label>cassert</label>
+      </node>
+      <node id="25">
+        <label>stdexcept</label>
+      </node>
+      <node id="33">
+        <label>numeric</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="44">
+        <label>boost/noncopyable.hpp</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="19">
+        <label>map</label>
+      </node>
+      <node id="24">
+        <label>exception</label>
+      </node>
+      <node id="43">
+        <label>rlenvs/utils//io/file_handler_base.h</label>
+        <link refid="file__handler__base_8h_source"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>fstream</label>
+      </node>
+      <node id="39">
+        <label>ostream</label>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="38">
+        <label>ios</label>
+      </node>
+      <node id="32">
+        <label>cstdio</label>
+      </node>
+      <node id="20">
+        <label>tuple</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="16">
+        <label>utility</label>
+      </node>
+      <node id="17">
+        <label>array</label>
+      </node>
+      <node id="13">
+        <label>iosfwd</label>
+      </node>
+      <node id="37">
+        <label>cerrno</label>
+      </node>
+      <node id="27">
+        <label>cstdlib</label>
+      </node>
+      <node id="35">
+        <label>clocale</label>
+      </node>
+      <node id="36">
+        <label>cctype</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="22">
+        <label>unordered_map</label>
+      </node>
+      <node id="4">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="21">
+        <label>type_traits</label>
+      </node>
+      <node id="18">
+        <label>forward_list</label>
+      </node>
+      <node id="10">
+        <label>algorithm</label>
+      </node>
+      <node id="30">
+        <label>cstring</label>
+      </node>
+      <node id="15">
+        <label>memory</label>
+      </node>
+      <node id="34">
+        <label>istream</label>
+      </node>
+      <node id="12">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1io_1_1JSONFileReader" prot="public">rlenvscpp::utils::io::JSONFileReader</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils">rlenvscpp::utils</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils_1_1io">rlenvscpp::utils::io</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>SPDX-FileCopyrightText:<sp/>2024<sp/>&lt;copyright<sp/>holder&gt;<sp/>&lt;email&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>JSON_FILE_READER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSON_FILE_READER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_types_v2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/extern/nlohmann/json/json.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/utils/io/file_reader_base.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">utils{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">io{</highlight></codeline>
+<codeline lineno="17" refid="classrlenvscpp_1_1utils_1_1io_1_1JSONFileReader" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1io_1_1JSONFileReader" kindref="compound">JSONFileReader</ref><sp/>final:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileReaderBase" kindref="compound">FileReaderBase</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1JSONFileReader" kindref="compound">JSONFileReader</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1JSONFileReader_1aba860a2ee74d9eef375aec05790ccd80" kindref="member">open</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1JSONFileReader_1a20535fd19e6081e0716af5b4f31a974c" kindref="member">get_value</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>label)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>json<sp/>=<sp/>nlohmann::json;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>json<sp/>data_;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">T</highlight></codeline>
+<codeline lineno="47" refid="classrlenvscpp_1_1utils_1_1io_1_1JSONFileReader_1a20535fd19e6081e0716af5b4f31a974c" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1io_1_1JSONFileReader_1a20535fd19e6081e0716af5b4f31a974c" kindref="member">JSONFileReader::get_value</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>label)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1af5bd6b21abc6e41037883f0228269f7b" kindref="member">is_open</ref>()){</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;JSON<sp/>file<sp/>is<sp/>not<sp/>open.<sp/>Have<sp/>you<sp/>called<sp/>open()?&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data_[label].template<sp/>get&lt;T&gt;();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>JSON_FILE_READER_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/json_file_reader.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="normal__dist_8h" kind="file" language="C++">
+    <compoundname>normal_dist.h</compoundname>
+    <includes refid="rlenvs__types__v2_8h" local="yes">rlenvs/rlenvs_types_v2.h</includes>
+    <includes refid="rlenvs__consts_8h" local="yes">rlenvs/rlenvs_consts.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">random</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">numbers</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>numbers</label>
+      </node>
+      <node id="11">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h</label>
+        <link refid="normal__dist_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>rlenvs/rlenvs_consts.h</label>
+        <link refid="rlenvs__consts_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="10">
+        <label>random</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist" prot="public">rlenvscpp::utils::maths::stats::NormalDist</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils">rlenvscpp::utils</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils_1_1maths">rlenvscpp::utils::maths</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils_1_1maths_1_1stats">rlenvscpp::utils::maths::stats</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>NORMAL_DIST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NORMAL_DIST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_types_v2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_consts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numbers&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">utils{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">maths<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">stats<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RealType<sp/>=<sp/>real_t&gt;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist" kindref="compound">NormalDist</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>RealType<sp/>result_type;<sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1a1502bad6f6257ab317d73186058f7d28" kindref="member">NormalDist</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1a1502bad6f6257ab317d73186058f7d28" kindref="member">NormalDist</ref>(result_type<sp/>mu,<sp/>result_type<sp/><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ad9ba2946f804aa951d6584a545345620" kindref="member">std</ref><sp/>=<sp/>1.0);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>result_type<sp/><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1acf6d2a5aa4726d801d09dc0d53d5d8a5" kindref="member">pdf</ref>(result_type<sp/>x)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>result_type<sp/><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ae4cc7f4644c18373ff8dd176785356f9" kindref="member">sample</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>result_type<sp/><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ae4cc7f4644c18373ff8dd176785356f9" kindref="member">sample</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>seed)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;result_type&gt;<sp/><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1aca5632cedb912a729607e6aca441eb2c" kindref="member">sample_many</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>size)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;result_type&gt;<sp/><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1aca5632cedb912a729607e6aca441eb2c" kindref="member">sample_many</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>size,<sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>seed)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ad1e2c32144096f9a58561e6d6e82c31e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>result_type<sp/><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ad1e2c32144096f9a58561e6d6e82c31e" kindref="member">mean</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist_.mean();}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ad9ba2946f804aa951d6584a545345620" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>result_type<sp/><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ad9ba2946f804aa951d6584a545345620" kindref="member">std</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist_.stddev();}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>std::normal_distribution&lt;RealType&gt;<sp/>dist_;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RealType&gt;<sp/></highlight></codeline>
+<codeline lineno="88" refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ae30b1cbedc8188c4f9f52a75595d9a23" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1a1502bad6f6257ab317d73186058f7d28" kindref="member">NormalDist&lt;RealType&gt;::NormalDist</ref>(RealType<sp/>mu,<sp/>RealType<sp/>std)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">dist_(mu,<sp/>std)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RealType&gt;<sp/></highlight></codeline>
+<codeline lineno="94" refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1a1502bad6f6257ab317d73186058f7d28" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1a1502bad6f6257ab317d73186058f7d28" kindref="member">NormalDist&lt;RealType&gt;::NormalDist</ref>()</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist" kindref="compound">NormalDist</ref>&lt;RealType&gt;(0.0,<sp/>1.0)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RealType&gt;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">RealType<sp/></highlight></codeline>
+<codeline lineno="101" refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ae4cc7f4644c18373ff8dd176785356f9" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ae4cc7f4644c18373ff8dd176785356f9" kindref="member">NormalDist&lt;RealType&gt;::sample</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>std::random_device<sp/>rd{};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>std::mt19937<sp/>gen{rd()};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist_(gen);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RealType&gt;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">RealType<sp/></highlight></codeline>
+<codeline lineno="111" refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1a3e80f0a8a828cb60bab431f4e9bfb9e9" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ae4cc7f4644c18373ff8dd176785356f9" kindref="member">NormalDist&lt;RealType&gt;::sample</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>seed)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>std::mt19937<sp/>gen{seed};</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist_(gen);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RealType&gt;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">std::vector&lt;RealType&gt;<sp/></highlight></codeline>
+<codeline lineno="119" refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1aca5632cedb912a729607e6aca441eb2c" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1aca5632cedb912a729607e6aca441eb2c" kindref="member">NormalDist&lt;RealType&gt;::sample_many</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>size)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;RealType&gt;<sp/>samples(size);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>std::random_device<sp/>rd{};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>std::mt19937<sp/>gen{rd()};</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>i=0;<sp/>i&lt;size;<sp/>++i){</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>samples[i]<sp/>=<sp/>dist_(gen);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>samples;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RealType&gt;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">std::vector&lt;RealType&gt;<sp/></highlight></codeline>
+<codeline lineno="135" refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1aef06414891dec629725b6b9e75a8be20" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1aca5632cedb912a729607e6aca441eb2c" kindref="member">NormalDist&lt;RealType&gt;::sample_many</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>size,<sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>seed)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;RealType&gt;<sp/>samples(size);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>std::mt19937<sp/>gen(seed);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>i=0;<sp/>i&lt;size;<sp/>++i){</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>samples[i]<sp/>=<sp/>dist_(gen);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>samples;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RealType&gt;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">RealType<sp/></highlight></codeline>
+<codeline lineno="149" refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1acf6d2a5aa4726d801d09dc0d53d5d8a5" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1acf6d2a5aa4726d801d09dc0d53d5d8a5" kindref="member">NormalDist&lt;RealType&gt;::pdf</ref>(RealType<sp/>x)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mu<sp/>=<sp/>dist_.mean();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>std<sp/>=<sp/>dist_.stddev();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pi<sp/>=<sp/>rlenvscpp::consts::maths::PI;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>factor<sp/>=<sp/>1.0/(std<sp/>*<sp/>std::sqrt(2.0<sp/>*<sp/>pi));</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>exp<sp/>=<sp/>std::exp(-0.5*std::pow((x<sp/>-<sp/>mu)<sp/>/<sp/>std,<sp/>2.0));</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>factor<sp/>*<sp/>exp;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h"/>
+  </compounddef>
+</doxygen>

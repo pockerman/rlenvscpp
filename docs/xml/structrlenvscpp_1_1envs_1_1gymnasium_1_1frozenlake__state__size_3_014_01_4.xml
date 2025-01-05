@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structrlenvscpp_1_1envs_1_1gymnasium_1_1frozenlake__state__size_3_014_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>rlenvscpp::envs::gymnasium::frozenlake_state_size&lt; 4 &gt;</compoundname>
+    <templateparamlist>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structrlenvscpp_1_1envs_1_1gymnasium_1_1frozenlake__state__size_3_014_01_4_1ae979fa28b69f7bac4e125150bff4825f" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>constexpr uint_t rlenvscpp::envs::gymnasium::frozenlake_state_size&lt; 4 &gt;::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+<para>size </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h" line="84" column="29" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h" line="79" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h" bodystart="80" bodyend="86"/>
+    <listofallmembers>
+      <member refid="structrlenvscpp_1_1envs_1_1gymnasium_1_1frozenlake__state__size_3_014_01_4_1ae979fa28b69f7bac4e125150bff4825f" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::gymnasium::frozenlake_state_size&lt; 4 &gt;</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

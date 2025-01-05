@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1is__constructible__array__type__impl_3_01BasicJsonType_00_01ConstructibleArrayTyff4af2af9684a1cc8580410ec8c319a4" kind="struct" language="C++" prot="public">
+    <compoundname>detail::is_constructible_array_type_impl&lt; BasicJsonType, ConstructibleArrayType, enable_if_t&lt; std::is_same&lt; ConstructibleArrayType, typename BasicJsonType::value_type &gt;::value &gt; &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::true_type</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename BasicJsonType</type>
+      </param>
+      <param>
+        <type>typename ConstructibleArrayType</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::true_type</label>
+      </node>
+      <node id="1">
+        <label>detail::is_constructible_array_type_impl&lt; BasicJsonType, ConstructibleArrayType, enable_if_t&lt; std::is_same&lt; ConstructibleArrayType, typename BasicJsonType::value_type &gt;::value &gt; &gt;</label>
+        <link refid="structdetail_1_1is__constructible__array__type__impl_3_01BasicJsonType_00_01ConstructibleArrayTyff4af2af9684a1cc8580410ec8c319a4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::true_type</label>
+      </node>
+      <node id="1">
+        <label>detail::is_constructible_array_type_impl&lt; BasicJsonType, ConstructibleArrayType, enable_if_t&lt; std::is_same&lt; ConstructibleArrayType, typename BasicJsonType::value_type &gt;::value &gt; &gt;</label>
+        <link refid="structdetail_1_1is__constructible__array__type__impl_3_01BasicJsonType_00_01ConstructibleArrayTyff4af2af9684a1cc8580410ec8c319a4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3866" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3870" bodyend="3870"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

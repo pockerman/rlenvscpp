@@ -1,0 +1,586 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="taxi__env_8h" kind="file" language="C++">
+    <compoundname>taxi_env.h</compoundname>
+    <includes refid="rlenvscpp__config_8h" local="yes">rlenvs/rlenvscpp_config.h</includes>
+    <includes refid="rlenvs__types__v2_8h" local="yes">rlenvs/rlenvs_types_v2.h</includes>
+    <includes refid="toy__text__base_8h" local="yes">rlenvs/envs/gymnasium/toy_text/toy_text_base.h</includes>
+    <includes refid="time__step_8h" local="yes">rlenvs/envs/time_step.h</includes>
+    <includes refid="apiserver_8h" local="yes">rlenvs/envs/api_server/apiserver.h</includes>
+    <includes refid="json_8hpp" local="yes">rlenvs/extern/nlohmann/json/json.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">any</includes>
+    <includes local="no">unordered_map</includes>
+    <includedby refid="taxi__env_8cpp" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/taxi_env.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/taxi_env.h</label>
+        <link refid="taxi__env_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>valarray</label>
+      </node>
+      <node id="56">
+        <label>sys/select.h</label>
+      </node>
+      <node id="54">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="51">
+        <label>system_error</label>
+      </node>
+      <node id="42">
+        <label>iomanip</label>
+      </node>
+      <node id="13">
+        <label>functional</label>
+      </node>
+      <node id="31">
+        <label>limits</label>
+      </node>
+      <node id="49">
+        <label>rlenvs/extern/HTTPRequest.hpp</label>
+        <link refid="HTTPRequest_8hpp_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>iterator</label>
+      </node>
+      <node id="43">
+        <label>rlenvs/envs/env_base.h</label>
+        <link refid="env__base_8h_source"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>rlenvs/extern/nlohmann/json/json.hpp</label>
+        <link refid="json_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>cstdint</label>
+      </node>
+      <node id="45">
+        <label>rlenvs/envs/synchronized_env_mixin.h</label>
+        <link refid="synchronized__env__mixin_8h_source"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>rlenvs/envs/api_server/apiserver.h</label>
+        <link refid="apiserver_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>cmath</label>
+      </node>
+      <node id="52">
+        <label>errno.h</label>
+      </node>
+      <node id="30">
+        <label>cassert</label>
+      </node>
+      <node id="27">
+        <label>stdexcept</label>
+      </node>
+      <node id="53">
+        <label>fcntl.h</label>
+      </node>
+      <node id="35">
+        <label>numeric</label>
+      </node>
+      <node id="10">
+        <label>rlenvs/envs/gymnasium/gymnasium_env_base.h</label>
+        <link refid="gymnasium__env__base_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="47">
+        <label>boost/noncopyable.hpp</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="21">
+        <label>map</label>
+      </node>
+      <node id="44">
+        <label>rlenvs/rlenvs_consts.h</label>
+        <link refid="rlenvs__consts_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>exception</label>
+      </node>
+      <node id="55">
+        <label>netdb.h</label>
+      </node>
+      <node id="41">
+        <label>ostream</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="62">
+        <label>rlenvs/envs/space_type.h</label>
+        <link refid="space__type_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>any</label>
+      </node>
+      <node id="63">
+        <label>random</label>
+      </node>
+      <node id="60">
+        <label>string_view</label>
+      </node>
+      <node id="58">
+        <label>sys/types.h</label>
+      </node>
+      <node id="40">
+        <label>ios</label>
+      </node>
+      <node id="66">
+        <label>rlenvs/utils/io/io_utils.h</label>
+        <link refid="io__utils_8h_source"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>cstdio</label>
+      </node>
+      <node id="22">
+        <label>tuple</label>
+      </node>
+      <node id="59">
+        <label>unistd.h</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="18">
+        <label>utility</label>
+      </node>
+      <node id="9">
+        <label>rlenvs/envs/gymnasium/toy_text/toy_text_base.h</label>
+        <link refid="toy__text__base_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>array</label>
+      </node>
+      <node id="15">
+        <label>iosfwd</label>
+      </node>
+      <node id="39">
+        <label>cerrno</label>
+      </node>
+      <node id="29">
+        <label>cstdlib</label>
+      </node>
+      <node id="37">
+        <label>clocale</label>
+      </node>
+      <node id="38">
+        <label>cctype</label>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="24">
+        <label>unordered_map</label>
+      </node>
+      <node id="64">
+        <label>rlenvs/envs/time_step.h</label>
+        <link refid="time__step_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>chrono</label>
+      </node>
+      <node id="4">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="57">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="23">
+        <label>type_traits</label>
+      </node>
+      <node id="20">
+        <label>forward_list</label>
+      </node>
+      <node id="12">
+        <label>algorithm</label>
+      </node>
+      <node id="32">
+        <label>cstring</label>
+      </node>
+      <node id="17">
+        <label>memory</label>
+      </node>
+      <node id="65">
+        <label>rlenvs/envs/time_step_type.h</label>
+        <link refid="time__step__type_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>istream</label>
+      </node>
+      <node id="14">
+        <label>initializer_list</label>
+      </node>
+      <node id="61">
+        <label>rlenvs/envs/env_types.h</label>
+        <link refid="env__types_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi" prot="public">rlenvscpp::envs::gymnasium::Taxi</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1envs">rlenvscpp::envs</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1envs_1_1gymnasium">rlenvscpp::envs::gymnasium</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>TAXI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TAXI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvscpp_config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_types_v2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/envs/gymnasium/toy_text/toy_text_base.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/envs/time_step.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/envs/api_server/apiserver.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/extern/nlohmann/json/json.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;any&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">envs<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">gymnasium{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi" kindref="compound">Taxi</ref><sp/>final:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1ToyTextEnvBase" kindref="compound">ToyTextEnvBase</ref>&lt;TimeStep&lt;uint_t&gt;,<sp/>500,<sp/>6&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a683bafc647f41bba086e848b47eaa871" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a683bafc647f41bba086e848b47eaa871" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a0de15b4160a3d77fb9ae2bf1ef0cc419" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a0de15b4160a3d77fb9ae2bf1ef0cc419" kindref="member">URI</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a8bad11131720eaeb7e6f4d983ffd06e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1ToyTextEnvBase" kindref="compound">ToyTextEnvBase&lt;TimeStep&lt;uint_t&gt;</ref>,<sp/>500,<sp/>6&gt;<ref refid="classrlenvscpp_1_1envs_1_1EnvBase" kindref="compound">::base_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a8bad11131720eaeb7e6f4d983ffd06e4" kindref="member">base_type</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1ac5fcd2616e678aff2166fadedcd6dd05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a9d7b5e362a2acd20f6a2e4eb85359a28" kindref="member">base_type::time_step_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1ac5fcd2616e678aff2166fadedcd6dd05" kindref="member">time_step_type</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1ae45ce27f58124f63f24f402654895746" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a32b57a9f7a72fdac0033d15159fcdfa8" kindref="member">base_type::state_space_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1ae45ce27f58124f63f24f402654895746" kindref="member">state_space_type</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1ae9e72046bee77e5dab76b9cbfe25ece3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a1bc17d6a838f0eb39347c104f0c25e88" kindref="member">base_type::action_space_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1ae9e72046bee77e5dab76b9cbfe25ece3" kindref="member">action_space_type</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1af67e49598590a374c2b9f8002e70df3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a45feccee92313b3a3d636cb288488242" kindref="member">base_type::action_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1af67e49598590a374c2b9f8002e70df3e" kindref="member">action_type</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1ab91025004ed2a9593848ba2cc126008a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a75f678ad7dc1367058734619e78de120" kindref="member">base_type::state_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1ab91025004ed2a9593848ba2cc126008a" kindref="member">state_type</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1aab398aafc27abd11c2426f2df4fbea6c" kindref="member">Taxi</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper" kindref="compound">RESTApiServerWrapper</ref>&amp;<sp/>api_server);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1aab398aafc27abd11c2426f2df4fbea6c" kindref="member">Taxi</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1RESTApiServerWrapper" kindref="compound">RESTApiServerWrapper</ref>&amp;<sp/>api_server,<sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a1897dd501bc1980e1cde04b60c012ca8" kindref="member">cidx</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1aab398aafc27abd11c2426f2df4fbea6c" kindref="member">Taxi</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi" kindref="compound">Taxi</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86" refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a0a9012c7f8010c3867779671c2dfd61c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a0a9012c7f8010c3867779671c2dfd61c" kindref="member">~Taxi</ref>()=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a25c980b5ad9874c6760ea742f5a87fcb" kindref="member">make</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1aa7ef6b01e649a3bed482e92efc4eee4f" kindref="member">version</ref>,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>std::any&gt;&amp;<sp/></highlight><highlight class="comment">/*options*/</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a9d7b5e362a2acd20f6a2e4eb85359a28" kindref="member">time_step_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a3ad456524f8ecc2ef9f156a39384b23e" kindref="member">step</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a45feccee92313b3a3d636cb288488242" kindref="member">action_type</ref>&amp;<sp/>action)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi" kindref="compound">Taxi</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a3c36674aff8101ee07e0ca0e59d5059c" kindref="member">make_copy</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a1897dd501bc1980e1cde04b60c012ca8" kindref="member">cidx</ref>)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//virtual<sp/>dynamics_t<sp/>build_dynamics_from_response_(const<sp/>nlohmann::json&amp;<sp/>response)const<sp/>override<sp/>final;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a9d7b5e362a2acd20f6a2e4eb85359a28" kindref="member">time_step_type</ref><sp/><ref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a413cf3e94e6a0537615c8f57554eae22" kindref="member">create_time_step_from_response_</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nlohmann::json&amp;<sp/>response)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>TAXI_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/taxi_env.h"/>
+  </compounddef>
+</doxygen>

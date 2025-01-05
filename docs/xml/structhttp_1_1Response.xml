@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhttp_1_1Response" kind="struct" language="C++" prot="public" final="yes">
+    <compoundname>http::Response</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhttp_1_1Response_1abd411faef8479e600a4478cee12aa05b" prot="public" static="no" mutable="no">
+        <type><ref refid="structhttp_1_1Status" kindref="compound">Status</ref></type>
+        <definition>Status http::Response::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/HTTPRequest.hpp" line="173" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/HTTPRequest.hpp" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhttp_1_1Response_1a4047106eeca83e3e6f1cb0a5d9350aff" prot="public" static="no" mutable="no">
+        <type>HeaderFields</type>
+        <definition>HeaderFields http::Response::headerFields</definition>
+        <argsstring></argsstring>
+        <name>headerFields</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/HTTPRequest.hpp" line="174" column="22" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/HTTPRequest.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhttp_1_1Response_1a65a4c0f70e6bfa3df1ccba2ada43663e" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt;std::uint8_t&gt; http::Response::body</definition>
+        <argsstring></argsstring>
+        <name>body</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/HTTPRequest.hpp" line="175" column="21" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/HTTPRequest.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>http::Status</label>
+        <link refid="structhttp_1_1Status"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>httpVersion</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>http::HttpVersion</label>
+        <link refid="structhttp_1_1HttpVersion"/>
+      </node>
+      <node id="1">
+        <label>http::Response</label>
+        <link refid="structhttp_1_1Response"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>status</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/HTTPRequest.hpp" line="171" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/HTTPRequest.hpp" bodystart="172" bodyend="176"/>
+    <listofallmembers>
+      <member refid="structhttp_1_1Response_1a65a4c0f70e6bfa3df1ccba2ada43663e" prot="public" virt="non-virtual"><scope>http::Response</scope><name>body</name></member>
+      <member refid="structhttp_1_1Response_1a4047106eeca83e3e6f1cb0a5d9350aff" prot="public" virt="non-virtual"><scope>http::Response</scope><name>headerFields</name></member>
+      <member refid="structhttp_1_1Response_1abd411faef8479e600a4478cee12aa05b" prot="public" virt="non-virtual"><scope>http::Response</scope><name>status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

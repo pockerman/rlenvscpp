@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1is__basic__json" kind="struct" language="C++" prot="public">
+    <compoundname>detail::is_basic_json</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::false_type</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::false_type</label>
+      </node>
+      <node id="1">
+        <label>detail::is_basic_json&lt; typename &gt;</label>
+        <link refid="structdetail_1_1is__basic__json"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::false_type</label>
+      </node>
+      <node id="1">
+        <label>detail::is_basic_json&lt; typename &gt;</label>
+        <link refid="structdetail_1_1is__basic__json"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3463" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3463" bodyend="3463"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

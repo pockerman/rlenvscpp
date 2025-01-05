@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="env__types_8h" kind="file" language="C++">
+    <compoundname>env_types.h</compoundname>
+    <includes refid="rlenvs__types__v2_8h" local="yes">rlenvs/rlenvs_types_v2.h</includes>
+    <includes refid="space__type_8h" local="yes">rlenvs/envs/space_type.h</includes>
+    <includedby refid="connect2__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h</includedby>
+    <includedby refid="gym__walk_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gdrl/gym_walk.h</includedby>
+    <includedby refid="acrobot__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/acrobot_env.h</includedby>
+    <includedby refid="cart__pole__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/cart_pole_env.h</includedby>
+    <includedby refid="mountain__car__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/mountain_car_env.h</includedby>
+    <includedby refid="pendulum__env_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/pendulum_env.h</includedby>
+    <includedby refid="gymnasium__vector__env__base_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/gymnasium_vector_env_base.h</includedby>
+    <includedby refid="toy__text__base_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/toy_text_base.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="9">
+        <label>rlenvs/envs/space_type.h</label>
+        <link refid="space__type_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>random</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="11">
+        <label>type_traits</label>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_types.h</label>
+        <link refid="env__types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="15">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/taxi_env.h</label>
+        <link refid="taxi__env_8h_source"/>
+      </node>
+      <node id="10">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/vector/acrobot_vec_env.h</label>
+        <link refid="acrobot__vec__env_8h_source"/>
+      </node>
+      <node id="2">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/connect2/connect2_env.h</label>
+        <link refid="connect2__env_8h_source"/>
+      </node>
+      <node id="9">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/gymnasium_vector_env_base.h</label>
+        <link refid="gymnasium__vector__env__base_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/black_jack_env.h</label>
+        <link refid="black__jack__env_8h_source"/>
+      </node>
+      <node id="13">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/cliff_world_env.h</label>
+        <link refid="cliff__world__env_8h_source"/>
+      </node>
+      <node id="14">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h</label>
+        <link refid="frozen__lake__env_8h_source"/>
+      </node>
+      <node id="5">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/cart_pole_env.h</label>
+        <link refid="cart__pole__env_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/state_aggregation_cart_pole_env.h</label>
+        <link refid="state__aggregation__cart__pole__env_8h_source"/>
+      </node>
+      <node id="7">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/mountain_car_env.h</label>
+        <link refid="mountain__car__env_8h_source"/>
+      </node>
+      <node id="11">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/toy_text/toy_text_base.h</label>
+        <link refid="toy__text__base_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/acrobot_env.h</label>
+        <link refid="acrobot__env_8h_source"/>
+      </node>
+      <node id="8">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/pendulum_env.h</label>
+        <link refid="pendulum__env_8h_source"/>
+      </node>
+      <node id="3">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gdrl/gym_walk.h</label>
+        <link refid="gym__walk_8h_source"/>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_types.h</label>
+        <link refid="env__types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv" prot="public">rlenvscpp::envs::ScalarDiscreteEnv</innerclass>
+    <innerclass refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv" prot="public">rlenvscpp::envs::ContinuousVectorStateDiscreteActionEnv</innerclass>
+    <innerclass refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv" prot="public">rlenvscpp::envs::ContinuousVectorStateContinuousScalarBoundedActionEnv</innerclass>
+    <innerclass refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv" prot="public">rlenvscpp::envs::DiscreteVectorStateDiscreteActionEnv</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1envs">rlenvscpp::envs</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_types_v2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/envs/space_type.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">envs{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_end,<sp/><sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>action_end,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>state_start=0,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">_t<sp/>action_start=0&gt;<sp/></highlight></codeline>
+<codeline lineno="9" refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv" kindref="compound">ScalarDiscreteEnv</ref>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14" refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1a8805b2a82d2b83ff9807da813cd51788" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace" kindref="compound">ScalarDiscreteSpace&lt;state_start, state_end&gt;</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1a8805b2a82d2b83ff9807da813cd51788" kindref="member">state_space</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19" refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1a62d0f2b4a854ec8fe4d11679ef056af5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1adf96cb5d4e92b211720b6991f28b93f6" kindref="member">state_space::space_item_type</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1a62d0f2b4a854ec8fe4d11679ef056af5" kindref="member">state_type</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1a743c951c81ec71003403ba09e98827c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1a743c951c81ec71003403ba09e98827c2" kindref="member">STATE_SPACE_SIZE</ref><sp/>=<sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1a5f42da19b2972641a9c27eb83bccec92" kindref="member">state_space::size</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1ab5840e87f292711abe7c3d5884ef1e67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace" kindref="compound">ScalarDiscreteSpace&lt;action_start, action_end&gt;</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1ab5840e87f292711abe7c3d5884ef1e67" kindref="member">action_space</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1aa18d718ab41eec941ae04c118ef6c2e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1adf96cb5d4e92b211720b6991f28b93f6" kindref="member">action_space::space_item_type</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1aa18d718ab41eec941ae04c118ef6c2e6" kindref="member">action_type</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1a7661b0234c32fae7010adddd42033497" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1a7661b0234c32fae7010adddd42033497" kindref="member">ACTION_SPACE_SIZE</ref><sp/>=<sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1a5f42da19b2972641a9c27eb83bccec92" kindref="member">action_space::size</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1afc64c18cffe62ebeb974f18f59aa06cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1aa18d718ab41eec941ae04c118ef6c2e6" kindref="member">action_type</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1afc64c18cffe62ebeb974f18f59aa06cb" kindref="member">sample_action</ref>(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1a1276b7c7eb787900e671ec8b86d3f202" kindref="member">action_space::sample</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1a5efbb112aa9e29fcb6bc79cd0a039760" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1aa18d718ab41eec941ae04c118ef6c2e6" kindref="member">action_type</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1a5efbb112aa9e29fcb6bc79cd0a039760" kindref="member">sample_action</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>seed){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1a1276b7c7eb787900e671ec8b86d3f202" kindref="member">action_space::sample</ref>(seed,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;action_type&gt;<sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteEnv_1afc64c18cffe62ebeb974f18f59aa06cb" kindref="member">sample_action</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>seed,<sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>size){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1a1276b7c7eb787900e671ec8b86d3f202" kindref="member">action_space::sample</ref>(seed,<sp/>size,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>StateSpaceSize,<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>action_end,<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>action_start=0,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>StateSpaceItemType<sp/>=<sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref>&gt;</highlight></codeline>
+<codeline lineno="65" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv" kindref="compound">ContinuousVectorStateDiscreteActionEnv</ref></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorSpace" kindref="compound">ContinuousVectorSpace&lt;StateSpaceSize, StateSpaceItemType&gt;</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorSpace" kindref="compound">state_space</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1a7171f877507c296bc04e97bccc9ef356" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorSpace_1a7b632ae4bacbc9751359477877594a56" kindref="member">state_space::space_item_type</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1a7171f877507c296bc04e97bccc9ef356" kindref="member">state_type</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1ab297f4068cfb213aa71328258b2dc25c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1ab297f4068cfb213aa71328258b2dc25c" kindref="member">STATE_SPACE_SIZE</ref><sp/>=<sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorSpace_1ae084ddd1e6a365db33ec415f98533246" kindref="member">state_space::size</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1aa83992047324178749f0ac539ef040ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace" kindref="compound">ScalarDiscreteSpace&lt;action_start, action_end&gt;</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1aa83992047324178749f0ac539ef040ed" kindref="member">action_space</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1a3c06491eb8a71a4a2a162b42ff8c7caf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1adf96cb5d4e92b211720b6991f28b93f6" kindref="member">action_space::space_item_type</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1a3c06491eb8a71a4a2a162b42ff8c7caf" kindref="member">action_type</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1ae5ec5d542fa3568481e8866a9ca2e9c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1ae5ec5d542fa3568481e8866a9ca2e9c2" kindref="member">ACTION_SPACE_SIZE</ref><sp/>=<sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1a5f42da19b2972641a9c27eb83bccec92" kindref="member">action_space::size</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1a1c6441593a6f29be161e1b4c016eec03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1a3c06491eb8a71a4a2a162b42ff8c7caf" kindref="member">action_type</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateDiscreteActionEnv_1a1c6441593a6f29be161e1b4c016eec03" kindref="member">sample_action</ref>(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1a1276b7c7eb787900e671ec8b86d3f202" kindref="member">action_space::sample</ref>();}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>StateSpaceSize,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>action_end,<sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>real_range,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>action_start<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>StateSpaceItemType<sp/>=<sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref>&gt;</highlight></codeline>
+<codeline lineno="110" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv" kindref="compound">ContinuousVectorStateContinuousScalarBoundedActionEnv</ref></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1afc477a6960e0c6c24225794839346da3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorSpace" kindref="compound">ContinuousVectorSpace&lt;StateSpaceSize, StateSpaceItemType&gt;</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1afc477a6960e0c6c24225794839346da3" kindref="member">state_space</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1aca9fb77b847839093b4c22bfb6dbe300" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorSpace_1a7b632ae4bacbc9751359477877594a56" kindref="member">state_space::space_item_type</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1aca9fb77b847839093b4c22bfb6dbe300" kindref="member">state_type</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1ab040f4cd450718d2e6b4de94c99664b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1ab040f4cd450718d2e6b4de94c99664b9" kindref="member">STATE_SPACE_SIZE</ref><sp/>=<sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorSpace_1ae084ddd1e6a365db33ec415f98533246" kindref="member">state_space::size</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1a9e70b578aee782a28b550fe35c305c88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>real_range<sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1a9e70b578aee782a28b550fe35c305c88" kindref="member">action_limits</ref><sp/>=<sp/>real_range();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1afc1d1011e9a46604f3bce9a98ebeb018" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace" kindref="compound">ScalarDiscreteSpace&lt;action_start, action_end&gt;</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1afc1d1011e9a46604f3bce9a98ebeb018" kindref="member">action_space</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1ae3cbae1e2a64c17dfc11df15a7ffeb08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>real_range::value_type<sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1ae3cbae1e2a64c17dfc11df15a7ffeb08" kindref="member">action_type</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146" refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1add412b52f4a2fdd4ab99d826aad5e945" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1ContinuousVectorStateContinuousScalarBoundedActionEnv_1add412b52f4a2fdd4ab99d826aad5e945" kindref="member">ACTION_SPACE_SIZE</ref><sp/>=<sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1a5f42da19b2972641a9c27eb83bccec92" kindref="member">action_space::size</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="151"><highlight class="comment">template&lt;uint_t<sp/>StateSpaceSize,<sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint_t<sp/>ActionSpaceSize,</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>StateSpaceItemType=std::vector&lt;real_t&gt;&gt;</highlight></codeline>
+<codeline lineno="154"><highlight class="comment">struct<sp/>ContinousStateDiscreteActionEnv{</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/><sp/><sp/><sp/>typedef<sp/>ContinuousSpace&lt;StateSpaceSize,<sp/>StateSpaceItemType&gt;<sp/>state_space;</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/>typedef<sp/>typename<sp/>state_space::space_item_type<sp/>state_type;</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/><sp/><sp/><sp/>static<sp/>constexpr<sp/>uint_t<sp/>STATE_SPACE_SIZE<sp/>=<sp/>StateSpaceSize;</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/><sp/><sp/><sp/>typedef<sp/>DiscreteSpace&lt;ActionSpaceSize&gt;<sp/>action_space;</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/><sp/><sp/><sp/>typedef<sp/>typename<sp/>action_space::space_item_type<sp/>action_type;</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="comment"><sp/><sp/><sp/><sp/>static<sp/>constexpr<sp/>uint_t<sp/>ACTION_SPACE_SIZE<sp/>=<sp/>ActionSpaceSize;</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/><sp/><sp/><sp/>static<sp/>action_type<sp/>sample_action(){return<sp/>action_space::sample();}</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"></highlight></codeline>
+<codeline lineno="199"><highlight class="comment"><sp/><sp/><sp/><sp/>static<sp/>action_type<sp/>sample_action(uint_t<sp/>seed){return<sp/>action_space::sample();}</highlight></codeline>
+<codeline lineno="200"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="comment">};</highlight></codeline>
+<codeline lineno="202"><highlight class="comment"></highlight></codeline>
+<codeline lineno="203"><highlight class="comment">template&lt;uint_t<sp/>StateSpaceSize,<sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint_t<sp/>ActionSpaceSize,</highlight></codeline>
+<codeline lineno="205"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>ActionSpaceItemType=std::vector&lt;real_t&gt;&gt;</highlight></codeline>
+<codeline lineno="206"><highlight class="comment">struct<sp/>DisceteStateContinuousActionEnv{</highlight></codeline>
+<codeline lineno="207"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/><sp/><sp/><sp/>typedef<sp/>DiscreteSpace&lt;StateSpaceSize&gt;<sp/>state_space;</highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="216"><highlight class="comment"><sp/><sp/><sp/><sp/>typedef<sp/>typename<sp/>state_space::space_item_type<sp/>state_type;</highlight></codeline>
+<codeline lineno="217"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/><sp/><sp/><sp/>static<sp/>constexpr<sp/>uint_t<sp/>STATE_SPACE_SIZE<sp/>=<sp/>StateSpaceSize;</highlight></codeline>
+<codeline lineno="222"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="comment"><sp/><sp/><sp/><sp/>typedef<sp/>ContinuousSpace&lt;ActionSpaceSize,<sp/>ActionSpaceItemType&gt;<sp/>action_space;</highlight></codeline>
+<codeline lineno="227"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="231"><highlight class="comment"><sp/><sp/><sp/><sp/>typedef<sp/>typename<sp/>action_space::space_item_type<sp/>action_type;</highlight></codeline>
+<codeline lineno="232"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="comment"><sp/><sp/><sp/><sp/>static<sp/>constexpr<sp/>uint_t<sp/>ACTION_SPACE_SIZE<sp/>=<sp/>ActionSpaceSize;</highlight></codeline>
+<codeline lineno="237"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="comment">};</highlight></codeline>
+<codeline lineno="239"><highlight class="comment"></highlight></codeline>
+<codeline lineno="240"><highlight class="comment"></highlight></codeline>
+<codeline lineno="241"><highlight class="comment">template&lt;uint_t<sp/>StateSpaceSize,<sp/></highlight></codeline>
+<codeline lineno="242"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint_t<sp/>ActionSpaceSize,</highlight></codeline>
+<codeline lineno="243"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>StateSpaceItemType<sp/>=<sp/>std::vector&lt;real_t&gt;,</highlight></codeline>
+<codeline lineno="244"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>ActionSpaceItemType<sp/>=<sp/>std::vector&lt;real_t&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="245"><highlight class="comment">struct<sp/>ContinousEnv{</highlight></codeline>
+<codeline lineno="246"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="247"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="251"><highlight class="comment"><sp/><sp/><sp/><sp/>typedef<sp/>ContinuousSpace&lt;StateSpaceSize,<sp/>StateSpaceItemType&gt;<sp/>state_space;</highlight></codeline>
+<codeline lineno="252"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/><sp/><sp/><sp/>typedef<sp/>typename<sp/>state_space::space_item_type<sp/>state_type;</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="261"><highlight class="comment"><sp/><sp/><sp/><sp/>static<sp/>constexpr<sp/>uint_t<sp/>STATE_SPACE_SIZE<sp/>=<sp/>StateSpaceSize;</highlight></codeline>
+<codeline lineno="262"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="266"><highlight class="comment"><sp/><sp/><sp/><sp/>typedef<sp/>ContinuousSpace&lt;ActionSpaceSize,<sp/>ActionSpaceItemType&gt;<sp/>action_space;</highlight></codeline>
+<codeline lineno="267"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="271"><highlight class="comment"><sp/><sp/><sp/><sp/>typedef<sp/>typename<sp/>action_space::space_item_type<sp/>action_type;</highlight></codeline>
+<codeline lineno="272"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="276"><highlight class="comment"><sp/><sp/><sp/><sp/>static<sp/>constexpr<sp/>uint_t<sp/>ACTION_SPACE_SIZE<sp/>=<sp/>ActionSpaceSize;</highlight></codeline>
+<codeline lineno="277"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="278"><highlight class="comment">};</highlight></codeline>
+<codeline lineno="279"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>StateSpaceSize,<sp/></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>AS,</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>AE,</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>StateSpaceItemType<sp/>=<sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref>&gt;</highlight></codeline>
+<codeline lineno="284" refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv" kindref="compound">DiscreteVectorStateDiscreteActionEnv</ref></highlight></codeline>
+<codeline lineno="285"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="289" refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a3ba86ca02fb39177b40f80fbd8594f0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1DiscreteVectorSpace" kindref="compound">DiscreteVectorSpace&lt;StateSpaceSize, StateSpaceItemType&gt;</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a3ba86ca02fb39177b40f80fbd8594f0c" kindref="member">state_space</ref>;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="294" refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a72443b3346ffe8cfc919c7ca91e0a199" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1DiscreteVectorSpace_1a4af80c3d827605d2802b70aea9a75ba7" kindref="member">state_space::space_item_type</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a72443b3346ffe8cfc919c7ca91e0a199" kindref="member">state_type</ref>;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="299" refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1afdf48b4a975df7d7db4967671eba49db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1afdf48b4a975df7d7db4967671eba49db" kindref="member">STATE_SPACE_SIZE</ref><sp/>=<sp/>StateSpaceSize;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="304" refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a59e3793303b6d2a16f2f9056bf66bd56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace" kindref="compound">ScalarDiscreteSpace&lt;AS, AE&gt;</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a59e3793303b6d2a16f2f9056bf66bd56" kindref="member">action_space</ref>;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="309" refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a2a100f470479212b64fd2d99449eae1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1adf96cb5d4e92b211720b6991f28b93f6" kindref="member">action_space::space_item_type</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a2a100f470479212b64fd2d99449eae1c" kindref="member">action_type</ref>;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="314" refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a7de18fb157d98c5dc819d56aa6d5c929" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="structrlenvscpp_1_1envs_1_1DiscreteVectorStateDiscreteActionEnv_1a7de18fb157d98c5dc819d56aa6d5c929" kindref="member">ACTION_SPACE_SIZE</ref><sp/>=<sp/><ref refid="structrlenvscpp_1_1envs_1_1ScalarDiscreteSpace_1a5f42da19b2972641a9c27eb83bccec92" kindref="member">action_space::size</ref>;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_types.h"/>
+  </compounddef>
+</doxygen>

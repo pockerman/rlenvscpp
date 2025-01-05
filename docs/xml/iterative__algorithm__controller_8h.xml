@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="iterative__algorithm__controller_8h" kind="file" language="C++">
+    <compoundname>iterative_algorithm_controller.h</compoundname>
+    <includes refid="rlenvs__types__v2_8h" local="yes">rlenvs/rlenvs_types_v2.h</includes>
+    <includes refid="iterative__algorithm__result_8h" local="yes">rlenvs/utils/iterative_algorithm_result.h</includes>
+    <includes local="no">limits</includes>
+    <includedby refid="iterative__algorithm__controller_8cpp" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/iterative_algorithm_controller.cpp</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>limits</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>ostream</label>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="11">
+        <label>chrono</label>
+      </node>
+      <node id="4">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="9">
+        <label>rlenvs/utils/iterative_algorithm_result.h</label>
+        <link refid="iterative__algorithm__result_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/iterative_algorithm_controller.h</label>
+        <link refid="iterative__algorithm__controller_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController" prot="public">rlenvscpp::utils::IterativeAlgorithmController</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils">rlenvscpp::utils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ITERATIVE_ALGORITHM_CONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ITERATIVE_ALGORITHM_CONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_types_v2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/utils/iterative_algorithm_result.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">utils{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController" kindref="compound">IterativeAlgorithmController</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1aa5291edff32a8ccf148735ac3de95480" kindref="member">IterativeAlgorithmController</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>maxIterations,<sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>exitTolerance);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a2ea48e44f080581fa8ee0db38ad94522" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a2ea48e44f080581fa8ee0db38ad94522" kindref="member">IterativeAlgorithmController</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController" kindref="compound">IterativeAlgorithmController</ref>&amp;)=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1ac6cbaa05fbaab3ffc584e762bd3efc64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1ac6cbaa05fbaab3ffc584e762bd3efc64" kindref="member">IterativeAlgorithmController</ref>(<ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController" kindref="compound">IterativeAlgorithmController</ref>&amp;&amp;)=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a44745d894a915b6ec94cb90a30833313" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController" kindref="compound">IterativeAlgorithmController</ref>&amp;<sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a44745d894a915b6ec94cb90a30833313" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController" kindref="compound">IterativeAlgorithmController</ref>&amp;)=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a683be3b453de95b0095cf3fac6da84de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController" kindref="compound">IterativeAlgorithmController</ref>&amp;<sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a683be3b453de95b0095cf3fac6da84de" kindref="member">operator=</ref>(<ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController" kindref="compound">IterativeAlgorithmController</ref>&amp;&amp;)=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1ac5ad8baede46e946afdc36f27f72cef9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1ac5ad8baede46e946afdc36f27f72cef9" kindref="member">~IterativeAlgorithmController</ref>()=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a874dc79f9368166a96582ab84a64e9bf" kindref="member">continue_iterations</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1aeebb52753ac78e947d325c60d7b4eee0" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1aeebb52753ac78e947d325c60d7b4eee0" kindref="member">show_iterations</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>show_iterations_;}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a379e3548514a228e743a3f827833b001" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a379e3548514a228e743a3f827833b001" kindref="member">track_residuals</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>track_residuals_;}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1ae904526d56ee35e86ed2c4d42f3a0345" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1ae904526d56ee35e86ed2c4d42f3a0345" kindref="member">set_tolerance</ref>(<ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>tol){exit_tolerance_<sp/>=<sp/>tol;}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a75a5bd34329697d5e389b46c533e9e25" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a75a5bd34329697d5e389b46c533e9e25" kindref="member">set_show_iterations_flag</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>flag){show_iterations_<sp/>=<sp/>flag;}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1afb6b55036ca3bb94c6eecad928fde389" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1afb6b55036ca3bb94c6eecad928fde389" kindref="member">set_track_residuals_flag</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>flag){track_residuals_<sp/>=<sp/>flag;}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a5c5472aec12b0f9e8a5fdd4f6cc576a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a5c5472aec12b0f9e8a5fdd4f6cc576a0" kindref="member">set_num_threads</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>nthreads){n_threads_<sp/>=<sp/>nthreads;}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1ae1aadc71fe44d1f97ce6d7cfc28a0d26" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1ae1aadc71fe44d1f97ce6d7cfc28a0d26" kindref="member">set_max_itrs</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>max_itrs){max_iterations_<sp/>=<sp/>max_itrs;}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1aff16507ef967e51c1028d2cc9089780d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1aff16507ef967e51c1028d2cc9089780d" kindref="member">get_current_iteration</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>current_iteration_idx_;}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a54df2381e0d88fcc93de3bbef57ad85a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a54df2381e0d88fcc93de3bbef57ad85a" kindref="member">get_exit_tolerance</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>exit_tolerance_;}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a7dd8e82f198994cb7afefb202df46de3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a7dd8e82f198994cb7afefb202df46de3" kindref="member">get_max_iterations</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>max_iterations_;}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a77d6b2a53bf30fa63ec2bc25ec7b58c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a77d6b2a53bf30fa63ec2bc25ec7b58c2" kindref="member">get_num_threads</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n_threads_;}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a9c500462801af9270e3c05e344fb307b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a9c500462801af9270e3c05e344fb307b" kindref="member">get_residual</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>current_res_;}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><ref refid="structrlenvscpp_1_1utils_1_1IterativeAlgorithmResult" kindref="compound">IterativeAlgorithmResult</ref><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1aa6c36e441c314a0f26ebe7b9a01b343d" kindref="member">get_state</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a4ed333773b5bc7cc7becd15f7ef46917" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a4ed333773b5bc7cc7becd15f7ef46917" kindref="member">update_residual</ref>(<ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>res){current_res_<sp/>=<sp/>res;}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a1789cee90b7505732d96cbaac65aecf5" kindref="member">reset</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController" kindref="compound">IterativeAlgorithmController</ref>&amp;<sp/>control);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1a1789cee90b7505732d96cbaac65aecf5" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>max_iterations_;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>exit_tolerance_;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>current_iteration_idx_;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>n_threads_;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>current_res_;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>show_iterations_;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>track_residuals_;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1aa5291edff32a8ccf148735ac3de95480" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1IterativeAlgorithmController_1aa5291edff32a8ccf148735ac3de95480" kindref="member">IterativeAlgorithmController::IterativeAlgorithmController</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>max_iterations,<sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>exit_tolerance)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>max_iterations_(max_iterations),</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>exit_tolerance_(exit_tolerance),</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>current_iteration_idx_(0),</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>n_threads_(1),</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>current_res_(std::numeric_limits&lt;<ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref>&gt;::max()),</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>show_iterations_(false),</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>track_residuals_(false)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ITERATIVE_ALGORITHM_CONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/iterative_algorithm_controller.h"/>
+  </compounddef>
+</doxygen>

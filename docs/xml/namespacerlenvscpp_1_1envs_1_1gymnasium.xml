@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacerlenvscpp_1_1envs_1_1gymnasium" kind="namespace" language="C++">
+    <compoundname>rlenvscpp::envs::gymnasium</compoundname>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Acrobot" prot="public">rlenvscpp::envs::gymnasium::Acrobot</innerclass>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1CartPole" prot="public">rlenvscpp::envs::gymnasium::CartPole</innerclass>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1MountainCar" prot="public">rlenvscpp::envs::gymnasium::MountainCar</innerclass>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Pendulum" prot="public">rlenvscpp::envs::gymnasium::Pendulum</innerclass>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1AcrobotV" prot="public">rlenvscpp::envs::gymnasium::AcrobotV</innerclass>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase" prot="public">rlenvscpp::envs::gymnasium::GymnasiumEnvBase</innerclass>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumVecEnvBase" prot="public">rlenvscpp::envs::gymnasium::GymnasiumVecEnvBase</innerclass>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1BlackJack" prot="public">rlenvscpp::envs::gymnasium::BlackJack</innerclass>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1CliffWorld" prot="public">rlenvscpp::envs::gymnasium::CliffWorld</innerclass>
+    <innerclass refid="structrlenvscpp_1_1envs_1_1gymnasium_1_1frozenlake__state__size" prot="public">rlenvscpp::envs::gymnasium::frozenlake_state_size</innerclass>
+    <innerclass refid="structrlenvscpp_1_1envs_1_1gymnasium_1_1frozenlake__state__size_3_014_01_4" prot="public">rlenvscpp::envs::gymnasium::frozenlake_state_size&lt; 4 &gt;</innerclass>
+    <innerclass refid="structrlenvscpp_1_1envs_1_1gymnasium_1_1frozenlake__state__size_3_018_01_4" prot="public">rlenvscpp::envs::gymnasium::frozenlake_state_size&lt; 8 &gt;</innerclass>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1FrozenLake" prot="public">rlenvscpp::envs::gymnasium::FrozenLake</innerclass>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi" prot="public">rlenvscpp::envs::gymnasium::Taxi</innerclass>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1ToyTextEnvBase" prot="public">rlenvscpp::envs::gymnasium::ToyTextEnvBase</innerclass>
+    <innernamespace refid="namespacerlenvscpp_1_1envs_1_1gymnasium_1_1detail__">rlenvscpp::envs::gymnasium::detail_</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/gymnasium/classic_control/acrobot_env.cpp" line="10" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdetail_1_1iterator__input__adapter" kind="class" language="C++" prot="public">
+    <compoundname>detail::iterator_input_adapter</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename IteratorType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classdetail_1_1iterator__input__adapter_1a6c852966a1cd5719ae32e8e486691fbe" prot="public" static="no">
+        <type>typename std::iterator_traits&lt; IteratorType &gt;::value_type</type>
+        <definition>using detail::iterator_input_adapter&lt; IteratorType &gt;::char_type =  typename std::iterator_traits&lt;IteratorType&gt;::value_type</definition>
+        <argsstring></argsstring>
+        <name>char_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6284" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6284" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdetail_1_1iterator__input__adapter_1aabbd29e91a451bd3e950d909590c1e27" prot="private" static="no" mutable="no">
+        <type>IteratorType</type>
+        <definition>IteratorType detail::iterator_input_adapter&lt; IteratorType &gt;::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6303" column="18" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdetail_1_1iterator__input__adapter_1a06b072f92b4626d7e3774bb9dba39a2d" prot="private" static="no" mutable="no">
+        <type>IteratorType</type>
+        <definition>IteratorType detail::iterator_input_adapter&lt; IteratorType &gt;::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6304" column="18" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6304" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdetail_1_1iterator__input__adapter_1ab86106ba230f1542b94dcd96e6ab3221" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename BaseInputAdapter</type>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>struct</type>
+        <definition>friend struct wide_string_input_helper</definition>
+        <argsstring></argsstring>
+        <name>wide_string_input_helper</name>
+        <param>
+          <type><ref refid="structdetail_1_1wide__string__input__helper" kindref="compound">wide_string_input_helper</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6307" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6307" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdetail_1_1iterator__input__adapter_1a6bbdb33434a11f90d6bfe2a9a71ee356" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>detail::iterator_input_adapter&lt; IteratorType &gt;::iterator_input_adapter</definition>
+        <argsstring>(IteratorType first, IteratorType last)</argsstring>
+        <name>iterator_input_adapter</name>
+        <param>
+          <type>IteratorType</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>IteratorType</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6286" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6286" bodyend="6288"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1iterator__input__adapter_1ae2aff565d914ead3f0a3cb7bbce51a9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structdetail_1_1char__traits" kindref="compound">char_traits</ref>&lt; char_type &gt;::int_type</type>
+        <definition>char_traits&lt;char_type&gt;::int_type detail::iterator_input_adapter&lt; IteratorType &gt;::get_character</definition>
+        <argsstring>()</argsstring>
+        <name>get_character</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6290" column="37" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6290" bodyend="6300"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdetail_1_1iterator__input__adapter_1a2d318655648b8a1afcd902fdab0b0c5c" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::iterator_input_adapter&lt; IteratorType &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6309" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6309" bodyend="6312"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6281" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6282" bodyend="6313"/>
+    <listofallmembers>
+      <member refid="classdetail_1_1iterator__input__adapter_1a6c852966a1cd5719ae32e8e486691fbe" prot="public" virt="non-virtual"><scope>detail::iterator_input_adapter</scope><name>char_type</name></member>
+      <member refid="classdetail_1_1iterator__input__adapter_1aabbd29e91a451bd3e950d909590c1e27" prot="private" virt="non-virtual"><scope>detail::iterator_input_adapter</scope><name>current</name></member>
+      <member refid="classdetail_1_1iterator__input__adapter_1a2d318655648b8a1afcd902fdab0b0c5c" prot="private" virt="non-virtual"><scope>detail::iterator_input_adapter</scope><name>empty</name></member>
+      <member refid="classdetail_1_1iterator__input__adapter_1a06b072f92b4626d7e3774bb9dba39a2d" prot="private" virt="non-virtual"><scope>detail::iterator_input_adapter</scope><name>end</name></member>
+      <member refid="classdetail_1_1iterator__input__adapter_1ae2aff565d914ead3f0a3cb7bbce51a9c" prot="public" virt="non-virtual"><scope>detail::iterator_input_adapter</scope><name>get_character</name></member>
+      <member refid="classdetail_1_1iterator__input__adapter_1a6bbdb33434a11f90d6bfe2a9a71ee356" prot="public" virt="non-virtual"><scope>detail::iterator_input_adapter</scope><name>iterator_input_adapter</name></member>
+      <member refid="classdetail_1_1iterator__input__adapter_1ab86106ba230f1542b94dcd96e6ab3221" prot="private" virt="non-virtual"><scope>detail::iterator_input_adapter</scope><name>wide_string_input_helper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

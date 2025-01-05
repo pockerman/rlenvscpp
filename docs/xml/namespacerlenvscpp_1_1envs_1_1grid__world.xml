@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacerlenvscpp_1_1envs_1_1grid__world" kind="namespace" language="C++">
+    <compoundname>rlenvscpp::envs::grid_world</compoundname>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1grid__world_1_1Gridworld" prot="public">rlenvscpp::envs::grid_world::Gridworld</innerclass>
+    <innernamespace refid="namespacerlenvscpp_1_1envs_1_1grid__world_1_1detail">rlenvscpp::envs::grid_world::detail</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="grid__world__env_8h_1abe2ec3624c4e474f436167fc0fe2df5c" prot="public" static="no" strong="yes">
+        <type>int</type>
+        <name>GridWorldInitType</name>
+        <enumvalue id="grid__world__env_8h_1abe2ec3624c4e474f436167fc0fe2df5cafe6f99ef1ec99efbdc19a9786cf1facc" prot="public">
+          <name>STATIC</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="grid__world__env_8h_1abe2ec3624c4e474f436167fc0fe2df5ca170e02e86972c2be8559884cc3c12254" prot="public">
+          <name>RANDOM</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="grid__world__env_8h_1abe2ec3624c4e474f436167fc0fe2df5ca07c80e2a355d91402a00d82b1fa13855" prot="public">
+          <name>PLAYER</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="grid__world__env_8h_1abe2ec3624c4e474f436167fc0fe2df5ca092170c04de9552a6503565e95b25ca3" prot="public">
+          <name>INVALID_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/grid_world/grid_world_env.h" line="36" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/grid_world/grid_world_env.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="enum" id="grid__world__env_8h_1af589716aa805a83c84767a8260c52a10" prot="public" static="no" strong="yes">
+        <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <name>GridWorldActionType</name>
+        <enumvalue id="grid__world__env_8h_1af589716aa805a83c84767a8260c52a10afbaedde498cdead4f2780217646e9ba1" prot="public">
+          <name>UP</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="grid__world__env_8h_1af589716aa805a83c84767a8260c52a10ac4e0e4e3118472beeb2ae75827450f1f" prot="public">
+          <name>DOWN</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="grid__world__env_8h_1af589716aa805a83c84767a8260c52a10a684d325a7303f52e64011467ff5c5758" prot="public">
+          <name>LEFT</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="grid__world__env_8h_1af589716aa805a83c84767a8260c52a10a21507b40c80068eda19865706fdc2403" prot="public">
+          <name>RIGHT</name>
+          <initializer>=3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="grid__world__env_8h_1af589716aa805a83c84767a8260c52a10a092170c04de9552a6503565e95b25ca3" prot="public">
+          <name>INVALID_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/grid_world/grid_world_env.h" line="37" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/grid_world/grid_world_env.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="grid__world__env_8cpp_1a12ae9bc9c2738a0062d2b5a6494ecac2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GridWorldInitType</type>
+        <definition>GridWorldInitType rlenvscpp::envs::grid_world::from_string</definition>
+        <argsstring>(const std::string &amp;gw_init_type)</argsstring>
+        <name>from_string</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>gw_init_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/grid_world/grid_world_env.cpp" line="15" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/grid_world/grid_world_env.cpp" bodystart="15" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/grid_world/grid_world_env.cpp" line="12" column="1"/>
+  </compounddef>
+</doxygen>

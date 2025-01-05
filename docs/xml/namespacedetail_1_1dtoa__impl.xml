@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacedetail_1_1dtoa__impl" kind="namespace" language="C++">
+    <compoundname>detail::dtoa_impl</compoundname>
+    <innerclass refid="structdetail_1_1dtoa__impl_1_1diyfp" prot="public">detail::dtoa_impl::diyfp</innerclass>
+    <innerclass refid="structdetail_1_1dtoa__impl_1_1boundaries" prot="public">detail::dtoa_impl::boundaries</innerclass>
+    <innerclass refid="structdetail_1_1dtoa__impl_1_1cached__power" prot="public">detail::dtoa_impl::cached_power</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacedetail_1_1dtoa__impl_1a95c569b7627a9372686f1f77d73e8660" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int detail::dtoa_impl::kAlpha</definition>
+        <argsstring></argsstring>
+        <name>kAlpha</name>
+        <initializer>= -60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="17219" column="15" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="17219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedetail_1_1dtoa__impl_1ae152a095d2dd1a6dd41ef8ad39c26e19" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int detail::dtoa_impl::kGamma</definition>
+        <argsstring></argsstring>
+        <name>kGamma</name>
+        <initializer>= -32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="17220" column="15" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="17220" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacedetail_1_1dtoa__impl_1a3c879bf97b806cacbcbb2da07a5ff5c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Target</type>
+          </param>
+          <param>
+            <type>typename Source</type>
+          </param>
+        </templateparamlist>
+        <type>Target</type>
+        <definition>Target detail::dtoa_impl::reinterpret_bits</definition>
+        <argsstring>(const Source source)</argsstring>
+        <name>reinterpret_bits</name>
+        <param>
+          <type>const Source</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16956" column="8" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="16956" bodyend="16963"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedetail_1_1dtoa__impl_1a6a5ccf11847aab7a0f42f587b33935df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FloatType</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structdetail_1_1dtoa__impl_1_1boundaries" kindref="compound">boundaries</ref></type>
+        <definition>boundaries detail::dtoa_impl::compute_boundaries</definition>
+        <argsstring>(FloatType value)</argsstring>
+        <name>compute_boundaries</name>
+        <param>
+          <type>FloatType</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the (normalized) diyfp representing the input number &apos;value&apos; and its boundaries.</para>
+<para><simplesect kind="pre"><para>value must be finite and positive </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="17097" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="17097" bodyend="17162"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedetail_1_1dtoa__impl_1a29ae6574f6be09a5c8ab08da9a3f71b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structdetail_1_1dtoa__impl_1_1cached__power" kindref="compound">cached_power</ref></type>
+        <definition>cached_power detail::dtoa_impl::get_cached_power_for_binary_exponent</definition>
+        <argsstring>(int e)</argsstring>
+        <name>get_cached_power_for_binary_exponent</name>
+        <param>
+          <type>int</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For a normalized diyfp w = f * 2^e, this function returns a (normalized) cached power-of-ten c = f_c * 2^e_c, such that the exponent of the product w * c satisfies (Definition 3.2 from [1]) <verbatim> alpha &lt;= e_c + e + q &lt;= gamma.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="17236" column="21" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="17236" bodyend="17394"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedetail_1_1dtoa__impl_1a04eb234a28617519974fc962cd4da666" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int detail::dtoa_impl::find_largest_pow10</definition>
+        <argsstring>(const std::uint32_t n, std::uint32_t &amp;pow10)</argsstring>
+        <name>find_largest_pow10</name>
+        <param>
+          <type>const std::uint32_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>std::uint32_t &amp;</type>
+          <declname>pow10</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For n != 0, returns k, such that pow10 := 10^(k-1) &lt;= n &lt; 10^k. For n == 0, returns 1 and sets pow10 := 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="17400" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="17400" bodyend="17452"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedetail_1_1dtoa__impl_1a73a15efcb5c2157ea0e1375b98ef0e83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::dtoa_impl::grisu2_round</definition>
+        <argsstring>(char *buf, int len, std::uint64_t dist, std::uint64_t delta, std::uint64_t rest, std::uint64_t ten_k)</argsstring>
+        <name>grisu2_round</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>delta</declname>
+        </param>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>rest</declname>
+        </param>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>ten_k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="17454" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="17454" bodyend="17489"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedetail_1_1dtoa__impl_1ae877aa13ab872c99a1c614e5e1524807" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::dtoa_impl::grisu2_digit_gen</definition>
+        <argsstring>(char *buffer, int &amp;length, int &amp;decimal_exponent, diyfp M_minus, diyfp w, diyfp M_plus)</argsstring>
+        <name>grisu2_digit_gen</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>decimal_exponent</declname>
+        </param>
+        <param>
+          <type><ref refid="structdetail_1_1dtoa__impl_1_1diyfp" kindref="compound">diyfp</ref></type>
+          <declname>M_minus</declname>
+        </param>
+        <param>
+          <type><ref refid="structdetail_1_1dtoa__impl_1_1diyfp" kindref="compound">diyfp</ref></type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="structdetail_1_1dtoa__impl_1_1diyfp" kindref="compound">diyfp</ref></type>
+          <declname>M_plus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates V = buffer * 10^decimal_exponent, such that M- &lt;= V &lt;= M+. M- and M+ must be normalized and share the same exponent -60 &lt;= e &lt;= -32. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="17495" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="17495" bodyend="17728"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedetail_1_1dtoa__impl_1ad549352ed1a9676a092d143a2daa3dee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::dtoa_impl::grisu2</definition>
+        <argsstring>(char *buf, int &amp;len, int &amp;decimal_exponent, diyfp m_minus, diyfp v, diyfp m_plus)</argsstring>
+        <name>grisu2</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>decimal_exponent</declname>
+        </param>
+        <param>
+          <type><ref refid="structdetail_1_1dtoa__impl_1_1diyfp" kindref="compound">diyfp</ref></type>
+          <declname>m_minus</declname>
+        </param>
+        <param>
+          <type><ref refid="structdetail_1_1dtoa__impl_1_1diyfp" kindref="compound">diyfp</ref></type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="structdetail_1_1dtoa__impl_1_1diyfp" kindref="compound">diyfp</ref></type>
+          <declname>m_plus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>v = buf * 10^decimal_exponent len is the length of the buffer (number of decimal digits) The buffer must be large enough, i.e. &gt;= max_digits10. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="17736" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="17736" bodyend="17787"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedetail_1_1dtoa__impl_1abdf6bc05c54068a5930f66c2e803e8b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FloatType</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void detail::dtoa_impl::grisu2</definition>
+        <argsstring>(char *buf, int &amp;len, int &amp;decimal_exponent, FloatType value)</argsstring>
+        <name>grisu2</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>decimal_exponent</declname>
+        </param>
+        <param>
+          <type>FloatType</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>v = buf * 10^decimal_exponent len is the length of the buffer (number of decimal digits) The buffer must be large enough, i.e. &gt;= max_digits10. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="17796" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="17796" bodyend="17827"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedetail_1_1dtoa__impl_1a6efd46b9558b99b68c674ad02b395d25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>JSON_HEDLEY_RETURNS_NON_NULL char *</type>
+        <definition>JSON_HEDLEY_RETURNS_NON_NULL char* detail::dtoa_impl::append_exponent</definition>
+        <argsstring>(char *buf, int e)</argsstring>
+        <name>append_exponent</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>appends a decimal representation of e to buf </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a pointer to the element following the exponent. </para>
+</simplesect>
+<simplesect kind="pre"><para>-1000 &lt; e &lt; 1000 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="17836" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="17836" bodyend="17875"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedetail_1_1dtoa__impl_1a7175c9997b110bce4526e3b7357e7b03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>JSON_HEDLEY_RETURNS_NON_NULL char *</type>
+        <definition>JSON_HEDLEY_RETURNS_NON_NULL char* detail::dtoa_impl::format_buffer</definition>
+        <argsstring>(char *buf, int len, int decimal_exponent, int min_exp, int max_exp)</argsstring>
+        <name>format_buffer</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>decimal_exponent</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_exp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_exp</declname>
+        </param>
+        <briefdescription>
+<para>prettify v = buf * 10^decimal_exponent </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If v is in the range [10^min_exp, 10^max_exp) it will be printed in fixed-point notation. Otherwise it will be printed in exponential notation.</para>
+<para><simplesect kind="pre"><para>min_exp &lt; 0 </para>
+</simplesect>
+<simplesect kind="pre"><para>max_exp &gt; 0 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="17888" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="17888" bodyend="17956"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>implements the Grisu2 algorithm for binary to decimal floating-point conversion. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This implementation is a slightly modified version of the reference implementation which may be obtained from <ulink url="http://florian.loitsch.com/publications">http://florian.loitsch.com/publications</ulink> (bench.tar.gz).</para>
+<para>The code is distributed under the MIT license, Copyright (c) 2009 Florian Loitsch.</para>
+<para>For a detailed description of the algorithm see:</para>
+<para>[1] Loitsch, &quot;Printing Floating-Point Numbers Quickly and Accurately with
+    Integers&quot;, Proceedings of the ACM SIGPLAN 2010 Conference on Programming Language Design and Implementation, PLDI 2010 [2] Burger, Dybvig, &quot;Printing Floating-Point Numbers Quickly and Accurately&quot;, Proceedings of the ACM SIGPLAN 1996 Conference on Programming Language Design and Implementation, PLDI 1996 </para>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="16952" column="1"/>
+  </compounddef>
+</doxygen>

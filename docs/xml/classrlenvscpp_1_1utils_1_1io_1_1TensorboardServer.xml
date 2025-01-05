@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer" kind="class" language="C++" prot="public">
+    <compoundname>rlenvscpp::utils::io::TensorboardServer</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">boost::noncopyable</basecompoundref>
+    <includes refid="tensorboard__server_8h" local="no">tensorboard_server.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1a14b6b56aeff2101e248d41a2ee68b065" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string rlenvscpp::utils::io::TensorboardServer::api_url_</definition>
+        <argsstring></argsstring>
+        <name>api_url_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" line="72" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1a1cad3c7e2a2ed47e4f61213ff07d1dbd" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string rlenvscpp::utils::io::TensorboardServer::log_dir_</definition>
+        <argsstring></argsstring>
+        <name>log_dir_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" line="73" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1aa1705dbc3a5be19043730ba6e013386f" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string rlenvscpp::utils::io::TensorboardServer::api_str_</definition>
+        <argsstring></argsstring>
+        <name>api_str_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" line="75" column="23" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1ad63efea9b8370327aead634b88679029" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::io::TensorboardServer::TensorboardServer</definition>
+        <argsstring>(const std::string &amp;api_url)</argsstring>
+        <name>TensorboardServer</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>api_url</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" line="27" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.cpp" bodystart="12" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1ad3b7d1ff82a19ba4975ee83e06318910" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::io::TensorboardServer::init</definition>
+        <argsstring>(const std::string &amp;log_dir)</argsstring>
+        <name>init</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>log_dir</declname>
+        </param>
+        <briefdescription>
+<para>Set the log_dir for this instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" line="32" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.cpp" bodystart="21" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1aea2c43b62e1cc5509509a2a1028f700f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::io::TensorboardServer::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+<para>Close the <ref refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer" kindref="compound">TensorboardServer</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" line="37" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.cpp" bodystart="43" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1a9978c057d75eff4a35722323787af28c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::io::TensorboardServer::add_scalar</definition>
+        <argsstring>(const std::string &amp;tag, real_t value, uint_t step_idx=rlenvscpp::consts::INVALID_ID) const</argsstring>
+        <name>add_scalar</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>step_idx</declname>
+          <defval>rlenvscpp::consts::INVALID_ID</defval>
+        </param>
+        <briefdescription>
+<para>Add scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" line="42" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.cpp" bodystart="62" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1aafa45a70433559e8b112644ba0bd7cc6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::io::TensorboardServer::add_scalars</definition>
+        <argsstring>(const std::string &amp;main_tag, const std::unordered_map&lt; std::string, real_t &gt; &amp;values, uint_t step_idx=rlenvscpp::consts::INVALID_ID) const</argsstring>
+        <name>add_scalars</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>main_tag</declname>
+        </param>
+        <param>
+          <type>const std::unordered_map&lt; std::string, <ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref> &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>step_idx</declname>
+          <defval>rlenvscpp::consts::INVALID_ID</defval>
+        </param>
+        <briefdescription>
+<para>Add scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" line="48" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.cpp" bodystart="90" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1a17a8db5168b9b1161e2529c04173c02f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::io::TensorboardServer::add_text</definition>
+        <argsstring>(const std::string &amp;tag, const std::string &amp;text, uint_t step_idx=rlenvscpp::consts::INVALID_ID) const</argsstring>
+        <name>add_text</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>step_idx</declname>
+          <defval>rlenvscpp::consts::INVALID_ID</defval>
+        </param>
+        <briefdescription>
+<para>Add scalar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" line="55" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.cpp" bodystart="121" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1adc9483b8da11fd1063cb4d7d6955f766" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::string_view</type>
+        <definition>std::string_view rlenvscpp::utils::io::TensorboardServer::get_log_dir_path</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_log_dir_path</name>
+        <briefdescription>
+<para>Return the directory for logging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" line="62" column="22" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1a308e0f614991534cd26e1f26f2bb581e" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::string_view</type>
+        <definition>std::string_view rlenvscpp::utils::io::TensorboardServer::get_server_address</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_server_address</name>
+        <briefdescription>
+<para>Return the server address. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" line="68" column="22" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>class <ref refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer" kindref="compound">TensorboardServer</ref> </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>boost::noncopyable</label>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::utils::io::TensorboardServer</label>
+        <link refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>boost::noncopyable</label>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::utils::io::TensorboardServer</label>
+        <link refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" line="20" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/tensor_board_server/tensorboard_server.h" bodystart="21" bodyend="78"/>
+    <listofallmembers>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1a9978c057d75eff4a35722323787af28c" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::TensorboardServer</scope><name>add_scalar</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1aafa45a70433559e8b112644ba0bd7cc6" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::TensorboardServer</scope><name>add_scalars</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1a17a8db5168b9b1161e2529c04173c02f" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::TensorboardServer</scope><name>add_text</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1aa1705dbc3a5be19043730ba6e013386f" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::io::TensorboardServer</scope><name>api_str_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1a14b6b56aeff2101e248d41a2ee68b065" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::io::TensorboardServer</scope><name>api_url_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1aea2c43b62e1cc5509509a2a1028f700f" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::TensorboardServer</scope><name>close</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1adc9483b8da11fd1063cb4d7d6955f766" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::TensorboardServer</scope><name>get_log_dir_path</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1a308e0f614991534cd26e1f26f2bb581e" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::TensorboardServer</scope><name>get_server_address</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1ad3b7d1ff82a19ba4975ee83e06318910" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::TensorboardServer</scope><name>init</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1a1cad3c7e2a2ed47e4f61213ff07d1dbd" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::io::TensorboardServer</scope><name>log_dir_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1TensorboardServer_1ad63efea9b8370327aead634b88679029" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::TensorboardServer</scope><name>TensorboardServer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

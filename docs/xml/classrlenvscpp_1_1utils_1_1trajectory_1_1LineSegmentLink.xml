@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink" kind="class" language="C++" prot="public">
+    <compoundname>rlenvscpp::utils::trajectory::LineSegmentLink</compoundname>
+    <basecompoundref refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine" prot="private" virt="non-virtual">rlenvscpp::utils::geom::GenericLine&lt; dim &gt;</basecompoundref>
+    <includes refid="line__segment__link_8h" local="no">line_segment_link.h</includes>
+    <templateparamlist>
+      <param>
+        <type>int</type>
+        <declname>dim</declname>
+        <defname>dim</defname>
+      </param>
+      <param>
+        <type>typename NodeData</type>
+      </param>
+      <param>
+        <type>typename SegmentData</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1a13fa2790eb2d002b17e7d7f93a8e22c0" prot="public" static="no">
+        <type>NodeData</type>
+        <definition>typedef NodeData rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::node_data_type</definition>
+        <argsstring></argsstring>
+        <name>node_data_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="19" column="22" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1aa640762a78c86ae774932292084721a7" prot="public" static="no">
+        <type>SegmentData</type>
+        <definition>typedef SegmentData rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::segment_data_type</definition>
+        <argsstring></argsstring>
+        <name>segment_data_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="20" column="25" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1a558266ce641530992b8779a7d3766bdc" prot="public" static="no">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint" kindref="compound">WayPoint</ref>&lt; dim, NodeData &gt;</type>
+        <definition>typedef WayPoint&lt;dim, NodeData&gt; rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::w_point_type</definition>
+        <argsstring></argsstring>
+        <name>w_point_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="21" column="22" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1aa9a90a60813ada15d4d73a066b588935" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::dimension</definition>
+        <argsstring></argsstring>
+        <name>dimension</name>
+        <initializer>= dim</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="18" column="22" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1a6b91f9549274f927b8ee162564a08410" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint" kindref="compound">w_point_type</ref> &gt;</type>
+        <definition>std::vector&lt;w_point_type&gt; rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::internal_points_</definition>
+        <argsstring></argsstring>
+        <name>internal_points_</name>
+        <briefdescription>
+<para>list of internal points of the segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="69" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1af61a1abb4c578dad6564beb39bc8b4f5" prot="private" static="no" mutable="no">
+        <type>segment_data_type</type>
+        <definition>segment_data_type rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <briefdescription>
+<para>The data asociated with the segmen. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="72" column="23" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1a64b9b78ceeb2d40959ba208055668310" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::is_active_</definition>
+        <argsstring></argsstring>
+        <name>is_active_</name>
+        <briefdescription>
+<para>Flag indicating if the segment is active. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="75" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1adb4e817ba9a766990413f3b3fb756a5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::LineSegmentLink</definition>
+        <argsstring>()</argsstring>
+        <name>LineSegmentLink</name>
+        <briefdescription>
+<para>Default ctor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="32" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" bodystart="80" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1ab1e2ac00b531981ccb5925d2235f23a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::LineSegmentLink</definition>
+        <argsstring>(const w_point_type &amp;v1, const w_point_type &amp;v2, uint_t id, const segment_data_type &amp;data)</argsstring>
+        <name>LineSegmentLink</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint" kindref="compound">w_point_type</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint" kindref="compound">w_point_type</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const segment_data_type &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="37" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1a9f0b79d332a2822f214f33c5b92a77ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::LineSegmentLink</definition>
+        <argsstring>(const w_point_type &amp;v1, const w_point_type &amp;v2, uint_t id)</argsstring>
+        <name>LineSegmentLink</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint" kindref="compound">w_point_type</ref> &amp;</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint" kindref="compound">w_point_type</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="46" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1afd668cd7343faaff36fe81cad150f4bd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::is_active</definition>
+        <argsstring>() const</argsstring>
+        <name>is_active</name>
+        <briefdescription>
+<para>Returns true if the segment is active. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="53" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1a804809e8018740e884841da4600858ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::deactivate</definition>
+        <argsstring>()</argsstring>
+        <name>deactivate</name>
+        <briefdescription>
+<para>deactive the segment </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="58" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1aae2c7d9f7827ce314b2d6ea1d6b020d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;::make_active</definition>
+        <argsstring>()</argsstring>
+        <name>make_active</name>
+        <briefdescription>
+<para>Activate the segment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="63" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" bodystart="63" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>class <ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink" kindref="compound">LineSegmentLink</ref>. Represents a straight line link between two waypoints. <linebreak/>
+ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>rlenvscpp::utils::geom::GenericLine&lt; dim &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine"/>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>rlenvscpp::utils::geom::GenericLine&lt; dim &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1geom_1_1GenericLine"/>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::utils::trajectory::LineSegmentLink&lt; dim, NodeData, SegmentData &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" line="14" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/line_segment_link.h" bodystart="15" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1af61a1abb4c578dad6564beb39bc8b4f5" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>data_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1a804809e8018740e884841da4600858ae" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>deactivate</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1aa9a90a60813ada15d4d73a066b588935" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>dimension</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1a6b91f9549274f927b8ee162564a08410" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>internal_points_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1afd668cd7343faaff36fe81cad150f4bd" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>is_active</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1a64b9b78ceeb2d40959ba208055668310" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>is_active_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1adb4e817ba9a766990413f3b3fb756a5f" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>LineSegmentLink</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1ab1e2ac00b531981ccb5925d2235f23a9" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>LineSegmentLink</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1a9f0b79d332a2822f214f33c5b92a77ff" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>LineSegmentLink</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1aae2c7d9f7827ce314b2d6ea1d6b020d8" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>make_active</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1a13fa2790eb2d002b17e7d7f93a8e22c0" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>node_data_type</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1aa640762a78c86ae774932292084721a7" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>segment_data_type</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1LineSegmentLink_1a558266ce641530992b8779a7d3766bdc" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::LineSegmentLink</scope><name>w_point_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

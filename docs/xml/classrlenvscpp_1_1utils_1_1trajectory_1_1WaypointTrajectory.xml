@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory" kind="class" language="C++" prot="public">
+    <compoundname>rlenvscpp::utils::trajectory::WaypointTrajectory</compoundname>
+    <includes refid="waypoint__trajectory_8h" local="no">waypoint_trajectory.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename LinkType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ad333e63454e2c210cb1d1b65434f0346" prot="public" static="no">
+        <type>LinkType</type>
+        <definition>typedef LinkType rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::link_type</definition>
+        <argsstring></argsstring>
+        <name>link_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="28" column="18" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a80e933a594c2cf274f77fd600688b80d" prot="public" static="no">
+        <type>link_type::w_point_type</type>
+        <definition>typedef link_type::w_point_type rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::w_point_type</definition>
+        <argsstring></argsstring>
+        <name>w_point_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="30" column="42" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a7c3029af480364d68d81d0cfe1f75ada" prot="public" static="no">
+        <type>std::vector&lt; link_type &gt;::iterator</type>
+        <definition>typedef std::vector&lt;link_type&gt;::iterator rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::link_iterator</definition>
+        <argsstring></argsstring>
+        <name>link_iterator</name>
+        <briefdescription>
+<para>point iteration </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="35" column="45" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ab396767c7d6b18c3ed82892899e3b5a0" prot="public" static="no">
+        <type>std::vector&lt; link_type &gt;::const_iterator</type>
+        <definition>typedef std::vector&lt;link_type&gt;::const_iterator rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::const_link_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_link_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="36" column="51" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a3f0cdac41762b1b37dee2bd216481a34" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; link_type &gt;</type>
+        <definition>std::vector&lt;link_type&gt; rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::links_</definition>
+        <argsstring></argsstring>
+        <name>links_</name>
+        <briefdescription>
+<para>The segments of the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="111" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a4131aef473c0c3d3fa6af72f02041ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::WaypointTrajectory</definition>
+        <argsstring>()</argsstring>
+        <name>WaypointTrajectory</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="41" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a243e865b75059a469ff6da12a2e88e87" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::WaypointTrajectory</definition>
+        <argsstring>(uint_t n)</argsstring>
+        <name>WaypointTrajectory</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="46" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="121" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ac16a969d64ef49a8d7ecc56ef4ba7d18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; <ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref>, link_type &gt;</type>
+        <definition>std::pair&lt; real_t, typename WaypointTrajectory&lt; LinkType &gt;::link_type &gt; rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::distance</definition>
+        <argsstring>(const w_point_type &amp;p) const</argsstring>
+        <name>distance</name>
+        <param>
+          <type>const w_point_type &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Computes the minimum distance of the given point from the trajectory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="52" column="11" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="130" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a3bc0098aea3c2b3483d971d8d87f2c8b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>uint_t rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>How many waypoints the pah has. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="57" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a607b756432bdf050ece6f88bc8ea736e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::reserve</definition>
+        <argsstring>(uint_t n)</argsstring>
+        <name>reserve</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Reserve space for waypoints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="62" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ab2fc7abe7bcd8a62c6efc40a96792264" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>clear the memory allocated for points and edges </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="67" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a4e5dd9b23ef3d407c6ec75c151e96bff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+<para>Returns true if the trajectory is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="72" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a45a4e3b7bf67713a5ed4cb3fabf9d88a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::push</definition>
+        <argsstring>(const link_type &amp;link)</argsstring>
+        <name>push</name>
+        <param>
+          <type>const link_type &amp;</type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>Push a new link. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="77" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1aeed6749b28479e1c199c2aed90f5d063" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>link_type &amp;</type>
+        <definition>link_type&amp; rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::operator[]</definition>
+        <argsstring>(uint_t i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Returns a read/write reference of the i-th link. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="82" column="11" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a2141500023421d74c285598c7184ebb8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const link_type &amp;</type>
+        <definition>const link_type&amp; rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::operator[]</definition>
+        <argsstring>(uint_t i) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Returns a read reference of the i-th link. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="87" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1af449eca955e477d5ab22c211d6c60de9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::resize</definition>
+        <argsstring>(uint_t n)</argsstring>
+        <name>resize</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Resize the underlying links. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="92" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a1eea8c52451fffea4cfb99f25e2532e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a7c3029af480364d68d81d0cfe1f75ada" kindref="member">link_iterator</ref></type>
+        <definition>link_iterator rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Raw node iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="97" column="19" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ab7af64a507aadb1314630b25c695dfda" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a7c3029af480364d68d81d0cfe1f75ada" kindref="member">link_iterator</ref></type>
+        <definition>link_iterator rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="98" column="19" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a27e65bc54da57a5d026391eb658430e5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_link_iterator</type>
+        <definition>const_link_iterator rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Raw node iteration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="103" column="25" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a03817348905df786c8f18db3496f4720" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_link_iterator</type>
+        <definition>const_link_iterator rlenvscpp::utils::trajectory::WaypointTrajectory&lt; LinkType &gt;::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="104" column="25" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="104" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A container that represents a collection of way points linked together via a LinkType The LinkType defines how smooth the trajectory will look like. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" line="21" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h" bodystart="22" bodyend="112"/>
+    <listofallmembers>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a1eea8c52451fffea4cfb99f25e2532e7" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>begin</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a27e65bc54da57a5d026391eb658430e5" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>begin</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ab2fc7abe7bcd8a62c6efc40a96792264" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>clear</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ab396767c7d6b18c3ed82892899e3b5a0" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>const_link_iterator</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ac16a969d64ef49a8d7ecc56ef4ba7d18" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>distance</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a4e5dd9b23ef3d407c6ec75c151e96bff" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>empty</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ab7af64a507aadb1314630b25c695dfda" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>end</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a03817348905df786c8f18db3496f4720" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>end</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a7c3029af480364d68d81d0cfe1f75ada" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>link_iterator</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ad333e63454e2c210cb1d1b65434f0346" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>link_type</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a3f0cdac41762b1b37dee2bd216481a34" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>links_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1aeed6749b28479e1c199c2aed90f5d063" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>operator[]</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a2141500023421d74c285598c7184ebb8" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>operator[]</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a45a4e3b7bf67713a5ed4cb3fabf9d88a" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>push</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a607b756432bdf050ece6f88bc8ea736e" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>reserve</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1af449eca955e477d5ab22c211d6c60de9" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>resize</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a3bc0098aea3c2b3483d971d8d87f2c8b" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>size</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a80e933a594c2cf274f77fd600688b80d" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>w_point_type</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a4131aef473c0c3d3fa6af72f02041ca9" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>WaypointTrajectory</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a243e865b75059a469ff6da12a2e88e87" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::trajectory::WaypointTrajectory</scope><name>WaypointTrajectory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

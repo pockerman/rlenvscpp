@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdetail_1_1span__input__adapter" kind="class" language="C++" prot="public">
+    <compoundname>detail::span_input_adapter</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdetail_1_1span__input__adapter_1a7ce63946a0eb5b73946580379ff566a1" prot="private" static="no" mutable="no">
+        <type>contiguous_bytes_input_adapter</type>
+        <definition>contiguous_bytes_input_adapter detail::span_input_adapter::ia</definition>
+        <argsstring></argsstring>
+        <name>ia</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6630" column="36" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6630" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdetail_1_1span__input__adapter_1a100cb2415f6ad4fb60e3848569ed20dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename CharT</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; std::is_pointer&lt; CharT &gt;::value &amp;&amp;std::is_integral&lt; typename std::remove_pointer&lt; CharT &gt;::type &gt;::value &amp;&amp;sizeof(typename std::remove_pointer&lt; CharT &gt;::type)==1, int &gt;::type</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>detail::span_input_adapter::span_input_adapter</definition>
+        <argsstring>(CharT b, std::size_t l)</argsstring>
+        <name>span_input_adapter</name>
+        <param>
+          <type>CharT</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6614" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6614" bodyend="6615"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1span__input__adapter_1a8f3a694242ffd71722d292ffa9156e79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class IteratorType</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; std::is_same&lt; typename <ref refid="structdetail_1_1iterator__traits" kindref="compound">iterator_traits</ref>&lt; IteratorType &gt;::iterator_category, std::random_access_iterator_tag &gt;::value, int &gt;::type</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>detail::span_input_adapter::span_input_adapter</definition>
+        <argsstring>(IteratorType first, IteratorType last)</argsstring>
+        <name>span_input_adapter</name>
+        <param>
+          <type>IteratorType</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>IteratorType</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6621" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6621" bodyend="6622"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1span__input__adapter_1af0ab348e01ae00da4067cba95d0beb64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>contiguous_bytes_input_adapter &amp;&amp;</type>
+        <definition>contiguous_bytes_input_adapter&amp;&amp; detail::span_input_adapter::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6624" column="36" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6624" bodyend="6627"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6605" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6606" bodyend="6631"/>
+    <listofallmembers>
+      <member refid="classdetail_1_1span__input__adapter_1af0ab348e01ae00da4067cba95d0beb64" prot="public" virt="non-virtual"><scope>detail::span_input_adapter</scope><name>get</name></member>
+      <member refid="classdetail_1_1span__input__adapter_1a7ce63946a0eb5b73946580379ff566a1" prot="private" virt="non-virtual"><scope>detail::span_input_adapter</scope><name>ia</name></member>
+      <member refid="classdetail_1_1span__input__adapter_1a100cb2415f6ad4fb60e3848569ed20dc" prot="public" virt="non-virtual"><scope>detail::span_input_adapter</scope><name>span_input_adapter</name></member>
+      <member refid="classdetail_1_1span__input__adapter_1a8f3a694242ffd71722d292ffa9156e79" prot="public" virt="non-virtual"><scope>detail::span_input_adapter</scope><name>span_input_adapter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

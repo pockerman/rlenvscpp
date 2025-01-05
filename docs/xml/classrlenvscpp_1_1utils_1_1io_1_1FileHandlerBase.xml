@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>rlenvscpp::utils::io::FileHandlerBase</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">boost::noncopyable</basecompoundref>
+    <includes refid="file__handler__base_8h" local="no">file_handler_base.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename HandlerType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a20641bb80200efa83fff629dd680318f" prot="public" static="no">
+        <type>HandlerType</type>
+        <definition>typedef HandlerType rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::handler_type</definition>
+        <argsstring></argsstring>
+        <name>handler_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="23" column="25" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1aaf32d2b0b34a855ca41d70b5662c5a98" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::file_name_</definition>
+        <argsstring></argsstring>
+        <name>file_name_</name>
+        <briefdescription>
+<para>The name of the file to write. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="82" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a6c196ffa3d3f81156e3b41efb3019c3f" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="structrlenvscpp_1_1utils_1_1io_1_1FileFormats_1a49f9121b447504eadba6b60bcfb1be23" kindref="member">FileFormats::Type</ref></type>
+        <definition>const FileFormats::Type rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::t_</definition>
+        <argsstring></argsstring>
+        <name>t_</name>
+        <briefdescription>
+<para>The format of the file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="87" column="29" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a05f4803df34ea07e3be2cff7a647c791" prot="protected" static="no" mutable="no">
+        <type>handler_type</type>
+        <definition>handler_type rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::f_</definition>
+        <argsstring></argsstring>
+        <name>f_</name>
+        <briefdescription>
+<para>The low level file handler. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="92" column="18" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a4dd34387db002879af9a723444031c4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::~FileHandlerBase</definition>
+        <argsstring>()</argsstring>
+        <name>~FileHandlerBase</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="28" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a25574b0138baa00b5784e8a377347a3c" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="structrlenvscpp_1_1utils_1_1io_1_1FileFormats_1a49f9121b447504eadba6b60bcfb1be23" kindref="member">FileFormats::Type</ref></type>
+        <definition>FileFormats::Type rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::get_type</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_type</name>
+        <briefdescription>
+<para>Returns the type of the file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="33" column="23" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a52dfca851af7c9ada69417f95906f276" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>handler_type &amp;</type>
+        <definition>handler_type&amp; rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::get_file_stream</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>get_file_stream</name>
+        <briefdescription>
+<para>Returns the underlying file stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="38" column="18" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a2b78be19f23ddb54b485c842cc44640e" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>const handler_type &amp;</type>
+        <definition>const handler_type&amp; rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::get_file_stream</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_file_stream</name>
+        <briefdescription>
+<para>Returns the underlying file stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="43" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1af4922667fec054d4073978d79d07ddfe" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::get_filename</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_filename</name>
+        <briefdescription>
+<para>Returns the filename that is used to write. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="48" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1af5bd6b21abc6e41037883f0228269f7b" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::is_open</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_open</name>
+        <briefdescription>
+<para>Return true if and only if the file is open. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="55" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a093d2471335ad33a82c419e6f938cad7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+<para>Close the file. Return true if and only if the file was closed successfully false otherwise. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="62" column="18" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="109" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1ad5138c67486131eb95f09ca9f389dbec" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::open</definition>
+        <argsstring>()=0</argsstring>
+        <name>open</name>
+        <reimplementedby refid="classrlenvscpp_1_1utils_1_1io_1_1FileReaderBase_1ad12e2a460586e687d118c3f98827e55b">open</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1a4b7c9b5d3fe1566ac31d21bcec4c11cf">open</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1utils_1_1io_1_1JSONFileReader_1aba860a2ee74d9eef375aec05790ccd80">open</reimplementedby>
+        <briefdescription>
+<para>Open the file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="67" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a49c92bb502deb480b8c7edbc3de26b18" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;::FileHandlerBase</definition>
+        <argsstring>(const std::string &amp;file_name, FileFormats::Type t)</argsstring>
+        <name>FileHandlerBase</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type><ref refid="structrlenvscpp_1_1utils_1_1io_1_1FileFormats_1a49f9121b447504eadba6b60bcfb1be23" kindref="member">FileFormats::Type</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>protected Constructor so that explicit instantiation of the class fails </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="75" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="96" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="todo_1_todo000002"><xreftitle>Todo</xreftitle><xrefdescription><para>write docs </para>
+</xrefdescription></xrefsect></para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>boost::noncopyable</label>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>boost::noncopyable</label>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::utils::io::FileHandlerBase&lt; HandlerType &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" line="19" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_handler_base.h" bodystart="20" bodyend="93"/>
+    <listofallmembers>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a093d2471335ad33a82c419e6f938cad7" prot="public" virt="virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>close</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a05f4803df34ea07e3be2cff7a647c791" prot="protected" virt="non-virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>f_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1aaf32d2b0b34a855ca41d70b5662c5a98" prot="protected" virt="non-virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>file_name_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a49c92bb502deb480b8c7edbc3de26b18" prot="protected" virt="non-virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>FileHandlerBase</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a52dfca851af7c9ada69417f95906f276" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>get_file_stream</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a2b78be19f23ddb54b485c842cc44640e" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>get_file_stream</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1af4922667fec054d4073978d79d07ddfe" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>get_filename</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a25574b0138baa00b5784e8a377347a3c" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>get_type</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a20641bb80200efa83fff629dd680318f" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>handler_type</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1af5bd6b21abc6e41037883f0228269f7b" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>is_open</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1ad5138c67486131eb95f09ca9f389dbec" prot="public" virt="pure-virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>open</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a6c196ffa3d3f81156e3b41efb3019c3f" prot="protected" virt="non-virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>t_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase_1a4dd34387db002879af9a723444031c4e" prot="public" virt="virtual"><scope>rlenvscpp::utils::io::FileHandlerBase</scope><name>~FileHandlerBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

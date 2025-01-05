@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacedetail_1_1container__input__adapter__factory__impl" kind="namespace" language="C++">
+    <compoundname>detail::container_input_adapter_factory_impl</compoundname>
+    <innerclass refid="structdetail_1_1container__input__adapter__factory__impl_1_1container__input__adapter__factory" prot="public">detail::container_input_adapter_factory_impl::container_input_adapter_factory</innerclass>
+    <innerclass refid="structdetail_1_1container__input__adapter__factory__impl_1_1container__input__adapter__factory_3983614ac0e8828aa386ca24b1ddc2bd1" prot="public">detail::container_input_adapter_factory_impl::container_input_adapter_factory&lt; ContainerType, void_t&lt; decltype(begin(std::declval&lt; ContainerType &gt;()), end(std::declval&lt; ContainerType &gt;()))&gt; &gt;</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6532" column="1"/>
+  </compounddef>
+</doxygen>

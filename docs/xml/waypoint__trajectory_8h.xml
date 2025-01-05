@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="waypoint__trajectory_8h" kind="file" language="C++">
+    <compoundname>waypoint_trajectory.h</compoundname>
+    <includes refid="rlenvs__types__v2_8h" local="yes">rlenvs/rlenvs_types_v2.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">type_traits</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>limits</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>utility</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="11">
+        <label>type_traits</label>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h</label>
+        <link refid="waypoint__trajectory_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory" prot="public">rlenvscpp::utils::trajectory::WaypointTrajectory</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils">rlenvscpp::utils</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils_1_1trajectory">rlenvscpp::utils::trajectory</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>WAYPOINT_TRAJECTORY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WAYPOINT_TRAJECTORY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_types_v2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">utils{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">trajectory{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>LinkType&gt;</highlight></codeline>
+<codeline lineno="21" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory" kindref="compound">WaypointTrajectory</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>static_assert(std::is_default_constructible&lt;LinkType&gt;::value,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;LinkType<sp/>must<sp/>have<sp/>default<sp/>constructor&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>LinkType<sp/>link_type;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>link_type::w_point_type<sp/>w_point_type;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a7c3029af480364d68d81d0cfe1f75ada" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::vector&lt;link_type&gt;::iterator<sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a7c3029af480364d68d81d0cfe1f75ada" kindref="member">link_iterator</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::vector&lt;link_type&gt;::const_iterator<sp/>const_link_iterator;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a4131aef473c0c3d3fa6af72f02041ca9" kindref="member">WaypointTrajectory</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a4131aef473c0c3d3fa6af72f02041ca9" kindref="member">WaypointTrajectory</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>n);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>std::pair&lt;real_t,<sp/>link_type&gt;<sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ac16a969d64ef49a8d7ecc56ef4ba7d18" kindref="member">distance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>w_point_type&amp;<sp/>p)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a3bc0098aea3c2b3483d971d8d87f2c8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a3bc0098aea3c2b3483d971d8d87f2c8b" kindref="member">size</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>links_.size();}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a607b756432bdf050ece6f88bc8ea736e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a607b756432bdf050ece6f88bc8ea736e" kindref="member">reserve</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>n){links_.reserve(n);}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ab2fc7abe7bcd8a62c6efc40a96792264" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ab2fc7abe7bcd8a62c6efc40a96792264" kindref="member">clear</ref>(){links_.clear();}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a4e5dd9b23ef3d407c6ec75c151e96bff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a4e5dd9b23ef3d407c6ec75c151e96bff" kindref="member">empty</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>links_.empty();}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a45a4e3b7bf67713a5ed4cb3fabf9d88a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a45a4e3b7bf67713a5ed4cb3fabf9d88a" kindref="member">push</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>link_type&amp;<sp/>link){links_.push_back(link);}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1aeed6749b28479e1c199c2aed90f5d063" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>link_type&amp;<sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1aeed6749b28479e1c199c2aed90f5d063" kindref="member">operator[]</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>i){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>links_[i];}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a2141500023421d74c285598c7184ebb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>link_type&amp;<sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a2141500023421d74c285598c7184ebb8" kindref="member">operator[]</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>i)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>links_[i];}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1af449eca955e477d5ab22c211d6c60de9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1af449eca955e477d5ab22c211d6c60de9" kindref="member">resize</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>n){links_.resize(n);}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a1eea8c52451fffea4cfb99f25e2532e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a7c3029af480364d68d81d0cfe1f75ada" kindref="member">link_iterator</ref><sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a1eea8c52451fffea4cfb99f25e2532e7" kindref="member">begin</ref>(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>links_.begin();}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a7c3029af480364d68d81d0cfe1f75ada" kindref="member">link_iterator</ref><sp/>end(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>links_.end();}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a27e65bc54da57a5d026391eb658430e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>const_link_iterator<sp/><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a27e65bc54da57a5d026391eb658430e5" kindref="member">begin</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>links_.begin();}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>const_link_iterator<sp/>end()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>links_.end();}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;link_type&gt;<sp/>links_;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>LinkType&gt;</highlight></codeline>
+<codeline lineno="115" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a4131aef473c0c3d3fa6af72f02041ca9" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a4131aef473c0c3d3fa6af72f02041ca9" kindref="member">WaypointTrajectory&lt;LinkType&gt;::WaypointTrajectory</ref>()</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">links_()</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>LinkType&gt;</highlight></codeline>
+<codeline lineno="121" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a243e865b75059a469ff6da12a2e88e87" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1a4131aef473c0c3d3fa6af72f02041ca9" kindref="member">WaypointTrajectory&lt;LinkType&gt;::WaypointTrajectory</ref>(<ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref><sp/>n)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">:</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">links_()</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/>links_.resize(n);<sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>LinkType&gt;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">std::pair&lt;real_t,<sp/>typename<sp/>WaypointTrajectory&lt;LinkType&gt;::link_type&gt;<sp/></highlight></codeline>
+<codeline lineno="130" refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ac16a969d64ef49a8d7ecc56ef4ba7d18" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WaypointTrajectory_1ac16a969d64ef49a8d7ecc56ef4ba7d18" kindref="member">WaypointTrajectory&lt;LinkType&gt;::distance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>WaypointTrajectory&lt;LinkType&gt;::w_point_type&amp;<sp/>p)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>dist_<sp/>=<sp/>std::numeric_limits&lt;real_t&gt;::max();</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>link_type<sp/>link_;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>link:<sp/>links_){</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>link.distance(p);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(dist<sp/>&lt;<sp/>dist_){</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist_<sp/>=<sp/>dist;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>link_<sp/>=<sp/>link;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_pair(dist_,<sp/>links_);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/trajectory/waypoint_trajectory.h"/>
+  </compounddef>
+</doxygen>

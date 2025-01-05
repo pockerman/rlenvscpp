@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="file__writer__base_8h" kind="file" language="C++">
+    <compoundname>file_writer_base.h</compoundname>
+    <includes refid="file__formats_8h" local="yes">rlenvs/utils/io/file_formats.h</includes>
+    <includes refid="file__handler__base_8h" local="yes">rlenvs/utils/io/file_handler_base.h</includes>
+    <includes local="yes">boost/noncopyable.hpp</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">string</includes>
+    <includedby refid="csv__file__writer_8h" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/csv_file_writer.h</includedby>
+    <includedby refid="file__writer__base_8cpp" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_writer_base.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>rlenvs/utils/io/file_formats.h</label>
+        <link refid="file__formats_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>boost/noncopyable.hpp</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>rlenvs/utils/io/file_handler_base.h</label>
+        <link refid="file__handler__base_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>fstream</label>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_writer_base.h</label>
+        <link refid="file__writer__base_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/csv_file_writer.h</label>
+        <link refid="csv__file__writer_8h_source"/>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_writer_base.h</label>
+        <link refid="file__writer__base_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase" prot="public">rlenvscpp::utils::io::FileWriterBase</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils">rlenvscpp::utils</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils_1_1io">rlenvscpp::utils::io</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>FILE_WRITER_BASE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FILE_WRITER_BASE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/utils/io/file_formats.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/utils/io/file_handler_base.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/noncopyable.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">utils{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">io{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase" kindref="compound">FileWriterBase</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileHandlerBase" kindref="compound">FileHandlerBase</ref>&lt;std::ofstream&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1afd7c3e60dc2245cf9e1910ecb11e5ffd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1afd7c3e60dc2245cf9e1910ecb11e5ffd" kindref="member">default_comment_mark</ref>(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1ac97ba5ca0fdf90c2ba609494164e0bf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1ac97ba5ca0fdf90c2ba609494164e0bf3" kindref="member">FileWriterBase</ref>()=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1ac97ba5ca0fdf90c2ba609494164e0bf3" kindref="member">FileWriterBase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>file_name,<sp/><ref refid="structrlenvscpp_1_1utils_1_1io_1_1FileFormats_1a49f9121b447504eadba6b60bcfb1be23" kindref="member">FileFormats::Type</ref><sp/>t);<sp/></highlight><highlight class="comment">//const<sp/>std::ios_base::openmode<sp/>mode=std::ios_base::out);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1a4d461f4924beb8585d2306b09a95bfe1" kindref="member">~FileWriterBase</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1a4b7c9b5d3fe1566ac31d21bcec4c11cf" kindref="member">open</ref>()</highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1ae0d5f7f48df4780c9d365ec9009d2516" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1ae0d5f7f48df4780c9d365ec9009d2516" kindref="member">get_comment_mark</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1adca29d9ab460fad084865225764c5964" kindref="member">comment_mark_</ref>;}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1a71941cf779eae3771c087d767fd8cdc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1a71941cf779eae3771c087d767fd8cdc6" kindref="member">set_comment_mark</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>mark){<ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1adca29d9ab460fad084865225764c5964" kindref="member">comment_mark_</ref><sp/>=<sp/>mark;}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1a2a66dc536657e99eeb0d951e32679f17" kindref="member">write_header</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1adca29d9ab460fad084865225764c5964" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1io_1_1FileWriterBase_1adca29d9ab460fad084865225764c5964" kindref="member">comment_mark_</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>FILE_WRITER_BASE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_writer_base.h"/>
+  </compounddef>
+</doxygen>

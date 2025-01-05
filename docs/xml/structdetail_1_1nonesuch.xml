@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1nonesuch" kind="struct" language="C++" prot="public">
+    <compoundname>detail::nonesuch</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdetail_1_1nonesuch_1a283c791aacfbfba2e7bd0d1512fc439b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>detail::nonesuch::nonesuch</definition>
+        <argsstring>()=delete</argsstring>
+        <name>nonesuch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="268" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structdetail_1_1nonesuch_1a66e806397cf13e4b7166e91f6160a7aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>detail::nonesuch::~nonesuch</definition>
+        <argsstring>()=delete</argsstring>
+        <name>~nonesuch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="269" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structdetail_1_1nonesuch_1ad569eaaae39f63de66bf4ed523d8db18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>detail::nonesuch::nonesuch</definition>
+        <argsstring>(nonesuch const &amp;)=delete</argsstring>
+        <name>nonesuch</name>
+        <param>
+          <type><ref refid="structdetail_1_1nonesuch" kindref="compound">nonesuch</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="270" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structdetail_1_1nonesuch_1a1f1515e16d847406e50a1586ca9165c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>detail::nonesuch::nonesuch</definition>
+        <argsstring>(nonesuch const &amp;&amp;)=delete</argsstring>
+        <name>nonesuch</name>
+        <param>
+          <type><ref refid="structdetail_1_1nonesuch" kindref="compound">nonesuch</ref> const &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="271" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structdetail_1_1nonesuch_1a92143f4de1976c007305eb56b63e4eea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::nonesuch::operator=</definition>
+        <argsstring>(nonesuch const &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="structdetail_1_1nonesuch" kindref="compound">nonesuch</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="272" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structdetail_1_1nonesuch_1a862d5984131f27c50c6dc78cb0349d28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void detail::nonesuch::operator=</definition>
+        <argsstring>(nonesuch &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="structdetail_1_1nonesuch" kindref="compound">nonesuch</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="273" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="266" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="267" bodyend="274"/>
+    <listofallmembers>
+      <member refid="structdetail_1_1nonesuch_1a283c791aacfbfba2e7bd0d1512fc439b" prot="public" virt="non-virtual"><scope>detail::nonesuch</scope><name>nonesuch</name></member>
+      <member refid="structdetail_1_1nonesuch_1ad569eaaae39f63de66bf4ed523d8db18" prot="public" virt="non-virtual"><scope>detail::nonesuch</scope><name>nonesuch</name></member>
+      <member refid="structdetail_1_1nonesuch_1a1f1515e16d847406e50a1586ca9165c5" prot="public" virt="non-virtual"><scope>detail::nonesuch</scope><name>nonesuch</name></member>
+      <member refid="structdetail_1_1nonesuch_1a92143f4de1976c007305eb56b63e4eea" prot="public" virt="non-virtual"><scope>detail::nonesuch</scope><name>operator=</name></member>
+      <member refid="structdetail_1_1nonesuch_1a862d5984131f27c50c6dc78cb0349d28" prot="public" virt="non-virtual"><scope>detail::nonesuch</scope><name>operator=</name></member>
+      <member refid="structdetail_1_1nonesuch_1a66e806397cf13e4b7166e91f6160a7aa" prot="public" virt="non-virtual"><scope>detail::nonesuch</scope><name>~nonesuch</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

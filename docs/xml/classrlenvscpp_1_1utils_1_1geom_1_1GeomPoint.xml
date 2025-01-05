@@ -1,0 +1,584 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kind="class" language="C++" prot="public">
+    <compoundname>rlenvscpp::utils::geom::GeomPoint</compoundname>
+    <derivedcompoundref refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint" prot="public" virt="non-virtual">rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;</derivedcompoundref>
+    <includes refid="geom__point_8h" local="no">geom_point.h</includes>
+    <templateparamlist>
+      <param>
+        <type>int</type>
+        <declname>spacedim</declname>
+        <defname>spacedim</defname>
+      </param>
+      <param>
+        <type>typename T</type>
+        <defval><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a7b124d738791846372a0e69410bac1c7" prot="public" static="no">
+        <type>T</type>
+        <definition>typedef T rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::value_type</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+<para>value_type. The type of the coordinates </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="29" column="15" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1aa511dbd85fc5dcd1ebe5c4f535aa3133" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::dimension</definition>
+        <argsstring></argsstring>
+        <name>dimension</name>
+        <initializer>= spacedim</initializer>
+        <briefdescription>
+<para>dimension. Spatial dimension of the point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="34" column="22" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1ae51a3a007437da430cb536df7a6caf4d" prot="private" static="no" mutable="no">
+        <type>std::array&lt; T, spacedim &gt;</type>
+        <definition>std::array&lt;T, spacedim&gt; rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <briefdescription>
+<para>Hold the coordinates of the point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="153" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a963ab2be7472d8cd0974a761eab13d28" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::GeomPoint</definition>
+        <argsstring>(T val=T())</argsstring>
+        <name>GeomPoint</name>
+        <param>
+          <type>T</type>
+          <declname>val</declname>
+          <defval>T()</defval>
+        </param>
+        <briefdescription>
+<para>ctor all dim data are assigned the given value </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="39" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="159" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a6cebdc0d28a6ac15c4b6eeb206841dd0" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::GeomPoint</definition>
+        <argsstring>(const Container &amp;data)</argsstring>
+        <name>GeomPoint</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Create by passing a vector of data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="45" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="169" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1ab86b7d5ab9d691248e1d9e933934a512" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::GeomPoint</definition>
+        <argsstring>(const std::initializer_list&lt; T &gt; &amp;list)</argsstring>
+        <name>GeomPoint</name>
+        <param>
+          <type>const std::initializer_list&lt; T &gt; &amp;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Construct given an initializer_list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="50" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="179" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1af4b4f933f521592d2537f28e5479ebbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::GeomPoint</definition>
+        <argsstring>(const GeomPoint &amp;t)</argsstring>
+        <name>GeomPoint</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>copy ctor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="53" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="202" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a6e81c058cbd51353e459a4abe528bf01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+        <definition>GeomPoint&lt; spacedim, T &gt; &amp; rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::operator=</definition>
+        <argsstring>(const GeomPoint &amp;t)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>copy assignement operator </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="56" column="15" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="210" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1aca62c56a5cbbd16dd41db4479a49fb1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::~GeomPoint</definition>
+        <argsstring>()</argsstring>
+        <name>~GeomPoint</name>
+        <briefdescription>
+<para>dtor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="59" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a747a1f20948f6c292d974a4f028713a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+        <definition>GeomPoint&lt; spacedim, T &gt; &amp; rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::operator+=</definition>
+        <argsstring>(const GeomPoint &amp;)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+<para>Add another vector, i.e. move this point by the given offset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="64" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="237" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a945350b7a34b4fa951134c1ce560703f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+        <definition>GeomPoint&lt; spacedim, T &gt; &amp; rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::operator-=</definition>
+        <argsstring>(const GeomPoint &amp;)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+<para>\detailed Subtract another tensor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="67" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="248" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a4c8ef701d6d145f1ee88df6fc0f5a61b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+        <definition>GeomPoint&lt; spacedim, T &gt; &amp; rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::operator*=</definition>
+        <argsstring>(T factor)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>T</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+<para>Scale the point by factor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="70" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="259" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1ad741c0cab9abcc4227a5803c6f5b71a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+        <definition>GeomPoint&lt; spacedim, T &gt; &amp; rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::operator/=</definition>
+        <argsstring>(T factor)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>T</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+<para>Scale the vector by factor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="73" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="271" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1aa46f14e52a48f2d455b9d563bd5966ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+        <definition>GeomPoint&lt; spacedim, T &gt; &amp; rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::operator=</definition>
+        <argsstring>(const std::initializer_list&lt; T &gt; &amp;list)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const std::initializer_list&lt; T &gt; &amp;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>operator = Assign from the initializer list </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="78" column="15" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="280" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a164afb8d21954ae66cbb0d0b56a90e60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::scale</definition>
+        <argsstring>(T factor)</argsstring>
+        <name>scale</name>
+        <param>
+          <type>T</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+<para>scale with a given factor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="83" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a9a3bf2de057d35fc83b9c750555f7010" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::scale</definition>
+        <argsstring>(const std::vector&lt; T &gt; &amp;factors)</argsstring>
+        <name>scale</name>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>factors</declname>
+        </param>
+        <briefdescription>
+<para>scale this object by the given factors p factors should have size at least <computeroutput>spacedim</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="89" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="353" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a285e1d6bd03207a74190ee02043cdad6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::zero</definition>
+        <argsstring>()</argsstring>
+        <name>zero</name>
+        <briefdescription>
+<para>Zero the entries of the tensor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="94" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="388" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a68cd15c51878b7d0ea9b610f319981e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::add_scaled</definition>
+        <argsstring>(const GeomPoint &amp;p, T factor)</argsstring>
+        <name>add_scaled</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+<para>Add the coordinates of the given point to this scaled by factor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="97" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="304" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1af3343caeb2afa7deffd8f79b6c520151" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T &amp; rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::operator[]</definition>
+        <argsstring>(uint_t i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Access the i-th coordinate of the point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="100" column="7" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="222" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a758c0e9031b3777715c8a71aa1bbad14" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::operator[]</definition>
+        <argsstring>(uint_t i) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Access the i-th coordinate of the point read-only. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="103" column="7" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="230" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a20ba1d291e09a1d27ffaf390f3895dfe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::entry</definition>
+        <argsstring>(uint_t i) const</argsstring>
+        <name>entry</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>access the i-th coordinate of the point read-only </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="106" column="7" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a3a12623758ece91dd026140aae18d638" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::coordinates</definition>
+        <argsstring>() const</argsstring>
+        <name>coordinates</name>
+        <briefdescription>
+<para>Get a copy of the data of this object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="109" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a257f3172f84f4796cf0760117e1d8795" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::max</definition>
+        <argsstring>() const</argsstring>
+        <name>max</name>
+        <briefdescription>
+<para>Get the max element in the point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="114" column="7" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="313" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a06c8e8ee0e33c972c376f728014b0f89" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::min</definition>
+        <argsstring>() const</argsstring>
+        <name>min</name>
+        <briefdescription>
+<para>Get the min element in the point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="119" column="7" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="325" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a05fa5f3d4b27e626ea98bf82762f5268" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::distance</definition>
+        <argsstring>(const GeomPoint &amp;) const</argsstring>
+        <name>distance</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>Get the distance from the given point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="122" column="7" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="338" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a3fbb031052d6eacdd5388c5e0c28924f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::L2_norm</definition>
+        <argsstring>() const</argsstring>
+        <name>L2_norm</name>
+        <briefdescription>
+<para>Return the distance from the origin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="127" column="7" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="127" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1afa1dfa2507351e26bb8058be11ea4db0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::dot</definition>
+        <argsstring>(const GeomPoint &amp;other) const</argsstring>
+        <name>dot</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Returns the dot product of this point and the given point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="133" column="7" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="374" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a979b8edaca58e391883670d09df1de1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::square_sum</definition>
+        <argsstring>() const</argsstring>
+        <name>square_sum</name>
+        <briefdescription>
+<para>Returns the square sum of the compontents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="138" column="7" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="361" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1ae406f0a070ef2d7544cd0a616ba443b2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::print_point_info</definition>
+        <argsstring>(std::ostream &amp;out) const</argsstring>
+        <name>print_point_info</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>print the point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="143" column="18" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="396" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a9f226bb45e1df35cdea6091e93c7bee1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;::to_string</definition>
+        <argsstring>() const</argsstring>
+        <name>to_string</name>
+        <briefdescription>
+<para>Returns string representation of the point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="148" column="23" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="415" bodyend="428"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class that describes a point with spacedim spatial dimension space. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>rlenvscpp::utils::geom::GeomPoint&lt; spacedim, T &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint"/>
+      </node>
+      <node id="2">
+        <label>rlenvscpp::utils::trajectory::WayPoint&lt; dim, Data &gt;</label>
+        <link refid="classrlenvscpp_1_1utils_1_1trajectory_1_1WayPoint"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" line="21" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/geom_point.h" bodystart="22" bodyend="155"/>
+    <listofallmembers>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a68cd15c51878b7d0ea9b610f319981e8" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>add_scaled</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a3a12623758ece91dd026140aae18d638" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>coordinates</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1ae51a3a007437da430cb536df7a6caf4d" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>data_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1aa511dbd85fc5dcd1ebe5c4f535aa3133" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>dimension</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a05fa5f3d4b27e626ea98bf82762f5268" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>distance</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1afa1dfa2507351e26bb8058be11ea4db0" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>dot</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a20ba1d291e09a1d27ffaf390f3895dfe" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>entry</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a963ab2be7472d8cd0974a761eab13d28" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>GeomPoint</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a6cebdc0d28a6ac15c4b6eeb206841dd0" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>GeomPoint</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1ab86b7d5ab9d691248e1d9e933934a512" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>GeomPoint</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1af4b4f933f521592d2537f28e5479ebbc" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>GeomPoint</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a3fbb031052d6eacdd5388c5e0c28924f" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>L2_norm</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a257f3172f84f4796cf0760117e1d8795" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>max</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a06c8e8ee0e33c972c376f728014b0f89" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>min</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a4c8ef701d6d145f1ee88df6fc0f5a61b" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>operator*=</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a747a1f20948f6c292d974a4f028713a9" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>operator+=</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a945350b7a34b4fa951134c1ce560703f" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>operator-=</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1ad741c0cab9abcc4227a5803c6f5b71a8" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>operator/=</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a6e81c058cbd51353e459a4abe528bf01" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>operator=</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1aa46f14e52a48f2d455b9d563bd5966ef" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>operator=</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1af3343caeb2afa7deffd8f79b6c520151" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>operator[]</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a758c0e9031b3777715c8a71aa1bbad14" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>operator[]</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1ae406f0a070ef2d7544cd0a616ba443b2" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>print_point_info</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a164afb8d21954ae66cbb0d0b56a90e60" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>scale</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a9a3bf2de057d35fc83b9c750555f7010" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>scale</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a979b8edaca58e391883670d09df1de1c" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>square_sum</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a9f226bb45e1df35cdea6091e93c7bee1" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>to_string</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a7b124d738791846372a0e69410bac1c7" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>value_type</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1a285e1d6bd03207a74190ee02043cdad6" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>zero</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint_1aca62c56a5cbbd16dd41db4479a49fb1f" prot="public" virt="virtual"><scope>rlenvscpp::utils::geom::GeomPoint</scope><name>~GeomPoint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

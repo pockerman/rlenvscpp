@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1is__sax__static__asserts" kind="struct" language="C++" prot="public">
+    <compoundname>detail::is_sax_static_asserts</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename SAX</type>
+      </param>
+      <param>
+        <type>typename BasicJsonType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="structdetail_1_1is__sax__static__asserts_1a0e725c7e8fec37836f0ca18ea67c3ca0" prot="private" static="no">
+        <type>typename BasicJsonType::number_integer_t</type>
+        <definition>using detail::is_sax_static_asserts&lt; SAX, BasicJsonType &gt;::number_integer_t =  typename BasicJsonType::number_integer_t</definition>
+        <argsstring></argsstring>
+        <name>number_integer_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="9123" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="9123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structdetail_1_1is__sax__static__asserts_1a55f7814837ca207b3fe5f69e56fa8e54" prot="private" static="no">
+        <type>typename BasicJsonType::number_unsigned_t</type>
+        <definition>using detail::is_sax_static_asserts&lt; SAX, BasicJsonType &gt;::number_unsigned_t =  typename BasicJsonType::number_unsigned_t</definition>
+        <argsstring></argsstring>
+        <name>number_unsigned_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="9124" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="9124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structdetail_1_1is__sax__static__asserts_1ae7d38f7671bcc08956be2c6275feb310" prot="private" static="no">
+        <type>typename BasicJsonType::number_float_t</type>
+        <definition>using detail::is_sax_static_asserts&lt; SAX, BasicJsonType &gt;::number_float_t =  typename BasicJsonType::number_float_t</definition>
+        <argsstring></argsstring>
+        <name>number_float_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="9125" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="9125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structdetail_1_1is__sax__static__asserts_1ac64a5e25339dbee8fb0f33e9bf061f98" prot="private" static="no">
+        <type>typename BasicJsonType::string_t</type>
+        <definition>using detail::is_sax_static_asserts&lt; SAX, BasicJsonType &gt;::string_t =  typename BasicJsonType::string_t</definition>
+        <argsstring></argsstring>
+        <name>string_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="9126" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="9126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structdetail_1_1is__sax__static__asserts_1a88f0149c3b29051dc9b81d8957abd017" prot="private" static="no">
+        <type>typename BasicJsonType::binary_t</type>
+        <definition>using detail::is_sax_static_asserts&lt; SAX, BasicJsonType &gt;::binary_t =  typename BasicJsonType::binary_t</definition>
+        <argsstring></argsstring>
+        <name>binary_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="9127" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="9127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structdetail_1_1is__sax__static__asserts_1a9c70b850079742701cf0d4083a5e61b0" prot="private" static="no">
+        <type>typename BasicJsonType::exception</type>
+        <definition>using detail::is_sax_static_asserts&lt; SAX, BasicJsonType &gt;::exception_t =  typename BasicJsonType::exception</definition>
+        <argsstring></argsstring>
+        <name>exception_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="9128" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="9128" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="9117" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="9118" bodyend="9168"/>
+    <listofallmembers>
+      <member refid="structdetail_1_1is__sax__static__asserts_1a88f0149c3b29051dc9b81d8957abd017" prot="private" virt="non-virtual"><scope>detail::is_sax_static_asserts</scope><name>binary_t</name></member>
+      <member refid="structdetail_1_1is__sax__static__asserts_1a9c70b850079742701cf0d4083a5e61b0" prot="private" virt="non-virtual"><scope>detail::is_sax_static_asserts</scope><name>exception_t</name></member>
+      <member refid="structdetail_1_1is__sax__static__asserts_1ae7d38f7671bcc08956be2c6275feb310" prot="private" virt="non-virtual"><scope>detail::is_sax_static_asserts</scope><name>number_float_t</name></member>
+      <member refid="structdetail_1_1is__sax__static__asserts_1a0e725c7e8fec37836f0ca18ea67c3ca0" prot="private" virt="non-virtual"><scope>detail::is_sax_static_asserts</scope><name>number_integer_t</name></member>
+      <member refid="structdetail_1_1is__sax__static__asserts_1a55f7814837ca207b3fe5f69e56fa8e54" prot="private" virt="non-virtual"><scope>detail::is_sax_static_asserts</scope><name>number_unsigned_t</name></member>
+      <member refid="structdetail_1_1is__sax__static__asserts_1ac64a5e25339dbee8fb0f33e9bf061f98" prot="private" virt="non-virtual"><scope>detail::is_sax_static_asserts</scope><name>string_t</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

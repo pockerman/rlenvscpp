@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structrlenvscpp_1_1utils_1_1io_1_1FileFormats" kind="struct" language="C++" prot="public">
+    <compoundname>rlenvscpp::utils::io::FileFormats</compoundname>
+    <includes refid="file__formats_8h" local="no">file_formats.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structrlenvscpp_1_1utils_1_1io_1_1FileFormats_1a49f9121b447504eadba6b60bcfb1be23" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <enumvalue id="structrlenvscpp_1_1utils_1_1io_1_1FileFormats_1a49f9121b447504eadba6b60bcfb1be23acc8d68c551c4a9a6d5313e07de4deafd" prot="public">
+          <name>CSV</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structrlenvscpp_1_1utils_1_1io_1_1FileFormats_1a49f9121b447504eadba6b60bcfb1be23a0ecd11c1d7a287401d148a23bbd7a2f8" prot="public">
+          <name>JSON</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structrlenvscpp_1_1utils_1_1io_1_1FileFormats_1a49f9121b447504eadba6b60bcfb1be23a092170c04de9552a6503565e95b25ca3" prot="public">
+          <name>INVALID_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File formats types </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_formats.h" line="21" column="3" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_formats.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structrlenvscpp_1_1utils_1_1io_1_1FileFormats_1a7c0312c974a9033596d52f7a371c88be" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string rlenvscpp::utils::io::FileFormats::type_to_string</definition>
+        <argsstring>(Type t)</argsstring>
+        <name>type_to_string</name>
+        <param>
+          <type><ref refid="structrlenvscpp_1_1utils_1_1io_1_1FileFormats_1a49f9121b447504eadba6b60bcfb1be23" kindref="member">Type</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return an std::string representation of the given file format type </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_formats.h" line="26" column="22" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_formats.cpp" bodystart="8" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Small struct that holds an enumeration for varioufile formats </para>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_formats.h" line="15" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/io/file_formats.h" bodystart="16" bodyend="27"/>
+    <listofallmembers>
+      <member refid="structrlenvscpp_1_1utils_1_1io_1_1FileFormats_1a49f9121b447504eadba6b60bcfb1be23" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::FileFormats</scope><name>Type</name></member>
+      <member refid="structrlenvscpp_1_1utils_1_1io_1_1FileFormats_1a7c0312c974a9033596d52f7a371c88be" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::io::FileFormats</scope><name>type_to_string</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

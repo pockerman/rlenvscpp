@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1external__constructor_3_01value__t_1_1number__integer_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>detail::external_constructor&lt; value_t::number_integer &gt;</compoundname>
+    <templateparamlist>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structdetail_1_1external__constructor_3_01value__t_1_1number__integer_01_4_1a1f695d898af799e2e86cf862e95b8b71" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename BasicJsonType</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void detail::external_constructor&lt; value_t::number_integer &gt;::construct</definition>
+        <argsstring>(BasicJsonType &amp;j, typename BasicJsonType::number_integer_t val) noexcept</argsstring>
+        <name>construct</name>
+        <param>
+          <type>BasicJsonType &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>typename BasicJsonType::number_integer_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="5519" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="5519" bodyend="5525"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="5516" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="5517" bodyend="5526"/>
+    <listofallmembers>
+      <member refid="structdetail_1_1external__constructor_3_01value__t_1_1number__integer_01_4_1a1f695d898af799e2e86cf862e95b8b71" prot="public" virt="non-virtual"><scope>detail::external_constructor&lt; value_t::number_integer &gt;</scope><name>construct</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

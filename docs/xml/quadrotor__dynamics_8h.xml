@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="quadrotor__dynamics_8h" kind="file" language="C++">
+    <compoundname>quadrotor_dynamics.h</compoundname>
+    <includes refid="rlenvs__types__v2_8h" local="yes">rlenvs/rlenvs_types_v2.h</includes>
+    <includes refid="system__state_8h" local="yes">rlenvs/dynamics/system_state.h</includes>
+    <includes refid="motion__model__base_8h" local="yes">rlenvs/dynamics/motion_model_base.h</includes>
+    <includes refid="dynamics__matrix__descriptor_8h" local="yes">rlenvs/dynamics/dynamics_matrix_descriptor.h</includes>
+    <includes local="no">any</includes>
+    <includedby refid="quadrotor__dynamics_8cpp" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.cpp</includedby>
+    <incdepgraph>
+      <node id="20">
+        <label>rlenvs/dynamics/dynamics_matrix_descriptor.h</label>
+        <link refid="dynamics__matrix__descriptor_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>iomanip</label>
+      </node>
+      <node id="9">
+        <label>rlenvs/dynamics/system_state.h</label>
+        <link refid="system__state_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="18">
+        <label>boost/noncopyable.hpp</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="21">
+        <label>map</label>
+      </node>
+      <node id="17">
+        <label>rlenvs/rlenvs_consts.h</label>
+        <link refid="rlenvs__consts_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ostream</label>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h</label>
+        <link refid="quadrotor__dynamics_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="22">
+        <label>any</label>
+      </node>
+      <node id="16">
+        <label>rlenvs/dynamics/motion_model_base.h</label>
+        <link refid="motion__model__base_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="11">
+        <label>utility</label>
+      </node>
+      <node id="10">
+        <label>array</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="12">
+        <label>algorithm</label>
+      </node>
+      <node id="19">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig" prot="public">rlenvscpp::dynamics::QuadrotorDynamicsConfig</innerclass>
+    <innerclass refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics" prot="public">rlenvscpp::dynamics::QuadrotorDynamics</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1dynamics">rlenvscpp::dynamics</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>QUADROTOR_DYNAMICS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>QUADROTOR_DYNAMICS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_types_v2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/dynamics/system_state.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/dynamics/motion_model_base.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/dynamics/dynamics_matrix_descriptor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/dynamics/system_state.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;any&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dynamics<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16" refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig" kindref="compound">QuadrotorDynamicsConfig</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21" refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig_1ae3795eea59880812875d49733105a616" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig_1ae3795eea59880812875d49733105a616" kindref="member">use_gravity</ref>{</highlight><highlight class="keyword">true</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>use_description_matrices{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig_1ae906d055780a9de4d9f189239d945a59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/><ref refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig_1ae906d055780a9de4d9f189239d945a59" kindref="member">mass</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig_1a750e69d13784d9b769568b6e8ec46233" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/><ref refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig_1a750e69d13784d9b769568b6e8ec46233" kindref="member">l</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig_1a4c55da8638a89c864e12d8da2dd8b3ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/><ref refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig_1a4c55da8638a89c864e12d8da2dd8b3ae" kindref="member">k_1</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig_1aee49159819472f7e11ac34e18806697c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/><ref refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig_1aee49159819472f7e11ac34e18806697c" kindref="member">k_2</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig_1a8710a4e7b61a22478020bd6346916201" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/><ref refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig_1a8710a4e7b61a22478020bd6346916201" kindref="member">dt</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>Jx;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>Jy;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>Jz;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics" kindref="compound">QuadrotorDynamics</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase" kindref="compound">MotionModelDynamicsBase</ref>&lt;SysState&lt;12&gt;,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DynamicsMatrixDescriptor,<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RealVec&gt;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase" kindref="compound">MotionModelDynamicsBase&lt;SysState&lt;12&gt;</ref>,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1DynamicsMatrixDescriptor" kindref="compound">DynamicsMatrixDescriptor</ref>,<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1aae17d9ede748488c19706693aebac6bd" kindref="member">RealVec</ref>&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase" kindref="compound">base_type</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a67543d2fd39405b2f3d75aa03d27950f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">base_type::state_type</ref><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a67543d2fd39405b2f3d75aa03d27950f" kindref="member">state_type</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a6a4b6fcd025938bf334c7e1c5d3612b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>base_type::input_type<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a6a4b6fcd025938bf334c7e1c5d3612b6" kindref="member">input_type</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aa895ddd0e28999d200f87f3ffc8cc165" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>base_type::matrix_type<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aa895ddd0e28999d200f87f3ffc8cc165" kindref="member">matrix_type</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a315f2c69cbb693473a8d097405933629" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>base_type::vector_type<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a315f2c69cbb693473a8d097405933629" kindref="member">vector_type</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a2e0b670c2d5d68a9c78619855f7acfab" kindref="member">QuadrotorDynamics</ref>(<ref refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig" kindref="compound">QuadrotorDynamicsConfig</ref><sp/>config,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">SysState&lt;12&gt;</ref>&amp;<sp/>state);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">state_type</ref>&amp;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1adac1c7282a1b66137eb1c2b37db95bd6" kindref="member">evaluate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a6a4b6fcd025938bf334c7e1c5d3612b6" kindref="member">input_type</ref>&amp;<sp/>input<sp/>)</highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a7ace7b598e37e3bbad0a5e43db33343d" kindref="member">integrate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1aae17d9ede748488c19706693aebac6bd" kindref="member">RealVec</ref>&amp;<sp/>motor_w);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a833684be35618b9e5db86926aa8aad2a" kindref="member">translational_dynamics</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1aae17d9ede748488c19706693aebac6bd" kindref="member">RealVec</ref>&amp;<sp/>motor_w);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a8f3e32475dc8506cd8414f4c63e0c25d" kindref="member">rotational_dynamics</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1aae17d9ede748488c19706693aebac6bd" kindref="member">RealVec</ref>&amp;<sp/>motor_w);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163" refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aee7945c685f5f0fd08a88b031d3cd1f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aee7945c685f5f0fd08a88b031d3cd1f8" kindref="member">get_position</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_position_from_state_();}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168" refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1ab2a186f910a4cd241ccc68d8a2553f59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1ab2a186f910a4cd241ccc68d8a2553f59" kindref="member">get_velocity</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_velocity_from_state_();}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="173" refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a36eb01eb918e0c22c5e3a230485b4544" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a36eb01eb918e0c22c5e3a230485b4544" kindref="member">get_angular_velocity</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_angular_velocity_from_state_();}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="178" refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a5094ad1b66def57bb43b83e58399c03f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a5094ad1b66def57bb43b83e58399c03f" kindref="member">get_euler_angles</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_euler_angles_from_state_();}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig" kindref="compound">QuadrotorDynamicsConfig</ref><sp/>config_;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1a95257139fb8f5e6a5d03a87867d02604" kindref="member">RealMat3d</ref><sp/>rotation_mat_;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1a95257139fb8f5e6a5d03a87867d02604" kindref="member">RealMat3d</ref><sp/>euler_mat_;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>v_dot_;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>omega_dot_;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>euler_dot_;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_position_();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_rotation_matrix_();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_euler_angles_();</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>get_velocity_from_state_()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>get_angular_velocity_from_state_()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>get_position_from_state_()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>get_euler_angles_from_state_()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal">RealColVec3d<sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal">QuadrotorDynamics::get_velocity_from_state_()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>v<sp/>=<sp/>RealColVec3d::Zero();</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>v[0]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" kindref="member">get_state_property</ref>(</highlight><highlight class="stringliteral">&quot;u&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>v[1]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" kindref="member">get_state_property</ref>(</highlight><highlight class="stringliteral">&quot;v&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>v[2]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" kindref="member">get_state_property</ref>(</highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal">RealColVec3d<sp/></highlight></codeline>
+<codeline lineno="250"><highlight class="normal">QuadrotorDynamics::get_position_from_state_()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>v<sp/>=<sp/>RealColVec3d::Zero();</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>v[0]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" kindref="member">get_state_property</ref>(</highlight><highlight class="stringliteral">&quot;x&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>v[1]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" kindref="member">get_state_property</ref>(</highlight><highlight class="stringliteral">&quot;y&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>v[2]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" kindref="member">get_state_property</ref>(</highlight><highlight class="stringliteral">&quot;z&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal">RealColVec3d<sp/></highlight></codeline>
+<codeline lineno="262"><highlight class="normal">QuadrotorDynamics::get_angular_velocity_from_state_()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>v<sp/>=<sp/>RealColVec3d::Zero();</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>v[0]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" kindref="member">get_state_property</ref>(</highlight><highlight class="stringliteral">&quot;p&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>v[1]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" kindref="member">get_state_property</ref>(</highlight><highlight class="stringliteral">&quot;q&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>v[2]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" kindref="member">get_state_property</ref>(</highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal">RealColVec3d<sp/></highlight></codeline>
+<codeline lineno="273"><highlight class="normal">QuadrotorDynamics::get_euler_angles_from_state_()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>RealColVec3d<sp/>v<sp/>=<sp/>RealColVec3d::Zero();</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>v[0]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" kindref="member">get_state_property</ref>(</highlight><highlight class="stringliteral">&quot;phi&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>v[1]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" kindref="member">get_state_property</ref>(</highlight><highlight class="stringliteral">&quot;theta&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>v[2]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" kindref="member">get_state_property</ref>(</highlight><highlight class="stringliteral">&quot;psi&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>QUADROTOR_DYNAMICS_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="with__rest__api__mixin_8h" kind="file" language="C++">
+    <compoundname>with_rest_api_mixin.h</compoundname>
+    <includes refid="HTTPRequest_8hpp" local="yes">rlenvs/extern/HTTPRequest.hpp</includes>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="22">
+        <label>sys/select.h</label>
+      </node>
+      <node id="20">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="15">
+        <label>system_error</label>
+      </node>
+      <node id="10">
+        <label>functional</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/extern/HTTPRequest.hpp</label>
+        <link refid="HTTPRequest_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/with_rest_api_mixin.h</label>
+        <link refid="with__rest__api__mixin_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>errno.h</label>
+      </node>
+      <node id="13">
+        <label>stdexcept</label>
+      </node>
+      <node id="19">
+        <label>fcntl.h</label>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="21">
+        <label>netdb.h</label>
+      </node>
+      <node id="24">
+        <label>sys/types.h</label>
+      </node>
+      <node id="25">
+        <label>unistd.h</label>
+      </node>
+      <node id="17">
+        <label>vector</label>
+      </node>
+      <node id="8">
+        <label>array</label>
+      </node>
+      <node id="3">
+        <label>cctype</label>
+      </node>
+      <node id="4">
+        <label>cstddef</label>
+      </node>
+      <node id="9">
+        <label>chrono</label>
+      </node>
+      <node id="23">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="16">
+        <label>type_traits</label>
+      </node>
+      <node id="7">
+        <label>algorithm</label>
+      </node>
+      <node id="6">
+        <label>cstring</label>
+      </node>
+      <node id="12">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin" prot="public">rlenvscpp::envs::with_rest_api_mixin</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1envs">rlenvscpp::envs</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>WITH_REST_API_MIXIN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WITH_REST_API_MIXIN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/extern/HTTPRequest.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">envs{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TimeStepType&gt;</highlight></codeline>
+<codeline lineno="15" refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin" kindref="compound">with_rest_api_mixin</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>TimeStepType<sp/>time_step_type;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1a6b99a36097398db406a95f46eb0d40da" kindref="member">with_rest_api_mixin</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>api_url,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>resource_path);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1a6b99a36097398db406a95f46eb0d40da" kindref="member">with_rest_api_mixin</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin" kindref="compound">with_rest_api_mixin</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1a92e80caa4e0f938529f861a55345aaca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1a92e80caa4e0f938529f861a55345aaca" kindref="member">~with_rest_api_mixin</ref>()=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1a094486f21d9af56d5c17fb75d5be17d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>time_step_type<sp/><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1a094486f21d9af56d5c17fb75d5be17d8" kindref="member">create_time_step_from_response_</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhttp_1_1Response" kindref="compound">http::Response</ref>&amp;<sp/>response)</highlight><highlight class="keyword">const</highlight><highlight class="normal">=0;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1a5196f40859ba5eaa5e2bdb5b1517b1f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1a5196f40859ba5eaa5e2bdb5b1517b1f0" kindref="member">is_alive</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">=0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1aa76fb67f15e481a8267bf68a215f65ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1aa76fb67f15e481a8267bf68a215f65ba" kindref="member">get_url</ref>()const<sp/>noexcept{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>api_url_<sp/>+<sp/>resource_path_;}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1aa47d75b0a21a00a1536b86b42123aac9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1aa47d75b0a21a00a1536b86b42123aac9" kindref="member">get_api_url</ref>()const<sp/>noexcept{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>api_url_;}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1ac88626a771daa8fa6e700003c48967ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1ac88626a771daa8fa6e700003c48967ca" kindref="member">get_resource_path</ref>()const<sp/>noexcept<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>resource_path_;}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>api_url_;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>resource_path_;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TimeStepType&gt;</highlight></codeline>
+<codeline lineno="71" refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1a6b99a36097398db406a95f46eb0d40da" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1a6b99a36097398db406a95f46eb0d40da" kindref="member">with_rest_api_mixin&lt;TimeStepType&gt;::with_rest_api_mixin</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>api_url,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>resource_path)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">api_url_(api_url),</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">resource_path_(resource_path)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TimeStepType&gt;</highlight></codeline>
+<codeline lineno="78" refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1ac023d39e0c842ae0df9c4382eb64c45c" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin_1a6b99a36097398db406a95f46eb0d40da" kindref="member">with_rest_api_mixin&lt;TimeStepType&gt;::with_rest_api_mixin</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1envs_1_1with__rest__api__mixin" kindref="compound">with_rest_api_mixin&lt;TimeStepType&gt;</ref>&amp;<sp/>other)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">api_url_(other.api_url_),</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">resource_path_(other.resource_path_)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/with_rest_api_mixin.h"/>
+  </compounddef>
+</doxygen>

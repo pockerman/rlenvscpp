@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1value__in__range__of__impl2" kind="struct" language="C++" prot="public">
+    <compoundname>detail::value_in_range_of_impl2</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename OfType</type>
+      </param>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>bool</type>
+        <declname>OfTypeSigned</declname>
+        <defname>OfTypeSigned</defname>
+        <defval>std::is_signed&lt;OfType&gt;::value</defval>
+      </param>
+      <param>
+        <type>bool</type>
+        <declname>TSigned</declname>
+        <defname>TSigned</defname>
+        <defval>std::is_signed&lt;T&gt;::value</defval>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4083" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4083" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

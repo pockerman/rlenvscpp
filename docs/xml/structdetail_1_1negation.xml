@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1negation" kind="struct" language="C++" prot="public">
+    <compoundname>detail::negation</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::integral_constant&lt; bool, !B::value &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class B</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::integral_constant&lt; bool, !B::value &gt;</label>
+      </node>
+      <node id="1">
+        <label>detail::negation&lt; B &gt;</label>
+        <link refid="structdetail_1_1negation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::integral_constant&lt; bool, !B::value &gt;</label>
+      </node>
+      <node id="1">
+        <label>detail::negation&lt; B &gt;</label>
+        <link refid="structdetail_1_1negation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3667" column="11" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3667" bodyend="3667"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

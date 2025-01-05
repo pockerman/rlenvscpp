@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classstd_1_1tuple__element_3_01N_00_01_1_1nlohmann_1_1detail_1_1iteration__proxy__value_3_01IteratorType_01_4_01_4" kind="class" language="C++" prot="public">
+    <compoundname>std::tuple_element&lt; N, ::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>std::size_t</type>
+        <declname>N</declname>
+        <defname>N</defname>
+      </param>
+      <param>
+        <type>typename IteratorType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classstd_1_1tuple__element_3_01N_00_01_1_1nlohmann_1_1detail_1_1iteration__proxy__value_3_01IteratorType_01_4_01_4_1ace1dfdb74841c2f58c064a50598188fd" prot="public" static="no">
+        <type>decltype(get&lt; N &gt;(std::declval&lt; ::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt;()))</type>
+        <definition>using std::tuple_element&lt; N, ::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt;::type =  decltype( get&lt;N&gt;(std::declval &lt; ::nlohmann::detail::iteration_proxy_value&lt;IteratorType &gt; &gt; ()))</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="5378" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="5380" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="5375" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="5376" bodyend="5381"/>
+    <listofallmembers>
+      <member refid="classstd_1_1tuple__element_3_01N_00_01_1_1nlohmann_1_1detail_1_1iteration__proxy__value_3_01IteratorType_01_4_01_4_1ace1dfdb74841c2f58c064a50598188fd" prot="public" virt="non-virtual"><scope>std::tuple_element&lt; N, ::nlohmann::detail::iteration_proxy_value&lt; IteratorType &gt; &gt;</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

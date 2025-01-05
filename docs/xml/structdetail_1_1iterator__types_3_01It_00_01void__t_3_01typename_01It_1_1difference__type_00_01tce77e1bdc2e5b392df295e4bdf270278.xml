@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1iterator__types_3_01It_00_01void__t_3_01typename_01It_1_1difference__type_00_01tce77e1bdc2e5b392df295e4bdf270278" kind="struct" language="C++" prot="public">
+    <compoundname>detail::iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename It</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structdetail_1_1iterator__types_3_01It_00_01void__t_3_01typename_01It_1_1difference__type_00_01tce77e1bdc2e5b392df295e4bdf270278_1a3d9338ab90d2fd007e139856eca8e00e" prot="public" static="no">
+        <type>typename It::difference_type</type>
+        <definition>using detail::iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;::difference_type =  typename It::difference_type</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3280" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structdetail_1_1iterator__types_3_01It_00_01void__t_3_01typename_01It_1_1difference__type_00_01tce77e1bdc2e5b392df295e4bdf270278_1a40b1342e4941a2c311f96d50bb79fa48" prot="public" static="no">
+        <type>typename It::value_type</type>
+        <definition>using detail::iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;::value_type =  typename It::value_type</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3281" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structdetail_1_1iterator__types_3_01It_00_01void__t_3_01typename_01It_1_1difference__type_00_01tce77e1bdc2e5b392df295e4bdf270278_1a91985df24a2f38521cbb7a9218113160" prot="public" static="no">
+        <type>typename It::pointer</type>
+        <definition>using detail::iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;::pointer =  typename It::pointer</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3282" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structdetail_1_1iterator__types_3_01It_00_01void__t_3_01typename_01It_1_1difference__type_00_01tce77e1bdc2e5b392df295e4bdf270278_1a70066015b1af4f35e09dabed204389c6" prot="public" static="no">
+        <type>typename It::reference</type>
+        <definition>using detail::iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;::reference =  typename It::reference</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3283" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structdetail_1_1iterator__types_3_01It_00_01void__t_3_01typename_01It_1_1difference__type_00_01tce77e1bdc2e5b392df295e4bdf270278_1a10766f50e317b231ff6b1c8342d3e515" prot="public" static="no">
+        <type>typename It::iterator_category</type>
+        <definition>using detail::iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;::iterator_category =  typename It::iterator_category</definition>
+        <argsstring></argsstring>
+        <name>iterator_category</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3284" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3284" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3275" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3279" bodyend="3285"/>
+    <listofallmembers>
+      <member refid="structdetail_1_1iterator__types_3_01It_00_01void__t_3_01typename_01It_1_1difference__type_00_01tce77e1bdc2e5b392df295e4bdf270278_1a3d9338ab90d2fd007e139856eca8e00e" prot="public" virt="non-virtual"><scope>detail::iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;</scope><name>difference_type</name></member>
+      <member refid="structdetail_1_1iterator__types_3_01It_00_01void__t_3_01typename_01It_1_1difference__type_00_01tce77e1bdc2e5b392df295e4bdf270278_1a10766f50e317b231ff6b1c8342d3e515" prot="public" virt="non-virtual"><scope>detail::iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;</scope><name>iterator_category</name></member>
+      <member refid="structdetail_1_1iterator__types_3_01It_00_01void__t_3_01typename_01It_1_1difference__type_00_01tce77e1bdc2e5b392df295e4bdf270278_1a91985df24a2f38521cbb7a9218113160" prot="public" virt="non-virtual"><scope>detail::iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;</scope><name>pointer</name></member>
+      <member refid="structdetail_1_1iterator__types_3_01It_00_01void__t_3_01typename_01It_1_1difference__type_00_01tce77e1bdc2e5b392df295e4bdf270278_1a70066015b1af4f35e09dabed204389c6" prot="public" virt="non-virtual"><scope>detail::iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;</scope><name>reference</name></member>
+      <member refid="structdetail_1_1iterator__types_3_01It_00_01void__t_3_01typename_01It_1_1difference__type_00_01tce77e1bdc2e5b392df295e4bdf270278_1a40b1342e4941a2c311f96d50bb79fa48" prot="public" virt="non-virtual"><scope>detail::iterator_types&lt; It, void_t&lt; typename It::difference_type, typename It::value_type, typename It::pointer, typename It::reference, typename It::iterator_category &gt; &gt;</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

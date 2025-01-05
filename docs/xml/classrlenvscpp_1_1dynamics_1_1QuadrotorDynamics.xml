@@ -1,0 +1,523 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics" kind="class" language="C++" prot="public">
+    <compoundname>rlenvscpp::dynamics::QuadrotorDynamics</compoundname>
+    <basecompoundref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase" prot="public" virt="non-virtual">rlenvscpp::dynamics::MotionModelDynamicsBase&lt; SysState&lt; 12 &gt;, DynamicsMatrixDescriptor, RealVec &gt;</basecompoundref>
+    <includes refid="quadrotor__dynamics_8h" local="no">quadrotor_dynamics.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a02ed5a0809a5f7292f54e8dea27028fe" prot="public" static="no">
+        <type><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase" kindref="compound">MotionModelDynamicsBase</ref>&lt; <ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">SysState</ref>&lt; 12 &gt;, <ref refid="classrlenvscpp_1_1dynamics_1_1DynamicsMatrixDescriptor" kindref="compound">DynamicsMatrixDescriptor</ref>, <ref refid="namespacerlenvscpp_1aae17d9ede748488c19706693aebac6bd" kindref="member">RealVec</ref> &gt;</type>
+        <definition>typedef MotionModelDynamicsBase&lt;SysState&lt;12&gt;, DynamicsMatrixDescriptor, RealVec&gt; rlenvscpp::dynamics::QuadrotorDynamics::base_type</definition>
+        <argsstring></argsstring>
+        <name>base_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="101" column="2" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a67543d2fd39405b2f3d75aa03d27950f" prot="public" static="no">
+        <type><ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">base_type::state_type</ref></type>
+        <definition>typedef base_type::state_type rlenvscpp::dynamics::QuadrotorDynamics::state_type</definition>
+        <argsstring></argsstring>
+        <name>state_type</name>
+        <briefdescription>
+<para>The type of the state handled by this dynamics object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="106" column="35" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a6a4b6fcd025938bf334c7e1c5d3612b6" prot="public" static="no">
+        <type>base_type::input_type</type>
+        <definition>typedef base_type::input_type rlenvscpp::dynamics::QuadrotorDynamics::input_type</definition>
+        <argsstring></argsstring>
+        <name>input_type</name>
+        <briefdescription>
+<para>input_t The type of the input for solving the dynamics </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="111" column="35" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aa895ddd0e28999d200f87f3ffc8cc165" prot="public" static="no">
+        <type>base_type::matrix_type</type>
+        <definition>typedef base_type::matrix_type rlenvscpp::dynamics::QuadrotorDynamics::matrix_type</definition>
+        <argsstring></argsstring>
+        <name>matrix_type</name>
+        <briefdescription>
+<para>matrix_t Matrix type that describes the dynamics </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="116" column="36" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a315f2c69cbb693473a8d097405933629" prot="public" static="no">
+        <type>base_type::vector_type</type>
+        <definition>typedef base_type::vector_type rlenvscpp::dynamics::QuadrotorDynamics::vector_type</definition>
+        <argsstring></argsstring>
+        <name>vector_type</name>
+        <briefdescription>
+<para>vector_t </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="121" column="36" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aeaa5b4983f2469bec22aab9488c9dea2" prot="private" static="no" mutable="no">
+        <type><ref refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig" kindref="compound">QuadrotorDynamicsConfig</ref></type>
+        <definition>QuadrotorDynamicsConfig rlenvscpp::dynamics::QuadrotorDynamics::config_</definition>
+        <argsstring></argsstring>
+        <name>config_</name>
+        <briefdescription>
+<para>Configuration of the dynamics integrator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="185" column="25" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a6734e80eec16094273d329033a9050c7" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerlenvscpp_1a95257139fb8f5e6a5d03a87867d02604" kindref="member">RealMat3d</ref></type>
+        <definition>RealMat3d rlenvscpp::dynamics::QuadrotorDynamics::rotation_mat_</definition>
+        <argsstring></argsstring>
+        <name>rotation_mat_</name>
+        <briefdescription>
+<para>The rotation matrix from body to inertial frames. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="191" column="11" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a19a5c3d0893c7d20d1fe2628862e02d2" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerlenvscpp_1a95257139fb8f5e6a5d03a87867d02604" kindref="member">RealMat3d</ref></type>
+        <definition>RealMat3d rlenvscpp::dynamics::QuadrotorDynamics::euler_mat_</definition>
+        <argsstring></argsstring>
+        <name>euler_mat_</name>
+        <briefdescription>
+<para>The rotation matrix from body to inertial frames. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="197" column="11" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1abb7e6a418e540b8b6e7f4a4804427ccf" prot="private" static="no" mutable="no">
+        <type>RealColVec3d</type>
+        <definition>RealColVec3d rlenvscpp::dynamics::QuadrotorDynamics::v_dot_</definition>
+        <argsstring></argsstring>
+        <name>v_dot_</name>
+        <briefdescription>
+<para>Track the velocity time gradient. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="202" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a125b6d0d9e6458860087a2cd883c5477" prot="private" static="no" mutable="no">
+        <type>RealColVec3d</type>
+        <definition>RealColVec3d rlenvscpp::dynamics::QuadrotorDynamics::omega_dot_</definition>
+        <argsstring></argsstring>
+        <name>omega_dot_</name>
+        <briefdescription>
+<para>Track the angular velocity time gradient. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="207" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aea901904ca5b81995557b84724eb6304" prot="private" static="no" mutable="no">
+        <type>RealColVec3d</type>
+        <definition>RealColVec3d rlenvscpp::dynamics::QuadrotorDynamics::euler_dot_</definition>
+        <argsstring></argsstring>
+        <name>euler_dot_</name>
+        <briefdescription>
+<para>The time derivative of the euler angles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="212" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a2e0b670c2d5d68a9c78619855f7acfab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::dynamics::QuadrotorDynamics::QuadrotorDynamics</definition>
+        <argsstring>(QuadrotorDynamicsConfig config, SysState&lt; 12 &gt; &amp;state)</argsstring>
+        <name>QuadrotorDynamics</name>
+        <param>
+          <type><ref refid="structrlenvscpp_1_1dynamics_1_1QuadrotorDynamicsConfig" kindref="compound">QuadrotorDynamicsConfig</ref></type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">SysState</ref>&lt; 12 &gt; &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics" kindref="compound">QuadrotorDynamics</ref> Constructor. Specify the configuration parameters of the simulated quadrotor. It is assumed that the mass of the quadrotor remains fixed and the system state to be tracked. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="130" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.cpp" bodystart="10" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1adac1c7282a1b66137eb1c2b37db95bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a67543d2fd39405b2f3d75aa03d27950f" kindref="member">state_type</ref> &amp;</type>
+        <definition>QuadrotorDynamics::state_type &amp; rlenvscpp::dynamics::QuadrotorDynamics::evaluate</definition>
+        <argsstring>(const input_type &amp;input) override</argsstring>
+        <name>evaluate</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a6a4b6fcd025938bf334c7e1c5d3612b6" kindref="member">input_type</ref> &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate the new state using the given input it also updates the various matrices if needed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="137" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a7ace7b598e37e3bbad0a5e43db33343d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::dynamics::QuadrotorDynamics::integrate</definition>
+        <argsstring>(const RealVec &amp;motor_w)</argsstring>
+        <name>integrate</name>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1aae17d9ede748488c19706693aebac6bd" kindref="member">RealVec</ref> &amp;</type>
+          <declname>motor_w</declname>
+        </param>
+        <briefdescription>
+<para>Integrate the new state. It also uses error terms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="142" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.cpp" bodystart="36" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a833684be35618b9e5db86926aa8aad2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::dynamics::QuadrotorDynamics::translational_dynamics</definition>
+        <argsstring>(const RealVec &amp;motor_w)</argsstring>
+        <name>translational_dynamics</name>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1aae17d9ede748488c19706693aebac6bd" kindref="member">RealVec</ref> &amp;</type>
+          <declname>motor_w</declname>
+        </param>
+        <briefdescription>
+<para>Implements the translational dynamics. It accepts the motors angular velocities. Notice that this model will squared and input velocities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="150" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.cpp" bodystart="173" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a8f3e32475dc8506cd8414f4c63e0c25d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::dynamics::QuadrotorDynamics::rotational_dynamics</definition>
+        <argsstring>(const RealVec &amp;motor_w)</argsstring>
+        <name>rotational_dynamics</name>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1aae17d9ede748488c19706693aebac6bd" kindref="member">RealVec</ref> &amp;</type>
+          <declname>motor_w</declname>
+        </param>
+        <briefdescription>
+<para>Implements the translational dynamics. It accepts the motors angular velocities. Notice that this model will squared and input velocities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="158" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.cpp" bodystart="122" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aee7945c685f5f0fd08a88b031d3cd1f8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>RealColVec3d</type>
+        <definition>RealColVec3d rlenvscpp::dynamics::QuadrotorDynamics::get_position</definition>
+        <argsstring>() const</argsstring>
+        <name>get_position</name>
+        <briefdescription>
+<para>Returns the current position NED frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="163" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="163" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1ab2a186f910a4cd241ccc68d8a2553f59" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>RealColVec3d</type>
+        <definition>RealColVec3d rlenvscpp::dynamics::QuadrotorDynamics::get_velocity</definition>
+        <argsstring>() const</argsstring>
+        <name>get_velocity</name>
+        <briefdescription>
+<para>Returns the current linear velocity (body frame) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="168" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="168" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a36eb01eb918e0c22c5e3a230485b4544" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>RealColVec3d</type>
+        <definition>RealColVec3d rlenvscpp::dynamics::QuadrotorDynamics::get_angular_velocity</definition>
+        <argsstring>() const</argsstring>
+        <name>get_angular_velocity</name>
+        <briefdescription>
+<para>Returns the current angular velocity (body frame) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="173" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="173" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a5094ad1b66def57bb43b83e58399c03f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>RealColVec3d</type>
+        <definition>RealColVec3d rlenvscpp::dynamics::QuadrotorDynamics::get_euler_angles</definition>
+        <argsstring>() const</argsstring>
+        <name>get_euler_angles</name>
+        <briefdescription>
+<para>Returns the Euler angles (0: phi, 1: theta, 2:psi) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="178" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="178" bodyend="178"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a57fdeec2f9fd66e4078517918c28b557" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::dynamics::QuadrotorDynamics::update_position_</definition>
+        <argsstring>()</argsstring>
+        <name>update_position_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update the position </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="217" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.cpp" bodystart="47" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1af481b583aebfeca8a4654e8359fb8d29" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::dynamics::QuadrotorDynamics::update_rotation_matrix_</definition>
+        <argsstring>()</argsstring>
+        <name>update_rotation_matrix_</name>
+        <briefdescription>
+<para>Update the rotation matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="222" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.cpp" bodystart="92" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1acc66f4295c6ecc09f50599cb77f0ba92" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::dynamics::QuadrotorDynamics::update_euler_angles_</definition>
+        <argsstring>()</argsstring>
+        <name>update_euler_angles_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="224" column="6" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.cpp" bodystart="61" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1adecf82c5fd8d4d61ee5d93a6132aa5b6" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>RealColVec3d</type>
+        <definition>RealColVec3d rlenvscpp::dynamics::QuadrotorDynamics::get_velocity_from_state_</definition>
+        <argsstring>() const</argsstring>
+        <name>get_velocity_from_state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="227" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="238" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a861bbba17dfbcfa2a4a0b0b8591d643f" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>RealColVec3d</type>
+        <definition>RealColVec3d rlenvscpp::dynamics::QuadrotorDynamics::get_angular_velocity_from_state_</definition>
+        <argsstring>() const</argsstring>
+        <name>get_angular_velocity_from_state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="228" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="262" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1ace127dae1d9763e5ed72273c438c277e" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>RealColVec3d</type>
+        <definition>RealColVec3d rlenvscpp::dynamics::QuadrotorDynamics::get_position_from_state_</definition>
+        <argsstring>() const</argsstring>
+        <name>get_position_from_state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="229" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="250" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aa14529e91f14bda67d67fb52e0742eb2" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>RealColVec3d</type>
+        <definition>RealColVec3d rlenvscpp::dynamics::QuadrotorDynamics::get_euler_angles_from_state_</definition>
+        <argsstring>() const</argsstring>
+        <name>get_euler_angles_from_state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="230" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="273" bodyend="280"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics" kindref="compound">QuadrotorDynamics</ref> class. Implements quadrotor dynamics The implementation of this class follows the System Modeling section at <ulink url="https://wilselby.com/research/arducopter/modeling/">https://wilselby.com/research/arducopter/modeling/</ulink> and <ulink url="https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=2324&amp;context=facpub">https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=2324&amp;context=facpub</ulink> The quadrotor is assumed to have four rotors Each rotor consists of a brushless DC motor and rotor with a fixed pitch. It is assumed that the quadrotor can move in 6 degrees of freedom; 3-translational and 3-rotational, The motion of the quadrotor is controlled via 4 inputs namely the speeds of the 4 motors. The quadrotor model that this class implements assumes the following: </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>The quadrotor structure is rigid and symmetrical with a center of mass aligned with the center of the body frame of the vehicle.</para>
+</listitem><listitem><para>The thrust and drag of each motor is proportional to the square of the motor velocity.</para>
+</listitem><listitem><para>The propellers are considered to be rigid and therefore blade flapping is negligible (deformation of propeller blades due to high velocities and flexible material).</para>
+</listitem><listitem><para>The Earth is flat and non-rotating (difference of gravity by altitude or the spin of the earth is negligible)</para>
+</listitem><listitem><para>Surrounding fluid velocities (wind) are negligible.</para>
+</listitem><listitem><para>Ground effect is negligible</para>
+</listitem></itemizedlist>
+</para>
+<para>The class integrates the translational and rotational dynamics equations on the body frame </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>boost::noncopyable</label>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::dynamics::QuadrotorDynamics</label>
+        <link refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rlenvscpp::dynamics::MotionModelDynamicsBase&lt; SysState&lt; 12 &gt;, DynamicsMatrixDescriptor, RealVec &gt;</label>
+        <link refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>boost::noncopyable</label>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::dynamics::QuadrotorDynamics</label>
+        <link refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rlenvscpp::dynamics::MotionModelDynamicsBase&lt; SysState&lt; 12 &gt;, DynamicsMatrixDescriptor, RealVec &gt;</label>
+        <link refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" line="93" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/quadrotor_dynamics.h" bodystart="96" bodyend="234"/>
+    <listofallmembers>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a18ef8d12f92c19682a5ab610f4e9f98c" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>allows_matrix_updates</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a02ed5a0809a5f7292f54e8dea27028fe" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>base_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aeaa5b4983f2469bec22aab9488c9dea2" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>config_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ad0f26c623a77afb8903f0235dc8f0b36" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>dt_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aea901904ca5b81995557b84724eb6304" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>euler_dot_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a19a5c3d0893c7d20d1fe2628862e02d2" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>euler_mat_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1adac1c7282a1b66137eb1c2b37db95bd6" prot="public" virt="virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>evaluate</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ac37040c80f3cd72f14a3ad5dad7f3cf0" prot="public" virt="pure-virtual" ambiguityscope="MotionModelDynamicsBase&lt; SysState&lt; 12 &gt;, DynamicsMatrixDescriptor, RealVec &gt;::"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>evaluate</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a36eb01eb918e0c22c5e3a230485b4544" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_angular_velocity</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a861bbba17dfbcfa2a4a0b0b8591d643f" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_angular_velocity_from_state_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a5094ad1b66def57bb43b83e58399c03f" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_euler_angles</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aa14529e91f14bda67d67fb52e0742eb2" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_euler_angles_from_state_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a98d8a2462ced6f7affa9a71da8b12d27" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_matrix</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a35520c9f7045ef829ec789fbe376013d" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_matrix</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aee7945c685f5f0fd08a88b031d3cd1f8" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_position</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1ace127dae1d9763e5ed72273c438c277e" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_position_from_state_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a08098e5d14d9af91a4bbb644e604eeba" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_state</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1aae3398753ff616aa4146f89e0bc3c474" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_state</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a30f307371c2c4ac8e353db6cec838165" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_state_property</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ae62f1512a79a45c6c930065a659080ef" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_state_variables_names</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a86de2f41cc4b0cb6e259daf7f5813a46" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_time_step</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a6cdd87d6a43b77a851fd20544a2bfe22" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_tolerance</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1afb13ec33d5be8104beb17cb5206ed30a" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_vector</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a7bf73427232b99581429d11f030419df" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_vector</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1ab2a186f910a4cd241ccc68d8a2553f59" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_velocity</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1adecf82c5fd8d4d61ee5d93a6132aa5b6" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>get_velocity_from_state_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a1fc6d82a8f896f44897b3b5193b59f14" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>has_matrix</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a6a4b6fcd025938bf334c7e1c5d3612b6" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>input_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a7ace7b598e37e3bbad0a5e43db33343d" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>integrate</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1af2b93f301fe76ec82374cc3c60ef68bb" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>matrix_description_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a2ea6538982777d370afe326f1c30e607" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>matrix_descriptor_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1aa895ddd0e28999d200f87f3ffc8cc165" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>matrix_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ab7973af3b5826d0cd6b43cee4ca47041" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>MotionModelDynamicsBase</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1afd2ec840791eab9fdd78872223f706f4" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>MotionModelDynamicsBase</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a125b6d0d9e6458860087a2cd883c5477" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>omega_dot_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ad48f9ad639a987a458f452579bcf4946" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>output_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a2e0b670c2d5d68a9c78619855f7acfab" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>QuadrotorDynamics</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a6734e80eec16094273d329033a9050c7" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>rotation_mat_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a8f3e32475dc8506cd8414f4c63e0c25d" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>rotational_dynamics</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a8cf812ea6634771def813aa4b077fe7d" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>set_matrix</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a817e00f5480d3856afc41ec2482abe47" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>set_matrix_update_flag</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a13c1155415be9a77b0e03f56c58604d0" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>set_state_name_value</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a1f4b1b9269b3468c7e1b5c8184f993b6" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>set_state_name_value</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a2a639aaf2ff67d9ce244766355c3812e" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>set_state_property</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a94e0d15af2efada4499c7735fd386df4" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>set_time_step</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a3568c7fc57bd7ed8aaba67edf81e51e6" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>set_tolerance</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ac67646f4673903762fa4e6c7fb020386" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>set_vector</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1af26c8b9d7aa6acccb48388a45ea6878a" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>state_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ab505348dd7a8bd73146f304593b98982" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>state_dimension</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a67543d2fd39405b2f3d75aa03d27950f" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>state_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a4a7df0d96d88180f6cbe2837663a7843" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>tol_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a833684be35618b9e5db86926aa8aad2a" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>translational_dynamics</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1ad95cdfeb2540dd571c2092e73df6ad2f" prot="protected" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>update_description_matrices_on_evaluate_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1acc66f4295c6ecc09f50599cb77f0ba92" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>update_euler_angles_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a57fdeec2f9fd66e4078517918c28b557" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>update_position_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1af481b583aebfeca8a4654e8359fb8d29" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>update_rotation_matrix_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1abb7e6a418e540b8b6e7f4a4804427ccf" prot="private" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>v_dot_</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1QuadrotorDynamics_1a315f2c69cbb693473a8d097405933629" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>vector_type</name></member>
+      <member refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase_1a15d52cd1347e650b36ee784322f8d2aa" prot="public" virt="virtual"><scope>rlenvscpp::dynamics::QuadrotorDynamics</scope><name>~MotionModelDynamicsBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

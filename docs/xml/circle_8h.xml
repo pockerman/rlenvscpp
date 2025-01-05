@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="circle_8h" kind="file" language="C++">
+    <compoundname>circle.h</compoundname>
+    <includes refid="rlenvs__types__v2_8h" local="yes">rlenvs/rlenvs_types_v2.h</includes>
+    <includes refid="rlenvs__consts_8h" local="yes">rlenvs/rlenvs_consts.h</includes>
+    <includes refid="geom__point_8h" local="yes">rlenvs/utils/geometry/geom_point.h</includes>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/shapes/circle.h</label>
+        <link refid="circle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>rlenvs/rlenvs_consts.h</label>
+        <link refid="rlenvs__consts_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ostream</label>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="11">
+        <label>array</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="10">
+        <label>rlenvs/utils/geometry/geom_point.h</label>
+        <link refid="geom__point_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle" prot="public">rlenvscpp::utils::geom::Circle</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils">rlenvscpp::utils</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils_1_1geom">rlenvscpp::utils::geom</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CIRCLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIRCLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_types_v2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_consts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/utils/geometry/geom_point.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">utils{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">geom{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle" kindref="compound">Circle</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1adbaf98b6490c61d391e15d0c89033b17" kindref="member">Circle</ref>(<ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>r);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1adbaf98b6490c61d391e15d0c89033b17" kindref="member">Circle</ref>(<ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint&lt;2&gt;</ref>&amp;<sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a8cc60e79c6343af2aeb899fc9f085c4b" kindref="member">center</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1ac924e525aa8392e6a7b5d92d4144aed3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1ac924e525aa8392e6a7b5d92d4144aed3" kindref="member">radius</ref>()const<sp/>noexcept{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r_;}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a8cc60e79c6343af2aeb899fc9f085c4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint&lt;2&gt;</ref><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a8cc60e79c6343af2aeb899fc9f085c4b" kindref="member">center</ref>()const<sp/>noexcept{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>center_;}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a244a061f5b6fbcd9a93bca488521e7a6" kindref="member">area</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a0c76ba898ca590f7f912c153e4b99680" kindref="member">is_inside</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint&lt;2&gt;</ref>&amp;<sp/>point,<sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>tol<sp/>=<sp/>rlenvscpp::consts::TOLERANCE)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a0c76ba898ca590f7f912c153e4b99680" kindref="member">is_inside</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>y,<sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>tol<sp/>=<sp/>rlenvscpp::consts::TOLERANCE)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>r_;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint&lt;2&gt;</ref><sp/>center_;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1adbaf98b6490c61d391e15d0c89033b17" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1adbaf98b6490c61d391e15d0c89033b17" kindref="member">Circle::Circle</ref>(<ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>r)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>r_(r),</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>center_(0.0)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a854889181257e74221f551f279263acf" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1adbaf98b6490c61d391e15d0c89033b17" kindref="member">Circle::Circle</ref>(<ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint&lt;2&gt;</ref>&amp;<sp/>center)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/>r_(r),</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/>center_(center)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></highlight></codeline>
+<codeline lineno="89" refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a244a061f5b6fbcd9a93bca488521e7a6" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a244a061f5b6fbcd9a93bca488521e7a6" kindref="member">Circle::area</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rlenvscpp::consts::maths::PI*r_*r_;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a0c76ba898ca590f7f912c153e4b99680" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a0c76ba898ca590f7f912c153e4b99680" kindref="member">Circle::is_inside</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1GeomPoint" kindref="compound">GeomPoint&lt;2&gt;</ref>&amp;<sp/>point,<sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>tol)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(std::pow((center_[0]<sp/>-<sp/>point[0]),<sp/>2)<sp/>+<sp/>std::pow((center_[1]<sp/>-<sp/>point[1]),<sp/>2)<sp/>-<sp/>r_*r_<sp/>&lt;<sp/>tol){</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a34ddd2913630f91c8f5d4d9d69336b95" refkind="member"><highlight class="normal"><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a0c76ba898ca590f7f912c153e4b99680" kindref="member">Circle::is_inside</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>y,<sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/>tol)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1utils_1_1geom_1_1Circle_1a0c76ba898ca590f7f912c153e4b99680" kindref="member">is_inside</ref>({x,<sp/>y},<sp/>tol);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CIRCLE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/geometry/shapes/circle.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,725 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacerlenvscpp" kind="namespace" language="C++">
+    <compoundname>rlenvscpp</compoundname>
+    <innerclass refid="classrlenvscpp_1_1TimeStep" prot="public">rlenvscpp::TimeStep</innerclass>
+    <innerclass refid="classrlenvscpp_1_1VectorTimeStep" prot="public">rlenvscpp::VectorTimeStep</innerclass>
+    <innerclass refid="structrlenvscpp_1_1TimeStepEnumUtils" prot="public">rlenvscpp::TimeStepEnumUtils</innerclass>
+    <innerclass refid="structrlenvscpp_1_1IntegralRange" prot="public">rlenvscpp::IntegralRange</innerclass>
+    <innerclass refid="structrlenvscpp_1_1RealRange" prot="public">rlenvscpp::RealRange</innerclass>
+    <innerclass refid="structrlenvscpp_1_1Null" prot="public">rlenvscpp::Null</innerclass>
+    <innernamespace refid="namespacerlenvscpp_1_1consts">rlenvscpp::consts</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1dynamics">rlenvscpp::dynamics</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1envs">rlenvscpp::envs</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1rigid__bodies">rlenvscpp::rigid_bodies</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1utils">rlenvscpp::utils</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacerlenvscpp_1a805e84d4818b37d501c58e8e38cb99bb" prot="public" static="no" strong="yes">
+        <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <name>TimeStepTp</name>
+        <enumvalue id="namespacerlenvscpp_1a805e84d4818b37d501c58e8e38cb99bba2c2624a5059934a947d6e25fe8332ade" prot="public">
+          <name>FIRST</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerlenvscpp_1a805e84d4818b37d501c58e8e38cb99bba18e48bbdf6d326bd88d3ebb99ad7515d" prot="public">
+          <name>MID</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerlenvscpp_1a805e84d4818b37d501c58e8e38cb99bbaf447f5c03508de4d88e340390ba7c78f" prot="public">
+          <name>LAST</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerlenvscpp_1a805e84d4818b37d501c58e8e38cb99bba092170c04de9552a6503565e95b25ca3" prot="public">
+          <name>INVALID_TYPE</name>
+          <initializer>=3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The TimeStepTp enum. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/time_step_type.h" line="16" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/time_step_type.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacerlenvscpp_1abf029e7f19d09c2b2b192336e07520e1" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>DeviceType</name>
+        <enumvalue id="namespacerlenvscpp_1abf029e7f19d09c2b2b192336e07520e1a092170c04de9552a6503565e95b25ca3" prot="public">
+          <name>INVALID_TYPE</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerlenvscpp_1abf029e7f19d09c2b2b192336e07520e1a2b55387dd066c5bac646ac61543d152d" prot="public">
+          <name>CPU</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacerlenvscpp_1abf029e7f19d09c2b2b192336e07520e1a52f9ec21735243ad9917cda3ca077d32" prot="public">
+          <name>GPU</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Device type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="129" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="129" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" prot="public" static="no">
+        <type>double</type>
+        <definition>typedef double rlenvscpp::real_t</definition>
+        <argsstring></argsstring>
+        <name>real_t</name>
+        <briefdescription>
+<para>real_t </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="22" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1ac63d0fa3f970077b85e8e04038fdefdf" prot="public" static="no">
+        <type>float</type>
+        <definition>typedef float rlenvscpp::float_t</definition>
+        <argsstring></argsstring>
+        <name>float_t</name>
+        <briefdescription>
+<para>float </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="27" column="15" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1a3f587743c65d9a1404e3f46d36d86927" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int rlenvscpp::int_t</definition>
+        <argsstring></argsstring>
+        <name>int_t</name>
+        <briefdescription>
+<para>integer type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="32" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1ac6a3f46d1cf5fa86fd721b816a7af188" prot="public" static="no">
+        <type>long int</type>
+        <definition>typedef long int rlenvscpp::lint_t</definition>
+        <argsstring></argsstring>
+        <name>lint_t</name>
+        <briefdescription>
+<para>long int type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="37" column="18" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" prot="public" static="no">
+        <type>std::size_t</type>
+        <definition>typedef std::size_t rlenvscpp::uint_t</definition>
+        <argsstring></argsstring>
+        <name>uint_t</name>
+        <briefdescription>
+<para>uint_t </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="42" column="21" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1ae3feeb98564c6c927fb4445c41c06b32" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>Eigen::MatrixX&lt; T &gt;</type>
+        <definition>using rlenvscpp::DynMat = typedef Eigen::MatrixX&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>DynMat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="46" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1a95257139fb8f5e6a5d03a87867d02604" prot="public" static="no">
+        <type>Eigen::Matrix3&lt; <ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref> &gt;</type>
+        <definition>using rlenvscpp::RealMat3d = typedef Eigen::Matrix3&lt;real_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>RealMat3d</name>
+        <briefdescription>
+<para>Dynamic×3 matrix of type double. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="51" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1a0ef4033633afa49f0b21b50978cda10a" prot="public" static="no">
+        <type>Eigen::Matrix3&lt; <ref refid="namespacerlenvscpp_1ac63d0fa3f970077b85e8e04038fdefdf" kindref="member">float_t</ref> &gt;</type>
+        <definition>using rlenvscpp::FloatMat3d = typedef Eigen::Matrix3&lt;float_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>FloatMat3d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="53" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1a7a52eac5203e7ea5e8a83c97138a6d0d" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>Eigen::RowVectorX&lt; T &gt;</type>
+        <definition>using rlenvscpp::DynVec = typedef Eigen::RowVectorX&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>DynVec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="57" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1a041713f4099b7782e41b3af36fd21541" prot="public" static="no">
+        <type>DynVec&lt; <ref refid="namespacerlenvscpp_1ac63d0fa3f970077b85e8e04038fdefdf" kindref="member">float_t</ref> &gt;</type>
+        <definition>using rlenvscpp::FloatVec = typedef DynVec&lt;float_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>FloatVec</name>
+        <briefdescription>
+<para>single precision floating point vector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="62" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1aae17d9ede748488c19706693aebac6bd" prot="public" static="no">
+        <type>DynVec&lt; <ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref> &gt;</type>
+        <definition>using rlenvscpp::RealVec = typedef DynVec&lt;real_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>RealVec</name>
+        <briefdescription>
+<para>double precision floating point vector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="67" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1af30fbc72301284e1aa1967fe8f1a6f2c" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="namespacerlenvscpp_1ac63d0fa3f970077b85e8e04038fdefdf" kindref="member">float_t</ref> &gt;</type>
+        <definition>using rlenvscpp::STD_FloatVec = typedef std::vector&lt;float_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>STD_FloatVec</name>
+        <briefdescription>
+<para>single precision std::vector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="72" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1a34e19229e07181a2a9be6fc41b1b2d30" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref> &gt;</type>
+        <definition>using rlenvscpp::STD_RealVec = typedef std::vector&lt;real_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>STD_RealVec</name>
+        <briefdescription>
+<para>double precision std::vector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="77" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1afc9ec7297ec93cf2e6adef469d6cad00" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>Eigen::VectorX&lt; T &gt;</type>
+        <definition>using rlenvscpp::ColVec = typedef Eigen::VectorX&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>ColVec</name>
+        <briefdescription>
+<para>Column vector. Some maths operations are easier using column vectors rather than DynVec. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="84" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1a351b6a65c11e0ee280f9474dccfcd267" prot="public" static="no">
+        <type><ref refid="namespacerlenvscpp_1afc9ec7297ec93cf2e6adef469d6cad00" kindref="member">ColVec</ref>&lt; <ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref> &gt;</type>
+        <definition>using rlenvscpp::RealColVec = typedef ColVec&lt;real_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>RealColVec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="87" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1a4179434924361fb40feb07cadc105660" prot="public" static="no">
+        <type><ref refid="namespacerlenvscpp_1afc9ec7297ec93cf2e6adef469d6cad00" kindref="member">ColVec</ref>&lt; <ref refid="namespacerlenvscpp_1ac63d0fa3f970077b85e8e04038fdefdf" kindref="member">float_t</ref> &gt;</type>
+        <definition>using rlenvscpp::FoatColVec = typedef ColVec&lt;float_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>FoatColVec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="88" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1a117480b29a94445758c9049737c05d1e" prot="public" static="no">
+        <type>Eigen::Vector3d</type>
+        <definition>using rlenvscpp::RealColVec3d = typedef Eigen::Vector3d</definition>
+        <argsstring></argsstring>
+        <name>RealColVec3d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="92" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacerlenvscpp_1adaf3886898bede43ba80fdf0477c0312" prot="public" static="no">
+        <type>Eigen::Vector3f</type>
+        <definition>using rlenvscpp::FloatColVec3d = typedef Eigen::Vector3f</definition>
+        <argsstring></argsstring>
+        <name>FloatColVec3d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" line="93" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/rlenvs_types_v2.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacerlenvscpp_1a86ba572cb743ae50a782787385ea50d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename StateTp</type>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; rlenvscpp::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const TimeStep&lt; StateTp &gt; &amp;step)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1TimeStep" kindref="compound">TimeStep</ref>&lt; StateTp &gt; &amp;</type>
+          <declname>step</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/time_step.h" line="288" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/time_step.h" bodystart="288" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacerlenvscpp_1aa7ea6eda34181cce9a8182816622dc9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; rlenvscpp::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const TimeStep&lt; std::vector&lt; T &gt;&gt; &amp;step)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1TimeStep" kindref="compound">TimeStep</ref>&lt; std::vector&lt; T &gt;&gt; &amp;</type>
+          <declname>step</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/time_step.h" line="299" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/time_step.h" bodystart="299" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacerlenvscpp_1aa71b88ccdacce5b80cec329831a63b87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename StateTp</type>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; rlenvscpp::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const VectorTimeStep&lt; StateTp &gt; &amp;step)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1VectorTimeStep" kindref="compound">VectorTimeStep</ref>&lt; StateTp &gt; &amp;</type>
+          <declname>step</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/vector_time_step.h" line="273" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/vector_time_step.h" bodystart="273" bodyend="292"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>todo write docs</para>
+<para>Implements the Gridworld environment from the book Deep Reinforcement Learning in Action by Manning publications. You can find the original environment here: <ulink url="https://github.com/DeepReinforcementLearning/DeepReinforcementLearningInAction">https://github.com/DeepReinforcementLearning/DeepReinforcementLearningInAction</ulink></para>
+<sect3 id="namespacerlenvscpp_1autotoc_md0">
+<title>Description</title>
+<para>The Acrobot environment is based on Sutton&apos;s work in <ulink url="https://papers.nips.cc/paper/1995/hash/8f1d43620bc6bb580df6e80b0dc05c48-Abstract.html">&quot;Generalization in Reinforcement Learning: Successful Examples Using Sparse Coarse Coding&quot;</ulink> and <ulink url="http://www.incompleteideas.net/book/the-book-2nd.html">Sutton and Barto&apos;s book</ulink>. The system consists of two links connected linearly to form a chain, with one end of the chain fixed. The joint between the two links is actuated. The goal is to apply torques on the actuated joint to swing the free end of the linear chain above a given height while starting from the initial state of hanging downwards.</para>
+<para>As seen in the <bold>Gif</bold>: two blue links connected by two green joints. The joint in between the two links is actuated. The goal is to swing the free end of the outer-link to reach the target height (black horizontal line above system) by applying torque on the actuator.</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md1">
+<title>Action Space</title>
+<para>The action is discrete, deterministic, and represents the torque applied on the actuated joint between the two links.</para>
+<para><table rows="4" cols="3"><row>
+<entry thead="yes"><para>Num   </para>
+</entry><entry thead="yes"><para>Action   </para>
+</entry><entry thead="yes"><para>Unit    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>0   </para>
+</entry><entry thead="no"><para>apply -1 torque to the actuated joint   </para>
+</entry><entry thead="no"><para>torque (N m)    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>1   </para>
+</entry><entry thead="no"><para>apply 0 torque to the actuated joint   </para>
+</entry><entry thead="no"><para>torque (N m)    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>2   </para>
+</entry><entry thead="no"><para>apply 1 torque to the actuated joint   </para>
+</entry><entry thead="no"><para>torque (N m)   </para>
+</entry></row>
+</table>
+</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md2">
+<title>Observation Space</title>
+<para>The observation is a <computeroutput>ndarray</computeroutput> with shape <computeroutput>(6,)</computeroutput> that provides information about the two rotational joint angles as well as their angular velocities:</para>
+<para><table rows="7" cols="4"><row>
+<entry thead="yes"><para>Num   </para>
+</entry><entry thead="yes"><para>Observation   </para>
+</entry><entry thead="yes"><para>Min   </para>
+</entry><entry thead="yes"><para>Max    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>0   </para>
+</entry><entry thead="no"><para>Cosine of <computeroutput>theta1</computeroutput>   </para>
+</entry><entry thead="no"><para>-1   </para>
+</entry><entry thead="no"><para>1    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>1   </para>
+</entry><entry thead="no"><para>Sine of <computeroutput>theta1</computeroutput>   </para>
+</entry><entry thead="no"><para>-1   </para>
+</entry><entry thead="no"><para>1    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>2   </para>
+</entry><entry thead="no"><para>Cosine of <computeroutput>theta2</computeroutput>   </para>
+</entry><entry thead="no"><para>-1   </para>
+</entry><entry thead="no"><para>1    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>3   </para>
+</entry><entry thead="no"><para>Sine of <computeroutput>theta2</computeroutput>   </para>
+</entry><entry thead="no"><para>-1   </para>
+</entry><entry thead="no"><para>1    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>4   </para>
+</entry><entry thead="no"><para>Angular velocity of <computeroutput>theta1</computeroutput>   </para>
+</entry><entry thead="no"><para>~ -12.567 (-4 * pi)   </para>
+</entry><entry thead="no"><para>~ 12.567 (4 * pi)    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>5   </para>
+</entry><entry thead="no"><para>Angular velocity of <computeroutput>theta2</computeroutput>   </para>
+</entry><entry thead="no"><para>~ -28.274 (-9 * pi)   </para>
+</entry><entry thead="no"><para>~ 28.274 (9 * pi)   </para>
+</entry></row>
+</table>
+</para>
+<para>where<itemizedlist>
+<listitem><para><computeroutput>theta1</computeroutput> is the angle of the first joint, where an angle of 0 indicates the first link is pointing directly downwards.</para>
+</listitem><listitem><para><computeroutput>theta2</computeroutput> is <emphasis><bold>relative to the angle of the first link.</bold></emphasis> An angle of 0 corresponds to having the same angle between the two links.</para>
+</listitem></itemizedlist>
+</para>
+<para>The angular velocities of <computeroutput>theta1</computeroutput> and <computeroutput>theta2</computeroutput> are bounded at ±4π, and ±9π rad/s respectively. A state of <computeroutput>[1, 0, 1, 0, ..., ...]</computeroutput> indicates that both links are pointing downwards.</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md3">
+<title>Rewards</title>
+<para>The goal is to have the free end reach a designated target height in as few steps as possible, and as such all steps that do not reach the goal incur a reward of -1. Achieving the target height results in termination with a reward of 0. The reward threshold is -100.</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md4">
+<title>Starting State</title>
+<para>Each parameter in the underlying state (<computeroutput>theta1</computeroutput>, <computeroutput>theta2</computeroutput>, and the two angular velocities) is initialized uniformly between -0.1 and 0.1. This means both links are pointing downwards with some initial stochasticity.</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md5">
+<title>Episode End</title>
+<para>The episode ends if one of the following occurs:<orderedlist>
+<listitem><para>Termination: The free end reaches the target height, which is constructed as: <computeroutput>-cos(theta1) - cos(theta2 + theta1) &gt; 1.0</computeroutput></para>
+</listitem><listitem><para>Truncation: Episode length is greater than 500 (200 for v0)</para>
+</listitem></orderedlist>
+</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md6">
+<title>Arguments</title>
+<para>No additional arguments are currently supported.</para>
+<para><programlisting><codeline><highlight class="normal">env<sp/>=<sp/>gym.make(&apos;Acrobot-v1&apos;)</highlight></codeline>
+</programlisting></para>
+<para>By default, the dynamics of the acrobot follow those described in Sutton and Barto&apos;s book <ulink url="http://incompleteideas.net/book/11/node4.html">Reinforcement Learning: An Introduction</ulink>. However, a <computeroutput>book_or_nips</computeroutput> parameter can be modified to change the pendulum dynamics to those described in the original <ulink url="https://papers.nips.cc/paper/1995/hash/8f1d43620bc6bb580df6e80b0dc05c48-Abstract.html">NeurIPS paper</ulink>.</para>
+<para><programlisting><codeline><highlight class="normal">#<sp/>To<sp/>change<sp/>the<sp/>dynamics<sp/>as<sp/>described<sp/>above</highlight></codeline>
+<codeline><highlight class="normal">env.env.book_or_nips<sp/>=<sp/>&apos;nips&apos;</highlight></codeline>
+</programlisting></para>
+<para>See the following note and the <ulink url="https://github.com/openai/gym/blob/master/gym/envs/classic_control/acrobot.py">implementation</ulink> for details:</para>
+<para><blockquote><para>The dynamics equations were missing some terms in the NIPS paper which </para>
+</blockquote>are present in the book. R. Sutton confirmed in personal correspondence that the experimental results shown in the paper and the book were generated with the equations shown in the book. However, there is the option to run the domain with the paper equations by setting <lsquo/>book_or_nips = &apos;nips<rsquo/>`</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md7">
+<title>Version History</title>
+<para><itemizedlist>
+<listitem><para>v1: Maximum number of steps increased from 200 to 500. The observation space for v0 provided direct readings of <computeroutput>theta1</computeroutput> and <computeroutput>theta2</computeroutput> in radians, having a range of <computeroutput>[-pi, pi]</computeroutput>. The v1 observation space as described here provides the sine and cosine of each angle instead.</para>
+</listitem><listitem><para>v0: Initial versions release (1.0.0) (removed from gym for v1)</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md8">
+<title>References</title>
+<para><itemizedlist>
+<listitem><para>Sutton, R. S. (1996). Generalization in Reinforcement Learning: Successful Examples Using Sparse Coarse Coding. In D. Touretzky, M. C. Mozer, &amp; M. Hasselmo (Eds.), Advances in Neural Information Processing Systems (Vol. 8). MIT Press. <ulink url="https://proceedings.neurips.cc/paper/1995/file/8f1d43620bc6bb580df6e80b0dc05c48-Paper.pdf">https://proceedings.neurips.cc/paper/1995/file/8f1d43620bc6bb580df6e80b0dc05c48-Paper.pdf</ulink></para>
+</listitem><listitem><para>Sutton, R. S., Barto, A. G. (2018 ). Reinforcement Learning: An Introduction. The MIT Press. &quot;&quot;"</para>
+</listitem></itemizedlist>
+</para>
+<para>CartPole environment. The original environment is described here: <ulink url="https://github.com/openai/gym/blob/master/gym/envs/classic_control/cartpole.py">https://github.com/openai/gym/blob/master/gym/envs/classic_control/cartpole.py</ulink> The state variables are:</para>
+<para>Observation: Type: Box(4) Num Observation Min Max 0 Cart Position -2.4 2.4 1 Cart Velocity -Inf Inf 2 Pole Angle -0.209 rad (-12 deg) 0.209 rad (12 deg) 3 Pole Angular Velocity -Inf Inf Actions: Type: Discrete(2) Num Action 0 Push cart to the left 1 Push cart to the right Note: The amount the velocity that is reduced or increased is not fixed; it depends on the angle the pole is pointing. This is because the center of gravity of the pole increases the amount of energy needed to move the cart underneath it Reward: Reward is 1 for every step taken, including the termination step Starting State: All observations are assigned a uniform random value in [-0.05..0.05] Episode Termination: Pole Angle is more than 12 degrees. Cart Position is more than 2.4 (center of the cart reaches the edge of the display). Episode length is greater than 200. Solved Requirements: Considered solved when the average return is greater than or equal to 195.0 over 100 consecutive trials.</para>
+<para>Pendulum environment. The original environment is described here: <ulink url="https://github.com/openai/gym/blob/master/gym/envs/classic_control/pendulum.py">https://github.com/openai/gym/blob/master/gym/envs/classic_control/pendulum.py</ulink> The state variables are: <verbatim>### Description
+</verbatim> The inverted pendulum swingup problem is based on the classic problem in control theory. The system consists of a pendulum attached at one end to a fixed point, and the other end being free. The pendulum starts in a random position and the goal is to apply torque on the free end to swing it into an upright position, with its center of gravity right above the fixed point.</para>
+<para>The diagram below specifies the coordinate system used for the implementation of the pendulum&apos;s dynamic equations.</para>
+<para><image type="html" name="./diagrams/pendulum.png" alt="Pendulum Coordinate System" inline="yes"></image>
+</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>x-y</computeroutput>: cartesian coordinates of the pendulum&apos;s end in meters.</para>
+</listitem><listitem><para><computeroutput>theta</computeroutput> : angle in radians.</para>
+</listitem><listitem><para><computeroutput>tau</computeroutput>: torque in <computeroutput>N m</computeroutput>. Defined as positive <emphasis>counter-clockwise</emphasis>.</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md9">
+<title>Action Space</title>
+<para>The action is a <computeroutput>ndarray</computeroutput> with shape <computeroutput>(1,)</computeroutput> representing the torque applied to free end of the pendulum.</para>
+<para><table rows="2" cols="4"><row>
+<entry thead="yes"><para>Num   </para>
+</entry><entry thead="yes"><para>Action   </para>
+</entry><entry thead="yes"><para>Min   </para>
+</entry><entry thead="yes"><para>Max    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>0   </para>
+</entry><entry thead="no"><para>Torque   </para>
+</entry><entry thead="no"><para>-2.0   </para>
+</entry><entry thead="no"><para>2.0   </para>
+</entry></row>
+</table>
+</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md10">
+<title>Observation Space</title>
+<para>The observation is a <computeroutput>ndarray</computeroutput> with shape <computeroutput>(3,)</computeroutput> representing the x-y coordinates of the pendulum&apos;s free end and its angular velocity.</para>
+<para><table rows="4" cols="4"><row>
+<entry thead="yes"><para>Num   </para>
+</entry><entry thead="yes"><para>Observation   </para>
+</entry><entry thead="yes"><para>Min   </para>
+</entry><entry thead="yes"><para>Max    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>0   </para>
+</entry><entry thead="no"><para>x = cos(theta)   </para>
+</entry><entry thead="no"><para>-1.0   </para>
+</entry><entry thead="no"><para>1.0    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>1   </para>
+</entry><entry thead="no"><para>y = sin(theta)   </para>
+</entry><entry thead="no"><para>-1.0   </para>
+</entry><entry thead="no"><para>1.0    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>2   </para>
+</entry><entry thead="no"><para>Angular Velocity   </para>
+</entry><entry thead="no"><para>-8.0   </para>
+</entry><entry thead="no"><para>8.0   </para>
+</entry></row>
+</table>
+</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md11">
+<title>Rewards</title>
+<para>The reward function is defined as:</para>
+<para>r = -(theta<superscript>2</superscript> + 0.1 * theta_dt<superscript>2</superscript> + 0.001 * torque<superscript>2</superscript>)*</para>
+<para>where <computeroutput>$\theta$</computeroutput> is the pendulum&apos;s angle normalized between <emphasis>[-pi, pi]</emphasis> (with 0 being in the upright position). Based on the above equation, the minimum reward that can be obtained is -(pi<superscript>2</superscript> + 0.1 * 8<superscript>2</superscript> + 0.001 * 2<superscript>2</superscript>) = -16.2736044*, while the maximum reward is zero (pendulum is upright with zero velocity and no torque applied).</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md12">
+<title>Starting State</title>
+<para>The starting state is a random angle in <emphasis>[-pi, pi]</emphasis> and a random angular velocity in <emphasis>[-1,1]</emphasis>.</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md13">
+<title>Episode Truncation</title>
+<para>The episode truncates at 200 time steps.</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md14">
+<title>Arguments</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>g</computeroutput>: acceleration of gravity measured in *(m s<superscript>-2</superscript>)* used to calculate the pendulum dynamics. The default value is g = 10.0 .</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting><codeline><highlight class="normal">gym.make(&apos;Pendulum-v1&apos;,<sp/>g=9.81)</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md15">
+<title>Version History</title>
+<para>v1: Simplify the math equations, no difference in behavior. v0: Initial versions release (1.0.0).</para>
+<para>TiledCartPole environment. Wrapper to CartPole environment using state aggregation. The original environment is described here: <ulink url="https://github.com/openai/gym/blob/master/gym/envs/classic_control/cartpole.py">https://github.com/openai/gym/blob/master/gym/envs/classic_control/cartpole.py</ulink> The state variables are:</para>
+<para>Observation: Type: Box(4) Num Observation Min Max 0 Cart Position -2.4 2.4 1 Cart Velocity -Inf Inf 2 Pole Angle -0.209 rad (-12 deg) 0.209 rad (12 deg) 3 Pole Angular Velocity -Inf Inf Actions: Type: Discrete(2) Num Action 0 Push cart to the left 1 Push cart to the right Note: The amount the velocity that is reduced or increased is not fixed; it depends on the angle the pole is pointing. This is because the center of gravity of the pole increases the amount of energy needed to move the cart underneath it Reward: Reward is 1 for every step taken, including the termination step Starting State: All observations are assigned a uniform random value in [-0.05..0.05] Episode Termination: Pole Angle is more than 12 degrees. Cart Position is more than 2.4 (center of the cart reaches the edge of the display). Episode length is greater than 200. Solved Requirements: Considered solved when the average return is greater than or equal to 195.0 over 100 consecutive trials.</para>
+<para>Vector Acrobot environment. This class simply wraps copies of the Acrobot class. See: <ulink url="https://github.com/pockerman/rlenvs_from_cpp/blob/master/src/rlenvs/envs/gymnasium/classic_control/acrobot_env.h">https://github.com/pockerman/rlenvs_from_cpp/blob/master/src/rlenvs/envs/gymnasium/classic_control/acrobot_env.h</ulink> for more information</para>
+<para>Base class for Gymnasium vector environments. See: <ulink url="https://gymnasium.farama.org/api/vector/sync_vector_env/">https://gymnasium.farama.org/api/vector/sync_vector_env/</ulink></para>
+<para>BlackJack environment <ulink url="https://github.com/Farama-Foundation/Gymnasium/blob/main/gymnasium/envs/toy_text/blackjack.py">https://github.com/Farama-Foundation/Gymnasium/blob/main/gymnasium/envs/toy_text/blackjack.py</ulink></para>
+<para>This is a simple implementation of the Gridworld Cliff einforcement learning task.</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md16">
+<title>Description</title>
+<para>The board is a 4x12 matrix, with (using NumPy matrix indexing):</para>
+<para><itemizedlist>
+<listitem><para>[3, 0] as the start at bottom-left</para>
+</listitem><listitem><para>[3, 11] as the goal at bottom-right</para>
+</listitem><listitem><para>[3, 1..10] as the cliff at bottom-center</para>
+</listitem></itemizedlist>
+</para>
+<para>If the agent steps on the cliff it returns to the start. An episode terminates when the agent reaches the goal.</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md17">
+<title>Actions</title>
+<para>There are 4 discrete deterministic actions:<itemizedlist>
+<listitem><para>0: move up</para>
+</listitem><listitem><para>1: move right</para>
+</listitem><listitem><para>2: move down</para>
+</listitem><listitem><para>3: move left</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md18">
+<title>Observations</title>
+<para>There are 3x12 + 1 possible states. In fact, the agent cannot be at the cliff, nor at the goal (as this results the end of episode). They remain all the positions of the first 3 rows plus the bottom-left cell. The observation is simply the current position encoded as <ulink url="https://numpy.org/doc/stable/reference/generated/numpy.unravel_index.html">flattened index</ulink>.</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md19">
+<title>Reward</title>
+<para>Each time step incurs -1 reward, and stepping into the cliff incurs -100 reward.</para>
+<para>Wrapper to the FrozenLake OpenAI-Gym environment. The origina environment can be found at: <ulink url="https://github.com/openai/gym/blob/master/gym/envs/toy_text/frozen_lake.py">https://github.com/openai/gym/blob/master/gym/envs/toy_text/frozen_lake.py</ulink> Frozen lake involves crossing a frozen lake from Start(S) to goal(G) without falling into any holes(H). The agent may not always move in the intended direction due to the slippery nature of the frozen lake</para>
+<para>The agent take a 1-element vector for actions. The action space is <computeroutput>(dir)</computeroutput>, where <computeroutput>dir</computeroutput> decides direction to move in which can be:<itemizedlist>
+<listitem><para>0: LEFT</para>
+</listitem><listitem><para>1: DOWN</para>
+</listitem><listitem><para>2: RIGHT</para>
+</listitem><listitem><para>3: UP</para>
+</listitem></itemizedlist>
+</para>
+<para>The observation is a value representing the agents current position as current_row * nrows + current_col</para>
+<para>Reward schedule:<itemizedlist>
+<listitem><para>Reach goal(G): +1</para>
+</listitem><listitem><para>Reach hole(H): 0</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="namespacerlenvscpp_1autotoc_md20">
+<title>Arguments</title>
+<para><programlisting><codeline><highlight class="normal">gym.make(&apos;FrozenLake-v0&apos;,<sp/>desc=None,map_name=&quot;4x4&quot;,<sp/>is_slippery=True)</highlight></codeline>
+</programlisting> <computeroutput>desc</computeroutput>: Used to specify custom map for frozen lake. For example, desc=[&quot;SFFF&quot;, &quot;FHFH&quot;, &quot;FFFH&quot;, &quot;HFFG&quot;]. <computeroutput>map_name</computeroutput>: ID to use any of the preloaded maps. &quot;4x4&quot;:[ &quot;SFFF&quot;, &quot;FHFH&quot;, &quot;FFFH&quot;, &quot;HFFG&quot; ] &quot;8x8&quot;: [ &quot;SFFFFFFF&quot;, &quot;FFFFFFFF&quot;, &quot;FFFHFFFF&quot;, &quot;FFFFFHFF&quot;, &quot;FFFHFFFF&quot;, &quot;FHHFFFHF&quot;, &quot;FHFFHFHF&quot;, &quot;FFFHFFFG&quot;, ] <computeroutput>is_slippery</computeroutput>: True/False. If True will move in intended direction with probability of 1/3 else will move in either perpendicular direction with equal probability of 1/3 in both directions. For example, if action is left and is_slippery is True, then:<itemizedlist>
+<listitem><para>P(move left)=1/3</para>
+</listitem><listitem><para>P(move up)=1/3</para>
+</listitem><listitem><para>P(move down)=1/3 </para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.cpp" line="4" column="1"/>
+  </compounddef>
+</doxygen>

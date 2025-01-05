@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structjson__pointer_1_1string__t__helper_3_01NLOHMANN__BASIC__JSON__TPL_01_4" kind="struct" language="C++" prot="private">
+    <compoundname>json_pointer::string_t_helper&lt; NLOHMANN_BASIC_JSON_TPL &gt;</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structjson__pointer_1_1string__t__helper_3_01NLOHMANN__BASIC__JSON__TPL_01_4_1a15694a2e8cbb26d2f8b292334ade1728" prot="public" static="no">
+        <type>StringType</type>
+        <definition>using json_pointer&lt; RefStringType &gt;::string_t_helper&lt; NLOHMANN_BASIC_JSON_TPL &gt;::type =  StringType</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="13859" column="9" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="13859" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="13857" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="13858" bodyend="13860"/>
+    <listofallmembers>
+      <member refid="structjson__pointer_1_1string__t__helper_3_01NLOHMANN__BASIC__JSON__TPL_01_4_1a15694a2e8cbb26d2f8b292334ade1728" prot="public" virt="non-virtual"><scope>json_pointer::string_t_helper&lt; NLOHMANN_BASIC_JSON_TPL &gt;</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

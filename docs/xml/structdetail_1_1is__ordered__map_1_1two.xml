@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1is__ordered__map_1_1two" kind="struct" language="C++" prot="public">
+    <compoundname>detail::is_ordered_map::two</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdetail_1_1is__ordered__map_1_1two_1a762e0d409e9c4f003df0638c04dfa3c8" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char detail::is_ordered_map&lt; T &gt;::two::x[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4039" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4039" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4037" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4038" bodyend="4040"/>
+    <listofallmembers>
+      <member refid="structdetail_1_1is__ordered__map_1_1two_1a762e0d409e9c4f003df0638c04dfa3c8" prot="public" virt="non-virtual"><scope>detail::is_ordered_map::two</scope><name>x</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

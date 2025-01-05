@@ -1,0 +1,731 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1envs_1_1EnvBase" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>rlenvscpp::envs::EnvBase</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">SpaceType</basecompoundref>
+    <basecompoundref refid="structrlenvscpp_1_1envs_1_1synchronized__env__mixin" prot="public" virt="non-virtual">rlenvscpp::envs::synchronized_env_mixin</basecompoundref>
+    <derivedcompoundref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase" prot="public" virt="non-virtual">rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; TimeStep&lt; std::vector&lt; real_t &gt; &gt;, ContinuousVectorStateDiscreteActionEnv&lt; 4, 2, 0, real_t &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase" prot="public" virt="non-virtual">rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; TimeStep&lt; std::vector&lt; real_t &gt; &gt;, ContinuousVectorStateDiscreteActionEnv&lt; 3, 2, 0, real_t &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase" prot="public" virt="non-virtual">rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; VectorTimeStepType, SpaceType &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase" prot="public" virt="non-virtual">rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; TimeStep&lt; std::vector&lt; real_t &gt; &gt;, ContinuousVectorStateDiscreteActionEnv&lt; 6, 2, 0, real_t &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase" prot="public" virt="non-virtual">rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; TimeStepType, ScalarDiscreteEnv&lt; state_end, action_end, 0, 0 &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase" prot="public" virt="non-virtual">rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; TimeStep&lt; std::vector&lt; real_t &gt; &gt;, ContinuousVectorStateContinuousScalarBoundedActionEnv&lt; 3, 1, RealRange&lt;-2.0, 2.0 &gt;, 0, real_t &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase" prot="public" virt="non-virtual">rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; TimeStepType, SpaceType &gt;</derivedcompoundref>
+    <includes refid="env__base_8h" local="no">env_base.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TimeStepType</type>
+      </param>
+      <param>
+        <type>typename SpaceType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrlenvscpp_1_1envs_1_1EnvBase_1a9d7b5e362a2acd20f6a2e4eb85359a28" prot="public" static="no">
+        <type>TimeStepType</type>
+        <definition>typedef TimeStepType rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::time_step_type</definition>
+        <argsstring></argsstring>
+        <name>time_step_type</name>
+        <briefdescription>
+<para>The time step type we return every time a step in the environment is performed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="40" column="26" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1envs_1_1EnvBase_1a32b57a9f7a72fdac0033d15159fcdfa8" prot="public" static="no">
+        <type>SpaceType::state_space</type>
+        <definition>typedef SpaceType::state_space rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::state_space_type</definition>
+        <argsstring></argsstring>
+        <name>state_space_type</name>
+        <briefdescription>
+<para>The type describing the state space for the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="45" column="41" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1envs_1_1EnvBase_1a75f678ad7dc1367058734619e78de120" prot="public" static="no">
+        <type>SpaceType::state_type</type>
+        <definition>typedef SpaceType::state_type rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::state_type</definition>
+        <argsstring></argsstring>
+        <name>state_type</name>
+        <briefdescription>
+<para>The type of the state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="50" column="40" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1envs_1_1EnvBase_1a1bc17d6a838f0eb39347c104f0c25e88" prot="public" static="no">
+        <type>SpaceType::action_space</type>
+        <definition>typedef SpaceType::action_space rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::action_space_type</definition>
+        <argsstring></argsstring>
+        <name>action_space_type</name>
+        <briefdescription>
+<para>The type of the action space for the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="55" column="42" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classrlenvscpp_1_1envs_1_1EnvBase_1a45feccee92313b3a3d636cb288488242" prot="public" static="no">
+        <type>SpaceType::action_type</type>
+        <definition>typedef SpaceType::action_type rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::action_type</definition>
+        <argsstring></argsstring>
+        <name>action_type</name>
+        <briefdescription>
+<para>The type of the action to be undertaken in the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="60" column="45" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1EnvBase_1a568ded9bca962f3ea71727c28f0e3d9f" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>const uint_t rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::DEFAULT_ENV_SEED</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_ENV_SEED</name>
+        <initializer>= 42</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="34" column="21" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1EnvBase_1a5275a0a0ca8d4b9161dd91396d9f9d2b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::is_created_</definition>
+        <argsstring></argsstring>
+        <name>is_created_</name>
+        <briefdescription>
+<para>Flag indicating if the environment has been created. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="151" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1EnvBase_1abc7baa2c33399f85faa62ce67804937b" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>uint_t rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::cidx_</definition>
+        <argsstring></argsstring>
+        <name>cidx_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The copy idx </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="156" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1EnvBase_1ad132382eed5137f22b71125311783483" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::version_</definition>
+        <argsstring></argsstring>
+        <name>version_</name>
+        <briefdescription>
+<para>Version of the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="161" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1EnvBase_1ae1b599c933f20bebfae6c5b72ac12916" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>Name of the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="166" column="23" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classrlenvscpp_1_1envs_1_1EnvBase_1a9fcfde50892f5ef0c5f984d6d9280779" prot="private" static="no" mutable="no">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a9d7b5e362a2acd20f6a2e4eb85359a28" kindref="member">time_step_type</ref></type>
+        <definition>time_step_type rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::current_state_</definition>
+        <argsstring></argsstring>
+        <name>current_state_</name>
+        <briefdescription>
+<para>current_state </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="171" column="20" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1a918429c30af06db020d87543478ec6df" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::~EnvBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>~EnvBase</name>
+        <briefdescription>
+<para>dctor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="65" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1aaea68c03f14ca20de8b1617eaadfa422" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::make</definition>
+        <argsstring>(const std::string &amp;version, const std::unordered_map&lt; std::string, std::any &gt; &amp;options)=0</argsstring>
+        <name>make</name>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Acrobot_1a9010ee56967ae216d6e11d986d3d717d">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1CartPole_1ab00094f57d732a2607148321329e5a85">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1MountainCar_1aa1e68498382a68248d96781f8e78023f">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Pendulum_1a205296c3c977de65220a5e0c9c035287">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1AcrobotV_1ae44cc3f3aceb6b00fc07bf18abeafb3a">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a25c980b5ad9874c6760ea742f5a87fcb">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1ac4417aec73a11a8aa0ce14cdc0a35a5b">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1ac94ce6e4888f8a07da0759bf511b5052">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1grid__world_1_1Gridworld_1a22f7d84063e8a3d6bd78933d983e90e8">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gym__pybullet__drones_1_1QuadcopterSimEnv_1a33fd21258f0231fac5f2655d67775a2b">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1BlackJack_1a3019dada7e82df20da838e3caa014084">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1CliffWorld_1ae59da9fd9ae5fb4ac32f1b665d284c66">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1FrozenLake_1ab7d374af60dc2256ad9337ccb826b186">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumVecEnvBase_1ae5e12418c9ea5351edf10c0444fc089b">make</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumVecEnvBase_1ae5e12418c9ea5351edf10c0444fc089b">make</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>const std::unordered_map&lt; std::string, std::any &gt; &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>make. Builds the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="70" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1a53051d4a4dfb0adbb14b0d256f6c25d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::close</definition>
+        <argsstring>()=0</argsstring>
+        <name>close</name>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a11a7161040eb5b3f3149cab31e2e5740">close</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a11a7161040eb5b3f3149cab31e2e5740">close</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a11a7161040eb5b3f3149cab31e2e5740">close</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a11a7161040eb5b3f3149cab31e2e5740">close</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a11a7161040eb5b3f3149cab31e2e5740">close</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a11a7161040eb5b3f3149cab31e2e5740">close</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a11a7161040eb5b3f3149cab31e2e5740">close</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a5c4325dbfddb51c318cc3f124c54f2ee">close</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1afd9c3ee1b8fc09fad28164cb6b8de0ce">close</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1grid__world_1_1Gridworld_1a489803d7e15992c4b5665807dfa7a298">close</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gym__pybullet__drones_1_1QuadcopterSimEnv_1a89a86ef484aa4f21b0f3ebbfc5b49765">close</reimplementedby>
+        <briefdescription>
+<para>close the environment </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="76" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1ad9caf8e016d511f258ecda9268d9e9c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a9d7b5e362a2acd20f6a2e4eb85359a28" kindref="member">time_step_type</ref></type>
+        <definition>virtual time_step_type rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::reset</definition>
+        <argsstring>(uint_t seed, const std::unordered_map&lt; std::string, std::any &gt; &amp;options)=0</argsstring>
+        <name>reset</name>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a01abe7e9c71c0a5c4acb4e4d14b1bb46">reset</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a01abe7e9c71c0a5c4acb4e4d14b1bb46">reset</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a01abe7e9c71c0a5c4acb4e4d14b1bb46">reset</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a01abe7e9c71c0a5c4acb4e4d14b1bb46">reset</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a01abe7e9c71c0a5c4acb4e4d14b1bb46">reset</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a01abe7e9c71c0a5c4acb4e4d14b1bb46">reset</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase_1a01abe7e9c71c0a5c4acb4e4d14b1bb46">reset</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1adf9f019e69b8ef96f567c0452006d34b">reset</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gym__pybullet__drones_1_1QuadcopterSimEnv_1a77c81cfd5213faa042a286b2ae5fa1bd">reset</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a563ee3875007f3ab1a2170e5301ecd83">reset</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1grid__world_1_1Gridworld_1aca32d0d13c519a584817de50ee05d38e">reset</reimplementedby>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>const std::unordered_map&lt; std::string, std::any &gt; &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Reset the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="81" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1a685d86116135ed7cb368c329add2147e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a9d7b5e362a2acd20f6a2e4eb85359a28" kindref="member">time_step_type</ref></type>
+        <definition>virtual time_step_type rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::step</definition>
+        <argsstring>(const action_type &amp;action)=0</argsstring>
+        <name>step</name>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1connect2_1_1Connect2_1a288b899f076a11acaf1a38454b59cb3f">step</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gdrl_1_1GymWalk_1ab8c77ac759752bdca809c60eb423d3f3">step</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Acrobot_1a79a92d5b45c0c3ad3cb28318fdf6f783">step</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1CartPole_1a17277c2ca11cdc5e44ac524940fc44c2">step</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1MountainCar_1a1bdebb871f89af9917343c3d8eb8ec40">step</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Pendulum_1a79896a64c4780b0be553cf1b42a039f8">step</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1AcrobotV_1a54d02ad278010d514681f8da5658336a">step</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1BlackJack_1af07146143cbb9e14efdda8c021464c6e">step</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1CliffWorld_1a222b0f33fc5fed5b26100881ef8ffed0">step</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1FrozenLake_1aff6c9de2cb4087bd94ee00d486f90dc3">step</reimplementedby>
+        <reimplementedby refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi_1a3ad456524f8ecc2ef9f156a39384b23e">step</reimplementedby>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a45feccee92313b3a3d636cb288488242" kindref="member">action_type</ref> &amp;</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>step in the environment by performing the given action </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The action to execute in the environment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The time step <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="88" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1a0dc609f93cc8dffa2b9ecf65c051ae66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a9d7b5e362a2acd20f6a2e4eb85359a28" kindref="member">time_step_type</ref></type>
+        <definition>time_step_type rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Reset the environment always using the same seed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="93" column="20" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="93" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1afb93f499d7eeb57a6f31fef89fa6b645" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::is_created</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_created</name>
+        <briefdescription>
+<para>is_created Returns true is make has been called successfully </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="99" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1aa7ef6b01e649a3bed482e92efc4eee4f" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::version</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>version</name>
+        <briefdescription>
+<para>version </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="104" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1a4c3153c80c82e905471cfe9598f92508" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::env_name</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>env_name</name>
+        <briefdescription>
+<para>name of the environment </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="109" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1a1897dd501bc1980e1cde04b60c012ca8" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+        <definition>uint_t rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::cidx</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>cidx</name>
+        <briefdescription>
+<para>The number of agents acting in the environment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="114" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1a4cb0d72b75df62411b8b7c8820c3a918" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::EnvBase</definition>
+        <argsstring>(const uint_t cidx=0, const std::string &amp;name=rlenvscpp::consts::INVALID_STR)</argsstring>
+        <name>EnvBase</name>
+        <param>
+          <type>const <ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>cidx</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+          <defval>rlenvscpp::consts::INVALID_STR</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="121" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="176" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1aa7eb0ff71af94db1f48c1b39ebcc29c3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::EnvBase</definition>
+        <argsstring>(const EnvBase &amp;)</argsstring>
+        <name>EnvBase</name>
+        <param>
+          <type>const <ref refid="classrlenvscpp_1_1envs_1_1EnvBase" kindref="compound">EnvBase</ref> &amp;</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="127" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="188" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1a3aad75c2321c714eb15d11ddab75ba86" prot="protected" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::set_version_</definition>
+        <argsstring>(const std::string &amp;version) noexcept</argsstring>
+        <name>set_version_</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+<para>Helper function to set the version. To be called only when the make is called. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="133" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="133" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1ad6b7d4737dfa8d6b73554d757e6f01b0" prot="protected" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::invalidate_is_created_flag_</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>invalidate_is_created_flag_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="136" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1ac7ba403c4c5046865d373a366ff3fd58" prot="protected" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::make_created_</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>make_created_</name>
+        <briefdescription>
+<para>mark the environment as created </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="141" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="141" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1ab249d79efbef8ac3e1c517736f7fe66a" prot="protected" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a9d7b5e362a2acd20f6a2e4eb85359a28" kindref="member">time_step_type</ref> &amp;</type>
+        <definition>time_step_type&amp; rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::get_current_time_step_</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>get_current_time_step_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="143" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1envs_1_1EnvBase_1a85b7be84d926406055a60d949a3fe613" prot="protected" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>const <ref refid="classrlenvscpp_1_1envs_1_1EnvBase_1a9d7b5e362a2acd20f6a2e4eb85359a28" kindref="member">time_step_type</ref> &amp;</type>
+        <definition>const time_step_type&amp; rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;::get_current_time_step_</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_current_time_step_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="144" column="26" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="144" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>\ brief Base class for environments. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>rlenvscpp::envs::synchronized_env_mixin</label>
+        <link refid="structrlenvscpp_1_1envs_1_1synchronized__env__mixin"/>
+      </node>
+      <node id="8">
+        <label>rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; VectorTimeStepType, SpaceType &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>rlenvscpp::envs::gymnasium::ToyTextEnvBase&lt; TimeStep&lt; uint_t &gt;, frozenlake_state_size&lt; side_size &gt;::size, 4 &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1ToyTextEnvBase"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>rlenvscpp::envs::gymnasium::AcrobotV</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1AcrobotV"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; TimeStep&lt; std::vector&lt; real_t &gt; &gt;, ContinuousVectorStateDiscreteActionEnv&lt; 3, 2, 0, real_t &gt; &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; TimeStepType, ScalarDiscreteEnv&lt; state_end, action_end, 0, 0 &gt; &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>rlenvscpp::envs::gymnasium::Pendulum</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Pendulum"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>rlenvscpp::envs::gymnasium::CliffWorld</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1CliffWorld"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>rlenvscpp::envs::gymnasium::MountainCar</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1MountainCar"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>rlenvscpp::envs::gymnasium::ToyTextEnvBase&lt; TimeStep&lt; uint_t &gt;, 48, 2 &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1ToyTextEnvBase"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>rlenvscpp::envs::gymnasium::GymnasiumVecEnvBase&lt; VectorTimeStep&lt; detail_::AcrobotVEnv::state_type &gt;, detail_::AcrobotVEnv &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumVecEnvBase"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; TimeStep&lt; std::vector&lt; real_t &gt; &gt;, ContinuousVectorStateDiscreteActionEnv&lt; 4, 2, 0, real_t &gt; &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>rlenvscpp::envs::gymnasium::CartPole</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1CartPole"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>rlenvscpp::envs::gymnasium::GymnasiumVecEnvBase&lt; VectorTimeStepType, SpaceType &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumVecEnvBase"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>rlenvscpp::envs::gymnasium::ToyTextEnvBase&lt; TimeStepType, state_end, action_end &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1ToyTextEnvBase"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>rlenvscpp::envs::gymnasium::BlackJack</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1BlackJack"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>rlenvscpp::envs::gymnasium::Taxi</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Taxi"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1EnvBase"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>rlenvscpp::envs::gymnasium::ToyTextEnvBase&lt; TimeStep&lt; uint_t &gt;, 500, 6 &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1ToyTextEnvBase"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>rlenvscpp::envs::gymnasium::ToyTextEnvBase&lt; TimeStep&lt; uint_t &gt;, 37, 4 &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1ToyTextEnvBase"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; TimeStepType, SpaceType &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpaceType</label>
+      </node>
+      <node id="20">
+        <label>rlenvscpp::envs::gymnasium::FrozenLake&lt; side_size &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1FrozenLake"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>rlenvscpp::envs::gymnasium::Acrobot</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1Acrobot"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; TimeStep&lt; std::vector&lt; real_t &gt; &gt;, ContinuousVectorStateDiscreteActionEnv&lt; 6, 2, 0, real_t &gt; &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>rlenvscpp::envs::gymnasium::GymnasiumEnvBase&lt; TimeStep&lt; std::vector&lt; real_t &gt; &gt;, ContinuousVectorStateContinuousScalarBoundedActionEnv&lt; 3, 1, RealRange&lt;-2.0, 2.0 &gt;, 0, real_t &gt; &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1gymnasium_1_1GymnasiumEnvBase"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>rlenvscpp::envs::synchronized_env_mixin</label>
+        <link refid="structrlenvscpp_1_1envs_1_1synchronized__env__mixin"/>
+      </node>
+      <node id="1">
+        <label>rlenvscpp::envs::EnvBase&lt; TimeStepType, SpaceType &gt;</label>
+        <link refid="classrlenvscpp_1_1envs_1_1EnvBase"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpaceType</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" line="27" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/envs/env_base.h" bodystart="28" bodyend="172"/>
+    <listofallmembers>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a1bc17d6a838f0eb39347c104f0c25e88" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>action_space_type</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a45feccee92313b3a3d636cb288488242" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>action_type</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a1897dd501bc1980e1cde04b60c012ca8" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>cidx</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1abc7baa2c33399f85faa62ce67804937b" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>cidx_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a53051d4a4dfb0adbb14b0d256f6c25d1" prot="public" virt="pure-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>close</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a9fcfde50892f5ef0c5f984d6d9280779" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>current_state_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a568ded9bca962f3ea71727c28f0e3d9f" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>DEFAULT_ENV_SEED</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a4c3153c80c82e905471cfe9598f92508" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>env_name</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a4cb0d72b75df62411b8b7c8820c3a918" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>EnvBase</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1aa7eb0ff71af94db1f48c1b39ebcc29c3" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>EnvBase</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1ab249d79efbef8ac3e1c517736f7fe66a" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>get_current_time_step_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a85b7be84d926406055a60d949a3fe613" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>get_current_time_step_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1ad6b7d4737dfa8d6b73554d757e6f01b0" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>invalidate_is_created_flag_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1afb93f499d7eeb57a6f31fef89fa6b645" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>is_created</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a5275a0a0ca8d4b9161dd91396d9f9d2b" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>is_created_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1aaea68c03f14ca20de8b1617eaadfa422" prot="public" virt="pure-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>make</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1ac7ba403c4c5046865d373a366ff3fd58" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>make_created_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1ae1b599c933f20bebfae6c5b72ac12916" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>name_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1ad9caf8e016d511f258ecda9268d9e9c3" prot="public" virt="pure-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>reset</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a0dc609f93cc8dffa2b9ecf65c051ae66" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>reset</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a3aad75c2321c714eb15d11ddab75ba86" prot="protected" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>set_version_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a32b57a9f7a72fdac0033d15159fcdfa8" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>state_space_type</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a75f678ad7dc1367058734619e78de120" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>state_type</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a685d86116135ed7cb368c329add2147e" prot="public" virt="pure-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>step</name></member>
+      <member refid="structrlenvscpp_1_1envs_1_1synchronized__env__mixin_1a088ce5412a694ee0844498cf091efcf2" prot="public" virt="virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>sync</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a9d7b5e362a2acd20f6a2e4eb85359a28" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>time_step_type</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1aa7ef6b01e649a3bed482e92efc4eee4f" prot="public" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>version</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1ad132382eed5137f22b71125311783483" prot="private" virt="non-virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>version_</name></member>
+      <member refid="classrlenvscpp_1_1envs_1_1EnvBase_1a918429c30af06db020d87543478ec6df" prot="public" virt="virtual"><scope>rlenvscpp::envs::EnvBase</scope><name>~EnvBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdetail_1_1other__error" kind="class" language="C++" prot="public">
+    <compoundname>detail::other_error</compoundname>
+    <basecompoundref refid="classdetail_1_1exception" prot="public" virt="non-virtual">detail::exception</basecompoundref>
+    <includes refid="json_8hpp" local="no">json.hpp</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdetail_1_1other__error_1a687565ec69bfdf7a15f9a672038b0f0f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename BasicJsonContext</type>
+          </param>
+          <param>
+            <type>enable_if_t&lt; <ref refid="structdetail_1_1is__basic__json__context" kindref="compound">is_basic_json_context</ref>&lt; BasicJsonContext &gt;::value, int &gt;</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdetail_1_1other__error" kindref="compound">other_error</ref></type>
+        <definition>static other_error detail::other_error::create</definition>
+        <argsstring>(int id_, const std::string &amp;what_arg, BasicJsonContext context)</argsstring>
+        <name>create</name>
+        <param>
+          <type>int</type>
+          <declname>id_</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>what_arg</declname>
+        </param>
+        <param>
+          <type>BasicJsonContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4578" column="24" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4578" bodyend="4582"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdetail_1_1other__error_1a326f472daeeff5c12a57dff853d958c5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>detail::other_error::other_error</definition>
+        <argsstring>(int id_, const char *what_arg)</argsstring>
+        <name>other_error</name>
+        <param>
+          <type>int</type>
+          <declname>id_</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>what_arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4586" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4586" bodyend="4586"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>exception indicating other library errors </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://json.nlohmann.me/api/basic_json/other_error/">https://json.nlohmann.me/api/basic_json/other_error/</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>detail::other_error</label>
+        <link refid="classdetail_1_1other__error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::exception</label>
+      </node>
+      <node id="2">
+        <label>detail::exception</label>
+        <link refid="classdetail_1_1exception"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>detail::other_error</label>
+        <link refid="classdetail_1_1other__error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::exception</label>
+      </node>
+      <node id="2">
+        <label>detail::exception</label>
+        <link refid="classdetail_1_1exception"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="4574" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="4575" bodyend="4587"/>
+    <listofallmembers>
+      <member refid="classdetail_1_1other__error_1a687565ec69bfdf7a15f9a672038b0f0f" prot="public" virt="non-virtual"><scope>detail::other_error</scope><name>create</name></member>
+      <member refid="classdetail_1_1exception_1a6b4a786b5c1c25dd3edaceb1bf2d5120" prot="protected" virt="non-virtual"><scope>detail::other_error</scope><name>diagnostics</name></member>
+      <member refid="classdetail_1_1exception_1af3739c53fe56a1712754d13dfa561f80" prot="protected" virt="non-virtual"><scope>detail::other_error</scope><name>diagnostics</name></member>
+      <member refid="classdetail_1_1exception_1a528d6bc77e88490bbb84cde2222b7ff0" prot="protected" virt="non-virtual"><scope>detail::other_error</scope><name>exception</name></member>
+      <member refid="classdetail_1_1exception_1a63b819fbb2ef34df9dad1e309207fa24" prot="public" virt="non-virtual"><scope>detail::other_error</scope><name>id</name></member>
+      <member refid="classdetail_1_1exception_1a8f1eb56b9964c8dd84d89d0da98d883b" prot="protected" virt="non-virtual"><scope>detail::other_error</scope><name>name</name></member>
+      <member refid="classdetail_1_1other__error_1a326f472daeeff5c12a57dff853d958c5" prot="private" virt="non-virtual"><scope>detail::other_error</scope><name>other_error</name></member>
+      <member refid="classdetail_1_1exception_1a7a50109c734c69d4521730a898be08f9" prot="public" virt="non-virtual"><scope>detail::other_error</scope><name>what</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

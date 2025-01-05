@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="bicycle__vehicle__model__dynamics_8h" kind="file" language="C++">
+    <compoundname>bicycle_vehicle_model_dynamics.h</compoundname>
+    <includes refid="rlenvs__types__v2_8h" local="yes">rlenvs/rlenvs_types_v2.h</includes>
+    <includes refid="system__state_8h" local="yes">rlenvs/dynamics/system_state.h</includes>
+    <includes refid="motion__model__base_8h" local="yes">rlenvs/dynamics/motion_model_base.h</includes>
+    <includes refid="dynamics__matrix__descriptor_8h" local="yes">rlenvs/dynamics/dynamics_matrix_descriptor.h</includes>
+    <includes local="no">any</includes>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includedby refid="bicycle__vehicle__model__dynamics_8cpp" local="yes">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.cpp</includedby>
+    <incdepgraph>
+      <node id="20">
+        <label>rlenvs/dynamics/dynamics_matrix_descriptor.h</label>
+        <link refid="dynamics__matrix__descriptor_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>iomanip</label>
+      </node>
+      <node id="9">
+        <label>rlenvs/dynamics/system_state.h</label>
+        <link refid="system__state_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="18">
+        <label>boost/noncopyable.hpp</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="21">
+        <label>map</label>
+      </node>
+      <node id="17">
+        <label>rlenvs/rlenvs_consts.h</label>
+        <link refid="rlenvs__consts_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>ostream</label>
+      </node>
+      <node id="3">
+        <label>rlenvs/rlenvscpp_config.h</label>
+        <link refid="rlenvscpp__config_8h_source"/>
+      </node>
+      <node id="22">
+        <label>any</label>
+      </node>
+      <node id="16">
+        <label>rlenvs/dynamics/motion_model_base.h</label>
+        <link refid="motion__model__base_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h</label>
+        <link refid="bicycle__vehicle__model__dynamics_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="11">
+        <label>utility</label>
+      </node>
+      <node id="10">
+        <label>array</label>
+      </node>
+      <node id="2">
+        <label>rlenvs/rlenvs_types_v2.h</label>
+        <link refid="rlenvs__types__v2_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="12">
+        <label>algorithm</label>
+      </node>
+      <node id="19">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig" prot="public">rlenvscpp::dynamics::BicycleVehicleModelDynamicsConfig</innerclass>
+    <innerclass refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics" prot="public">rlenvscpp::dynamics::BicycleVehicleModelDynamics</innerclass>
+    <innernamespace refid="namespacerlenvscpp">rlenvscpp</innernamespace>
+    <innernamespace refid="namespacerlenvscpp_1_1dynamics">rlenvscpp::dynamics</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BICYCLE_VEHICLE_MODEL_DYNAMICS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BICYCLE_VEHICLE_MODEL_DYNAMICS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/rlenvs_types_v2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/dynamics/system_state.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/dynamics/motion_model_base.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rlenvs/dynamics/dynamics_matrix_descriptor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;any&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacerlenvscpp" kindref="compound">rlenvscpp</ref>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dynamics{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16" refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig" kindref="compound">BicycleVehicleModelDynamicsConfig</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21" refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig_1a2e1d8ee1ae2a5602bc5ed0692b93e756" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/><ref refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig_1a2e1d8ee1ae2a5602bc5ed0692b93e756" kindref="member">dt</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig_1a1be18229b82a3e0bf4888055018861b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref><sp/><ref refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig_1a1be18229b82a3e0bf4888055018861b6" kindref="member">L</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics" kindref="compound">BicycleVehicleModelDynamics</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase" kindref="compound">MotionModelDynamicsBase</ref>&lt;SysState&lt;3&gt;,<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DynamicsMatrixDescriptor,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::any&gt;&gt;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase" kindref="compound">MotionModelDynamicsBase&lt;SysState&lt;3&gt;</ref>,<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1DynamicsMatrixDescriptor" kindref="compound">DynamicsMatrixDescriptor</ref>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::any&gt;&gt;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1MotionModelDynamicsBase" kindref="compound">base_type</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">base_type::state_type</ref><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">state_type</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>base_type::input_type<sp/>input_type;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1DynamicsMatrixDescriptor" kindref="compound">base_type::matrix_descriptor_type</ref><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1DynamicsMatrixDescriptor" kindref="compound">matrix_descriptor_type</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>matrix_descriptor_type::matrix_type<sp/>matrix_type;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>matrix_descriptor_type::vector_type<sp/>vector_type;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a4b131074e4d9c1097cd73db4adaea6a0" kindref="member">BicycleVehicleModelDynamics</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig" kindref="compound">BicycleVehicleModelDynamicsConfig</ref><sp/>config,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">SysState&lt;3&gt;</ref>&amp;<sp/>init_state);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a6ab638edf33af7c563652bf7030a1991" kindref="member">integrate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>input_type&amp;<sp/>input<sp/>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1SysState" kindref="compound">state_type</ref>&amp;<sp/><ref refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a070ca7d87685f5d9faddf7895fcdc51a" kindref="member">evaluate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>input_type&amp;<sp/>input<sp/>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1aa71d2511e034dc88e367ba2bf661c18c" kindref="member">initialize_matrices</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>input_type&amp;<sp/>input);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a51ae41ba615c79dac0919f9cf18f249d" kindref="member">update_matrices</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>input_type&amp;<sp/>input);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a2c01a3eb2e9aab233dec638d553d6383" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamics_1a2c01a3eb2e9aab233dec638d553d6383" kindref="member">load_from_json</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename){};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig" kindref="compound">BicycleVehicleModelDynamicsConfig</ref><sp/>config_;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>BICYCLE_VEHICLE_MODEL_DYNAMICS_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h"/>
+  </compounddef>
+</doxygen>

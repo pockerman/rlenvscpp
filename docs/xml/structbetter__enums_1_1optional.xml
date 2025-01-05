@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structbetter__enums_1_1optional" kind="struct" language="C++" prot="public">
+    <compoundname>better_enums::optional</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structbetter__enums_1_1optional_1a15ae57d95602f6d99faccc12aaec3847" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool better_enums::optional&lt; T &gt;::_valid</definition>
+        <argsstring></argsstring>
+        <name>_valid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" line="347" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbetter__enums_1_1optional_1ae544de2f1fb6bcca6f2c7f5aa6a8555b" prot="private" static="no" mutable="no">
+        <type>T</type>
+        <definition>T better_enums::optional&lt; T &gt;::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" line="348" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structbetter__enums_1_1optional_1a6b6c2ec649f33370031ce00cfc891b14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BETTER_ENUMS_CONSTEXPR_</type>
+        <definition>BETTER_ENUMS_CONSTEXPR_ better_enums::optional&lt; T &gt;::optional</definition>
+        <argsstring>()</argsstring>
+        <name>optional</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" line="334" column="29" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" bodystart="334" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="structbetter__enums_1_1optional_1a893399829eb6dbdf7c8eb385b2ec464d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BETTER_ENUMS_CONSTEXPR_</type>
+        <definition>BETTER_ENUMS_CONSTEXPR_ better_enums::optional&lt; T &gt;::optional</definition>
+        <argsstring>(T v)</argsstring>
+        <name>optional</name>
+        <param>
+          <type>T</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" line="337" column="29" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" bodystart="337" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="structbetter__enums_1_1optional_1ac112a6e38895da91c4a5a96ee1a8460e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>BETTER_ENUMS_CONSTEXPR_ const T &amp;</type>
+        <definition>BETTER_ENUMS_CONSTEXPR_ const T&amp; better_enums::optional&lt; T &gt;::operator*</definition>
+        <argsstring>() const</argsstring>
+        <name>operator*</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" line="339" column="37" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" bodystart="339" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="structbetter__enums_1_1optional_1a0eba3de653c3dbaa047e753a42fd59e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>BETTER_ENUMS_CONSTEXPR_ const T *</type>
+        <definition>BETTER_ENUMS_CONSTEXPR_ const T* better_enums::optional&lt; T &gt;::operator-&gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" line="340" column="37" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" bodystart="340" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="structbetter__enums_1_1optional_1a48429aab0bf3d616df7431a1871e2f75" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>BETTER_ENUMS_CONSTEXPR_</type>
+        <definition>BETTER_ENUMS_CONSTEXPR_ better_enums::optional&lt; T &gt;::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" line="342" column="29" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" bodystart="342" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="structbetter__enums_1_1optional_1afd33f8c0b31edbbc8db640a403899363" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>BETTER_ENUMS_CONSTEXPR_ const T &amp;</type>
+        <definition>BETTER_ENUMS_CONSTEXPR_ const T&amp; better_enums::optional&lt; T &gt;::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" line="344" column="37" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" bodystart="344" bodyend="344"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" line="333" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/enum.h" bodystart="333" bodyend="349"/>
+    <listofallmembers>
+      <member refid="structbetter__enums_1_1optional_1a15ae57d95602f6d99faccc12aaec3847" prot="private" virt="non-virtual"><scope>better_enums::optional</scope><name>_valid</name></member>
+      <member refid="structbetter__enums_1_1optional_1ae544de2f1fb6bcca6f2c7f5aa6a8555b" prot="private" virt="non-virtual"><scope>better_enums::optional</scope><name>_value</name></member>
+      <member refid="structbetter__enums_1_1optional_1a48429aab0bf3d616df7431a1871e2f75" prot="public" virt="non-virtual"><scope>better_enums::optional</scope><name>operator bool</name></member>
+      <member refid="structbetter__enums_1_1optional_1ac112a6e38895da91c4a5a96ee1a8460e" prot="public" virt="non-virtual"><scope>better_enums::optional</scope><name>operator*</name></member>
+      <member refid="structbetter__enums_1_1optional_1a0eba3de653c3dbaa047e753a42fd59e1" prot="public" virt="non-virtual"><scope>better_enums::optional</scope><name>operator-&gt;</name></member>
+      <member refid="structbetter__enums_1_1optional_1a6b6c2ec649f33370031ce00cfc891b14" prot="public" virt="non-virtual"><scope>better_enums::optional</scope><name>optional</name></member>
+      <member refid="structbetter__enums_1_1optional_1a893399829eb6dbdf7c8eb385b2ec464d" prot="public" virt="non-virtual"><scope>better_enums::optional</scope><name>optional</name></member>
+      <member refid="structbetter__enums_1_1optional_1afd33f8c0b31edbbc8db640a403899363" prot="public" virt="non-virtual"><scope>better_enums::optional</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

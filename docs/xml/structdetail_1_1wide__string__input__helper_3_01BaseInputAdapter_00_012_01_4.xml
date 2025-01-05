@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1wide__string__input__helper_3_01BaseInputAdapter_00_012_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>detail::wide_string_input_helper&lt; BaseInputAdapter, 2 &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename BaseInputAdapter</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structdetail_1_1wide__string__input__helper_3_01BaseInputAdapter_00_012_01_4_1a025830a052f1397980d280036df5a9a9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void detail::wide_string_input_helper&lt; BaseInputAdapter, 2 &gt;::fill_buffer</definition>
+        <argsstring>(BaseInputAdapter &amp;input, std::array&lt; std::char_traits&lt; char &gt;::int_type, 4 &gt; &amp;utf8_bytes, size_t &amp;utf8_bytes_index, size_t &amp;utf8_bytes_filled)</argsstring>
+        <name>fill_buffer</name>
+        <param>
+          <type>BaseInputAdapter &amp;</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>std::array&lt; std::char_traits&lt; char &gt;::int_type, 4 &gt; &amp;</type>
+          <declname>utf8_bytes</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>utf8_bytes_index</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>utf8_bytes_filled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6380" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6380" bodyend="6435"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6377" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6378" bodyend="6436"/>
+    <listofallmembers>
+      <member refid="structdetail_1_1wide__string__input__helper_3_01BaseInputAdapter_00_012_01_4_1a025830a052f1397980d280036df5a9a9" prot="public" virt="non-virtual"><scope>detail::wide_string_input_helper&lt; BaseInputAdapter, 2 &gt;</scope><name>fill_buffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

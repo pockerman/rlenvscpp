@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1container__input__adapter__factory__impl_1_1container__input__adapter__factory_3983614ac0e8828aa386ca24b1ddc2bd1" kind="struct" language="C++" prot="public">
+    <compoundname>detail::container_input_adapter_factory_impl::container_input_adapter_factory&lt; ContainerType, void_t&lt; decltype(begin(std::declval&lt; ContainerType &gt;()), end(std::declval&lt; ContainerType &gt;()))&gt; &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename ContainerType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structdetail_1_1container__input__adapter__factory__impl_1_1container__input__adapter__factory_3983614ac0e8828aa386ca24b1ddc2bd1_1a207039125e6dcb091170b0b6f8e05cdb" prot="public" static="no">
+        <type>decltype(input_adapter(begin(std::declval&lt; ContainerType &gt;()), end(std::declval&lt; ContainerType &gt;())))</type>
+        <definition>using detail::container_input_adapter_factory_impl::container_input_adapter_factory&lt; ContainerType, void_t&lt; decltype(begin(std::declval&lt; ContainerType &gt;()), end(std::declval&lt; ContainerType &gt;()))&gt; &gt;::adapter_type =  decltype(input_adapter(begin(std::declval&lt;ContainerType&gt;()), end(std::declval&lt;ContainerType&gt;())))</definition>
+        <argsstring></argsstring>
+        <name>adapter_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6545" column="12" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6545" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structdetail_1_1container__input__adapter__factory__impl_1_1container__input__adapter__factory_3983614ac0e8828aa386ca24b1ddc2bd1_1a6b9ccb1f4f7503123e553956abde9b85" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>adapter_type</type>
+        <definition>static adapter_type detail::container_input_adapter_factory_impl::container_input_adapter_factory&lt; ContainerType, void_t&lt; decltype(begin(std::declval&lt; ContainerType &gt;()), end(std::declval&lt; ContainerType &gt;()))&gt; &gt;::create</definition>
+        <argsstring>(const ContainerType &amp;container)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const ContainerType &amp;</type>
+          <declname>container</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6547" column="32" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6547" bodyend="6550"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6542" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6544" bodyend="6551"/>
+    <listofallmembers>
+      <member refid="structdetail_1_1container__input__adapter__factory__impl_1_1container__input__adapter__factory_3983614ac0e8828aa386ca24b1ddc2bd1_1a207039125e6dcb091170b0b6f8e05cdb" prot="public" virt="non-virtual"><scope>detail::container_input_adapter_factory_impl::container_input_adapter_factory&lt; ContainerType, void_t&lt; decltype(begin(std::declval&lt; ContainerType &gt;()), end(std::declval&lt; ContainerType &gt;()))&gt; &gt;</scope><name>adapter_type</name></member>
+      <member refid="structdetail_1_1container__input__adapter__factory__impl_1_1container__input__adapter__factory_3983614ac0e8828aa386ca24b1ddc2bd1_1a6b9ccb1f4f7503123e553956abde9b85" prot="public" virt="non-virtual"><scope>detail::container_input_adapter_factory_impl::container_input_adapter_factory&lt; ContainerType, void_t&lt; decltype(begin(std::declval&lt; ContainerType &gt;()), end(std::declval&lt; ContainerType &gt;()))&gt; &gt;</scope><name>create</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

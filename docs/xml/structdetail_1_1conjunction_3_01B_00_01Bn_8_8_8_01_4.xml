@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdetail_1_1conjunction_3_01B_00_01Bn_8_8_8_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>detail::conjunction&lt; B, Bn... &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::conditional::type</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class B</type>
+      </param>
+      <param>
+        <type>class...</type>
+        <declname>Bn</declname>
+        <defname>Bn</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>detail::conjunction&lt; B, Bn... &gt;</label>
+        <link refid="structdetail_1_1conjunction_3_01B_00_01Bn_8_8_8_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::conditional&lt; static_cast&lt; bool &gt;(B::value), conjunction&lt; Bn... &gt;, B &gt;::type</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>detail::conjunction&lt; B, Bn... &gt;</label>
+        <link refid="structdetail_1_1conjunction_3_01B_00_01Bn_8_8_8_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::conditional&lt; static_cast&lt; bool &gt;(B::value), conjunction&lt; Bn... &gt;, B &gt;::type</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="3663" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="3664" bodyend="3664"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig" kind="struct" language="C++" prot="public">
+    <compoundname>rlenvscpp::dynamics::BicycleVehicleModelDynamicsConfig</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig_1a2e1d8ee1ae2a5602bc5ed0692b93e756" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+        <definition>real_t rlenvscpp::dynamics::BicycleVehicleModelDynamicsConfig::dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <briefdescription>
+<para>The time step to use in secs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="21" column="8" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig_1a1be18229b82a3e0bf4888055018861b6" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></type>
+        <definition>real_t rlenvscpp::dynamics::BicycleVehicleModelDynamicsConfig::L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <briefdescription>
+<para>The distance between the front and real wheels in m. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="27" column="8" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" line="16" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/dynamics/bicycle_vehicle_model_dynamics.h" bodystart="17" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig_1a2e1d8ee1ae2a5602bc5ed0692b93e756" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamicsConfig</scope><name>dt</name></member>
+      <member refid="structrlenvscpp_1_1dynamics_1_1BicycleVehicleModelDynamicsConfig_1a1be18229b82a3e0bf4888055018861b6" prot="public" virt="non-virtual"><scope>rlenvscpp::dynamics::BicycleVehicleModelDynamicsConfig</scope><name>L</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

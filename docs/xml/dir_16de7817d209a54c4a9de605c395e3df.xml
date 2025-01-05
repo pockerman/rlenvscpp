@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_16de7817d209a54c4a9de605c395e3df" kind="dir">
+    <compoundname>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths</compoundname>
+    <innerdir refid="dir_0faa97a360dc459ba7a02d4b2abf0a68">/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/"/>
+  </compounddef>
+</doxygen>

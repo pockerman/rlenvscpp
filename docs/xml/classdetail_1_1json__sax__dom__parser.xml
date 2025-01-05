@@ -1,0 +1,590 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classdetail_1_1json__sax__dom__parser" kind="class" language="C++" prot="public">
+    <compoundname>detail::json_sax_dom_parser</compoundname>
+    <includes refid="json_8hpp" local="no">json.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename BasicJsonType</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classdetail_1_1json__sax__dom__parser_1a8a7ba3deeb48e47b4a7705602c9f8807" prot="public" static="no">
+        <type>typename BasicJsonType::number_integer_t</type>
+        <definition>using detail::json_sax_dom_parser&lt; BasicJsonType &gt;::number_integer_t =  typename BasicJsonType::number_integer_t</definition>
+        <argsstring></argsstring>
+        <name>number_integer_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6803" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6803" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classdetail_1_1json__sax__dom__parser_1a80d34b386ee1cbfe353f640bc4745317" prot="public" static="no">
+        <type>typename BasicJsonType::number_unsigned_t</type>
+        <definition>using detail::json_sax_dom_parser&lt; BasicJsonType &gt;::number_unsigned_t =  typename BasicJsonType::number_unsigned_t</definition>
+        <argsstring></argsstring>
+        <name>number_unsigned_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6804" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6804" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classdetail_1_1json__sax__dom__parser_1af3fbbe21ea4ec3ae7ba8c9a5b8d736b3" prot="public" static="no">
+        <type>typename BasicJsonType::number_float_t</type>
+        <definition>using detail::json_sax_dom_parser&lt; BasicJsonType &gt;::number_float_t =  typename BasicJsonType::number_float_t</definition>
+        <argsstring></argsstring>
+        <name>number_float_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6805" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6805" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classdetail_1_1json__sax__dom__parser_1a6616e04b1c1c9ecae11a49a5302720e6" prot="public" static="no">
+        <type>typename BasicJsonType::string_t</type>
+        <definition>using detail::json_sax_dom_parser&lt; BasicJsonType &gt;::string_t =  typename BasicJsonType::string_t</definition>
+        <argsstring></argsstring>
+        <name>string_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6806" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6806" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classdetail_1_1json__sax__dom__parser_1ada36726394d0347cb9a08da4180d16de" prot="public" static="no">
+        <type>typename BasicJsonType::binary_t</type>
+        <definition>using detail::json_sax_dom_parser&lt; BasicJsonType &gt;::binary_t =  typename BasicJsonType::binary_t</definition>
+        <argsstring></argsstring>
+        <name>binary_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6807" column="5" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6807" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdetail_1_1json__sax__dom__parser_1aab35aee2aec35d99681400832a404109" prot="private" static="no" mutable="no">
+        <type>BasicJsonType &amp;</type>
+        <definition>BasicJsonType&amp; detail::json_sax_dom_parser&lt; BasicJsonType &gt;::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <briefdescription>
+<para>the parsed JSON value </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6971" column="19" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6971" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdetail_1_1json__sax__dom__parser_1a7abe0305cc4bcfa1cee1bbe25a722e1a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; BasicJsonType * &gt;</type>
+        <definition>std::vector&lt;BasicJsonType*&gt; detail::json_sax_dom_parser&lt; BasicJsonType &gt;::ref_stack</definition>
+        <argsstring></argsstring>
+        <name>ref_stack</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>stack to model hierarchy of values </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6973" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6973" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdetail_1_1json__sax__dom__parser_1aebee40c564c1b319d4d4d7e8bfd01a56" prot="private" static="no" mutable="no">
+        <type>BasicJsonType *</type>
+        <definition>BasicJsonType* detail::json_sax_dom_parser&lt; BasicJsonType &gt;::object_element</definition>
+        <argsstring></argsstring>
+        <name>object_element</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>helper to hold the reference for the next object element </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6975" column="19" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6975" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdetail_1_1json__sax__dom__parser_1a132be8ae1df3f2f2bba3f38cf707c17d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::errored</definition>
+        <argsstring></argsstring>
+        <name>errored</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>whether a syntax error occurred </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6977" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6977" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdetail_1_1json__sax__dom__parser_1a768d6651b3e0a324947625d72071543f" prot="private" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::allow_exceptions</definition>
+        <argsstring></argsstring>
+        <name>allow_exceptions</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>whether to throw exceptions in case of errors </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6979" column="16" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6979" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1a3ee72f78d1ebdd8f8573ccf2b8e3ea6f" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>detail::json_sax_dom_parser&lt; BasicJsonType &gt;::json_sax_dom_parser</definition>
+        <argsstring>(BasicJsonType &amp;r, const bool allow_exceptions_=true)</argsstring>
+        <name>json_sax_dom_parser</name>
+        <param>
+          <type>BasicJsonType &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>allow_exceptions_</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to a JSON value that is manipulated while parsing </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">allow_exceptions_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether parse errors yield exceptions </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6814" column="14" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6814" bodyend="6816"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1a16b31b6cfdc0eec28c485a48b2c58217" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>detail::json_sax_dom_parser&lt; BasicJsonType &gt;::json_sax_dom_parser</definition>
+        <argsstring>(const json_sax_dom_parser &amp;)=delete</argsstring>
+        <name>json_sax_dom_parser</name>
+        <param>
+          <type>const <ref refid="classdetail_1_1json__sax__dom__parser" kindref="compound">json_sax_dom_parser</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6819" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1a9e4e41ae2c56824ee768cfeceace30d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>detail::json_sax_dom_parser&lt; BasicJsonType &gt;::json_sax_dom_parser</definition>
+        <argsstring>(json_sax_dom_parser &amp;&amp;)=default</argsstring>
+        <name>json_sax_dom_parser</name>
+        <param>
+          <type><ref refid="classdetail_1_1json__sax__dom__parser" kindref="compound">json_sax_dom_parser</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6820" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1ac422aa4cb1f6eeb135f21366e03041fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdetail_1_1json__sax__dom__parser" kindref="compound">json_sax_dom_parser</ref> &amp;</type>
+        <definition>json_sax_dom_parser&amp; detail::json_sax_dom_parser&lt; BasicJsonType &gt;::operator=</definition>
+        <argsstring>(const json_sax_dom_parser &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classdetail_1_1json__sax__dom__parser" kindref="compound">json_sax_dom_parser</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6821" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1a08a5b8d751cdba508179d2a56c6215d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdetail_1_1json__sax__dom__parser" kindref="compound">json_sax_dom_parser</ref> &amp;</type>
+        <definition>json_sax_dom_parser&amp; detail::json_sax_dom_parser&lt; BasicJsonType &gt;::operator=</definition>
+        <argsstring>(json_sax_dom_parser &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classdetail_1_1json__sax__dom__parser" kindref="compound">json_sax_dom_parser</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6822" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1a5b64d0d6b27e55fa12fafd3dfc56b8c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>detail::json_sax_dom_parser&lt; BasicJsonType &gt;::~json_sax_dom_parser</definition>
+        <argsstring>()=default</argsstring>
+        <name>~json_sax_dom_parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6823" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1a414cc4f54b4a5d69504ae415e279a727" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::null</definition>
+        <argsstring>()</argsstring>
+        <name>null</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6825" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6825" bodyend="6829"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1aafe33f4ea1ae0a03242e6cbd8d380a52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::boolean</definition>
+        <argsstring>(bool val)</argsstring>
+        <name>boolean</name>
+        <param>
+          <type>bool</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6831" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6831" bodyend="6835"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1a8362e0fba0cd0f96af11a94ed5f02d64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::number_integer</definition>
+        <argsstring>(number_integer_t val)</argsstring>
+        <name>number_integer</name>
+        <param>
+          <type>number_integer_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6837" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6837" bodyend="6841"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1a82df1690cf1e76ee4b47da944f6bca70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::number_unsigned</definition>
+        <argsstring>(number_unsigned_t val)</argsstring>
+        <name>number_unsigned</name>
+        <param>
+          <type>number_unsigned_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6843" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6843" bodyend="6847"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1ace74cb6adc6a0c386d9e45ba6cbd4329" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::number_float</definition>
+        <argsstring>(number_float_t val, const string_t &amp;)</argsstring>
+        <name>number_float</name>
+        <param>
+          <type>number_float_t</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>const string_t &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6849" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6849" bodyend="6853"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1a3c989c4cbb0acd034f5cc31018830885" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::string</definition>
+        <argsstring>(string_t &amp;val)</argsstring>
+        <name>string</name>
+        <param>
+          <type>string_t &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6855" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6855" bodyend="6859"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1a9cda315021b356776bed7600f782abde" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::binary</definition>
+        <argsstring>(binary_t &amp;val)</argsstring>
+        <name>binary</name>
+        <param>
+          <type>binary_t &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6861" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6861" bodyend="6865"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1a7a3559ee198992550caad696a9c002ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::start_object</definition>
+        <argsstring>(std::size_t len)</argsstring>
+        <name>start_object</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6867" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6867" bodyend="6877"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1af71738af6db40114169d3171a7cb1da0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::key</definition>
+        <argsstring>(string_t &amp;val)</argsstring>
+        <name>key</name>
+        <param>
+          <type>string_t &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6879" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6879" bodyend="6887"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1acfee569536d31144551a9e37c0b07ee5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::end_object</definition>
+        <argsstring>()</argsstring>
+        <name>end_object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6889" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6889" bodyend="6897"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1af6e857ad7aaf6eba2440c67d4b5f360e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::start_array</definition>
+        <argsstring>(std::size_t len)</argsstring>
+        <name>start_array</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6899" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6899" bodyend="6909"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1abc555200fe32bcecc76d435a17ea732b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::end_array</definition>
+        <argsstring>()</argsstring>
+        <name>end_array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6911" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6911" bodyend="6919"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1a3f26893075e90608c97b39d1e809cb60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Exception</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::parse_error</definition>
+        <argsstring>(std::size_t, const std::string &amp;, const Exception &amp;ex)</argsstring>
+        <name>parse_error</name>
+        <param>
+          <type>std::size_t</type>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+        </param>
+        <param>
+          <type>const Exception &amp;</type>
+          <declname>ex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6922" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6922" bodyend="6932"/>
+      </memberdef>
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1ad6cfc4a7cc36b9d5b73fb7ddff6409cf" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>constexpr bool detail::json_sax_dom_parser&lt; BasicJsonType &gt;::is_errored</definition>
+        <argsstring>() const</argsstring>
+        <name>is_errored</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6934" column="20" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6934" bodyend="6937"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdetail_1_1json__sax__dom__parser_1ae40261648f0b0d9c320608e48d5f3c81" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Value</type>
+          </param>
+        </templateparamlist>
+        <type>JSON_HEDLEY_RETURNS_NON_NULL BasicJsonType *</type>
+        <definition>JSON_HEDLEY_RETURNS_NON_NULL BasicJsonType* detail::json_sax_dom_parser&lt; BasicJsonType &gt;::handle_value</definition>
+        <argsstring>(Value &amp;&amp;v)</argsstring>
+        <name>handle_value</name>
+        <param>
+          <type>Value &amp;&amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="invariant"><para>If the ref stack is empty, then the passed value will be the new root. </para>
+</simplesect>
+<simplesect kind="invariant"><para>If the ref stack contains a value, then it is an array or an object to which we can add elements </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6948" column="19" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6948" bodyend="6968"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SAX implementation to create a JSON value from SAX events. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements the <ref refid="structjson__sax" kindref="compound">json_sax</ref> interface and processes the SAX events to create a JSON value which makes it basically a DOM parser. The structure or hierarchy of the JSON value is managed by the stack <computeroutput>ref_stack</computeroutput> which contains a pointer to the respective array or object for each recursion depth.</para>
+<para>After successful parsing, the value that is passed by reference to the constructor contains the parsed value.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>BasicJsonType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the JSON type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="6800" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="6801" bodyend="6980"/>
+    <listofallmembers>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a768d6651b3e0a324947625d72071543f" prot="private" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>allow_exceptions</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a9cda315021b356776bed7600f782abde" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>binary</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1ada36726394d0347cb9a08da4180d16de" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>binary_t</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1aafe33f4ea1ae0a03242e6cbd8d380a52" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>boolean</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1abc555200fe32bcecc76d435a17ea732b" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>end_array</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1acfee569536d31144551a9e37c0b07ee5" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>end_object</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a132be8ae1df3f2f2bba3f38cf707c17d" prot="private" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>errored</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1ae40261648f0b0d9c320608e48d5f3c81" prot="private" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>handle_value</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1ad6cfc4a7cc36b9d5b73fb7ddff6409cf" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>is_errored</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a3ee72f78d1ebdd8f8573ccf2b8e3ea6f" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>json_sax_dom_parser</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a16b31b6cfdc0eec28c485a48b2c58217" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>json_sax_dom_parser</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a9e4e41ae2c56824ee768cfeceace30d3" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>json_sax_dom_parser</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1af71738af6db40114169d3171a7cb1da0" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>key</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a414cc4f54b4a5d69504ae415e279a727" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>null</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1ace74cb6adc6a0c386d9e45ba6cbd4329" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>number_float</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1af3fbbe21ea4ec3ae7ba8c9a5b8d736b3" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>number_float_t</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a8362e0fba0cd0f96af11a94ed5f02d64" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>number_integer</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a8a7ba3deeb48e47b4a7705602c9f8807" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>number_integer_t</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a82df1690cf1e76ee4b47da944f6bca70" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>number_unsigned</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a80d34b386ee1cbfe353f640bc4745317" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>number_unsigned_t</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1aebee40c564c1b319d4d4d7e8bfd01a56" prot="private" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>object_element</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1ac422aa4cb1f6eeb135f21366e03041fe" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>operator=</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a08a5b8d751cdba508179d2a56c6215d2" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>operator=</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a3f26893075e90608c97b39d1e809cb60" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>parse_error</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a7abe0305cc4bcfa1cee1bbe25a722e1a" prot="private" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>ref_stack</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1aab35aee2aec35d99681400832a404109" prot="private" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>root</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1af6e857ad7aaf6eba2440c67d4b5f360e" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>start_array</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a7a3559ee198992550caad696a9c002ff" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>start_object</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a3c989c4cbb0acd034f5cc31018830885" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>string</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a6616e04b1c1c9ecae11a49a5302720e6" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>string_t</name></member>
+      <member refid="classdetail_1_1json__sax__dom__parser_1a5b64d0d6b27e55fa12fafd3dfc56b8c9" prot="public" virt="non-virtual"><scope>detail::json_sax_dom_parser</scope><name>~json_sax_dom_parser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

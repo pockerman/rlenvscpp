@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_05b8960b5eaedf42f478afb87d68a6e5" kind="dir">
+    <compoundname>/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json</compoundname>
+    <innerfile refid="json_8hpp">json.hpp</innerfile>
+    <innerfile refid="json__fwd_8hpp">json_fwd.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/"/>
+  </compounddef>
+</doxygen>

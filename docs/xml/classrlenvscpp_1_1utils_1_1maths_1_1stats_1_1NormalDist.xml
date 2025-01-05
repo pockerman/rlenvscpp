@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist" kind="class" language="C++" prot="public">
+    <compoundname>rlenvscpp::utils::maths::stats::NormalDist</compoundname>
+    <includes refid="normal__dist_8h" local="no">normal_dist.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename RealType</type>
+        <defval><ref refid="namespacerlenvscpp_1ac50675da35de20edc5e4b56549ebe2e2" kindref="member">real_t</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1a008e668e3116ead3d047c2b0a17ac60c" prot="public" static="no">
+        <type>RealType</type>
+        <definition>typedef RealType rlenvscpp::utils::maths::stats::NormalDist&lt; RealType &gt;::result_type</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" line="28" column="18" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ab1ede7b99e503f9893c2e643b52bcb21" prot="private" static="no" mutable="yes">
+        <type>std::normal_distribution&lt; RealType &gt;</type>
+        <definition>std::normal_distribution&lt;RealType&gt; rlenvscpp::utils::maths::stats::NormalDist&lt; RealType &gt;::dist_</definition>
+        <argsstring></argsstring>
+        <name>dist_</name>
+        <briefdescription>
+<para>The underlying distribution. Mutable as the API exposes const methods and the compiler complains. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" line="83" column="34" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1a1502bad6f6257ab317d73186058f7d28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::maths::stats::NormalDist&lt; RealType &gt;::NormalDist</definition>
+        <argsstring>()</argsstring>
+        <name>NormalDist</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" line="33" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ae30b1cbedc8188c4f9f52a75595d9a23" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rlenvscpp::utils::maths::stats::NormalDist&lt; RealType &gt;::NormalDist</definition>
+        <argsstring>(result_type mu, result_type std=1.0)</argsstring>
+        <name>NormalDist</name>
+        <param>
+          <type>result_type</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>result_type</type>
+          <declname>std</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" line="38" column="10" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1acf6d2a5aa4726d801d09dc0d53d5d8a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>result_type</type>
+        <definition>RealType rlenvscpp::utils::maths::stats::NormalDist&lt; RealType &gt;::pdf</definition>
+        <argsstring>(result_type x) const</argsstring>
+        <name>pdf</name>
+        <param>
+          <type>result_type</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>compute the value of the PDF at the given point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" line="43" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" bodystart="149" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ae4cc7f4644c18373ff8dd176785356f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>result_type</type>
+        <definition>RealType rlenvscpp::utils::maths::stats::NormalDist&lt; RealType &gt;::sample</definition>
+        <argsstring>() const</argsstring>
+        <name>sample</name>
+        <briefdescription>
+<para>Sample from the distribution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" line="48" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" bodystart="101" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1a3e80f0a8a828cb60bab431f4e9bfb9e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>result_type</type>
+        <definition>RealType rlenvscpp::utils::maths::stats::NormalDist&lt; RealType &gt;::sample</definition>
+        <argsstring>(uint_t seed) const</argsstring>
+        <name>sample</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+<para>Sample from the distribution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" line="53" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" bodystart="111" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1aca5632cedb912a729607e6aca441eb2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; result_type &gt;</type>
+        <definition>std::vector&lt; RealType &gt; rlenvscpp::utils::maths::stats::NormalDist&lt; RealType &gt;::sample_many</definition>
+        <argsstring>(uint_t size) const</argsstring>
+        <name>sample_many</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>sample from the distribution </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" line="58" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" bodystart="119" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1aef06414891dec629725b6b9e75a8be20" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; result_type &gt;</type>
+        <definition>std::vector&lt; RealType &gt; rlenvscpp::utils::maths::stats::NormalDist&lt; RealType &gt;::sample_many</definition>
+        <argsstring>(uint_t size, uint_t seed) const</argsstring>
+        <name>sample_many</name>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacerlenvscpp_1ab3932c04676822ef4121e58e701dc623" kindref="member">uint_t</ref></type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+<para>sample from the distribution </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" line="63" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" bodystart="135" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ad1e2c32144096f9a58561e6d6e82c31e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>result_type</type>
+        <definition>result_type rlenvscpp::utils::maths::stats::NormalDist&lt; RealType &gt;::mean</definition>
+        <argsstring>() const</argsstring>
+        <name>mean</name>
+        <briefdescription>
+<para>The mean value of the distribution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" line="68" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ad9ba2946f804aa951d6584a545345620" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>result_type</type>
+        <definition>result_type rlenvscpp::utils::maths::stats::NormalDist&lt; RealType &gt;::std</definition>
+        <argsstring>() const</argsstring>
+        <name>std</name>
+        <briefdescription>
+<para>The STD of the distribution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" line="73" column="13" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wrapper to std::normal_distribution to facilitate sampling multiple values, sampling with a given seed and computing the PDF value at a specific point. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" line="23" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/utils/maths/statistics/distributions/normal_dist.h" bodystart="24" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ab1ede7b99e503f9893c2e643b52bcb21" prot="private" virt="non-virtual"><scope>rlenvscpp::utils::maths::stats::NormalDist</scope><name>dist_</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ad1e2c32144096f9a58561e6d6e82c31e" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::maths::stats::NormalDist</scope><name>mean</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1a1502bad6f6257ab317d73186058f7d28" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::maths::stats::NormalDist</scope><name>NormalDist</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ae30b1cbedc8188c4f9f52a75595d9a23" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::maths::stats::NormalDist</scope><name>NormalDist</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1acf6d2a5aa4726d801d09dc0d53d5d8a5" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::maths::stats::NormalDist</scope><name>pdf</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1a008e668e3116ead3d047c2b0a17ac60c" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::maths::stats::NormalDist</scope><name>result_type</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ae4cc7f4644c18373ff8dd176785356f9" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::maths::stats::NormalDist</scope><name>sample</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1a3e80f0a8a828cb60bab431f4e9bfb9e9" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::maths::stats::NormalDist</scope><name>sample</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1aca5632cedb912a729607e6aca441eb2c" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::maths::stats::NormalDist</scope><name>sample_many</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1aef06414891dec629725b6b9e75a8be20" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::maths::stats::NormalDist</scope><name>sample_many</name></member>
+      <member refid="classrlenvscpp_1_1utils_1_1maths_1_1stats_1_1NormalDist_1ad9ba2946f804aa951d6584a545345620" prot="public" virt="non-virtual"><scope>rlenvscpp::utils::maths::stats::NormalDist</scope><name>std</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

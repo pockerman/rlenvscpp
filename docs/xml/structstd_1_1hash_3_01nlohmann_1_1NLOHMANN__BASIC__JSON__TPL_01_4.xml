@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structstd_1_1hash_3_01nlohmann_1_1NLOHMANN__BASIC__JSON__TPL_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>std::hash&lt; nlohmann::NLOHMANN_BASIC_JSON_TPL &gt;</compoundname>
+    <includes refid="json_8hpp" local="no">json.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstd_1_1hash_3_01nlohmann_1_1NLOHMANN__BASIC__JSON__TPL_01_4_1aeadbcf51ae3e58f8daa2025aa7737dd8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t std::hash&lt; nlohmann::NLOHMANN_BASIC_JSON_TPL &gt;::operator()</definition>
+        <argsstring>(const nlohmann::NLOHMANN_BASIC_JSON_TPL &amp;j) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const nlohmann::NLOHMANN_BASIC_JSON_TPL &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="24507" column="17" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="24507" bodyend="24510"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>hash value for JSON objects </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ulink url="https://json.nlohmann.me/api/basic_json/std_hash/">https://json.nlohmann.me/api/basic_json/std_hash/</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" line="24505" column="1" bodyfile="/home/alex/qi3/rlenvs_from_cpp/src/rlenvs/extern/nlohmann/json/json.hpp" bodystart="24506" bodyend="24511"/>
+    <listofallmembers>
+      <member refid="structstd_1_1hash_3_01nlohmann_1_1NLOHMANN__BASIC__JSON__TPL_01_4_1aeadbcf51ae3e58f8daa2025aa7737dd8" prot="public" virt="non-virtual"><scope>std::hash&lt; nlohmann::NLOHMANN_BASIC_JSON_TPL &gt;</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
