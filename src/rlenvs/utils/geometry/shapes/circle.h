@@ -88,7 +88,7 @@ inline
 real_t
 Circle::area()const{
 
-    return MathConsts::PI*r_*r_;
+    return rlenvscpp::consts::maths::PI*r_*r_;
 
 }
 

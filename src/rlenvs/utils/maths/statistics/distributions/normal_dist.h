@@ -1,15 +1,16 @@
 #ifndef NORMAL_DIST_H
 #define NORMAL_DIST_H
 
-#include "cubeai/base/cubeai_types.h"
-#include "cubeai/base/math_constants.h"
+#include "rlenvs/rlenvs_types_v2.h"
+#include "rlenvs/rlenvs_consts.h"
 
 #include <vector>
 #include <random>
 #include <cmath>
 #include <numbers>
 
-namespace cuberl {
+namespace rlenvscpp {
+namespace utils{
 namespace maths {
 namespace stats {
 
@@ -149,7 +150,7 @@ NormalDist<RealType>::pdf(RealType x)const{
 	
 	auto mu = dist_.mean();
 	auto std = dist_.stddev();
-	auto pi = cubeai::MathConsts::PI;
+	auto pi = rlenvscpp::consts::maths::PI;
 	auto factor = 1.0/(std * std::sqrt(2.0 * pi));
 	auto exp = std::exp(-0.5*std::pow((x - mu) / std, 2.0));
 	return factor * exp;
@@ -159,6 +160,6 @@ NormalDist<RealType>::pdf(RealType x)const{
 }
 }
 }
-
+}
 
 #endif
