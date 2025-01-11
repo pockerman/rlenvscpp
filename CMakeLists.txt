@@ -111,6 +111,12 @@ FILE(GLOB SRCS src/rlenvs/*.cpp
 			   src/rlenvs/utils/io/tensor_board_server/*.cpp
 			   src/rlenvs/utils/geometry/*.cpp
 			   src/rlenvs/utils/geometry/shapes/*.cpp
+			   
+			   src/rlenvs/utils/geometry/mesh/element.cpp
+			   src/rlenvs/utils/geometry/mesh/face_element.cpp
+			   src/rlenvs/utils/geometry/mesh/node.cpp
+			   src/rlenvs/utils/geometry/mesh/quad_element.cpp
+			   
 			   src/rlenvs/utils/trajectory/*.cpp
    )
 
