@@ -54,7 +54,8 @@ struct IterativeAlgorithmResult  {
     /// \brief IterativeAlgorithmResult
     ///
     IterativeAlgorithmResult(real_t tol, real_t res,
-                             uint_t nitrs, std::chrono::duration<real_t> time);
+                             uint_t nitrs, 
+							 std::chrono::duration<real_t> time);
 
     ///
     /// \brief print
@@ -64,7 +65,8 @@ struct IterativeAlgorithmResult  {
 
 
 inline
-std::ostream& operator<<(std::ostream& out, const IterativeAlgorithmResult& result){
+std::ostream& operator<<(std::ostream& out, 
+                         const IterativeAlgorithmResult& result){
     return result.print(out);
 }
 
