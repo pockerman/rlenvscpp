@@ -22,6 +22,13 @@ Element<dim>::Element(uint_t id, uint_t pid, const std::any& data)
       MeshEntity(id, pid, data)
 {}
 
+
+template<int dim>
+Element<dim>::Element(uint_t id, uint_t pid)
+:
+Element<dim>(id, pid, std::any())
+{}
+
 template<int dim>
 Element<dim>::~Element()
 {}

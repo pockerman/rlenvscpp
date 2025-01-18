@@ -1,9 +1,9 @@
 #ifndef ELEMENT_H
 #define ELEMENT_H
 
-#include "rlenvs/utils/geometry/mesh/mesh_entity.h"
 #include "rlenvs/rlenvs_types_v2.h"
 #include "rlenvs/rlenvs_consts.h"
+#include "rlenvs/utils/geometry/mesh/mesh_entity.h"
 #include "rlenvs/utils/geometry/mesh/edge_face_selector.h"
 #include "rlenvs/utils/geometry/mesh/element_traits.h"
 #include "rlenvs/utils/geometry/geom_point.h"
@@ -130,6 +130,9 @@ protected:
 
     /// \brief Constructor
     Element();
+	
+	/// \brief Constructor
+    Element(uint_t id, uint_t pid);
 
     /// \brief Constructor
     Element(uint_t id, uint_t pid, const std::any& data);

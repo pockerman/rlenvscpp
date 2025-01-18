@@ -1,18 +1,16 @@
 #ifndef MESH_CONNECTIVITY_H
 #define MESH_CONNECTIVITY_H
 
-#include "kernel/base/types.h"
-#include "kernel/base/kernel_consts.h"
+#include "rlenvs/rlenvs_types_v2.h"
+#include "rlenvs/rlenvs_consts.h"
 
 #include<ostream>
 #include<vector>
 #include<iterator>
 
-namespace kernel
-{
-
-namespace numerics
-{
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
 
 /// \brief MeshConnectivity class stores the various connectivities
 /// for a mesh object
@@ -135,7 +133,7 @@ MeshConnectivity::MeshConnectivity()
 inline
 MeshConnectivity::MeshConnectivity(uint_t n)
     :
-      connections_(n, KernelConsts::invalid_size_type())
+      connections_(n, rlenvscpp::consts::INVALID_ID)
 {}
 
 inline
@@ -199,5 +197,6 @@ std::ostream& operator<< (std::ostream &out, const MeshConnectivity& connectivit
 
 }
 
+}
 }
 #endif

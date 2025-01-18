@@ -1,10 +1,11 @@
 #ifndef FACE_MESH_ITERATOR_H
 #define FACE_MESH_ITERATOR_H
 
-#include "kernel/utilities/filtered_iterator.h"
+#include "rlenvs/utils/filtered_iterator.h"
 
-namespace kernel{
-namespace numerics{
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
 
 template<typename Predicate, typename  MeshTp> class FaceMeshIterator;
 
@@ -105,6 +106,7 @@ ConstFaceMeshIterator<Predicate, MeshTp>::end()const{
     return ConstFaceMeshIterator<Predicate, MeshTp>::result_t(p, mesh_.faces_end(), mesh_.faces_end() );
 }
 
+}
 }
 }
 

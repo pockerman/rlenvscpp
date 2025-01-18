@@ -1,9 +1,10 @@
-#include "kernel/discretization/edge_element.h"
-#include "kernel/discretization/node.h"
+#include "rlenvs/utils/geometry/mesh/edge_element.h"
+#include "rlenvs/utils/geometry/mesh/node.h"
 #include <exception>
 
-namespace kernel{
-namespace numerics{
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
 
 EdgeElem<1>::EdgeElem(uint_t id, uint_t pid)
     :
@@ -78,7 +79,7 @@ EdgeElem<dim>::EdgeElem(uint_t id, uint_t n_nodes, uint_t pid)
 
 
 template class EdgeElem<2>;
-template class EdgeElem<3>;
 
+}
 }
 }

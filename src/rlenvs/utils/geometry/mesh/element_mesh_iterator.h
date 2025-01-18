@@ -1,11 +1,12 @@
 #ifndef ELEMENT_ITERATOR_H
 #define ELEMENT_ITERATOR_H
 
-#include "kernel/base/types.h"
-#include "kernel/utilities/filtered_iterator.h"
 
-namespace kernel{
-namespace numerics{
+#include "rlenvs/utils/filtered_iterator.h"
+
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
 
 template<typename Predicate, typename  MeshTp>
 class ElementMeshIterator
@@ -155,6 +156,7 @@ ConstElementMeshIterator<Predicate, MeshTp>::end(const T& item)const{
 
 }
 
+}
 }
 
 #endif // ELEMENT_ITERATOR_H

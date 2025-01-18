@@ -1,14 +1,12 @@
-#include "kernel/discretization/mesh.h"
-#include "kernel/geometry/geom_point.h"
-#include "kernel/discretization/element_builder.h"
-#include "kernel/discretization/element.h"
-#include "kernel/discretization/node.h"
+#include "rlenvs/utils/geometry/mesh/mesh.h"
+#include "rlenvs/utils/geometry/mesh/element_builder.h"
+#include "rlenvs/utils/geometry/mesh/element.h"
+#include "rlenvs/utils/geometry/mesh/node.h"
+#include "rlenvs/utils/geometry/geom_point.h"
 
-namespace kernel
-{
-
-namespace numerics
-{
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
 
 template<int spacedim>
 Mesh<spacedim>::Mesh()
@@ -75,12 +73,8 @@ Mesh<spacedim>::create_edge(ElementType::sub_type t,
 
     typename Mesh<spacedim>::edge_ptr_t edge = EdgeBuilder<spacedim>::build_edge(t);
 
-    //edge->set_mesh(*this);
     edge->set_id(global_id);
-    //edge->set_processor_id(pid);
-
     topology_.add_edge(edge);
-
     return edge;
 }
 
@@ -88,18 +82,12 @@ Mesh<spacedim>::create_edge(ElementType::sub_type t,
 template<int spacedim>
 typename Mesh<spacedim>::face_ptr_t
 Mesh<spacedim>::create_face(ElementType::sub_type t,
-                             uint_t global_id, uint_t pid )
-{
+                             uint_t global_id, uint_t pid ){
 
-typename Mesh<spacedim>::face_ptr_t edge = FaceBuilder<spacedim>::build_face(t);
-//edge->set_mesh(*this);
-edge->set_id(global_id);
-//edge->set_processor_id(pid);
-
-topology_.add_face(edge);
-
-return edge;
-
+	typename Mesh<spacedim>::face_ptr_t edge = FaceBuilder<spacedim>::build_face(t);
+	edge->set_id(global_id);
+	topology_.add_face(edge);
+	return edge;
 }
 
 template<int spacedim>
@@ -129,9 +117,7 @@ Mesh<spacedim>::n_active_faces()const
 
 template class Mesh<1>;
 template class Mesh<2>;
-template class Mesh<3>;
-
 
 }
-
+}
 }

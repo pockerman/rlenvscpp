@@ -1,15 +1,13 @@
-#include "kernel/discretization/mesh_topology.h"
-#include "kernel/discretization/element.h"
-#include "kernel/discretization/face_element.h"
-#include "kernel/discretization/node.h"
+#include "rlenvs/utils/geometry/mesh/mesh_topology.h"
+#include "rlenvs/utils/geometry/mesh/element.h"
+#include "rlenvs/utils/geometry/mesh/face_element.h"
+#include "rlenvs/utils/geometry/mesh/node.h"
 
 #include <exception>
 
-namespace kernel
-{
-
-namespace numerics
-{
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
 
 template<int spacedim>
 template<typename T,typename C>
@@ -31,13 +29,10 @@ MeshTopology<spacedim>::add_entity(T* t, C& c)
     
   uint_t id = t->get_id();
   
-  if (id < c.size())
-    {
+  if (id < c.size()){
        
-      //std::cout<<"The node has id: "<<id<<std::endl;
-      // Overwriting existing elements is still probably a mistake.
-      // AssertLibSimPP(!nodes_[id],"Atempt To Overwrite existing element");
-    }
+      
+	}
   else
     {
       
@@ -50,7 +45,6 @@ MeshTopology<spacedim>::add_entity(T* t, C& c)
 
 
 }
-
 
 template<int spacedim>
 MeshTopology<spacedim>::~MeshTopology(){
@@ -152,29 +146,22 @@ MeshTopology<1>::edge(uint_t i){
 
 template<>
 MeshTopology<1>::face_ptr_t
-MeshTopology<1>::face(uint_t i)
-{
+MeshTopology<1>::face(uint_t i){
 
- //AssertLibSimPP(i<nodes_.size(),ExecInvalidIndex(i,0,nodes_.size()));
- 
- return nodes_[i];
+	return nodes_[i];
 }
 
 
 template<>
 MeshTopology<1>::edge_ptr_t
-MeshTopology<1>::add_edge(MeshTopology<1>::edge_ptr_t edge)
-{
-
+MeshTopology<1>::add_edge(MeshTopology<1>::edge_ptr_t edge){
  return add_entity(static_cast<Node<1>* >(edge),nodes_);
 
 }
     
 template<>    
 MeshTopology<1>::face_ptr_t
-MeshTopology<1>::add_face(MeshTopology<1>::face_ptr_t face)
-{
-
+MeshTopology<1>::add_face(MeshTopology<1>::face_ptr_t face){
  return add_entity(static_cast<Node<1>* >(face),nodes_);
 
 }
@@ -182,11 +169,9 @@ MeshTopology<1>::add_face(MeshTopology<1>::face_ptr_t face)
 
 template<>
 void
-MeshTopology<1>::faces(const MeshConnectivity& faces_idx, std::vector<MeshTopology<1>::cface_ptr_t>& faces_ptr)const
-{
+MeshTopology<1>::faces(const MeshConnectivity& faces_idx, 
+                       std::vector<MeshTopology<1>::cface_ptr_t>& faces_ptr)const{
 
-  //AssertLibSimPP(faces_idx.empty()!=true,MeshConnectivity::ExecEmptyMeshConnectivity());
-  
   faces_ptr.resize(faces_idx.size(),nullptr);
   
   for(uint_t i=0; i<faces_idx.size(); ++i){
@@ -225,165 +210,46 @@ MeshTopology<2>::clear_topology_faces()
 
 template<>
 MeshTopology<2>::edge_ptr_t
-MeshTopology<2>::edge(uint_t i)
-{
-
- //AssertLibSimPP(i<edges_.size(),ExecInvalidIndex(i,0,edges_.size()));
- 
+MeshTopology<2>::edge(uint_t i){
  return edges_[i];
-
 
 }
 
 template<>
 MeshTopology<2>::face_ptr_t
-MeshTopology<2>::face(uint_t i)
-{
+MeshTopology<2>::face(uint_t i){
 
- //AssertLibSimPP(i<edges_.size(),ExecInvalidIndex(i,0,edges_.size()));
- 
  return edges_[i];
-
-
 }
 
 template<>
 MeshTopology<2>::edge_ptr_t
-MeshTopology<2>::add_edge(MeshTopology<2>::edge_ptr_t edge)
-{
-
+MeshTopology<2>::add_edge(MeshTopology<2>::edge_ptr_t edge){
  return add_entity(edge,edges_);
-
 }
     
 template<>    
 MeshTopology<2>::face_ptr_t
-MeshTopology<2>::add_face(MeshTopology<2>::face_ptr_t face)
-{
-
+MeshTopology<2>::add_face(MeshTopology<2>::face_ptr_t face){
  return add_entity(face,edges_);
-
 }
 
 
 template<>
 void
-MeshTopology<2>::faces(const MeshConnectivity& faces_idx,std::vector<MeshTopology<2>::cface_ptr_t>& faces_ptr)const
-{
+MeshTopology<2>::faces(const MeshConnectivity& faces_idx,
+                       std::vector<MeshTopology<2>::cface_ptr_t>& faces_ptr)const{
 
-  //AssertLibSimPP(faces_idx.empty()!=true,MeshConnectivity::ExecEmptyMeshConnectivity());
-  
   faces_ptr.resize(faces_idx.size(),nullptr);
   
-  for(uint_t i=0; i<faces_idx.size(); ++i)
-  {
-  
+  for(uint_t i=0; i<faces_idx.size(); ++i){
      faces_ptr[i] = edges_[faces_idx.connection_idx(i)];
   }
-
-}
-
-
-template<>
-void
-MeshTopology<3>::clear_topology_edges()
-{
-
-  typedef std::vector<MeshTopology<3>::edge_ptr_t>::iterator iterator;
-   
-   iterator it = edges_.begin();
-   iterator it_end = edges_.end();
-   
-   for(; it != it_end; ++it)
-   {
-     delete *it;
-   } 
-   
-   edges_.clear();
-
-}
-
-template<>
-void
-MeshTopology<3>::clear_topology_faces()
-{
-
-   typedef std::vector<MeshTopology<3>::face_ptr_t>::iterator iterator;
-   
-   iterator it = faces_.begin();
-   iterator it_end = faces_.end();
-   
-   for(; it != it_end; ++it)
-   {
-     delete *it;
-   } 
-   
-   faces_.clear();
-
-}
-
-
-
-template<>
-MeshTopology<3>::edge_ptr_t
-MeshTopology<3>::edge(uint_t i)
-{
-
- //AssertLibSimPP(i<edges_.size(),ExecInvalidIndex(i,0,edges_.size()));
- 
- return edges_[i];
-
-
-}
-
-template<>
-MeshTopology<3>::face_ptr_t
-MeshTopology<3>::face(uint_t i)
-{
- //AssertLibSimPP(i<faces_.size(),ExecInvalidIndex(i,0,faces_.size()));
- return faces_[i];
-
-}
-
-
-template<>
-MeshTopology<3>::edge_ptr_t
-MeshTopology<3>::add_edge(MeshTopology<3>::edge_ptr_t edge)
-{
-
- return add_entity(edge,edges_);
-
-}
-    
-template<>    
-MeshTopology<3>::face_ptr_t
-MeshTopology<3>::add_face(MeshTopology<3>::face_ptr_t face)
-{
-
- return add_entity(face,faces_);
-
-}
-
-
-template<>
-void
-MeshTopology<3>::faces(const MeshConnectivity& faces_idx,std::vector<MeshTopology<3>::cface_ptr_t>& faces_ptr)const
-{
-
-  faces_ptr.resize(faces_idx.size(),nullptr);
-  
-  for(uint_t i=0; i<faces_idx.size(); ++i)
-  {
-  
-     faces_ptr[i] = faces_[faces_idx.connection_idx(i)];
-  }
-
 }
 
 template class MeshTopology<1>;
 template class MeshTopology<2>;
-template class MeshTopology<3>;
 
-
+}
 }
 }

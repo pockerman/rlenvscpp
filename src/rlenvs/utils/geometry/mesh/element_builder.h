@@ -1,14 +1,13 @@
 #ifndef ELEMENT_BUILDER_H
 #define ELEMENT_BUILDER_H
 
-#include "kernel/discretization/element_traits.h"
-#include "kernel/discretization/element_type.h"
+#include "rlenvs/utils/geometry/mesh/element_traits.h"
+#include "rlenvs/utils/geometry/mesh/element_type.h"
 
 
-namespace kernel
-{
-namespace numerics
-{
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
 
 template<int dim>
 struct ElementBuilder
@@ -31,7 +30,7 @@ struct FaceBuilder
 };
 
 }
-
+}
 }
 
 #endif // ELEMENT_BUILDER_H

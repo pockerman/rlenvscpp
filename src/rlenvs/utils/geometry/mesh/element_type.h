@@ -1,12 +1,11 @@
 #ifndef ELEMENT_TYPE_H
 #define ELEMENT_TYPE_H
 
-#include "kernel/base/types.h"
+#include "rlenvs/rlenvs_types_v2.h"
 
-namespace kernel
-{
-namespace numerics
-{
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
 
 template<int spacedim> class Element;
 
@@ -62,21 +61,17 @@ template<int spacedim> class Element;
 
  namespace biblsimpp_geom_implementation
  {
-
    ElementType::sub_type element_sub_type(uint_t n_nodes,edge_type);
-
    ElementType::sub_type element_sub_type(uint_t n_nodes,tri_type);
-
    ElementType::sub_type element_sub_type(uint_t n_nodes,quad_type);
-
    ElementType::sub_type element_sub_type(uint_t n_nodes,hex_type);
-
    ElementType::sub_type element_sub_type(uint_t n_nodes,tet_type);
 
  }
 
 }
 
+}
 }
 
 #endif // ELEMENT_TYPE_H

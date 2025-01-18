@@ -1,22 +1,25 @@
 #ifndef MESH_H
 #define MESH_H
 
-#include "kernel/base/types.h"
-#include "kernel/base/kernel_consts.h"
-#include "kernel/discretization/mesh_topology.h"
-#include "kernel/discretization/element_type.h"
-#include "kernel/utilities/filtered_iterator.h"
+#include "rlenvs/rlenvs_types_v2.h"
+#include "rlenvs/rlenvs_consts.h"
+#include "rlenvs/utils/filtered_iterator.h"
+#include "rlenvs/utils/geometry/mesh/mesh_topology.h"
+#include "rlenvs/utils/geometry/mesh/element_type.h"
+
 
 #include "boost/noncopyable.hpp"
-namespace kernel{
+
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
 
 // forward declarations
 template<int dim, typename T> class GeomPoint;
 
-namespace numerics{
-
-
+///
 /// \brief A class that represents a mesh.
+///
 template<int spacedim>
 class Mesh: private boost::noncopyable
 {
@@ -64,14 +67,14 @@ public:
      *pass in the global id and the processor id of the created node
      */
     Node<spacedim>* create_vertex(const GeomPoint<spacedim, real_t>& point,
-                                 uint_t global_id=KernelConsts::invalid_size_type(),
+                                 uint_t global_id=rlenvscpp::consts::INVALID_ID,
                                  uint_t pid = 0);
 
    /**
      *\detailed create a Node
      */
     Node<spacedim>* create_node(const GeomPoint<spacedim, real_t>& point,
-                               uint_t global_id=KernelConsts::invalid_size_type(),
+                               uint_t global_id=rlenvscpp::consts::INVALID_ID,
                                uint_t pid = 0);
 
 
@@ -79,7 +82,7 @@ public:
      *\detailed create an Element and get back the pointer
      */
     Element<spacedim>* create_element(ElementType::sub_type t,
-                                     uint_t global_id=KernelConsts::invalid_size_type(),
+                                     uint_t global_id=rlenvscpp::consts::INVALID_ID,
                                      uint_t pid = 0);
 
 
@@ -87,7 +90,7 @@ public:
      *\detailed create an edge and get back the pointer
      */
     edge_ptr_t  create_edge(ElementType::sub_type t,
-                         uint_t global_id=KernelConsts::invalid_size_type(),
+                         uint_t global_id=rlenvscpp::consts::INVALID_ID,
                          uint_t pid = 0);
 
 
@@ -95,7 +98,7 @@ public:
      *\detailed create a face and get back the pointer
      */
     face_ptr_t create_face(ElementType::sub_type t,
-                       uint_t global_id=KernelConsts::invalid_size_type(),
+                       uint_t global_id=rlenvscpp::consts::INVALID_ID,
                        uint_t pid=0);
 
 
@@ -240,7 +243,7 @@ Mesh<1>::n_faces()const{
 }
 
 }
-
+}
 }
 
 #endif // MESH_H

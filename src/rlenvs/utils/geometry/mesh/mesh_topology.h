@@ -1,23 +1,17 @@
 #ifndef MESH_TOPOLOGY_H
 #define MESH_TOPOLOGY_H
 
-#include "kernel/base/types.h"
-#include "kernel/discretization/mesh_connectivity.h"
-#include "kernel/discretization/element_traits.h"
+#include "rlenvs/rlenvs_types_v2.h"
+#include "rlenvs/utils/geometry/mesh/mesh_connectivity.h"
+#include "rlenvs/utils/geometry/mesh/element_traits.h"
 
-/*#include "base/libsimpp_config.h"
-#include "base/libsimpp_exceptions.h"
-#include "geom/libsimpp_mesh_connectivity.h"
-#include "geom/libsimpp_element_traits.h"*/
+#include <vector>
 
-#include<vector>
-
-namespace kernel
-{
-
-namespace numerics
-{
-
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
+	
+	
   template<int spacedim> class Element;
   template<int spacedim,int topodim> class FaceElement;
   template<int dim> class Node;
@@ -357,42 +351,42 @@ template<int spacedim>
 inline
 typename MeshTopology<spacedim>::face_iterator 
 MeshTopology<spacedim>::faces_end(){
-  faces_.end();
+  return faces_.end();
 }
 
 template<>
 inline
 MeshTopology<2>::face_iterator 
 MeshTopology<2>::faces_end(){
-  edges_.end();
+  return edges_.end();
 }
   
 template<int spacedim>
 inline
 typename MeshTopology<spacedim>::const_face_iterator 
 MeshTopology<spacedim>::faces_begin()const{
-  faces_.begin();
+  return faces_.begin();
 }
 
 template<>
 inline
 MeshTopology<2>::const_face_iterator 
 MeshTopology<2>::faces_begin()const{
-  edges_.begin();
+  return edges_.begin();
 }
   
 template<int spacedim>
 inline
 typename MeshTopology<spacedim>::const_face_iterator 
 MeshTopology<spacedim>::faces_end()const{
-  faces_.end();
+ return  faces_.end();
 }
 
 template<>
 inline
 MeshTopology<2>::const_face_iterator 
 MeshTopology<2>::faces_end()const{
-  edges_.end();
+  return edges_.end();
 }
 
 template<int spacedim>
@@ -425,6 +419,6 @@ return edges_.size();
 }
 
 }
-
+}
 }
 #endif

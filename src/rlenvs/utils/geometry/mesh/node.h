@@ -28,6 +28,8 @@ public:
 	///
     Node();
 
+	
+
 	///
     /// \brief Constructor
 	///
@@ -42,6 +44,11 @@ public:
     /// \brief Constructor
 	///
     Node(const GeomPoint<dim>& point, uint_t global_id, uint_t pid, const std::any& data);
+	
+	///
+	/// \brief Constructor
+	///
+	Node(const GeomPoint<dim>& point, uint_t global_id, uint_t pid);
 
 };
 

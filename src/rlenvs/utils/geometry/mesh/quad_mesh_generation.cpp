@@ -1,24 +1,26 @@
-#include "kernel/discretization/quad_mesh_generation.h"
-#include "kernel/discretization/mesh.h"
-#include "kernel/geometry/geom_point.h"
-#include "kernel/discretization/mesh_connectivity.h"
-#include "kernel/discretization/element.h"
-#include "kernel/discretization/node.h"
-#include "kernel/discretization/face_element.h"
-#include "kernel/discretization/mesh_predicates.h"
-#include "kernel/utilities/predicates.h"
-#include "kernel/discretization/element_mesh_iterator.h"
-#include "kernel/discretization/face_mesh_iterator.h"
-#include "kernel/discretization/element_type.h"
-#include "kernel/base/kernel_consts.h"
+#include "rlenvs/rlenvs_consts.h"
+
+#include "rlenvs/utils/geometry/geom_point.h"
+#include "rlenvs/utils/geometry/mesh/mesh_connectivity.h"
+#include "rlenvs/utils/geometry/mesh/quad_mesh_generation.h"
+#include "rlenvs/utils/geometry/mesh/mesh.h"
+#include "rlenvs/utils/geometry/mesh/element.h"
+#include "rlenvs/utils/geometry/mesh/node.h"
+#include "rlenvs/utils/geometry/mesh/face_element.h"
+#include "rlenvs/utils/geometry/mesh/face_mesh_iterator.h"
+#include "rlenvs/utils/geometry/mesh/element_mesh_iterator.h"
+#include "rlenvs/utils/geometry/mesh/element_type.h"
+
+#include "rlenvs/utils/geometry/mesh/mesh_predicates.h"
+#include "rlenvs/utils//predicates.h"
 
 #include <exception>
 #include <vector>
-namespace kernel
-{
-namespace numerics
-{
 
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
+	
 namespace{
  inline
  uint_t idx(uint_t nx,
@@ -52,14 +54,15 @@ find_neighbor_id(const Element<2>& e, uint_t f,
 
    //compute the intersection
    std::set_intersection(v0.connectivity_begin(),v0.connectivity_end(),
-                         v1.connectivity_begin(),v1.connectivity_end(),std::back_inserter(common));
+                         v1.connectivity_begin(),v1.connectivity_end(),
+						 std::back_inserter(common));
 
    //remove the id of the element we work on
    common.erase(std::remove(common.begin(), common.end(),
                             e.get_id()),common.end());
 
    if(common.empty()){
-       return KernelConsts::invalid_size_type();
+       return rlenvscpp::consts::INVALID_ID;
    }
 
    //if we are not empty return the first
@@ -163,7 +166,7 @@ void build_rectangular_mesh_elements(uint_t Nx, uint_t Ny, uint_t n_nodes_per_el
          // find the id of the neighbor
          uint_t neigh_id = find_neighbor_id(*element, face, vertices_connections);
 
-         if(neigh_id == KernelConsts::invalid_size_type()){
+         if(neigh_id == rlenvscpp::consts::INVALID_ID){
              element->set_neighbor(face, nullptr);
          }
          else{
@@ -247,7 +250,7 @@ void build_quad_mesh_element_face_connectivity(Mesh<2>& m){
               //to our neighbor
               uint_t neigh_idx = neighbor->which_neighbor_am_i(*element);
 
-              if(neigh_idx == KernelConsts::invalid_size_type()){
+              if(neigh_idx == rlenvscpp::consts::INVALID_ID){
                   throw std::logic_error("Invalid neighbor index");
               }
 
@@ -349,4 +352,5 @@ void build_quad_mesh(Mesh<2>& mesh, uint_t nx, uint_t ny,
 
 }
 
+}
 }

@@ -1,15 +1,12 @@
 #ifndef EDGE_ELEMENT_H
 #define EDGE_ELEMENT_H
 
-#include "kernel/discretization/element.h"
-#include "kernel/discretization/face_element.h"
+#include "rlenvs/utils/geometry/mesh/element.h"
+#include "rlenvs/utils/geometry/mesh/face_element.h"
 
-namespace kernel
-{
-
-namespace numerics
-{
-
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
 template<int dim> class EdgeElem;
 
 template<int dim>
@@ -101,5 +98,5 @@ public:
 
 }
 }
-
+}
 #endif // EDGE_ELEMENT_H

@@ -1,10 +1,11 @@
 #ifndef MESH_PREDICATES_H
 #define MESH_PREDICATES_H
 
-#include "kernel/utilities/predicates.h"
+#include "rlenvs/utils/predicates.h"
 
-namespace kernel{
-namespace numerics{
+namespace rlenvscpp{
+namespace utils{
+namespace geom{
 
 struct Active: public IsActive{};
 
@@ -87,5 +88,5 @@ struct VertexActiveBoundary
 
 }
 }
-
+}
 #endif // MESH_PREDICATES_H
