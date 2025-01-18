@@ -111,6 +111,7 @@ FILE(GLOB SRCS src/rlenvs/*.cpp
 			   src/rlenvs/utils/io/tensor_board_server/*.cpp
 			   src/rlenvs/utils/geometry/*.cpp
 			   src/rlenvs/utils/geometry/shapes/*.cpp
+			   src/rlenvs/utils/geometry/mesh/*.cpp
 			   src/rlenvs/utils/trajectory/*.cpp
    )
 
@@ -135,9 +136,9 @@ ELSE()
 ENDIF()
 
 
-IF(ENABLE_DOC_FLAG)
+#IF(ENABLE_DOC_FLAG)
 	# Add the tests
-	ADD_SUBDIRECTORY(doc)
-ELSE()
-	MESSAGE(WARNING "Documentation will not be generated")
-ENDIF()
+#	ADD_SUBDIRECTORY(doc)
+#ELSE()
+#	MESSAGE(WARNING "Documentation will not be generated")
+#ENDIF()
