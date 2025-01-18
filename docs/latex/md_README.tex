@@ -1,0 +1,285 @@
+\href{https://github.com/pockerman/rlenvs_from_cpp/actions/workflows/build.yml}{\texttt{ }} \hypertarget{md_README_autotoc_md0}{}\doxysection{rlenvscpp}\label{md_README_autotoc_md0}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{rlenvscpp```\}}
+\DoxyCodeLine{using  C++. In addition, the library provides various utilities such as experiment tracking,}
+\DoxyCodeLine{representing trajectories  via waypoints and simple implementation of popular dynamics such as }
+\DoxyCodeLine{quadrotor dynamics.}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\# Environments}
+\DoxyCodeLine{}
+\DoxyCodeLine{Currently, ```rlenvscpp``` provides the following environments:}
+\DoxyCodeLine{}
+\DoxyCodeLine{| Environment         |   Use REST   | Example                                                   |}
+\DoxyCodeLine{| :-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/   | :-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/: | :-\/-\/-\/-\/:                                                    |}
+\DoxyCodeLine{| FrozenLake 4x4 map  |   Yes        | <a href="{}examples/example\_1/example\_1.cpp"{}>example\_1</a>  |}
+\DoxyCodeLine{| FrozenLake 8x8 map  |   Yes        | TODO                                                      |}
+\DoxyCodeLine{| Blackjack           |   Yes        | <a href="{}examples/example\_1/example\_1.cpp"{}>example\_1</a>  |}
+\DoxyCodeLine{| CliffWalking        |   Yes        | <a href="{}examples/example\_1/example\_1.cpp"{}>example\_1</a>  |}
+\DoxyCodeLine{| CartPole            |   Yes        | TODO                                                      |}
+\DoxyCodeLine{| MountainCar         |   Yes        | TODO                                                      |}
+\DoxyCodeLine{| Taxi                |   Yes        | <a href="{}examples/example\_1/example\_1.cpp"{}>example\_1</a>  |}
+\DoxyCodeLine{| Pendulum            |   Yes        | <a href="{}examples/example\_6/example\_6.cpp"{}>example\_6</a>  |}
+\DoxyCodeLine{| Acrobot             |   Yes        | TODO                                                      |}
+\DoxyCodeLine{| GymWalk             |   Yes        | TODO                                                      |}
+\DoxyCodeLine{| gym-\/pybullet-\/drones |  TODO        | TODO                                                      |}
+\DoxyCodeLine{| GridWorld           |   No         | <a href="{}examples/example\_5/example\_5.cpp"{}>example\_5</a>  |}
+\DoxyCodeLine{| Connect2            |   No         | <a href="{}examples/example\_7/example\_7.cpp"{}>example\_7</a>  |}
+\DoxyCodeLine{}
+\DoxyCodeLine{The Gymnasium (former OpenAI-\/Gym) environments utilise a REST API to communicate requests to/from the }
+\DoxyCodeLine{environment and ```rlenvscpp```.}
+\DoxyCodeLine{}
+\DoxyCodeLine{Some environments have a vector implementation meaning multiple instances of the same}
+\DoxyCodeLine{environment. Currently, ```rlenvscpp``` provides the following vector environments: }
+\DoxyCodeLine{}
+\DoxyCodeLine{| Environment         |   Use REST   | Example                                                    |}
+\DoxyCodeLine{| :-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/   | :-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/: | :-\/-\/-\/-\/:                                                     |}
+\DoxyCodeLine{| AcrobotV            |   Yes        |  <a href="{}examples/example\_8/example\_8.cpp"{}>example\_8</a>  |}
+\DoxyCodeLine{}
+\DoxyCodeLine{Various RL algorithms using the environments can be found at <a href="{}https://github.com/pockerman/cuberl/tree/master"{}>cuberl</a>.}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\# How to use}
+\DoxyCodeLine{}
+\DoxyCodeLine{The following is an example how to use the }
+\DoxyCodeLine{```FrozenLake```   environment from <a href="{}https://github.com/Farama-\/Foundation/Gymnasium/tree/main"{}>Gymnasium</a>.}
+\DoxyCodeLine{}
+\DoxyCodeLine{```cpp}
+\DoxyCodeLine{\#include "{}rlenvs/rlenvs\_types\_v2.h"{}}
+\DoxyCodeLine{\#include "{}rlenvs/envs/gymnasium/toy\_text/frozen\_lake\_env.h"{}}
+\DoxyCodeLine{\#include "{}rlenvs/envs/api\_server/apiserver.h"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#include <iostream>}
+\DoxyCodeLine{\#include <string>}
+\DoxyCodeLine{\#include <unordered\_map>}
+\DoxyCodeLine{\#include <any>}
+\DoxyCodeLine{}
+\DoxyCodeLine{namespace example\_1\{}
+\DoxyCodeLine{}
+\DoxyCodeLine{const std::string SERVER\_URL = "{}http://0.0.0.0:8001/api"{};}
+\DoxyCodeLine{}
+\DoxyCodeLine{using rlenvscpp::envs::gymnasium::FrozenLake;}
+\DoxyCodeLine{using rlenvscpp::envs::RESTApiServerWrapper;}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{void test\_frozen\_lake(const RESTApiServerWrapper\& server)\{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    FrozenLake<4> env(server);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    std::cout<<"{}Environame URL: "{}<<env.get\_url()<<std::endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // make the environment}
+\DoxyCodeLine{    std::unordered\_map<std::string, std::any> options;}
+\DoxyCodeLine{    options.insert(\{"{}is\_slippery"{}, false\});}
+\DoxyCodeLine{    env.make("{}v1"{}, options);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    std::cout<<"{}Is environment created? "{}<<env.is\_created()<<std::endl;}
+\DoxyCodeLine{    std::cout<<"{}Is environment alive? "{}<<env.is\_alive()<<std::endl;}
+\DoxyCodeLine{    std::cout<<"{}Number of valid actions? "{}<<env.n\_actions()<<std::endl;}
+\DoxyCodeLine{    std::cout<<"{}Number of states? "{}<<env.n\_states()<<std::endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // reset the environment}
+\DoxyCodeLine{    auto time\_step = env.reset(42, std::unordered\_map<std::string, std::any>());}
+\DoxyCodeLine{}
+\DoxyCodeLine{    std::cout<<"{}Reward on reset: "{}<<time\_step.reward()<<std::endl;}
+\DoxyCodeLine{    std::cout<<"{}Observation on reset: "{}<<time\_step.observation()<<std::endl;}
+\DoxyCodeLine{    std::cout<<"{}Is terminal state: "{}<<time\_step.done()<<std::endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    //...print the time\_step}
+\DoxyCodeLine{    std::cout<<time\_step<<std::endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // take an action in the environment}
+\DoxyCodeLine{    // 2 = RIGHT}
+\DoxyCodeLine{    auto new\_time\_step = env.step(2);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    std::cout<<new\_time\_step<<std::endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // get the dynamics of the environment for the given state and action}
+\DoxyCodeLine{    auto state = 0;}
+\DoxyCodeLine{    auto action = 1;}
+\DoxyCodeLine{    auto dynamics = env.p(state, action);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    std::cout<<"{}Dynamics for state="{}<<state<<"{} and action="{}<<action<<std::endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    for(auto item:dynamics)\{}
+\DoxyCodeLine{}
+\DoxyCodeLine{        std::cout<<std::get<0>(item)<<std::endl;}
+\DoxyCodeLine{        std::cout<<std::get<1>(item)<<std::endl;}
+\DoxyCodeLine{        std::cout<<std::get<2>(item)<<std::endl;}
+\DoxyCodeLine{        std::cout<<std::get<3>(item)<<std::endl;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    action = env.sample\_action();}
+\DoxyCodeLine{    new\_time\_step = env.step(action);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    std::cout<<new\_time\_step<<std::endl;}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    // synchronize the environment}
+\DoxyCodeLine{    env.sync(std::unordered\_map<std::string, std::any>());}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    auto copy\_env = env.make\_copy(1);}
+\DoxyCodeLine{    copy\_env.reset();}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    std::cout<<"{}Org env cidx: "{}<<env.cidx()<<std::endl;}
+\DoxyCodeLine{    std::cout<<"{}Copy env cidx: "{}<<copy\_env.cidx()<<std::endl;}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    copy\_env.close();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    // close the environment}
+\DoxyCodeLine{    env.close();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{int main()\{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    using namespace example\_1;}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    RESTApiServerWrapper server(SERVER\_URL, true);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    std::cout<<"{}Testing FrozenLake..."{}<<std::endl;}
+\DoxyCodeLine{    example\_1::test\_frozen\_lake(server);}
+\DoxyCodeLine{    std::cout<<"{}===================="{}<<std::endl;}
+\DoxyCodeLine{    return 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+In general, the environments exposed by the library follow the semantics in \href{https://github.com/deepmind/dm_env/blob/master/docs/index.md}{\texttt{ Environment API and Semantics}} specification. For more details see the \href{doc/env_spec.md}{\texttt{ {\ttfamily rlenvscpp} environment specification}} document.
+
+The general use case is to build the library and link it with your driver code to access its functionality. The environments specified as using REST in the tables above, that is all {\ttfamily Gymnasium}, {\ttfamily gym\+\_\+pybullet\+\_\+drones} and {\ttfamily Gym\+Walk} environments are accessed via a client/server pattern. Namely, they are exposed via an API developed using \href{https://fastapi.tiangolo.com/}{\texttt{ Fast\+API}}. You need to fire up the Fast\+API server, see dependencies, before using the environments in your code. To do so
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./start\_uvicorn.sh}
+
+\end{DoxyCode}
+
+
+By default the {\ttfamily uvicorn} server listents on port 8001. Change this if needed. You can access the Open\+API specification at
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{http://0.0.0.0:8001/docs}
+
+\end{DoxyCode}
+
+
+Note that currently the implementation is not thread/process safe i.\+e. if multiple threads/processes access the environment a global instance of the environment is manipulated. Thus no session based environment exists. However, you can create copies of the same environment and access this via its dedicate index. If just one thread/process touches this specific environment you should be ok. Notice that the Fast\+API server only uses a single process to manage all the environments. In addition, if you need multiple instances of the same environment you can also use one of the exissting vectorised environments (see table above).
+
+Finally, you can choose to launch several instances of {\ttfamily uvirocrn} (listening on different ports). However in this case you need to implement all the interactions logic yourself as currently no implementation exists to handle such a scenario.\hypertarget{md_README_autotoc_md1}{}\doxysubsection{Dynamics}\label{md_README_autotoc_md1}
+Apart from the exposed environments, {\ttfamily rlenvscpp} exposes classes that describe the dynamics of some popular rigid bodies\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Dynamics   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Example    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Dynamics   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Example    }\\\cline{1-2}
+\endhead
+Differential drive   &\PBS\centering \href{examples/example_9/example_9.cpp}{\texttt{ example\+\_\+9}}    \\\cline{1-2}
+Quadrotor   &\PBS\centering \href{examples/example_10/example_10.cpp}{\texttt{ example\+\_\+10}}    \\\cline{1-2}
+Bicycle vehicle   &\PBS\centering TODO   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md_README_autotoc_md2}{}\doxysubsection{Miscellaneous}\label{md_README_autotoc_md2}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Item   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Example    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Item   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Example    }\\\cline{1-2}
+\endhead
+Environment trajectory   &\PBS\centering \href{examples/example_3/example_3.cpp}{\texttt{ example\+\_\+3}}    \\\cline{1-2}
+Waypoint\+Trajectory   &\PBS\centering \href{examples/example_11/example_11.cpp}{\texttt{ example\+\_\+11}}    \\\cline{1-2}
+Tensorboard\+Server   &\PBS\centering \href{examples/example_12/example_12.cpp}{\texttt{ example\+\_\+12}}   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md_README_autotoc_md3}{}\doxysubsection{Dependencies}\label{md_README_autotoc_md3}
+The library has the following general dependencies
+
+
+\begin{DoxyItemize}
+\item A compiler that supports C++20 e.\+g. g++-\/11
+\item \href{https://www.boost.org/}{\texttt{ Boost C++}}
+\item \href{https://cmake.org/}{\texttt{ CMake}} $>$= 3.\+10
+\item \href{https://github.com/google/googletest}{\texttt{ Gtest}} (if configured with tests)
+\item \href{https://eigen.tuxfamily.org/index.php?title=Main_Page}{\texttt{ Eigen3}}
+\end{DoxyItemize}
+
+Using the Gymnasium environments requires \href{https://github.com/Farama-Foundation/Gymnasium/tree/main}{\texttt{ Gymnasium}} installed on your machine. In addition, you need to install
+
+
+\begin{DoxyItemize}
+\item \href{https://fastapi.tiangolo.com/}{\texttt{ Fast\+API}}
+\item \href{https://www.uvicorn.org/}{\texttt{ Uvicorn}}
+\item \href{https://docs.pydantic.dev/latest/}{\texttt{ Pydantic}}
+\end{DoxyItemize}
+
+By installing the requirement under {\ttfamily requirements.\+txt} should set your Python environment up correctly.
+
+In addition, the library also incorporates, see {\ttfamily (src/extern)}, the following libraries
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/elnormous/HTTPRequest}{\texttt{ HTTPRequest}}
+\item \href{https://github.com/nlohmann/json}{\texttt{ nlohmann/json}}
+\end{DoxyItemize}
+
+There are extra dependencies if you want to generate the documentation. Namely,
+
+
+\begin{DoxyItemize}
+\item Doxygen
+\item Sphinx
+\item sphinx\+\_\+rtd\+\_\+theme
+\item breathe
+\item m2r2
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md4}{}\doxysubsection{Installation}\label{md_README_autotoc_md4}
+The usual CMake based installation process is used. Namely
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build \&\& cd build \&\& cmake ..}
+\DoxyCodeLine{make install}
+
+\end{DoxyCode}
+
+
+You can toggle the following variables
+
+
+\begin{DoxyItemize}
+\item CMAKE\+\_\+\+BUILD\+\_\+\+TYPE (default is RELEASE)
+\item ENABLE\+\_\+\+TESTS\+\_\+\+FLAG (default is OFF)
+\item ENABLE\+\_\+\+EXAMPLES\+\_\+\+FLAG (default is OFF)
+\item ENABLE\+\_\+\+DOC\+\_\+\+FLAG (default is OFF)
+\end{DoxyItemize}
+
+For example enbling the examples
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake -\/DENABLE\_EXAMPLES\_FLAG=ON ..}
+\DoxyCodeLine{make install}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md5}{}\doxysubsubsection{Run the tests}\label{md_README_autotoc_md5}
+You can execute all the tests by running the helper script {\ttfamily execute\+\_\+tests.\+sh}.\hypertarget{md_README_autotoc_md6}{}\doxysubsubsection{Issues}\label{md_README_autotoc_md6}
+\hypertarget{md_README_autotoc_md7}{}\doxyparagraph{Could not find $<$tt$>$boost\+\_\+system$<$/tt$>$}\label{md_README_autotoc_md7}
+It is likely that you are missing the boost\+\_\+system library with your local Boost installation. This may be the case is you installed boost via a package manager. On a Ubuntu machine the following should resolve the issue
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-\/get update -\/y}
+\DoxyCodeLine{sudo apt-\/get install -\/y libboost-\/system-\/dev}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md8}{}\doxyparagraph{Fast\+API throws 422 Unpocessable entity}\label{md_README_autotoc_md8}
+Typically, this is a problem with how the client (400-\/range error) specified the data to be sent to the server. 
