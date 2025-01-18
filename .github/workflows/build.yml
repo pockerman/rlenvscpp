@@ -1,4 +1,4 @@
-name: Build rlenvs
+name: Build rlenvscpp
 
 on:
   push:
