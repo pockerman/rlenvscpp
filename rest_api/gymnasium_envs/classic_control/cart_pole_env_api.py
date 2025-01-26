@@ -71,7 +71,11 @@ async def make(version: str = Body(default="v1"),
             envs[cidx].close()
 
         try:
-            env = gym.make(env_type,)
+
+            if len(options) != 0:
+                env = gym.make(env_type, **options)
+            else:
+                env = gym.make(env_type,)
             envs[cidx] = env
         except Exception as e:
             logger.error('An exception was raised')
