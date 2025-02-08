@@ -28,6 +28,7 @@ ENDIF(COMMAND cmake_policy)
 OPTION(ENABLE_TESTS_FLAG OFF)
 OPTION(ENABLE_EXAMPLES_FLAG OFF)
 OPTION(ENABLE_DOC_FLAG OFF)
+OPTION(ENABLE_WEBOTS OFF)
 
 SET(CMAKE_BUILD_TYPE "Debug")
 
@@ -68,6 +69,17 @@ IF(ENABLE_TESTS_FLAG)
 ENDIF()
 
 LIST(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
+
+IF(ENABLE_WEBOTS)
+	# we have webots include the directories
+	#INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/external/webots/src)
+	#LINK_DIRECTORIES(${PROJECT_SOURCE_DIR}/external/webots/lib)
+
+    SET(WEBOTS_LIB_DIRS ${PROJECT_SOURCE_DIR}/external/webots/lib/controller)    
+    SET(WEBOTS_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/external/webots/include/controller/cpp)
+	SET(RLENVSCPP_WEBOTS ON)
+	
+ENDIF()
 
 configure_file(config.h.in ${PROJECT_SOURCE_DIR}/src/rlenvs/rlenvscpp_config.h @ONLY)
 configure_file(version.h.in ${PROJECT_SOURCE_DIR}/src/rlenvs/rlenvscpp_version.h @ONLY)
