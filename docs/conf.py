@@ -49,7 +49,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 breathe_default_project = "rlenvscpp"
 breathe_projects = {
-    "rlenvscpp": "/home/alex/qi3/rlenvs_from_cpp/build/doc/xml"
+    "rlenvscpp": "./_doxygen/xml"
 }
 
 
