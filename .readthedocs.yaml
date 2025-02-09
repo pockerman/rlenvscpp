@@ -13,7 +13,7 @@ build:
     python: "3.13"
   jobs:
     install:
-      - apt-get install graphviz
+      - sudo apt-get install graphviz -y
       - doxygen
       - pip install graphviz 
       - pip install pydot
