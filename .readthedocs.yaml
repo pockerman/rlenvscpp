@@ -11,9 +11,10 @@ build:
   os: ubuntu-24.04
   tools:
     python: "3.13"
+  apt-packages:
+    - graphviz
   jobs:
     install:
-      - sudo apt-get install graphviz -y
       - doxygen
       - pip install graphviz 
       - pip install pydot
