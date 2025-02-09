@@ -13,6 +13,7 @@ build:
     python: "3.13"
   jobs:
     install:
+      - graphviz
       - doxygen
       - pip install sphinx
       - pip install breathe
