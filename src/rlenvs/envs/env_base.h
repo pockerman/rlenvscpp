@@ -1,8 +1,9 @@
-// SPDX-FileCopyrightText: 2024 <copyright holder> <email>
-// SPDX-License-Identifier: Apache-2.0
-
 #ifndef ENV_BASE_H
 #define ENV_BASE_H
+
+///
+/// \file env_base.h
+///
 
 #include "rlenvs/rlenvs_consts.h"
 #include "rlenvs/envs/synchronized_env_mixin.h"
@@ -21,7 +22,11 @@ namespace envs{
 
 
 ///
-/// \ brief Base class for environments.
+/// \class EnvBase
+/// \brief Base class for environments.
+///
+/// The EnvBase class establishes the minimum contract
+/// that an RL environment should expose.
 ///
 template<typename TimeStepType, typename SpaceType>
 class EnvBase: public SpaceType, public synchronized_env_mixin
@@ -60,12 +65,15 @@ public:
     typedef typename SpaceType::action_type action_type;
 
     ///
-	/// \brief dctor
+	/// \brief Destructor 
 	///
     virtual ~EnvBase()=default;
 
     ///
-	/// \brief make. Builds the environment. 
+	/// \brief make. Builds the environment.
+    /// \param version. the version of the environment to build
+	/// \param options. Options to use for building the environment.
+	/// Concrete classes may choose to hold a copy 
 	///
     virtual void make(const std::string& version,
                       const std::unordered_map<std::string, std::any>& options) = 0;
@@ -77,14 +85,16 @@ public:
 	
 	/// 
 	/// \brief Reset the environment
+	/// \param seed. The seed to use for resetting the environment
+	/// \param options. Options to use for resetting the environment.
 	///
     virtual time_step_type reset(uint_t seed,
                                  const std::unordered_map<std::string, std::any>& options)=0;
 								 
 	///
 	/// \brief step in the environment by performing the given action
-    /// \param action The action to execute in the environment 
-	/// \return The time step 
+    /// \param action. The action to execute in the environment 
+	/// \return An instance of time_step_type 
     virtual time_step_type step(const action_type& action)=0;
 	
 	///
@@ -99,17 +109,18 @@ public:
     bool is_created()const noexcept{return is_created_;}
 
     ///
-	/// \brief version
+	/// \brief Returns the version of the environment
 	///
     std::string version()const noexcept{return version_;}
 
     ///
-	/// \brief name of the environment
+	/// \brief Returns the name of the environment
 	///
     std::string env_name()const noexcept{return name_;}
 
     ///
-	/// \brief The number of agents acting in the environment
+	/// \brief Returns the index of the environment that is active within
+	/// a simulation 
 	///
     uint_t cidx()const noexcept{return cidx_;}
 
@@ -132,7 +143,9 @@ protected:
 	///
     void set_version_(const std::string& version )noexcept{version_ = version;}
 
-
+	///
+	/// \brief 
+	///
     void invalidate_is_created_flag_()noexcept{is_created_ = false;}
 
     ///

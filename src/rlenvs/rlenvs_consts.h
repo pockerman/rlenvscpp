@@ -1,5 +1,9 @@
 #ifndef GYMFCPP_CONSTS_H
 #define GYMFCPP_CONSTS_H
+/**
+ * \file rlenvs_consts.h
+ * 
+ */
 
 #include "rlenvs/rlenvs_types_v2.h"
 #include <string>

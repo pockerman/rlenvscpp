@@ -16,7 +16,8 @@ namespace geom{
   template<int spacedim,int topodim> class FaceElement;
   template<int dim> class Node;
 
- /** MeshTopology stores the topology of a mesh, consisting of mesh
+ /** \class MeshTopology
+  * MeshTopology stores the topology of a mesh, consisting of mesh
   * entities and connectivity (incidence relations for the mesh
   * entities). Note that the mesh entities don't need to be stored,
   * only the number of entities and the connectivity.
@@ -62,109 +63,109 @@ public:
     typedef typename std::vector<face_ptr_t>::const_iterator const_face_iterator;
 
     /**
-       *\detailed reserve memory for n nodes
+       *\brief reserve memory for n nodes
        */
      void reserve_n_nodes(uint_t n){nodes_.reserve(n);}
 
      /**
-       *\detailed reserve memory for n elements
+       *\brief reserve memory for n elements
        */
      void reserve_n_elements(uint_t n){elements_.reserve(n);}
 
       /**
-       *\detailed reserve memory for n edges
+       *\brief reserve memory for n edges
        */
      void reserve_n_edges(uint_t n){edges_.reserve(n);}
 
      /**
-       *\detailed reserve memory for n edges
+       *\brief reserve memory for n edges
        */
      void reserve_n_faces(uint_t n);
 
     /**
-      *\detailed add a new node to the mesh and get back the pointer
+      *\brief add a new node to the mesh and get back the pointer
       */
     Node<spacedim>* add_node(Node<spacedim>* n);
 
     /**
-      *\detailed add a new element in the mesh and get back the pointer
+      *\brief add a new element in the mesh and get back the pointer
       */
     Element<spacedim>* add_element(Element<spacedim>* e);
 
     /**
-      *\detailed add a new edge in the mesh and get back the pointer
+      *\brief add a new edge in the mesh and get back the pointer
       */
     edge_ptr_t add_edge(edge_ptr_t edge);
 
     /**
-      *\detailed add a new face in the mesh and get back the pointer
+      *\brief add a new face in the mesh and get back the pointer
       */
     face_ptr_t add_face(face_ptr_t face);
 
     /**
-      *\detailed delete the nodes of the topology
+      *\brief delete the nodes of the topology
       */
     void clear_topology_nodes();
 
     /**
-      *\detailed delete the elements of the topology
+      *\brief delete the elements of the topology
       */
     void clear_topology_elements();
 
     /**
-      *\detailed delete the edges of the topology
+      *\brief delete the edges of the topology
       */
     void clear_topology_edges();
 
     /**
-      *\detailed delete the faces of the topology
+      *\brief delete the faces of the topology
       */
     void clear_topology_faces();
 
     /**
-      *\detailed clear the topology
+      *\brief clear the topology
       */
     void clear_topology();
     
     /**
-      *\detailed get the number of nodes in the mesh
+      *\brief get the number of nodes in the mesh
       */
     uint_t n_nodes()const{return nodes_.size();}
     
     /**
-      *\detailed get the number of elements in the mesh
+      *\brief get the number of elements in the mesh
       */
     uint_t n_elements()const{return elements_.size();}
     
     /**
-      *\detailed get the number of edges in the mesh
+      *\brief get the number of edges in the mesh
       */
     uint_t n_edges()const{return edges_.size();}
 
 
     /**
-      *\detailed get the number of edges in the mesh
+      *\brief get the number of edges in the mesh
       */
     uint_t n_faces()const;
     
     /**
-      *\detailed read/write access to the i-th node of the mesh
+      *\brief read/write access to the i-th node of the mesh
       */
     Node<spacedim>* node(uint_t i);
     
     /**
-      *\detailed read access to the i-th node of the mesh
+      *\brief read access to the i-th node of the mesh
       */
     const Node<spacedim>* node(uint_t i)const;
     
     
     /**
-      *\detailed read/write access to the i-th element of the mesh
+      *\brief read/write access to the i-th element of the mesh
       */
     Element<spacedim>* element(uint_t i);
     
     /**
-      *\detailed read access to the i-th element of the mesh
+      *\brief read access to the i-th element of the mesh
       */
     const Element<spacedim>* element(uint_t i)const;
     
