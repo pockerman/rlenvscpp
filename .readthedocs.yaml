@@ -16,7 +16,6 @@ build:
   jobs:
     install:
       - doxygen
-      - pip install graphviz 
       - pip install pydot
       - pip install sphinx
       - pip install breathe
