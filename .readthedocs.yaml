@@ -16,7 +16,7 @@ build:
       - doxygen
       - pip install sphinx
       - pip install breathe
-      - pip install exhale
+      - pip install -U exhale
       - pip install sphinx_rtd_theme
     
 
