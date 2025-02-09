@@ -17,7 +17,7 @@ build:
     install:
       - doxygen
       - pip install pydot
-      - pip install sphinx
+      - pip install sphinx=="5.0.2"
       - pip install breathe
       - pip install -U exhale
       - pip install sphinx_rtd_theme
