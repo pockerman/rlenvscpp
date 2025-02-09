@@ -12,7 +12,7 @@ build:
   tools:
     python: "3.13"
   jobs:
-    pre_build:
+    install:
       - doxygen
     
 
