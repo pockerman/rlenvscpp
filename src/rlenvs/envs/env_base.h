@@ -139,7 +139,8 @@ protected:
 
 
     ///
-	/// \brief Helper function to set the version. To be called only when the make is called
+	/// \brief Helper function to set the version. 
+	/// To be called only when the make is called
 	///
     void set_version_(const std::string& version )noexcept{version_ = version;}
 
