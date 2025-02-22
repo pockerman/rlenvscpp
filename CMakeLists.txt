@@ -148,9 +148,9 @@ ELSE()
 ENDIF()
 
 
-#IF(ENABLE_DOC_FLAG)
+IF(ENABLE_DOC_FLAG)
 	# Add the tests
-#	ADD_SUBDIRECTORY(doc)
-#ELSE()
-#	MESSAGE(WARNING "Documentation will not be generated")
-#ENDIF()
+	ADD_SUBDIRECTORY(doc)
+ELSE()
+	MESSAGE(WARNING "Documentation will not be generated")
+ENDIF()

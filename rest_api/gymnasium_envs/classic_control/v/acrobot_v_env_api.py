@@ -14,7 +14,6 @@ from time_step_response import TimeStepType, TimeStepV
 
 acrobot_v_router = APIRouter(prefix="/gymnasium/acrobot-env/v", tags=["Acrobot Vector env API"])
 
-
 NUM_COPIES = 0
 ENV_NAME = "Acrobot"
 VECTORIZATION_MODE = 'sync'
@@ -23,7 +22,6 @@ VECTORIZATION_MODE = 'sync'
 envs = {
     0: None
 }
-
 
 # actions that the environment accepts
 ACTIONS_SPACE = {0: "apply -1 torque to the actuated joint",
@@ -164,7 +162,6 @@ async def reset(seed: int = Body(default=42), cidx: int = Body(...),
 
 @acrobot_v_router.post("/step")
 async def step(action: dict[str, list[int]] = Body(title='actions'), cidx: int = Body(...)) -> JSONResponse:
-
     global NUM_COPIES
 
     actions = action['actions']
@@ -191,17 +188,20 @@ async def step(action: dict[str, list[int]] = Body(title='actions'), cidx: int =
 
             # if we truncate or terminate
             # set the environment step type to finished
-            for i, tr in enumerate(truncates):
-                if tr:
-                    step_types[i] = TimeStepType.LAST
+            for i, tr in enumerate(terminates):
+                # if tr:
+                #     step_types[i] = TimeStepType.LAST
 
                 if terminates[i]:
                     step_types[i] = TimeStepType.LAST
 
+            for i in truncates:
+                infos[i]['truncated'] = truncates[i]
+
             step = TimeStepV(observations=observations_ar,
                              rewards=rewards,
                              step_types=step_types,
-                             infos=[],
+                             infos=infos,
                              discounts=[1.0] * NUM_COPIES)
 
             logger.info(f'Step in environment {ENV_NAME} and index {cidx}')

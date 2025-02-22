@@ -56,16 +56,23 @@ GymnasiumEnvBase<TimeStep<std::vector<real_t> >,
 
 void
 CartPole::make(const std::string& version,
-              const std::unordered_map<std::string, std::any>& /*options*/){
+              const std::unordered_map<std::string, std::any>& options){
 
     if(this->is_created()){
         return;
     }
 
 
+	nlohmann::json ops;
+	auto has_rendering = options.find("render_mode");
+	if(has_rendering != options.end()){
+		auto render_str = std::any_cast<std::string>(has_rendering->second);
+		ops["render_mode"] = render_str;
+	}
+
 	auto response  = this -> get_api_server().make(this -> env_name(),
 												   this -> cidx(),
-												   version, nlohmann::json());
+												   version, ops);
 
     this->set_version_(version);
     this->make_created_();

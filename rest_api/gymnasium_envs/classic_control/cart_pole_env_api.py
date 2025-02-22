@@ -71,7 +71,11 @@ async def make(version: str = Body(default="v1"),
             envs[cidx].close()
 
         try:
-            env = gym.make(env_type,)
+
+            if len(options) != 0:
+                env = gym.make(env_type, **options)
+            else:
+                env = gym.make(env_type,)
             envs[cidx] = env
         except Exception as e:
             logger.error('An exception was raised')
@@ -139,8 +143,11 @@ async def step(action: int = Body(...), cidx: int = Body(...)) -> JSONResponse:
             observation = [float(val) for val in observation]
 
             step_type = TimeStepType.MID
-            if terminated or truncated:
+            if terminated:
                 step_type = TimeStepType.LAST
+
+            if info is not None:
+                info['truncated'] = truncated
 
             step = TimeStep(observation=observation,
                             reward=reward,
