@@ -137,8 +137,12 @@ async def step(action: int = Body(...), cidx: int = Body(...)) -> JSONResponse:
             observation = [float(val) for val in observation]
 
             step_type = TimeStepType.MID
-            if terminated or truncated:
+            if terminated:
                 step_type = TimeStepType.LAST
+
+            if info is not None:
+                info['truncated'] = truncated
+
             step = TimeStep(observation=observation,
                             reward=reward,
                             step_type=step_type,
