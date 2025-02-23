@@ -7,5 +7,7 @@
 /*Use PyTorch */
 /* #undef USE_PYTORCH */
 
+#define RLENVSCPP_WEBOTS
+
 #endif
 
