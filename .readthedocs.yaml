@@ -14,11 +14,10 @@ build:
   apt_packages:
     - graphviz
   jobs:
-    uinstall:
-      - sphinx
     install:
       - doxygen
       - pip install pydot
+      - pip uninstall sphinx
       - pip install sphinx==5.0.2
       - pip install breathe==4.35.0
       - pip install -U exhale==0.3.7
