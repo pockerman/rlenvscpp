@@ -17,10 +17,11 @@ build:
     install:
       - doxygen
       - pip install pydot
+      - pip install sphinx_rtd_theme==3.0.2
       - pip install sphinx==5.0.2
       - pip install breathe==4.35.0
       - pip install -U exhale==0.3.7
-      - pip install sphinx_rtd_theme==3.0.2
+      
 
 # Build documentation in the "docs/" directory with Sphinx
 sphinx:
