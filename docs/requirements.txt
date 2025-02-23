@@ -1,4 +1,4 @@
-sphinx
-breathe
-exhale
-sphinx_rtd_theme
+sphinx==5.0.2
+breathe==4.35.0
+exhale==0.3.7
+sphinx_rtd_theme==3.0.2

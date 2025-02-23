@@ -18,9 +18,9 @@ build:
       - doxygen
       - pip install pydot
       - pip install sphinx==5.0.2
-      - pip install breathe
-      - pip install -U exhale
-      - pip install sphinx_rtd_theme
+      - pip install breathe==4.35.0
+      - pip install -U exhale==0.3.7
+      - pip install sphinx_rtd_theme==3.0.2
     
 
 # Build documentation in the "docs/" directory with Sphinx

@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-```rlenvscpp``` documentation
+``rlenvscpp`` documentation
 =====================================
 
 .. toctree::
@@ -11,6 +11,7 @@
    :caption: Contents:
    
    overview
+   how_to_use
    installation
    api/library_root
 

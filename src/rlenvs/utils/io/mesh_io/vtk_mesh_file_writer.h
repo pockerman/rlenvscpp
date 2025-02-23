@@ -16,6 +16,10 @@ struct VtkMeshMeshCellOptions
 };
 
 template<int dim> class Mesh;
+
+///
+/// \brief Write the given Mesh object in a VTK format
+///
 class VtkMeshFileWriter: public FileWriterBase
 {
 
