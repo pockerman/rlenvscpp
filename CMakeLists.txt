@@ -77,6 +77,11 @@ IF(ENABLE_WEBOTS)
 
     SET(WEBOTS_LIB_DIRS ${PROJECT_SOURCE_DIR}/external/webots/lib/controller)    
     SET(WEBOTS_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/external/webots/include/controller/cpp)
+	
+	INCLUDE_DIRECTORIES(${WEBOTS_INCLUDE_DIRS})
+	LINK_DIRECTORIES(${WEBOTS_LIB_DIRS})
+	#MESSAGE( STATUS  "${WEBOTS_INCLUDE_DIRS}")
+	
 	SET(RLENVSCPP_WEBOTS ON)
 	
 ENDIF()
@@ -117,6 +122,9 @@ FILE(GLOB SRCS src/rlenvs/*.cpp
                #src/rlenvs/envs/gym_pybullet_drones/*.cpp
                src/rlenvs/envs/grid_world/*.cpp
 			   src/rlenvs/envs/connect2/*.cpp
+			   src/rlenvs/envs/webots_envs/*.cpp
+			   src/rlenvs/rigid_bodies/*.cpp
+			   src/rlenvs/rigid_bodies/webots_robots/*.cpp
 			   src/rlenvs/dynamics/*.cpp
 			   src/rlenvs/utils/*.cpp
 			   src/rlenvs/utils/io/*.cpp

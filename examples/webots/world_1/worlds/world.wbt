@@ -20,4 +20,5 @@ RectangleArena {
   wallHeight 0.05
 }
 E-puck {
+  controller "e_puck_controller"
 }
