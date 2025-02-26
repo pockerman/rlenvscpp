@@ -26,6 +26,14 @@ namespace rlenvscpp{
 namespace envs{
 namespace gymnasium {
 
+///
+/// \brief class GymnasiumEnvBase. Base class for all Gymnasium wrappers
+/// The class has two parameters:
+///
+/// TimeStepType: the type of the time step to use
+///
+/// SpaceType: The type of the space-action space
+///
 template<typename TimeStepType, typename SpaceType>
 class GymnasiumEnvBase: public EnvBase<TimeStepType, SpaceType>{
 public:

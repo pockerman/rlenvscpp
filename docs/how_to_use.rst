@@ -109,25 +109,28 @@ The following is an example how to use the
 
 
 
-In general, the environments exposed by the library  follow the semantics in <a href="https://github.com/deepmind/dm_env/blob/master/docs/index.md">Environment API and Semantics</a> specification.
+In general, the environments exposed by the library  
+follow the semantics in `Environment API and Semantics <https://github.com/deepmind/dm_env/blob/master/docs/index.md>`_ specification.
 For more details see the <a href="doc/env_spec.md">```rlenvscpp``` environment specification</a> document.
 
 The general use case is to build the library and link it with your driver code to access its functionality.
-The environments specified as using REST in the tables above, that is all ```Gymnasium```, ```gym_pybullet_drones``` and ```GymWalk``` 
+The environments specified as using REST in the tables above, that is all ``Gymnasium``, ``gym_pybullet_drones`` and ``GymWalk`` 
 environments are accessed via a client/server pattern. Namely, they are exposed via an API developed using 
-<a href="https://fastapi.tiangolo.com/">FastAPI</a>.
-You need to fire up the FastAPI server, see dependencies, before using the environments in your code. 
+`FastAPI <https://fastapi.tiangolo.com/>`_.
+You need to fire up the FastAPI server, see the dependencies, before using the environments in your code. 
 To do so
 
-``
-./start_uvicorn.sh
-``
+.. code-block::
 
-By default the ```uvicorn``` server listents on port 8001. Change this if needed. You can access the OpenAPI specification at
+   ./start_uvicorn.sh
 
-``
-http://0.0.0.0:8001/docs
-``
+
+By default the ``uvicorn`` server listents on port 8001. Change this if needed. You can access the OpenAPI specification at
+
+.. code-block::
+
+	http://0.0.0.0:8001/docs
+
 
 Note that currently the implementation is not thread/process safe i.e. if multiple threads/processes access the environment
 a global instance of the environment is manipulated. Thus no session based environment exists.
@@ -137,5 +140,5 @@ Notice that the FastAPI server only uses a single process to manage all the envi
 In addition, if  you need multiple instances of the same environment you can also  use one 
 of the exissting vectorised environments (see table above).
 
-Finally,   you can choose to launch several instances of ```uvirocrn``` (listening on different ports). 
+Finally,   you can choose to launch several instances of ``uvirocrn`` (listening on different ports). 
 However in this case you need to implement all the interactions logic yourself as currently no implementation exists to handle such a scenario.

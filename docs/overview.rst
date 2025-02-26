@@ -45,32 +45,42 @@ The Gymnasium (former OpenAI-Gym) environments utilise a REST API to communicate
 environment and ``rlenvscpp``.
 
 Some environments have a vector implementation meaning multiple instances of the same
-environment. Currently, ```rlenvscpp``` provides the following vector environments: 
+environment. Currently, ``rlenvscpp`` provides the following vector environments: 
 
-| Environment         |   Use REST   | Example                                                    |
-| :----------------   | :----------: | :----:                                                     |
-| AcrobotV            |   Yes        |  <a href="examples/example_8/example_8.cpp">example_8</a>  |
++---------------------+--------------+-----------------------------------------------------------------------------------------------------+
+| Environment         |   Use REST   | Example                                                                                             |
++=====================+==============+=====================================================================================================+
+| AcrobotV            |   Yes        |  `example_8 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_8/example_8.cpp>`_ |
++---------------------+--------------+-----------------------------------------------------------------------------------------------------+
 
-Various RL algorithms using the environments can be found at <a href="https://github.com/pockerman/cuberl/tree/master">cuberl</a>.
+Various RL algorithms using the environments can be found at `cuberl <https://github.com/pockerman/cuberl/tree/master>`_.
 
 
 Dynamics 
 ---------
 
-Apart from the exposed environments, ```rlenvscpp``` exposes classes that 
+Apart from the exposed environments, ``rlenvscpp`` exposes classes that 
 describe the dynamics of some popular rigid bodies:
 
-| Dynamics            |                       Example                                |
-| :----------------   | :----------------------------------------------------------: | 
-| Differential drive  |  <a href="examples/example_9/example_9.cpp">example_9</a>    |
-| Quadrotor           |  <a href="examples/example_10/example_10.cpp">example_10</a> |
-| Bicycle vehicle     |  TODO                                                        |
++---------------------+-------------------------------------------------------------------------------------------------------+
+| Dynamics            |                       Example                                                                         |
++=====================+=======================================================================================================+
+| Differential drive  |  `example_9 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_9/example_9.cpp>`_   |
++---------------------+-------------------------------------------------------------------------------------------------------+
+| Quadrotor           |  `example_10 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_10/example_10.cpp>`_|
++---------------------+-------------------------------------------------------------------------------------------------------+
+| Bicycle vehicle     |  TODO                                                                                                 |
++---------------------+-------------------------------------------------------------------------------------------------------+
 
 Miscellaneous
 -------------
 
-| Item                   |                       Example                                |
-| :----------------      | :----------------------------------------------------------: | 
-| Environment trajectory |  <a href="examples/example_3/example_3.cpp">example_3</a>    |
-| WaypointTrajectory     |  <a href="examples/example_11/example_11.cpp">example_11</a> |
-| TensorboardServer      |  <a href="examples/example_12/example_12.cpp">example_12</a> |
++------------------------+-------------------------------------------------------------------------------------------------------+
+| Item                   |                       Example                                                                         |
++========================+=======================================================================================================+ 
+| Environment trajectory |  `example_3 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_3/example_3.cpp>`_   |
++------------------------+-------------------------------------------------------------------------------------------------------+
+| WaypointTrajectory     |  `example_11 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_11/example_11.cpp>`_|
++------------------------+-------------------------------------------------------------------------------------------------------+
+| TensorboardServer      |  `example 12 <https://github.com/pockerman/rlenvscpp/tree/master/examples/example_12>`_               |
++------------------------+-------------------------------------------------------------------------------------------------------+

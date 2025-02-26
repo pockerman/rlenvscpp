@@ -14,21 +14,21 @@ The library has the following general dependencies
 - `Gtest  <https://github.com/google/googletest>`_  (if configured with tests)
 - `Eigen3 <https://eigen.tuxfamily.org/index.php?title=Main_Page>`_
 
-Using the Gymnasium environments requires `Gymnasium <https://github.com/Farama-Foundation/Gymnasium/tree/main>`_ 
-installed on your machine.
-In addition, you need to install
-
-- `FastAPI <https://fastapi.tiangolo.com/>`_
-- `Uvicorn <https://www.uvicorn.org/>`_
-- `Pydantic <a href="https://docs.pydantic.dev/latest/>`_
-
-By installing the requirement under ``requirements.txt`` should set your Python environment  up correctly.
 
 ``rlenvscpp`` also incorporates, see ``(src/extern)``, the following libraries
 
 - `HTTPRequest <https://github.com/elnormous/HTTPRequest>`_
 - `nlohmann/json <https://github.com/nlohmann/json>`_
 
+
+Using the Gymnasium environments requires `Gymnasium <https://github.com/Farama-Foundation/Gymnasium/tree/main>`_ 
+installed on your machine. In addition, you need to install
+
+- `FastAPI <https://fastapi.tiangolo.com/>`_
+- `Uvicorn <https://www.uvicorn.org/>`_
+- `Pydantic <a href="https://docs.pydantic.dev/latest/>`_
+
+By installing the requirement under ``requirements.txt`` should set your Python environment  up correctly.
 
 There are extra dependencies if you want to generate the documentation. Namely,
 
@@ -37,6 +37,9 @@ There are extra dependencies if you want to generate the documentation. Namely,
 - sphinx_rtd_theme
 - breathe
 - m2r2
+
+Building the code
+-----------------
 
 The usual CMake based installation process is used. Namely
 
@@ -61,11 +64,14 @@ For example enbling the examples
 	make install
 
 
-
 Run the tests
 -------------
 
 You can execute all the tests by running the helper script ``execute_tests.sh``.
+
+
+Build the documentation
+-----------------------
 
 
 Issues
