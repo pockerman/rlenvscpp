@@ -77,25 +77,25 @@ public:
 	/// the starting position of the robot e.t.c. Anything, we need 
 	/// to know to reset the environment back to each original form
 	///
-    virtual void make(const std::string& version,
-                      const std::unordered_map<std::string, std::any>& options)=0;
+    //virtual void make(const std::string& version,
+    //                  const std::unordered_map<std::string, std::any>& options)=0;
 					  
 	///
 	/// \brief close the environment
 	///
-    virtual void close()=0;
+    //virtual void close()=0;
 	
 	/// 
 	/// \brief Reset the environment
 	///
-    virtual time_step_type reset(uint_t seed,
-                                 const std::unordered_map<std::string, std::any>& options)=0;
+    //virtual time_step_type reset(uint_t seed,
+    //                             const std::unordered_map<std::string, std::any>& options)=0;
 					  
 					  
 	///
     /// \brief step. Step in the environment following the given action
     ///
-    virtual time_step_type step(const action_type& action)=0;
+    //virtual time_step_type step(const action_type& action)=0;
 
 
 protected:

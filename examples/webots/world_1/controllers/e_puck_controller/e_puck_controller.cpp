@@ -1,33 +1,17 @@
-// File:          e_puck_controller.cpp
-// Date:
-// Description:
-// Author:
-// Modifications:
-
-// You may need to add webots include files such as
-// <webots/DistanceSensor.hpp>, <webots/Motor.hpp>, etc.
-// and/or to add some other includes
-
-
-
-
-#include <webots/Robot.hpp>
-#include <iostream>
-#include <memory>
-#include <vector>
-#include <unordered_map>
-
-// we need this as all webots functionality is
-// under 
 #include "rlenvs/rlenvscpp_config.h"
-
-//#define RLENVSCPP_WEBOTS
 
 #ifdef RLENVSCPP_WEBOTS
 
 #include "rlenvs/rlenvs_types_v2.h"
 #include "rlenvs/envs/time_step.h"
 #include "rlenvs/envs/webots_envs/epuck_simple_grid_world.h"
+
+#include <webots/Robot.hpp>
+#include <iostream>
+#include <memory>
+#include <vector>
+#include <unordered_map>
+#include <any>
 
 
 #include <iostream>
@@ -37,9 +21,7 @@ using namespace webots;
 using namespace rlenvscpp;
 
 namespace webots_example_1{
-	
-
-	  
+		  
 using rlenvscpp::envs::webots_envs::EpuckSimpleGridWorld;
 	
 
@@ -64,23 +46,51 @@ int main() {
 	// create the environment
 	EpuckSimpleGridWorld env;
   
+	// create the environment...this initializes
+	// the robot sensors and motors
 	std::unordered_map<std::string, std::any> options;
-	options["right_motor_init_velocity"] = 0.25 / 2.0;
-	options["left_motor_init_velocity"] = 0.25 / 2.0;
+	options["right_motor_init_velocity"] = 0.25; // 2.0;
+	options["left_motor_init_velocity"] = 0.25; // 2.0;
 	env.make("v0", options); 
+	
+	// reset the environment...this will reload the 
+	// whole simulation world
+	//env.reset(42, std::unordered_map<std::string, std::any>());
+	
   
-           auto& robot = env.get_robot();
+	// access the robot
+	auto& robot = env.get_robot();
            
-           auto time_step = robot.get_basic_time_step();
-           std::cout<<"Basic time step used: "<<time_step<<std::endl;
+	auto time_step = robot.get_basic_time_step();
+	std::cout<<"Basic time step used: "<<time_step<<std::endl;
+	
+	auto init_odometry = robot.compute_odometry();
+	
+	std::cout<<"Init odometry: \n"<<init_odometry<<std::endl;
   
-	for(uint_t s=0; s<10; ++s){
+	for(uint_t s=0; s<15; ++s){
 		
-	    robot.step(time_step);
-		auto odometry = robot.compute_odometry();
-	    std::cout<<"odometry"<<std::endl;
+		robot.step(time_step);
+			
+		auto distances = robot.read_distance_sensors();
 		
-	}
+		for(uint_t s=0; s < distances.size(); ++s){
+				std::cout<<"Sensor: "<<s<<" distance: " << distances[s]<<std::endl;
+		}
+			
+		if(s == 10 || s == 100  || s == 200){
+				std::cout<<"Resetting the environment..."<<std::endl;
+				//env.reset(42, std::unordered_map<std::string, std::any>());
+				
+				auto odometry = robot.compute_odometry();
+				std::cout<<"With reset odometry: \n"<<odometry<<std::endl;
+		}
+		else{
+				auto odometry = robot.compute_odometry();
+				std::cout<<"odometry: \n"<<odometry<<std::endl;
+		}
+	}	
+		
   
   // get the time step of the current world.
   //int timeStep = (int)robot->getBasicTimeStep();

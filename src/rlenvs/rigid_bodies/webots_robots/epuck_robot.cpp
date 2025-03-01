@@ -2,6 +2,9 @@
 
 #ifdef RLENVSCPP_WEBOTS
 
+#include <iostream>
+#include <exception>
+
 namespace rlenvscpp{
 namespace rigid_bodies{
 namespace webots_robots{
@@ -19,7 +22,7 @@ motors_(2, nullptr),
 proximity_sensors_(EpuckRobot::DISTANCE_SENSORS_NUMBER, nullptr)
 {
 	
-	robot_ = std::make_shared<webots::Robot>();
+	robot_ = std::make_shared<webots::Supervisor>();
 }
 
 
@@ -56,6 +59,8 @@ EpuckRobot::activate_position_sensor(uint_t sensor_id, uint_t time_step){
 
 void 
 EpuckRobot::activate_proximity_sensor(const std::string& name, uint_t time_step){
+	
+	std::cout<<"Activating sensor: "<<name<<std::endl;
 	
 	if(name == "ps0"){
 		proximity_sensors_[0] = robot_ -> getDistanceSensor("ps0");
@@ -98,6 +103,60 @@ EpuckRobot::activate_proximity_sensor(const std::string& name, uint_t time_step)
 	}
 }
 
+real_t 
+EpuckRobot::get_distance_value_from_sensor(const std::string& sensor_name)const{
+	
+	if(name == "ps0"){
+		return proximity_sensors_[0] -> getValue();
+	}
+	
+	if(name == "ps1"){
+		return proximity_sensors_[1] -> getValue();
+	}
+	
+	if(name == "ps2"){
+		return proximity_sensors_[2] -> getValue();
+	}
+	
+	if(name == "ps3"){
+		return proximity_sensors_[3] -> getValue();
+	}
+	
+	if(name == "ps4"){
+		return proximity_sensors_[4] -> getValue();
+	}
+	
+	if(name == "ps5"){
+		return proximity_sensors_[5] -> getValue();
+	}
+	
+	if(name == "ps6"){
+		return proximity_sensors_[6] -> getValue();
+	}
+	
+	if(name == "ps7"){
+		return proximity_sensors_[7] -> getValue();
+	}
+}
+
+std::vector<real_t> 
+EpuckRobot::read_distance_sensors()const{
+	
+	std::vector<real_t> distances_;
+	distances_.reserve(proximity_sensors_.size());
+	
+	for(uint_t s=0; s < proximity_sensors_.size(); ++s){
+		
+		if(proximity_sensors_[s] == nullptr){
+			throw std::logic_error("Cannot read null sensor: " + std::to_string(s));
+		}
+
+		distances_.push_back(proximity_sensors_[s] -> getValue());
+	}
+	
+	return distances;
+}
+
 
 EpuckOdometry 
 EpuckRobot::compute_odometry()const{
@@ -111,12 +170,6 @@ EpuckRobot::compute_odometry()const{
   
   return EpuckOdometry(dl, dr, da);
 	
-}
-
-int_t 
-EpuckRobot::step(uint_t time_step){
-	
-	return robot_ -> step(time_step);
 }
 
 

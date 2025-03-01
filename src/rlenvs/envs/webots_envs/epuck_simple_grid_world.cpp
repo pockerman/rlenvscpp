@@ -3,6 +3,7 @@
 #ifdef RLENVSCPP_WEBOTS
 
 #include "rlenvs/envs/time_step.h"
+#include "rlenvs/envs/time_step_type.h"
 
 #include <webots/DistanceSensor.hpp>
 #include <webots/PositionSensor.hpp>
@@ -44,15 +45,50 @@ EpuckSimpleGridWorld::make(const std::string& version,
 	robot_.activate_position_sensor(0, std::any_cast<uint_t>(options_["left_pos_sensor_time_step"]));
 	robot_.activate_position_sensor(1, std::any_cast<uint_t>(options_["right_pos_sensor_time_step"]));
 	
+	// what is the 
+	
 	robot_.activate_motor(0, std::any_cast<real_t>(options_["left_motor_init_velocity"]));
 	robot_.activate_motor(1, std::any_cast<real_t>(options_["right_motor_init_velocity"]));
+	
+	for(uint_t i=0; i<8; ++i){
+		
+		auto name_s = "ps"+std::to_string(i);
+		std::cout<<"Activate proximity sensor: "<<name_s<<std::endl;
+		robot_.activate_proximity_sensor(name_s,
+		                                 std::any_cast<uint_t>(options_["distance_sensor_time_step"])); 
+	}
 	
 	// set the version and set the board
     // to created
 	this->set_version_(version);
     this->make_created_();
-							   
+}
 
+EpuckSimpleGridWorld::time_step_type 
+EpuckSimpleGridWorld::reset(uint_t /*seed*/,
+						    const std::unordered_map<std::string, std::any>& /*options*/){
+	
+
+	// reset the robot this will reset the whole
+	// simulation environment
+	robot_.reload();
+	/*robot_.activate_motor(0, std::any_cast<real_t>(options_["left_motor_init_velocity"]));
+	robot_.activate_motor(1, std::any_cast<real_t>(options_["right_motor_init_velocity"]));
+	
+	robot_.activate_position_sensor(0, std::any_cast<uint_t>(options_["left_pos_sensor_time_step"]));
+	robot_.activate_position_sensor(1, std::any_cast<uint_t>(options_["right_pos_sensor_time_step"]));
+	
+	for(uint_t i=0; i<8; ++i){
+		robot_.activate_proximity_sensor("ps"+std::to_string(i),
+		                                 std::any_cast<uint_t>(options_["distance_sensor_time_step"])); 
+	}*/
+	
+	// get the odometry
+	auto odometry = robot_.compute_odometry();
+	
+	std::vector<real_t> state{odometry.dl, odometry.dr, odometry.da};
+	return EpuckSimpleGridWorld::time_step_type(TimeStepTp::FIRST, 0.0, state);
+								
 }
 
 
@@ -101,16 +137,28 @@ EpuckSimpleGridWorld::build_make_options_(const std::unordered_map<std::string, 
 		options_["right_motor_init_velocity"] = std::any(static_cast<real_t>(0.0));
 	}
 	
+	auto ps_itr = options.find("distance_sensor_time_step");
+	if(ps_itr != options.end()){
+		options_["distance_sensor_time_step"] = ps_itr->second;
+	}
+	else{
+		options_["distance_sensor_time_step"] = this -> DEFAULT_SIM_TIME_STEP;
+	}
+	
 }
 
 
 void 
-EpuckSimpleGridWorld::close(){}
+EpuckSimpleGridWorld::close(){
+	
+}
 			
 
 
 EpuckSimpleGridWorld::time_step_type 
 EpuckSimpleGridWorld::step(const action_type& action){
+	
+	
 	
 	
 	auto distance_from_wall = distance_from_wall_();
@@ -159,6 +207,9 @@ EpuckSimpleGridWorld::step(const action_type& action){
 
 real_t 
 EpuckSimpleGridWorld::distance_from_wall_()const{
+	
+	// read all the distance sensors
+	auto distances = robot_.read_distance_sensors();
 	
 }
 

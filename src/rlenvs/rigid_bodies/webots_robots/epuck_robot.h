@@ -17,13 +17,16 @@
 #include <webots/Motor.hpp>
 #include <webots/Robot.hpp>
 
+// we need a supervisor as we want to
+// be able to reset the simulation
+#include <webots/Supervisor.hpp>
+
 #include <ostream>
 #include <memory>
 
 namespace rlenvscpp{
 namespace rigid_bodies{
 namespace webots_robots{
-	
 	
 
 struct EpuckRobotProperties{
@@ -79,6 +82,11 @@ struct EpuckRobotProperties{
 	static constexpr real_t MAX_ROTATION_SPEED = 6.28;
 };
 
+
+///
+/// \brief struct EpuckOdometry Describes the distance covered
+/// by the left and right wheels and the orientation of the robot
+///
 struct EpuckOdometry{
 	
 	///
@@ -130,6 +138,10 @@ std::ostream& operator<<(std::ostream& out, const EpuckOdometry& info){
 /// \brief class Epuck. Wrapper around webots::Robot class that specifically models
 /// an Epuck robot. The robot specification can be found at
 /// https://www.cyberbotics.com/doc/guide/epuck?version=cyberbotics:R2019a-rev1
+/// Actually this class uses webots::Supervisor instead of webots::Robot
+/// see https://cyberbotics.com/doc/reference/supervisor?tab-language=c++#wb_supervisor_world_save
+/// The webots::Supervisor gives more control over the simulation as it
+/// allows us to reload the world.
 ///
 class EpuckRobot final: protected EpuckRobotProperties 
 {
@@ -145,8 +157,9 @@ public:
 	///
 	static constexpr uint_t DEFAULT_SIM_TIME_STEP  = 32;
 	
-	
-	
+	///
+	/// \brief Expose properties of the robot
+	///
 	using EpuckRobotProperties::LEFT_POSITION_SENSOR_ID;
 	using EpuckRobotProperties::RIGHT_POSITION_SENSOR_ID;
 	using EpuckRobotProperties::WHEEL_RADIUS;
@@ -154,6 +167,7 @@ public:
 	using EpuckRobotProperties::MAX_FWD_SPEED;
 	using EpuckRobotProperties::MAX_BWD_SPEED;
 	using EpuckRobotProperties::MAX_ROTATION_SPEED;
+	using EpuckRobotProperties::DISTANCE_SENSORS_NUMBER;
 		
 	///
 	/// \brief Create an e-puck robot
@@ -163,7 +177,7 @@ public:
 	///
 	/// \brief Returns the actual webots::Robot pointer
 	///
-	std::shared_ptr<webots::Robot> get_webots_robot_prt(){return robot_;}
+	std::shared_ptr<webots::Supervisor> get_webots_robot_prt(){return robot_;}
 	
 	///
 	/// \brief Activate the motor with the given motor_id
@@ -183,7 +197,27 @@ public:
 	///
 	/// \brief Step in the simulation environment
 	///
-	int_t step(uint_t time_step);
+	int_t step(uint_t time_step){return robot_ -> step(time_step);}
+	
+	///
+	/// \brief Begin a time step
+	///
+	int_t begin_step(uint_t time_step){return robot_ -> stepBegin(time_step);}
+	
+	///
+	/// \brief End the last initiated step
+	/// 
+	int_t end_step(){return robot_ -> stepEnd();}
+	
+	///
+	/// \brief 
+	///
+	void reset(){robot_ -> simulationReset();}
+	
+	///
+	/// \brief 
+	///
+	void reload(){robot_ -> worldReload();}
 	
 	///
 	/// \brief Compute the odometry value
@@ -195,19 +229,25 @@ public:
 	///
 	uint_t get_basic_time_step()const{return robot_ -> getBasicTimeStep();}
 	
+	///
+	/// \brief Read the distance sensor with the given name
+	///
+	real_t get_distance_value_from_sensor(const std::string& sensor_name)const;
 	
-
-		
+	///
+	/// \brief Reads all the distance sensors
+	///
+	std::vector<real_t> read_distance_sensors()const;
+	
 private:
 		
 	/// pointer to the robot to manipulate
 	/// see https://cyberbotics.com/doc/reference/robot
 	///
-	std::shared_ptr<webots::Robot> robot_;
+	std::shared_ptr<webots::Supervisor> robot_;
 	
 	webots::PositionSensor* left_position_sensor_;
 	webots::PositionSensor* right_position_sensor_;
-	
 	
 	///
 	/// \brief The two motors of the robot

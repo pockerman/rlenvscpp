@@ -22,14 +22,14 @@ namespace webots_envs{
 
 using namespace rlenvscpp::rigid_bodies::webots_robots;	
 	
-typedef std::vector<real_t> state_type;
-typedef TimeStep<state_type> time_step_type;
+//typedef std::vector<real_t> state_type;
+//typedef TimeStep<state_type> time_step_type;
 
-typedef ContinuousVectorStateDiscreteActionEnv<2, // the state space has size 2 
-											  1, // the action space ends at 1
-											  0, // the action space starts at 0
-											  real_t
-											  > state_action_space_type;
+//typedef ContinuousVectorStateDiscreteActionEnv<2, // the state space has size 2 
+//											  1, // the action space ends at 1
+//											  0, // the action space starts at 0
+//											  real_t
+//											  > state_action_space_type;
 											  
 //typedef envs::webots_envs::WebotsEnvBase<time_step_type, state_action_space_type> base_type;
 											  
@@ -41,8 +41,12 @@ typedef ContinuousVectorStateDiscreteActionEnv<2, // the state space has size 2
 /// at: https://www.cyberbotics.com/doc/guide/epuck?version=cyberbotics:R2019a-rev1
 /// You can find the location of the PROTO files at: "WEBOTS_HOME/projects/robots/gctronic/e-puck/protos/E-puck.proto"
 ///
-class EpuckSimpleGridWorld final: public WebotsEnvBase<TimeStep<state_type>, 
-                                                  state_action_space_type>
+class EpuckSimpleGridWorld final: public WebotsEnvBase<TimeStep<std::vector<real_t>>, 
+                                                       ContinuousVectorStateDiscreteActionEnv<2, // the state space has size 2 
+											  1, // the action space ends at 1
+											  0, // the action space starts at 0
+											  real_t
+											  >>
 {
 
 public:
@@ -119,8 +123,8 @@ public:
 	/// 
 	/// \brief Reset the environment
 	///
-    virtual time_step_type reset(uint_t seed,
-                                 const std::unordered_map<std::string, std::any>& options)final{};
+    virtual time_step_type reset(uint_t /*seed*/,
+                                 const std::unordered_map<std::string, std::any>& /*options*/)final;
 					  
 					  
 	///
