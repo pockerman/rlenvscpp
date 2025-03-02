@@ -15,6 +15,8 @@
 #include <webots/Robot.hpp>
 
 #include <vector>
+#include <any>
+#include <exception>
 
 namespace rlenvscpp{
 namespace envs{
@@ -22,24 +24,13 @@ namespace webots_envs{
 
 using namespace rlenvscpp::rigid_bodies::webots_robots;	
 	
-//typedef std::vector<real_t> state_type;
-//typedef TimeStep<state_type> time_step_type;
-
-//typedef ContinuousVectorStateDiscreteActionEnv<2, // the state space has size 2 
-//											  1, // the action space ends at 1
-//											  0, // the action space starts at 0
-//											  real_t
-//											  > state_action_space_type;
-											  
-//typedef envs::webots_envs::WebotsEnvBase<time_step_type, state_action_space_type> base_type;
-											  
-
 ///
 /// \brief class EpuckSimpleGridWorld. Simple grid world that
 /// only assumes the presence of a differential drive robot.
 /// Specifically the e-puck robot. Checkout the robot specification
 /// at: https://www.cyberbotics.com/doc/guide/epuck?version=cyberbotics:R2019a-rev1
-/// You can find the location of the PROTO files at: "WEBOTS_HOME/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+/// You can find the location of the PROTO files at: 
+/// "WEBOTS_HOME/projects/robots/gctronic/e-puck/protos/E-puck.proto"
 ///
 class EpuckSimpleGridWorld final: public WebotsEnvBase<TimeStep<std::vector<real_t>>, 
                                                        ContinuousVectorStateDiscreteActionEnv<2, // the state space has size 2 
@@ -110,7 +101,6 @@ public:
 	/// left_pos_sensor_time_step: int If not set base_type::DEFAULT_SIM_TIME_STEP is used
 	/// rigth_pos_sensor_time_step: int If not set base_type::DEFAULT_SIM_TIME_STEP is used
 	/// 
-	///
     virtual void make(const std::string& version,
                       const std::unordered_map<std::string, std::any>& options)final;
 					  
@@ -121,7 +111,8 @@ public:
 	
 	
 	/// 
-	/// \brief Reset the environment
+	/// \brief Reset the environment. When calling reset
+	/// the whole simulation environment is reinitialized
 	///
     virtual time_step_type reset(uint_t /*seed*/,
                                  const std::unordered_map<std::string, std::any>& /*options*/)final;
@@ -132,7 +123,6 @@ public:
 	/// action = 1 means move whilst action = 0 means stop
     ///
     virtual time_step_type step(const action_type& action)override final;
-
 
 	///
 	/// \brief Create a new copy of the environment with the given
@@ -145,13 +135,17 @@ public:
     ///
     uint_t n_actions()const noexcept{return action_space_type::size;}
 	
+	///
+	/// \brief Read the option with the given name
+	///
+	template<typename T>
+	T read_option(const std::string& op_name)const;
 	
 	
 	EpuckRobot& get_robot()noexcept{return robot_;}
 	const EpuckRobot& get_robot()const noexcept{return robot_;}
 	
 private:
-	
 	
 	///
 	/// \brief The robot in the world
@@ -165,24 +159,46 @@ private:
 	std::unordered_map<std::string, std::any> options_;
 	
 	///
-	/// \brief
-	///
-	real_t distance_from_goal_;
-	
-	///
-	/// \brief Returns the distance from the wall
-	///
-	real_t distance_from_wall_()const;
-	
-	
-	///
 	/// \brief Builds the given options so that these can be used
 	/// when reseting the environment
 	///
 	void build_make_options_(const std::unordered_map<std::string, std::any>& options);
 	
+	///
+	/// \brief Set up the robot sensors
+	///
+	void activate_robot_();
+	
+	///
+	/// \brief Handles the stop command
+	///
+	time_step_type on_stop_();
+	
+	///
+	/// \brief Handles the move command
+	///
+	time_step_type on_move_();
+	
+	///
+	/// \brief Compute the reward to be returned
+	///
+	real_t compute_reward_()const;
 	
 };
+
+
+template<typename T>
+T 
+EpuckSimpleGridWorld::read_option(const std::string& op_name)const{
+	
+	auto op_itr = options_.find(op_name);
+	
+	if(op_itr != options_.end()){
+		return std::any_cast<T>(op_itr -> second);
+	}
+	
+	throw std::logic_error("Option: " + op_name + " not found");
+}
 	
 
 }

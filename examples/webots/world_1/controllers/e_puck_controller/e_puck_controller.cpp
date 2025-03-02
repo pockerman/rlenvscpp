@@ -23,7 +23,7 @@ using namespace rlenvscpp;
 namespace webots_example_1{
 		  
 using rlenvscpp::envs::webots_envs::EpuckSimpleGridWorld;
-	
+using rlenvscpp::uint_t;
 
 }
 
@@ -49,15 +49,23 @@ int main() {
 	// create the environment...this initializes
 	// the robot sensors and motors
 	std::unordered_map<std::string, std::any> options;
-	options["right_motor_init_velocity"] = 0.25; // 2.0;
-	options["left_motor_init_velocity"] = 0.25; // 2.0;
+	options["right_motor_init_velocity"] = 1.25; // 2.0;
+	options["left_motor_init_velocity"] = 1.25; // 2.0;
 	env.make("v0", options); 
+	
+	
+	auto right_pos_sensor_time_step = env.template read_option<uint_t>("right_pos_sensor_time_step");
+	std::cout<<"right_pos_sensor_time_step: "<<right_pos_sensor_time_step<<std::endl;
 	
 	// reset the environment...this will reload the 
 	// whole simulation world
-	//env.reset(42, std::unordered_map<std::string, std::any>());
+	env.reset(42, std::unordered_map<std::string, std::any>());
 	
-  
+	uint_t counter = 0;
+	while(counter < 5000000000){
+		counter++;
+	}
+	
 	// access the robot
 	auto& robot = env.get_robot();
            
@@ -68,57 +76,36 @@ int main() {
 	
 	std::cout<<"Init odometry: \n"<<init_odometry<<std::endl;
   
-	for(uint_t s=0; s<15; ++s){
+	for(uint_t s=0; s<500; ++s){
 		
-		robot.step(time_step);
+		std::cout<<"At step: "<<s<<std::endl;
+		std::cout<<"Robot left motor velocity: "<<robot.get_motor_velocity(0)<<std::endl;
+		std::cout<<"Robot right motor velocity: "<<robot.get_motor_velocity(1)<<std::endl;
+		
+		auto exit_event = robot.step(time_step);
+		
+		std::cout<<"Exit event flag is: "<<exit_event<<std::endl;
 			
 		auto distances = robot.read_distance_sensors();
 		
 		for(uint_t s=0; s < distances.size(); ++s){
 				std::cout<<"Sensor: "<<s<<" distance: " << distances[s]<<std::endl;
 		}
-			
-		if(s == 10 || s == 100  || s == 200){
-				std::cout<<"Resetting the environment..."<<std::endl;
-				//env.reset(42, std::unordered_map<std::string, std::any>());
+		
+		if( s % 20 == 0){
+			std::cout<<"Resetting the environment..."<<std::endl;
+			env.reset(42, std::unordered_map<std::string, std::any>());
 				
-				auto odometry = robot.compute_odometry();
-				std::cout<<"With reset odometry: \n"<<odometry<<std::endl;
+			auto odometry = robot.compute_odometry();
+			std::cout<<"With reset odometry: \n"<<odometry<<std::endl;
 		}
 		else{
-				auto odometry = robot.compute_odometry();
-				std::cout<<"odometry: \n"<<odometry<<std::endl;
+			auto odometry = robot.compute_odometry();
+			std::cout<<"odometry: \n"<<odometry<<std::endl;
 		}
 	}	
 		
-  
-  // get the time step of the current world.
-  //int timeStep = (int)robot->getBasicTimeStep();
-  
-  //std::cout<<"Time step size: "<<timeStep<<std::endl;
 
-  // You should insert a getDevice-like function in order to get the
-  // instance of a device of the robot. Something like:
-  //  Motor *motor = robot->getMotor("motorname");
-  //  DistanceSensor *ds = robot->getDistanceSensor("dsname");
-  //  ds->enable(timeStep);
-
-  // Main loop:
-  // - perform simulation steps until Webots is stopping the controller
-//  while (robot->step(timeStep) != -1) {
-//    // Read the sensors:
-//    // Enter here functions to read sensor data, like:
-//    //  double val = ds->getValue();
-//
-//    // Process sensor data here.
-//
-//    // Enter here functions to send actuator commands, like:
-//    //  motor->setPosition(10.0);
-//  };
-//
-//  // Enter here exit cleanup code.
-//
-//  delete robot;
   return 0;
 }
 #else

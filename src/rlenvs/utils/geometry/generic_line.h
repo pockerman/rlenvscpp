@@ -4,7 +4,7 @@
 #include "rlenvs/rlenvs_types_v2.h"
 #include "rlenvs/rlenvs_consts.h"
 #include "rlenvs/utils/geometry/geom_point.h"
-#include "rlenvs/utils/math_utils.h"
+#include "rlenvs/utils/maths/math_utils.h"
 
 #include <cmath>
 #include <stdexcept>
