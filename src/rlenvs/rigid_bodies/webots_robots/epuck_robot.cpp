@@ -16,13 +16,28 @@ const std::string EpuckRobot::name = "epuck";
 EpuckRobot::EpuckRobot()
 :
 robot_(),
-left_position_sensor_(nullptr),
-right_position_sensor_(nullptr),
+position_sensors_(2, nullptr),
 motors_(2, nullptr),
 proximity_sensors_(EpuckRobot::DISTANCE_SENSORS_NUMBER, nullptr)
 {
 	
 	robot_ = std::make_shared<webots::Supervisor>();
+}
+
+
+void 
+EpuckRobot::reset(){
+	
+	// this seems to keep the odometry
+	// always at zero!!!!
+	//robot_ -> simulationReset(); 
+	
+	robot_ -> simulationResetPhysics();
+	robot_ -> getSelf() -> resetPhysics();
+	
+	const real_t newValue[3] = {0.0, 0.0, 0.0};
+	robot_ -> getSelf() -> getField("translation")->setSFVec3f(newValue);
+	robot_ -> getFromDef("e-puck") -> getField("translation")->setSFVec3f(newValue);
 }
 
 
@@ -46,21 +61,19 @@ void
 EpuckRobot::activate_position_sensor(uint_t sensor_id, uint_t time_step){
 	
 	if(sensor_id == 0){
-		left_position_sensor_ = robot_->getPositionSensor("left wheel sensor");
-		left_position_sensor_ -> enable(time_step);
+		position_sensors_[sensor_id] = robot_->getPositionSensor("left wheel sensor");
+		position_sensors_[sensor_id] -> enable(time_step);
 	}
 	
 	if(sensor_id == 1){
-		right_position_sensor_ = robot_->getPositionSensor("right wheel sensor");
-		right_position_sensor_ -> enable(time_step);
+		position_sensors_[sensor_id] = robot_->getPositionSensor("right wheel sensor");
+		position_sensors_[sensor_id] -> enable(time_step);
 	}
 	
 }
 
 void 
 EpuckRobot::activate_proximity_sensor(const std::string& name, uint_t time_step){
-	
-	std::cout<<"Activating sensor: "<<name<<std::endl;
 	
 	if(name == "ps0"){
 		proximity_sensors_[0] = robot_ -> getDistanceSensor("ps0");
@@ -154,16 +167,35 @@ EpuckRobot::read_distance_sensors()const{
 		distances_.push_back(proximity_sensors_[s] -> getValue());
 	}
 	
-	return distances;
+	return distances_;
 }
 
+
+RBTranslation 
+EpuckRobot::get_position()const{
+	
+	const real_t *position = robot_ -> getFromDef("e-puck") -> getPosition();
+	return {position[0], position[1], position[2]}; 
+}
+
+RBRotation 
+EpuckRobot::get_orienatation()const{
+	const real_t *orientation = robot_ -> getFromDef("e-puck") -> getOrientation();
+	return {orientation[0], orientation[1], orientation[2]}; 
+}
 
 EpuckOdometry 
 EpuckRobot::compute_odometry()const{
 	
 	
-  real_t l = left_position_sensor_ -> getValue();
-  real_t r = right_position_sensor_ -> getValue(); 
+  if(position_sensors_[0] == nullptr || position_sensors_[1] == nullptr){
+	 throw std::logic_error("Cannot read null sensor"); 
+  }
+  
+  
+  
+  real_t l = position_sensors_[0] -> getValue();
+  real_t r = position_sensors_[1] -> getValue(); 
   real_t dl = l * WHEEL_RADIUS;         // distance covered by left wheel in meter
   real_t dr = r * WHEEL_RADIUS;         // distance covered by right wheel in meter
   real_t da = (dr - dl) / AXLE_LENGTH;  // delta orientation
@@ -171,6 +203,8 @@ EpuckRobot::compute_odometry()const{
   return EpuckOdometry(dl, dr, da);
 	
 }
+
+
 
 
 std::ostream& 

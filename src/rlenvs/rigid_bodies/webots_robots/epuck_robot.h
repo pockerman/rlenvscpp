@@ -11,7 +11,9 @@
 #ifdef RLENVSCPP_WEBOTS
                  
 #include "rlenvs/rlenvs_types_v2.h"
-				
+#include "rlenvs/rigid_bodies/body_translation.h"
+#include "rlenvs/rigid_bodies/body_rotation.h"
+
 #include <webots/DistanceSensor.hpp>
 #include <webots/PositionSensor.hpp>
 #include <webots/Motor.hpp>
@@ -29,6 +31,10 @@ namespace rigid_bodies{
 namespace webots_robots{
 	
 
+///
+/// \brief struct EpuckRobotProperties. Holds the properties
+/// of the e-puck robot
+///	
 struct EpuckRobotProperties{
 	
 	///
@@ -108,7 +114,6 @@ struct EpuckOdometry{
 	/// \brief Constructor
 	///
 	EpuckOdometry(real_t dl_, real_t dr_, real_t da_);
-	
 	
 	///
     /// \brief print
@@ -212,7 +217,7 @@ public:
 	///
 	/// \brief 
 	///
-	void reset(){robot_ -> simulationReset();}
+	void reset();
 	
 	///
 	/// \brief 
@@ -239,6 +244,26 @@ public:
 	///
 	std::vector<real_t> read_distance_sensors()const;
 	
+	///
+	/// \brief Returns the current velocity of
+	/// the motor
+	///
+	real_t get_motor_velocity(uint_t mid)const{return motors_[mid] -> getVelocity();}
+	
+	///
+	/// \brief Get the position of the robot
+	///
+	RBTranslation get_position()const;
+	
+	///
+	/// \brief Get the position of the robot
+	///
+	RBRotation get_orienatation()const;
+	
+	
+	webots::Motor* get_motor(uint_t m){return motors_[m];}
+	webots::PositionSensor* get_position_sensor(uint_t m){return position_sensors_[m];}
+	
 private:
 		
 	/// pointer to the robot to manipulate
@@ -246,8 +271,10 @@ private:
 	///
 	std::shared_ptr<webots::Supervisor> robot_;
 	
-	webots::PositionSensor* left_position_sensor_;
-	webots::PositionSensor* right_position_sensor_;
+	///
+	/// \brief The position sensors of the robot
+	///
+	std::vector<webots::PositionSensor*> position_sensors_;
 	
 	///
 	/// \brief The two motors of the robot
