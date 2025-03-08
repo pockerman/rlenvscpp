@@ -51,6 +51,22 @@ environment. Currently, ``rlenvscpp`` provides the following vector environments
 | AcrobotV            |   Yes        |  `example_8 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_8/example_8.cpp>`_ |
 +---------------------+--------------+-----------------------------------------------------------------------------------------------------+
 
+Webots environments
+--------------------------
+
+In order to use the Webots environments, you need to have <a href="https://cyberbotics.com/#cyberbotics">webots</a>
+installed on your machine. You also need to set the variable ``ENABLE_WEBOTS`` to ``ON`` when configuring the 
+library.
+
+
++---------------------+--------------+-----------------------------------------------------------------------------------------------------+
+| Environment         |   Use REST   | Example                                                                                             |
++=====================+==============+=====================================================================================================+
+| EpuckSimpleGridWorld|   No         |  `example_8 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_8/example_8.cpp>`_ |
++---------------------+--------------+-----------------------------------------------------------------------------------------------------+
+
+
+
 Miscellaneous environments
 --------------------------
 
