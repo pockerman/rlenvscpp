@@ -24,7 +24,10 @@ class NormalDist
 {
 	
 public:
-		
+	
+	///	
+	/// \breif The return type every time we call pdf, sample
+	///
 	typedef RealType result_type;  
 		
 	///
