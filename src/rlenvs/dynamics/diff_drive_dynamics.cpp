@@ -1,6 +1,6 @@
 #include "rlenvs/dynamics/diff_drive_dynamics.h"
 #include "rlenvs/rlenvs_consts.h"
-#include "rlenvs/utils/math_utils.h"
+#include "rlenvs/utils/maths/math_utils.h"
 #include "rlenvs/utils/std_map_utils.h"
 
 #include <cmath>
