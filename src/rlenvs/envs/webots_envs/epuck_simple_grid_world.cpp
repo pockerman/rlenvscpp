@@ -43,7 +43,6 @@ EpuckSimpleGridWorld::make(const std::string& version,
         return;
     }
 	
-	
 	build_make_options_(options);
 	activate_robot_();
 	
@@ -63,7 +62,7 @@ EpuckSimpleGridWorld::reset(uint_t /*seed*/,
 	robot_.reset(); 
 	
 	// re-activate the robot?
-	//activate_robot_();
+	activate_robot_();
 	
 	// get the odometry
 	auto odometry = robot_.compute_odometry();
@@ -77,6 +76,8 @@ EpuckSimpleGridWorld::reset(uint_t /*seed*/,
 void 
 EpuckSimpleGridWorld::build_make_options_(const std::unordered_map<std::string, std::any>& options){
 	
+	
+	std::unordered_map<std::string, std::any> options_;
 	auto sim_time_step_itr = options.find("sim_time_step");
 	
 	if(sim_time_step_itr != options.end()){
@@ -143,36 +144,51 @@ EpuckSimpleGridWorld::build_make_options_(const std::unordered_map<std::string, 
 		options_["distance_sensor_time_step"] = this -> DEFAULT_SIM_TIME_STEP;
 	}
 	
+	this->set_make_options_(options_);
+	
 }
 
 void 
 EpuckSimpleGridWorld::activate_robot_(){
 	
-	robot_.activate_position_sensor(0, std::any_cast<uint_t>(options_["left_pos_sensor_time_step"]));
-	robot_.activate_position_sensor(1, std::any_cast<uint_t>(options_["right_pos_sensor_time_step"]));
+	auto& options_ = this -> make_options();
+	auto left_pos_sensor_time_step = this -> template read_option<uint_t>("left_pos_sensor_time_step");
+	robot_.activate_position_sensor(0, std::any_cast<uint_t>(left_pos_sensor_time_step));
 	
-	// what is the 
+	auto right_pos_sensor_time_step = this -> template read_option<uint_t>("right_pos_sensor_time_step"); 
+	robot_.activate_position_sensor(1, std::any_cast<uint_t>(right_pos_sensor_time_step));
 	
-	robot_.activate_motor(0, std::any_cast<real_t>(options_["left_motor_init_velocity"]));
-	robot_.activate_motor(1, std::any_cast<real_t>(options_["right_motor_init_velocity"]));
 	
+	auto left_motor_init_velocity = this -> template read_option<real_t>("left_motor_init_velocity"); 
+	robot_.activate_motor(0, std::any_cast<real_t>(left_motor_init_velocity));
+	
+	auto right_motor_init_velocity = this -> template read_option<real_t>("right_motor_init_velocity"); 
+	robot_.activate_motor(1, std::any_cast<real_t>(right_motor_init_velocity));
+	
+	auto distance_sensor_time_step = this -> template read_option<uint_t>("distance_sensor_time_step");
 	for(uint_t i=0; i<8; ++i){
 		std::string name_s = "ps"+std::to_string(i);
-		robot_.activate_proximity_sensor(name_s,
-		                                 std::any_cast<uint_t>(options_["distance_sensor_time_step"])); 
+		robot_.activate_proximity_sensor(name_s, distance_sensor_time_step); 
 	}
-	
-	
 }
 
 
 void 
 EpuckSimpleGridWorld::close(){
 	
+	// close this world
+	robot_.stop_simulation();
+	
+	this -> base_type::close();
+}
+
+void 
+EpuckSimpleGridWorld::pause_simulation(){
+	robot_.pause_simulation();
 }
 
 real_t 
-EpuckSimpleGridWorld::compute_reward_()const{
+EpuckSimpleGridWorld::compute_reward()const{
 	
 	std::vector<real_t> dist_sensor_readings = robot_.read_distance_sensors();
 	
@@ -194,16 +210,20 @@ EpuckSimpleGridWorld::compute_reward_()const{
 		
 		auto min_reading = utils::maths::min(dist_sensor_readings);
 		auto min_dist_sensor_reading_goal = read_option<real_t>("min_dist_sensor_reading_goal");
+		
+		if(min_dist_sensor_reading_goal > min_reading && min_dist_sensor_reading_goal < max_reading){
+			return 10;
+		}
 
 		// there is a minimum reading above the min reading
 		// so this means the robot is somewhere where [min_reading, max_reading]
-		if(min_reading - min_dist_sensor_reading_goal > 1.0e-4){
-			return 10.0;
-		}
-		else{
+//		if(min_reading - min_dist_sensor_reading_goal > 1.0e-4){
+//			return 10.0;
+//		}
+//		else{
 			// is a win
-			return 1.0;
-		}
+		return 1.0;
+		//}
 	}
 }
 
@@ -212,9 +232,9 @@ EpuckSimpleGridWorld::time_step_type
 EpuckSimpleGridWorld::on_stop_(){
 	
 	auto r_position = robot_.get_position();
-	auto r_orientation = robot_.get_orienatation();
+	auto r_orientation = robot_.get_rotation();
 	
-	auto reward = compute_reward_();
+	auto reward = compute_reward();
 	std::vector<real_t> state{r_position.x, r_position.y, r_position.z,
 	                          r_orientation.x, r_orientation.y, r_orientation.z};
 	return EpuckSimpleGridWorld::time_step_type(TimeStepTp::LAST, reward, state);
@@ -225,24 +245,24 @@ EpuckSimpleGridWorld::on_move_(){
 	
 	auto sim_time_step = read_option<uint_t>("sim_time_step");
 	
+	
+	
 	/// the robot was instructed to
 	/// move
 	auto step_idx = robot_.step(sim_time_step);
 	
 	// now check the reward
-	auto reward = compute_reward_();
+	auto reward = compute_reward();
 	
 	auto r_position = robot_.get_position();
-	auto r_orientation = robot_.get_orienatation();
+	auto r_orientation = robot_.get_rotation();
 	if(reward == -1.0){
 		
 		std::vector<real_t> state{r_position.x, r_position.y, r_position.z,
 		r_orientation.x, r_orientation.y, r_orientation.z};
 		return EpuckSimpleGridWorld::time_step_type(TimeStepTp::MID, -1.0*reward, state);
-		
 	}
 	else{
-		
 		// reward == -10.0 means that the robot crashed
 		// so for the current robot velocity this wasn't the best
 		// choice
@@ -252,7 +272,6 @@ EpuckSimpleGridWorld::on_move_(){
 			return EpuckSimpleGridWorld::time_step_type(TimeStepTp::LAST, reward, state);
 		}
 		else{
-			
 			// this is reward == 10 this is winning
 			// but the robot has to actually call stop
 			// so we just give reward 1.0
@@ -260,7 +279,6 @@ EpuckSimpleGridWorld::on_move_(){
 			r_orientation.x, r_orientation.y, r_orientation.z};
 			return EpuckSimpleGridWorld::time_step_type(TimeStepTp::MID, 1.0, state);
 		}
-		
 	}
 }
 
@@ -274,12 +292,13 @@ EpuckSimpleGridWorld::step(const action_type& action){
 	if(action == 0){
 		
 		// the robot was instructed to
-		// stop. 
-		return on_stop_();
-		
+		// stop.
+		this -> get_current_time_step_ () = on_stop_();
+		return this -> get_current_time_step_ ();
 	}
 	
-	return on_move_();
+	this -> get_current_time_step_ () = on_move_();
+	return this -> get_current_time_step_ ();
 	
 	
 }

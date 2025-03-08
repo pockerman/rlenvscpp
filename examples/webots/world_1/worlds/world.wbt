@@ -19,7 +19,7 @@ RectangleArena {
   floorTileSize 0.25 0.25
   wallHeight 0.05
 }
-E-puck {
-  controller "<extern>"
+DEF e-puck E-puck {
+  controller "e_puck_controller"
   supervisor TRUE
 }

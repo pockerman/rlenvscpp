@@ -1,6 +1,10 @@
 #ifndef EPUCK_SIMPLE_GRID_WORLD_H
 #define EPUCK_SIMPLE_GRID_WORLD_H
 
+///
+/// \file epuck_simple_grid_world.h
+///
+
 #include "rlenvs/rlenvscpp_config.h"
 
 #ifdef RLENVSCPP_WEBOTS
@@ -90,7 +94,6 @@ public:
     /// 
 	EpuckSimpleGridWorld();
 	
-	
 	///
 	/// \brief make. Builds the environment. 
 	/// In the context of Webots means getting the basic timestep
@@ -102,20 +105,34 @@ public:
 	/// rigth_pos_sensor_time_step: int If not set base_type::DEFAULT_SIM_TIME_STEP is used
 	/// 
     virtual void make(const std::string& version,
-                      const std::unordered_map<std::string, std::any>& options)final;
+                      const std::unordered_map<std::string, std::any>& options)override final;
 					  
 	///
-	/// \brief close the environment
+	/// \brief close the environment. This will close the simulator
+	/// window also. Prefer the pause_world
 	///
-    virtual void close()final;
+    virtual void close() override final;
 	
+	///
+	/// \brief pauses the webots simulation
+	///
+	virtual void pause_simulation()override final;
 	
 	/// 
 	/// \brief Reset the environment. When calling reset
 	/// the whole simulation environment is reinitialized
 	///
     virtual time_step_type reset(uint_t /*seed*/,
-                                 const std::unordered_map<std::string, std::any>& /*options*/)final;
+                                 const std::unordered_map<std::string, std::any>& /*options*/)override final;
+								 
+	///
+	/// \brief Reset the environment always using the same seed
+	/// TODO: For some real the webots simulator does not see this
+	/// from the base class so I have to copy it here
+	///
+    time_step_type reset(){
+        return reset( this -> base_type::DEFAULT_ENV_SEED, std::unordered_map<std::string, std::any>());
+	}
 					  
 					  
 	///
@@ -125,24 +142,23 @@ public:
     virtual time_step_type step(const action_type& action)override final;
 
 	///
-	/// \brief Create a new copy of the environment with the given
-	/// copy index
-	///
-	EpuckSimpleGridWorld make_copy(uint_t cidx)const{}
-	
-	///
     /// \brief n_actions. Returns the number of actions
     ///
     uint_t n_actions()const noexcept{return action_space_type::size;}
 	
 	///
-	/// \brief Read the option with the given name
+	/// \brief Compute the reward to be returned
 	///
-	template<typename T>
-	T read_option(const std::string& op_name)const;
-	
-	
+	real_t compute_reward()const;
+
+	///
+	/// \brief Read/write reference to the underlying robot
+	///
 	EpuckRobot& get_robot()noexcept{return robot_;}
+	
+	///
+	/// \brief Read reference to the underlying robot
+	///
 	const EpuckRobot& get_robot()const noexcept{return robot_;}
 	
 private:
@@ -151,12 +167,6 @@ private:
 	/// \brief The robot in the world
 	///
 	EpuckRobot robot_;
-	
-	///
-	/// \brief The options we use to initialize the world.
-	/// These options are used as well as when reset is called
-	///
-	std::unordered_map<std::string, std::any> options_;
 	
 	///
 	/// \brief Builds the given options so that these can be used
@@ -178,28 +188,7 @@ private:
 	/// \brief Handles the move command
 	///
 	time_step_type on_move_();
-	
-	///
-	/// \brief Compute the reward to be returned
-	///
-	real_t compute_reward_()const;
-	
 };
-
-
-template<typename T>
-T 
-EpuckSimpleGridWorld::read_option(const std::string& op_name)const{
-	
-	auto op_itr = options_.find(op_name);
-	
-	if(op_itr != options_.end()){
-		return std::any_cast<T>(op_itr -> second);
-	}
-	
-	throw std::logic_error("Option: " + op_name + " not found");
-}
-	
 
 }
 }

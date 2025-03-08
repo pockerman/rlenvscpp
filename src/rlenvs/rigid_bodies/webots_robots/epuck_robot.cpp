@@ -20,7 +20,6 @@ position_sensors_(2, nullptr),
 motors_(2, nullptr),
 proximity_sensors_(EpuckRobot::DISTANCE_SENSORS_NUMBER, nullptr)
 {
-	
 	robot_ = std::make_shared<webots::Supervisor>();
 }
 
@@ -32,12 +31,24 @@ EpuckRobot::reset(){
 	// always at zero!!!!
 	//robot_ -> simulationReset(); 
 	
+	// this makes everything crash
+	//robot_ -> getSelf() -> restartController();
+	
+	// I cannot create a new instance as the simulator
+	// throws: Only one instance of the Robot class should be created
+	//robot_ = std::make_shared<webots::Supervisor>();
 	robot_ -> simulationResetPhysics();
 	robot_ -> getSelf() -> resetPhysics();
+	robot_ -> getFromDef("e-puck") -> resetPhysics();
 	
-	const real_t newValue[3] = {0.0, 0.0, 0.0};
-	robot_ -> getSelf() -> getField("translation")->setSFVec3f(newValue);
-	robot_ -> getFromDef("e-puck") -> getField("translation")->setSFVec3f(newValue);
+	const real_t new_translation[3] = {0.0, 0.0, 0.0};
+	robot_ -> getSelf() -> getField("translation") -> setSFVec3f(new_translation);
+	robot_ -> getFromDef("e-puck") -> getField("translation")->setSFVec3f(new_translation);
+	
+	// x, y, z, angle
+	const real_t new_rotation[4] = {0.0, 0.0, 1.0, 0.0};
+	robot_ -> getSelf() -> getField("rotation") -> setSFRotation(new_rotation);
+	robot_ -> getFromDef("e-puck") -> getField("rotation")->setSFRotation(new_rotation);
 }
 
 
@@ -150,6 +161,8 @@ EpuckRobot::get_distance_value_from_sensor(const std::string& sensor_name)const{
 	if(name == "ps7"){
 		return proximity_sensors_[7] -> getValue();
 	}
+	
+	throw std::logic_error("Invalid sensor name: " + sensor_name);
 }
 
 std::vector<real_t> 
@@ -166,7 +179,6 @@ EpuckRobot::read_distance_sensors()const{
 
 		distances_.push_back(proximity_sensors_[s] -> getValue());
 	}
-	
 	return distances_;
 }
 
@@ -174,13 +186,18 @@ EpuckRobot::read_distance_sensors()const{
 RBTranslation 
 EpuckRobot::get_position()const{
 	
-	const real_t *position = robot_ -> getFromDef("e-puck") -> getPosition();
+	//const real_t *position = robot_ -> getFromDef("e-puck") -> getPosition(); //getSelf() -> getPosition(); 
+	//getFromDef("e-puck") -> getPosition();
+	const real_t *position = robot_ -> getSelf() -> getField("translation") -> getSFVec3f(); //getPosition(); 
 	return {position[0], position[1], position[2]}; 
 }
 
 RBRotation 
-EpuckRobot::get_orienatation()const{
-	const real_t *orientation = robot_ -> getFromDef("e-puck") -> getOrientation();
+EpuckRobot::get_rotation()const{
+	// review this and fix this function
+	// https://cyberbotics.com/doc/reference/supervisor?tab-language=c++#wb_supervisor_node_get_orientation
+	const real_t *orientation = robot_ -> getSelf() -> getOrientation(); 
+	//getgetFromDef("e-puck") -> getOrientation();
 	return {orientation[0], orientation[1], orientation[2]}; 
 }
 
@@ -192,8 +209,6 @@ EpuckRobot::compute_odometry()const{
 	 throw std::logic_error("Cannot read null sensor"); 
   }
   
-  
-  
   real_t l = position_sensors_[0] -> getValue();
   real_t r = position_sensors_[1] -> getValue(); 
   real_t dl = l * WHEEL_RADIUS;         // distance covered by left wheel in meter
@@ -203,9 +218,6 @@ EpuckRobot::compute_odometry()const{
   return EpuckOdometry(dl, dr, da);
 	
 }
-
-
-
 
 std::ostream& 
 EpuckOdometry::print(std::ostream& out)const noexcept{

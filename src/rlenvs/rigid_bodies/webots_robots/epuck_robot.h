@@ -225,6 +225,16 @@ public:
 	void reload(){robot_ -> worldReload();}
 	
 	///
+	/// \brief Stop the simulation
+	///
+	void stop_simulation(){robot_ -> simulationQuit(EXIT_SUCCESS);}
+	
+	///
+	/// \brief Pause the simulation of this robot
+	///
+	void pause_simulation(){robot_ -> simulationSetMode(webots::Supervisor::SIMULATION_MODE_PAUSE);}
+	
+	///
 	/// \brief Compute the odometry value
 	///
 	EpuckOdometry compute_odometry()const;
@@ -258,7 +268,7 @@ public:
 	///
 	/// \brief Get the position of the robot
 	///
-	RBRotation get_orienatation()const;
+	RBRotation get_rotation()const;
 	
 	
 	webots::Motor* get_motor(uint_t m){return motors_[m];}

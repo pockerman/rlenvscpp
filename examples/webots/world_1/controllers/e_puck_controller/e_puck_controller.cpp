@@ -6,15 +6,16 @@
 #include "rlenvs/envs/time_step.h"
 #include "rlenvs/envs/webots_envs/epuck_simple_grid_world.h"
 
-#include <webots/Robot.hpp>
 #include <iostream>
 #include <memory>
 #include <vector>
 #include <unordered_map>
 #include <any>
+#include <exception>
+#include <chrono>
+#include <thread>
 
 
-#include <iostream>
 
 // All the webots classes are defined in the "webots" namespace
 using namespace webots;
@@ -39,72 +40,93 @@ int main() {
 	
    using namespace webots_example_1;
    
-   
-	// create the Robot instance.
-	//std::shared_ptr<Robot> robot = std::make_shared<Robot>();// Robot();
-  
-	// create the environment
-	EpuckSimpleGridWorld env;
-  
-	// create the environment...this initializes
-	// the robot sensors and motors
-	std::unordered_map<std::string, std::any> options;
-	options["right_motor_init_velocity"] = 1.25; // 2.0;
-	options["left_motor_init_velocity"] = 1.25; // 2.0;
-	env.make("v0", options); 
-	
-	
-	auto right_pos_sensor_time_step = env.template read_option<uint_t>("right_pos_sensor_time_step");
-	std::cout<<"right_pos_sensor_time_step: "<<right_pos_sensor_time_step<<std::endl;
-	
-	// reset the environment...this will reload the 
-	// whole simulation world
-	env.reset(42, std::unordered_map<std::string, std::any>());
-	
-	uint_t counter = 0;
-	while(counter < 5000000000){
-		counter++;
-	}
-	
-	// access the robot
-	auto& robot = env.get_robot();
-           
-	auto time_step = robot.get_basic_time_step();
-	std::cout<<"Basic time step used: "<<time_step<<std::endl;
-	
-	auto init_odometry = robot.compute_odometry();
-	
-	std::cout<<"Init odometry: \n"<<init_odometry<<std::endl;
-  
-	for(uint_t s=0; s<500; ++s){
+   try
+   {
+		// create the environment
+		EpuckSimpleGridWorld env;
+	  
+		// create the environment...this initializes
+		// the robot sensors and motors
+		std::unordered_map<std::string, std::any> options;
+		options["right_motor_init_velocity"] = 1.25; // 2.0;
+		options["left_motor_init_velocity"] = 1.25; // 2.0;
+		options["sim_time_step"] = std::any(static_cast<uint_t>(64));
 		
-		std::cout<<"At step: "<<s<<std::endl;
-		std::cout<<"Robot left motor velocity: "<<robot.get_motor_velocity(0)<<std::endl;
-		std::cout<<"Robot right motor velocity: "<<robot.get_motor_velocity(1)<<std::endl;
+		// above this reading we assume there is a wall
+		options["max_dist_sensor_reading_goal"] = 120.0;
 		
-		auto exit_event = robot.step(time_step);
+		// we don't want the robot to be far away from the
+		// wall either
+		options["min_dist_sensor_reading_goal"] = 80.0;
+ 
+		env.make("v0", options); 
+
+		// reset the environment...this will reload the 
+		// whole simulation world
+		env.reset();
 		
-		std::cout<<"Exit event flag is: "<<exit_event<<std::endl;
+		// access the robot
+		auto& robot = env.get_robot();
+		
+		auto time_step = robot.get_basic_time_step();
+		std::cout<<"Basic time step used: "<<time_step<<std::endl;
+		
+		real_t total_reward = 0.0;
+		
+		// do 500 episodes 270
+		for(uint_t e=0; e<272; ++e){
 			
-		auto distances = robot.read_distance_sensors();
+			std::cout<<"At step: "<<e<<std::endl;
+			std::cout<<"Robot left motor velocity: "<<robot.get_motor_velocity(0)<<std::endl;
+			std::cout<<"Robot right motor velocity: "<<robot.get_motor_velocity(1)<<std::endl;
+			
+			auto r_position = robot.get_position();
 		
-		for(uint_t s=0; s < distances.size(); ++s){
-				std::cout<<"Sensor: "<<s<<" distance: " << distances[s]<<std::endl;
-		}
+			std::cout<<"Robot position: "<<r_position<<std::endl;
 		
-		if( s % 20 == 0){
-			std::cout<<"Resetting the environment..."<<std::endl;
-			env.reset(42, std::unordered_map<std::string, std::any>());
+			// what is the max reward
+			auto reward = env.compute_reward();
+			std::cout<<"Reward predicted: "<<reward<<std::endl;
+			
+			// move forward unless the
+			// reward is the highest
+			auto action = 1;
+			if(reward == 10.0){
+				action = 0;
+			}
+			
+			std::cout<<"Executing action: "<<action<<std::endl;
+			
+			// step in the environment
+			auto time_step = env.step(action);
 				
-			auto odometry = robot.compute_odometry();
-			std::cout<<"With reset odometry: \n"<<odometry<<std::endl;
+			total_reward += time_step.reward();
+			
+			std::cout<<"Total reward at episode: "<<e<<" "<<total_reward<<std::endl;
+			
+			auto distances = robot.read_distance_sensors();
+			for(uint_t s=0; s < distances.size(); ++s){
+					std::cout<<"Sensor: "<<s<<" distance: " << distances[s]<<std::endl;
+			}
+			
+			if(time_step.done()){
+				
+				std::cout<<"Reset the environment..."<<std::endl;
+				env.reset();
+				break;
+			}
 		}
-		else{
-			auto odometry = robot.compute_odometry();
-			std::cout<<"odometry: \n"<<odometry<<std::endl;
-		}
-	}	
+
+		std::cout<<"Total reward "<<total_reward<<std::endl;
 		
+		// this will quit the simulation window
+		//env.close();
+		std::this_thread::sleep_for(std::chrono::milliseconds(2));
+		env.pause_simulation();
+   }
+   catch(const std::logic_error& e){
+	   std::cout<<e.what()<<std::endl;
+   }
 
   return 0;
 }
