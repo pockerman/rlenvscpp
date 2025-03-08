@@ -55,7 +55,7 @@ environment. Currently, ``rlenvscpp`` provides the following vector environments
 Webots environments
 --------------------------
 
-In order to use the Webots environments, you need to have <a href="https://cyberbotics.com/#cyberbotics">webots</a>
+In order to use the Webots environments, you need to have `webots <https://cyberbotics.com/#cyberbotics>`_
 installed on your machine. You also need to set the variable ``ENABLE_WEBOTS`` to ``ON`` when configuring the 
 library.
 
@@ -63,7 +63,7 @@ library.
 +---------------------+--------------+-----------------------------------------------------------------------------------------------------+
 | Environment         |   Use REST   | Example                                                                                             |
 +=====================+==============+=====================================================================================================+
-| EpuckSimpleGridWorld|   No         |  `example_8 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_8/example_8.cpp>`_ |
+| EpuckSimpleGridWorld|   No         |  `world 1 <https://github.com/pockerman/rlenvscpp/blob/master/examples/webots/world_1/controllers/e_puck_controller/e_puck_controller.cpp>`_ |
 +---------------------+--------------+-----------------------------------------------------------------------------------------------------+
 
 Working with webots-based environments is a bit different. See the dedicated instructions.
