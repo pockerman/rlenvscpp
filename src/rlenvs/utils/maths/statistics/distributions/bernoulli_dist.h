@@ -19,7 +19,7 @@ public:
 	///	
 	/// \breif The return type every time we call pdf, sample
 	///
-	typedef real_t result_type;  
+	typedef bool result_type;  
 	
 	///
 	/// \brief Constructor
@@ -49,12 +49,12 @@ public:
 	///
 	/// \brief The mean value of the distribution
 	///
-	result_type mean()const{return p_;}
+	real_t mean()const{return p_;}
 	
 	///
 	/// \brief The STD of the distribution
 	///
-	result_type std()const{return p_*(1.0 - p_);}
+	real_t std()const{return p_*(1.0 - p_);}
 	
 private:
 	

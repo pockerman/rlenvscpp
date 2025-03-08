@@ -6,10 +6,13 @@ using  C++. In addition, the library provides various utilities such as experime
 representing trajectories  via waypoints and simple implementation of popular dynamics such as 
 quadrotor dynamics.
 
-Environments
-------------
+Various RL algorithms using the environments can be found at `cuberl <https://github.com/pockerman/cuberl/tree/master>`_.
 
-Currently, ``rlenvscpp`` provides the following environments:
+Gymnasium environments
+-----------------------
+
+Currently, ``rlenvscpp`` provides the following environments.
+Note that you will need to have Gymnasium installed.
 
 +---------------------+--------------+-----------------------------------------------------------------------------------------------------+
 | Environment         |   Use REST   | Example                                                                                             |
@@ -32,17 +35,12 @@ Currently, ``rlenvscpp`` provides the following environments:
 +---------------------+--------------+-----------------------------------------------------------------------------------------------------+
 | Acrobot             |   Yes        | TODO                                                                                                |
 +---------------------+--------------+-----------------------------------------------------------------------------------------------------+
-| GymWalk             |   Yes        | TODO                                                                                                |
-+---------------------+--------------+-----------------------------------------------------------------------------------------------------+
-| gym-pybullet-drones |  TODO        | TODO                                                                                                |
-+---------------------+--------------+-----------------------------------------------------------------------------------------------------+
-| GridWorld           |   No         | `example_1 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_5/example_5.cpp>`_  |
-+---------------------+--------------+-----------------------------------------------------------------------------------------------------+
-| Connect2            |   No         | `example_1 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_7/example_7.cpp>`_  |
-+---------------------+--------------+-----------------------------------------------------------------------------------------------------+
 
 The Gymnasium (former OpenAI-Gym) environments utilise a REST API to communicate requests to/from the 
 environment and ``rlenvscpp``.
+
+Gymnasium vector environments
+-----------------------------
 
 Some environments have a vector implementation meaning multiple instances of the same
 environment. Currently, ``rlenvscpp`` provides the following vector environments: 
@@ -53,8 +51,22 @@ environment. Currently, ``rlenvscpp`` provides the following vector environments
 | AcrobotV            |   Yes        |  `example_8 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_8/example_8.cpp>`_ |
 +---------------------+--------------+-----------------------------------------------------------------------------------------------------+
 
-Various RL algorithms using the environments can be found at `cuberl <https://github.com/pockerman/cuberl/tree/master>`_.
+Miscellaneous environments
+--------------------------
 
++---------------------+--------------+-----------------------------------------------------------------------------------------------------+
+| Environment         |   Use REST   | Example                                                                                             |
++=====================+==============+=====================================================================================================+
+| GymWalk             |   Yes        | TODO                                                                                                |
++---------------------+--------------+-----------------------------------------------------------------------------------------------------+
+| gym-pybullet-drones |  TODO        | TODO                                                                                                |
++---------------------+--------------+-----------------------------------------------------------------------------------------------------+
+| GridWorld           |   No         | `example_5 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_5/example_5.cpp>`_  |
++---------------------+--------------+-----------------------------------------------------------------------------------------------------+
+| Connect2            |   No         | `example_7 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_7/example_7.cpp>`_  |
++---------------------+--------------+-----------------------------------------------------------------------------------------------------+
+| MultiArmedBandits   |   No         | TODO                                                                                                |
++---------------------+--------------+-----------------------------------------------------------------------------------------------------+
 
 Dynamics 
 ---------

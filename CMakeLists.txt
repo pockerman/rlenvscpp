@@ -102,6 +102,7 @@ FILE(GLOB SRCS src/rlenvs/*.cpp
                src/rlenvs/envs/gymnasium/classic_control/*.cpp
                src/rlenvs/envs/gymnasium/classic_control/vector/*.cpp
                src/rlenvs/envs/gdrl/*.cpp
+			   src/rlenvs/envs/multi_armed_bandits/*.cpp
                #src/rlenvs/envs/gym_pybullet_drones/*.cpp
                src/rlenvs/envs/grid_world/*.cpp
 			   src/rlenvs/envs/connect2/*.cpp
@@ -109,6 +110,7 @@ FILE(GLOB SRCS src/rlenvs/*.cpp
 			   src/rlenvs/utils/*.cpp
 			   src/rlenvs/utils/io/*.cpp
 			   src/rlenvs/utils/io/tensor_board_server/*.cpp
+			   src/rlenvs/utils/maths/statistics/distributions/*.cpp
 			   src/rlenvs/utils/geometry/*.cpp
 			   src/rlenvs/utils/geometry/shapes/*.cpp
 			   src/rlenvs/utils/geometry/mesh/*.cpp

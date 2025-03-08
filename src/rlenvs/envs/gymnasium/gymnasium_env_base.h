@@ -1,6 +1,10 @@
 #ifndef GYMNASIUM_ENV_BASE_H
 #define GYMNASIUM_ENV_BASE_H
 
+///
+/// \file gymnasium/gymnasium_env_base.h
+///
+
 
 #include "rlenvs/rlenvs_types_v2.h"
 #include "rlenvs/rlenvscpp_config.h"

@@ -36,6 +36,9 @@ public:
 	static_assert(std::is_default_constructible<TimeStepType>::value && "TimeStepType should be default constructible");
 	static_assert(std::is_default_constructible<SpaceType>::value && "SpaceType should be default constructible");
 	
+	///
+	/// \brief Default seed to use
+	///
 	static const uint_t DEFAULT_ENV_SEED = 42;
 
 	///
@@ -117,6 +120,11 @@ public:
 	/// \brief Returns the name of the environment
 	///
     std::string env_name()const noexcept{return name_;}
+	
+	///
+	/// \brief Returns a read reference to the options passed when calling make
+	///
+	const std::unordered_map<std::string, std::any>& make_options()const noexcept{return make_options_;}
 
     ///
 	/// \brief Returns the index of the environment that is active within
@@ -143,6 +151,11 @@ protected:
 	/// To be called only when the make is called
 	///
     void set_version_(const std::string& version )noexcept{version_ = version;}
+	
+	///
+	/// \brief Set the make options
+	///
+	void set_make_options_(const std::unordered_map<std::string, std::any>& options) noexcept{make_options_ = options;}
 
 	///
 	/// \brief 
@@ -180,6 +193,11 @@ private:
     const std::string name_;
 	
 	///
+	/// \brief Copy of the options upon calling make
+	///
+	std::unordered_map<std::string, std::any> make_options_;
+	
+	///
     /// \brief current_state
     ///
     time_step_type current_state_;
@@ -209,6 +227,13 @@ version_(other.version_),
 name_(other.name_),
 current_state_()
 {}
+
+template<typename TimeStepType, typename SpaceType>
+void
+EnvBase<TimeStepType, SpaceType>::close(){
+	
+	this -> is_created_ = false;
+}
 
 }
 }
