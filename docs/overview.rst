@@ -1,5 +1,6 @@
 
-# rlenvscpp
+``rlenvscpp``
+===============
 
 ``rlenvscpp`` is an effort to provide implementations and wrappers of environments suitable for training reinforcement learning agents
 using  C++. In addition, the library provides various utilities such as experiment tracking,
@@ -65,7 +66,7 @@ library.
 | EpuckSimpleGridWorld|   No         |  `example_8 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_8/example_8.cpp>`_ |
 +---------------------+--------------+-----------------------------------------------------------------------------------------------------+
 
-
+Working with webots-based environments is a bit different. See the dedicated instructions.
 
 Miscellaneous environments
 --------------------------
