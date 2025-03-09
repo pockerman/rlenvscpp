@@ -1,6 +1,6 @@
 #include "rlenvs/dynamics/quadrotor_dynamics.h"
 #include "rlenvs/rlenvs_consts.h"
-#include "rlenvs/utils/math_utils.h"
+#include "rlenvs/utils/maths/math_utils.h"
 #include <cmath>
 
 namespace rlenvscpp{

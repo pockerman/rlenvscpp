@@ -16,6 +16,7 @@
 #include <string>
 #include <memory>
 #include <type_traits>
+#include <exception>
 
 namespace rlenvscpp{
 namespace envs{
@@ -125,6 +126,12 @@ public:
 	/// \brief Returns a read reference to the options passed when calling make
 	///
 	const std::unordered_map<std::string, std::any>& make_options()const noexcept{return make_options_;}
+	
+	///
+	/// \brief Read the option with the given name
+	///
+	template<typename T>
+	T read_option(const std::string& op_name)const;
 
     ///
 	/// \brief Returns the index of the environment that is active within
@@ -144,7 +151,6 @@ protected:
 	/// \brief Copy constructor
 	///
 	EnvBase(const EnvBase&);
-
 
     ///
 	/// \brief Helper function to set the version. 
@@ -231,8 +237,20 @@ current_state_()
 template<typename TimeStepType, typename SpaceType>
 void
 EnvBase<TimeStepType, SpaceType>::close(){
-	
 	this -> is_created_ = false;
+}
+
+template<typename TimeStepType, typename SpaceType>
+template<typename T>
+T 
+EnvBase<TimeStepType, SpaceType>::read_option(const std::string& op_name)const{
+	
+	auto op_itr = make_options_.find(op_name);
+	if(op_itr != make_options_.end()){
+		return std::any_cast<T>(op_itr -> second);
+	}
+	
+	throw std::logic_error("Option: " + op_name + " not found");
 }
 
 }

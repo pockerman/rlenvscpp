@@ -7,5 +7,7 @@
 /*Use PyTorch */
 #cmakedefine USE_PYTORCH
 
+#cmakedefine RLENVSCPP_WEBOTS
+
 #endif
 
