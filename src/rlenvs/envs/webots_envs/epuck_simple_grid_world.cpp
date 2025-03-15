@@ -1,7 +1,8 @@
-#include "rlenvs/envs/webots_envs/epuck_simple_grid_world.h"
+#include "rlenvs/rlenvscpp_config.h"
 
 #ifdef RLENVSCPP_WEBOTS
 
+#include "rlenvs/envs/webots_envs/epuck_simple_grid_world.h"
 #include "rlenvs/envs/time_step.h"
 #include "rlenvs/envs/time_step_type.h"
 #include "rlenvs/utils/maths/math_utils.h"

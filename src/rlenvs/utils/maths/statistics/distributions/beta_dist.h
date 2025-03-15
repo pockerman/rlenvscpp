@@ -3,7 +3,7 @@
 
 #include "rlenvs/rlenvs_types_v2.h"
 #include "rlenvs/rlenvs_consts.h"
-#include "rlevns/utils/maths/math_utils.h"
+#include "rlenvs/utils/maths/math_utils.h"
 
 #include <boost/random/beta_distribution.hpp>
 
@@ -28,7 +28,7 @@ class BetaDist
 {
 public:
 	
-	static_assert(is_floating_point<RealType>::value, "Not a floating point type");
+	static_assert(std::is_floating_point<RealType>::value, "Not a floating point type");
 
 	///	
 	/// \breif The return type every time we call pdf, sample
@@ -69,14 +69,35 @@ public:
 	/// \brief The mean value of the distribution
 	/// see https://en.wikipedia.org/wiki/Beta_distribution
 	///
-	result_type mean()const{return dist_.alpha / (dist_.alpha() + dist_.beta());}
+	result_type mean()const{return dist_.alpha() / (dist_.alpha() + dist_.beta());}
 	
 	///
 	/// \brief The variance of the distribution.
 	/// see https://en.wikipedia.org/wiki/Beta_distribution
 	///
-	result_type variance()const{return dist_.stddev();}
-			
+	result_type variance()const;
+	
+	///
+	/// \brief Returns the alpha parameter of the distribution
+	///
+	result_type alpha()const{return dist_.alpha();}
+	
+	///
+	/// \brief Returns the beta parameter of the distribution
+	///
+	result_type beta()const{return dist_.beta();}
+	
+	///
+	/// \brief Reset the underlying distribution
+	///
+	void reset(){dist_.reset();}
+	
+	///
+	/// \brief Reset the underlying distribution
+	/// with new alpha beta
+	///
+	void reset(result_type a, result_type b);
+	
 private:
 	
 	///
@@ -84,7 +105,7 @@ private:
 	/// as the API exposes const methods and the compiler 
 	/// complains
 	///
-	mutable boost::beta_distribution<RealType> dist_;
+	mutable boost::random::beta_distribution<RealType> dist_;
 	
 };
 
@@ -95,10 +116,18 @@ BetaDist<RealType>::BetaDist(RealType alpha, RealType beta)
 dist_(alpha, beta)
 {}
 
+
+template<typename RealType>	
+void
+BetaDist<RealType>::reset(result_type a, result_type b){
+	
+	dist_ = boost::random::beta_distribution<RealType>(a, b);
+}
+
 template<typename RealType>	
 RealType 
 BetaDist<RealType>::variance()const{
-	auto a = dist_.alpha()
+	auto a = dist_.alpha();
 	auto b = dist_.beta();
 	return a*b / (utils::maths::sqr(a + b)*(a + b + 1) );
 }

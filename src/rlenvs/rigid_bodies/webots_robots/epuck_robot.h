@@ -2,7 +2,7 @@
 #define EPUCK_ROBOT_H
 
 ///
-/// \file webots_robots/epuck_robot.h
+/// \file epuck_robot.h
 ///
 
 

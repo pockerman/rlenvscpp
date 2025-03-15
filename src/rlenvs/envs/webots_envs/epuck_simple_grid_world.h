@@ -88,6 +88,8 @@ public:
 	/// \brief The type of the state
 	///
 	typedef typename base_type::state_type state_type;
+	
+	using base_type::reset;
 
 	///
 	/// \brief Constructor
@@ -130,9 +132,9 @@ public:
 	/// TODO: For some real the webots simulator does not see this
 	/// from the base class so I have to copy it here
 	///
-    time_step_type reset(){
-        return reset( this -> base_type::DEFAULT_ENV_SEED, std::unordered_map<std::string, std::any>());
-	}
+//    time_step_type reset(){
+//        return reset( this -> base_type::DEFAULT_ENV_SEED, std::unordered_map<std::string, std::any>());
+//	}
 					  
 					  
 	///

@@ -11,7 +11,10 @@ namespace rlenvscpp {
 namespace utils{
 namespace maths {
 namespace stats {
-	
+
+///
+/// \brief class BernoulliDist. Wrapper to std::bernoulli_distribution
+///	
 class BernoulliDist
 {
 public:
@@ -24,7 +27,7 @@ public:
 	///
 	/// \brief Constructor
 	///
-	explicit BernoulliDist(result_type p=0.5);
+	explicit BernoulliDist(real_t p=0.5);
 		
 	///
 	/// \brief Sample from the distribution
@@ -56,9 +59,19 @@ public:
 	///
 	real_t std()const{return p_*(1.0 - p_);}
 	
+	///
+	/// \brief Reset the underlying distribution
+	///
+	void reset(){dist_.reset();}
+	
+	///
+	/// \brief Reset the distribution with a new p
+	///
+	void reset(real_t p);
+	
 private:
 	
-	const real_t p_;
+	real_t p_;
 	mutable std::bernoulli_distribution dist_;
 	
 };

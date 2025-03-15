@@ -17,6 +17,7 @@
 #include <string>
 #include <cstddef>
 #include <vector>
+#include <ostream>
 
 
 namespace rlenvscpp {
@@ -154,6 +155,14 @@ struct Null{};
 /// \brief Enumeration of various device types.
 ///
 enum class DeviceType {INVALID_TYPE=0, CPU=1, GPU=2} ;
+
+inline
+std::ostream& operator<<(std::ostream& out,
+                         const Null&){
+
+	out<<"null";
+	return out;
+}
 
 }
 

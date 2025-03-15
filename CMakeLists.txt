@@ -72,9 +72,6 @@ LIST(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
 IF(ENABLE_WEBOTS)
 	# we have webots include the directories
-	#INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/external/webots/src)
-	#LINK_DIRECTORIES(${PROJECT_SOURCE_DIR}/external/webots/lib)
-
     SET(WEBOTS_LIB_DIRS ${PROJECT_SOURCE_DIR}/external/webots/lib/controller)    
     SET(WEBOTS_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/external/webots/include/controller/cpp)
 	
@@ -83,7 +80,8 @@ IF(ENABLE_WEBOTS)
 	#MESSAGE( STATUS  "${WEBOTS_INCLUDE_DIRS}")
 	
 	SET(RLENVSCPP_WEBOTS ON)
-	
+ELSE()
+	MESSAGE( WARNING  "Building without Webots.")
 ENDIF()
 
 configure_file(config.h.in ${PROJECT_SOURCE_DIR}/src/rlenvs/rlenvscpp_config.h @ONLY)

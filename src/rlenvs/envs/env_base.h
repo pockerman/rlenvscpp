@@ -96,17 +96,23 @@ public:
                                  const std::unordered_map<std::string, std::any>& options)=0;
 								 
 	///
+	/// \brief Reset the environment always using the same seed
+	///
+    time_step_type reset(){
+        return reset(DEFAULT_ENV_SEED, std::unordered_map<std::string, std::any>());}
+		
+	///
+	/// \brief Reset the environment always using the provided seed
+	///
+    time_step_type reset(uint_t seed){
+        return reset(seed, std::unordered_map<std::string, std::any>());}
+								 
+	///
 	/// \brief step in the environment by performing the given action
     /// \param action. The action to execute in the environment 
 	/// \return An instance of time_step_type 
     virtual time_step_type step(const action_type& action)=0;
 	
-	///
-	/// \brief Reset the environment always using the same seed
-	///
-    time_step_type reset(){
-        return reset(DEFAULT_ENV_SEED, std::unordered_map<std::string, std::any>());}
-
     ///
 	/// \brief is_created Returns true is make has been called successfully
 	///
