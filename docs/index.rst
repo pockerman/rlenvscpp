@@ -12,6 +12,7 @@
    
    overview
    how_to_use
+   working_with_webots
    installation
    api/library_root
 

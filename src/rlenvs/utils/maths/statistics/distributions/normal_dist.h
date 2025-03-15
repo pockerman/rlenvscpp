@@ -8,6 +8,8 @@
 #include <random>
 #include <cmath>
 #include <numbers>
+#include <type_traits>
+
 
 namespace rlenvscpp {
 namespace utils{
@@ -24,6 +26,8 @@ class NormalDist
 {
 	
 public:
+	
+	static_assert(is_floating_point<RealType>::value, "Not a floating point type");
 	
 	///	
 	/// \breif The return type every time we call pdf, sample

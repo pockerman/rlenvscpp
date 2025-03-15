@@ -54,7 +54,7 @@ public:
 	///
 	/// \brief The STD of the distribution
 	///
-	real_t std()const{return p_*(1.0 - p_);}
+	real_t variance()const{return p_*(1.0 - p_);}
 	
 private:
 	
