@@ -1,5 +1,6 @@
 #ifndef WEBOTS_BASE_ENV_H
 #define WEBOTS_BASE_ENV_H
+
 #include "rlenvs/rlenvscpp_config.h"
 
 #ifdef RLENVSCPP_WEBOTS
@@ -8,8 +9,6 @@
 #include "rlenvs/envs/time_step.h"
 #include "rlenvs/envs/env_base.h"
 
-
-#include <webots/Robot.hpp>
 
 #include <memory>
 #include <string>

@@ -1,5 +1,6 @@
 #include "rlenvs/utils/maths/statistics/distributions/bernoulli_dist.h"
 
+#include <iostream>
 
 namespace rlenvscpp {
 namespace utils{
@@ -7,7 +8,7 @@ namespace maths {
 namespace stats {
 
 
-BernoulliDist::BernoulliDist(result_type p)
+BernoulliDist::BernoulliDist(real_t p)
 :
 p_(p),
 dist_(p)
@@ -18,7 +19,8 @@ BernoulliDist::sample() const{
 	
 	std::random_device rd{};
     std::mt19937 gen{rd()};
-	return dist_(gen);
+	auto result = dist_(gen);
+	return result;
 }
 
 
@@ -26,7 +28,8 @@ BernoulliDist::result_type
 BernoulliDist::sample(uint_t seed) const{
 	
 	std::mt19937 gen{seed};
-	return dist_(gen);
+	auto result = dist_(gen);
+	return result; 
 }
 
 
@@ -45,7 +48,6 @@ BernoulliDist::sample_many(uint_t size) const{
 	
 }
 
-
 std::vector<BernoulliDist::result_type> 
 BernoulliDist::sample_many(uint_t size, uint_t seed) const{
 	
@@ -57,6 +59,12 @@ BernoulliDist::sample_many(uint_t size, uint_t seed) const{
 	}
 	
 	return samples;
+}
+
+void 
+BernoulliDist::reset(real_t p){
+	p_ = p;
+	dist_ = std::bernoulli_distribution(p_);
 }
 	
 }

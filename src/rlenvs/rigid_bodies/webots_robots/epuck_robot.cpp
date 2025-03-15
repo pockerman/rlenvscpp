@@ -1,6 +1,9 @@
-#include "rlenvs/rigid_bodies/webots_robots/epuck_robot.h"
+#include "rlenvs/rlenvscpp_config.h"
+
 
 #ifdef RLENVSCPP_WEBOTS
+
+#include "rlenvs/rigid_bodies/webots_robots/epuck_robot.h"
 
 #include <iostream>
 #include <exception>

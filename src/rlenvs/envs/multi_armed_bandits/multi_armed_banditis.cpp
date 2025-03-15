@@ -1,8 +1,11 @@
+#include "rlenvs/rlenvs_consts.h"
 #include "rlenvs/envs/multi_armed_bandits/multi_armed_bandits.h"
 #include "rlenvs/envs/time_step_type.h"
 
+#include <algorithm>
 #include <vector>
 #include <exception>
+#include <iostream>
 
 namespace rlenvscpp{
 namespace envs{
@@ -12,7 +15,7 @@ const std::string MultiArmedBandits::name = "MultiArmedBandits";
 
 MultiArmedBandits::MultiArmedBandits()
 :
-EnvBase<TimeStep<Null>, MultiArmedBanditsSpace>(0, "MultiArmedBandits"),
+EnvBase<TimeStep<bool>, MultiArmedBanditsSpace>(0, "MultiArmedBandits"),
 bandits_()
 {}
 
@@ -61,9 +64,17 @@ MultiArmedBandits::reset(uint_t seed,
 						 const std::unordered_map<std::string, std::any>& /*options*/){
 	seed_ = seed;
 	
+	static auto res = [](auto& bernoulli){
+		bernoulli.reset();
+	};
+	
+	std::for_each(bandits_.begin(),
+	              bandits_.end(),
+				  res);
+				  
 	return MultiArmedBandits::time_step_type(TimeStepTp::FIRST,
 	                                         0.0,
-                                             Null(), 
+                                             false, 
 											 1.0
 											 );
 							 
@@ -76,19 +87,22 @@ MultiArmedBandits::step(const action_type& action){
 		throw std::logic_error("Invalid action index");
 	}
 	
-	auto result = bandits_[action].sample(seed_);
+	auto result = bandits_[action].sample();
+	if(seed_ != consts::INVALID_ID){
+		result = bandits_[action].sample(seed_);
+	}
 	
 	if(result){
 		this -> get_current_time_step_() = MultiArmedBandits::time_step_type(TimeStepTp::LAST, 
 		                                                                     success_reward_, 
-																			 Null(),
+																			 result,
 																			 1.0
 																			 );
 	}
 	else{
 		this -> get_current_time_step_() = MultiArmedBandits::time_step_type(TimeStepTp::LAST, 
 		                                                                     fail_reward_, 
-																			 Null(),
+																			 result,
 																			 1.0);
 	}
 	
@@ -99,7 +113,7 @@ void
 MultiArmedBandits::close(){
 	
 	bandits_.clear();
-	this -> EnvBase<TimeStep<Null>, MultiArmedBanditsSpace>::close();
+	this -> EnvBase<TimeStep<bool>, MultiArmedBanditsSpace>::close();
 }
 
 	

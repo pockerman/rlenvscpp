@@ -1,10 +1,13 @@
-#include "rlenvs/envs/webots_envs/epuck_simple_grid_world.h"
+#include "rlenvs/rlenvscpp_config.h"
 
 #ifdef RLENVSCPP_WEBOTS
 
+#include "rlenvs/envs/webots_envs/epuck_simple_grid_world.h"
 #include "rlenvs/envs/time_step.h"
 #include "rlenvs/envs/time_step_type.h"
 #include "rlenvs/utils/maths/math_utils.h"
+#include "rlenvs/rigid_bodies/body_translation.h"
+
 
 #include <webots/DistanceSensor.hpp>
 #include <webots/PositionSensor.hpp>
@@ -24,7 +27,7 @@ EpuckSimpleGridWorld::EpuckSimpleGridWorld()
 :
 WebotsEnvBase<TimeStep<state_type>,
 			  ContinuousVectorStateDiscreteActionEnv<
-										 2, // the state space has size 2 
+										 3, // the state space has size 3 
 										 1, // the action space ends at 1
 										 0, // the action space starts at 0
 										 real_t
@@ -64,11 +67,11 @@ EpuckSimpleGridWorld::reset(uint_t /*seed*/,
 	// re-activate the robot?
 	activate_robot_();
 	
-	// get the odometry
-	auto odometry = robot_.compute_odometry();
-	
-	std::vector<real_t> state{odometry.dl, odometry.dr, odometry.da};
-	return EpuckSimpleGridWorld::time_step_type(TimeStepTp::FIRST, 0.0, state);
+	rigid_bodies::RBTranslation position = robot_.get_position();
+	std::vector<real_t> state{position.x, position.y, position.z};
+	return EpuckSimpleGridWorld::time_step_type(TimeStepTp::FIRST, 
+	                                            0.0, 
+												state);
 								
 }
 
@@ -232,11 +235,8 @@ EpuckSimpleGridWorld::time_step_type
 EpuckSimpleGridWorld::on_stop_(){
 	
 	auto r_position = robot_.get_position();
-	auto r_orientation = robot_.get_rotation();
-	
 	auto reward = compute_reward();
-	std::vector<real_t> state{r_position.x, r_position.y, r_position.z,
-	                          r_orientation.x, r_orientation.y, r_orientation.z};
+	std::vector<real_t> state{r_position.x, r_position.y, r_position.z};
 	return EpuckSimpleGridWorld::time_step_type(TimeStepTp::LAST, reward, state);
 }
 
@@ -255,11 +255,10 @@ EpuckSimpleGridWorld::on_move_(){
 	auto reward = compute_reward();
 	
 	auto r_position = robot_.get_position();
-	auto r_orientation = robot_.get_rotation();
+	
 	if(reward == -1.0){
 		
-		std::vector<real_t> state{r_position.x, r_position.y, r_position.z,
-		r_orientation.x, r_orientation.y, r_orientation.z};
+		std::vector<real_t> state{r_position.x, r_position.y, r_position.z};
 		return EpuckSimpleGridWorld::time_step_type(TimeStepTp::MID, -1.0*reward, state);
 	}
 	else{
@@ -267,16 +266,14 @@ EpuckSimpleGridWorld::on_move_(){
 		// so for the current robot velocity this wasn't the best
 		// choice
 		if(reward == -10.0){
-			std::vector<real_t> state{r_position.x, r_position.y, r_position.z,
-			r_orientation.x, r_orientation.y, r_orientation.z};
+			std::vector<real_t> state{r_position.x, r_position.y, r_position.z};
 			return EpuckSimpleGridWorld::time_step_type(TimeStepTp::LAST, reward, state);
 		}
 		else{
 			// this is reward == 10 this is winning
 			// but the robot has to actually call stop
 			// so we just give reward 1.0
-			std::vector<real_t> state{r_position.x, r_position.y, r_position.z,
-			r_orientation.x, r_orientation.y, r_orientation.z};
+			std::vector<real_t> state{r_position.x, r_position.y, r_position.z};
 			return EpuckSimpleGridWorld::time_step_type(TimeStepTp::MID, 1.0, state);
 		}
 	}

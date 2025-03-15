@@ -10,7 +10,6 @@
 #include <numbers>
 #include <type_traits>
 
-
 namespace rlenvscpp {
 namespace utils{
 namespace maths {
@@ -26,9 +25,9 @@ class NormalDist
 {
 	
 public:
-	
-	static_assert(is_floating_point<RealType>::value, "Not a floating point type");
-	
+
+	static_assert(std::is_floating_point<RealType>::value, "Not a floating point type");
+
 	///	
 	/// \breif The return type every time we call pdf, sample
 	///

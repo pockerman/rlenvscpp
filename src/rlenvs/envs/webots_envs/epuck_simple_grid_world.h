@@ -35,9 +35,11 @@ using namespace rlenvscpp::rigid_bodies::webots_robots;
 /// at: https://www.cyberbotics.com/doc/guide/epuck?version=cyberbotics:R2019a-rev1
 /// You can find the location of the PROTO files at: 
 /// "WEBOTS_HOME/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+/// The environment returns the robot translation as an observation
+/// i.e. the (x,y,z) coordinates of the robot position
 ///
 class EpuckSimpleGridWorld final: public WebotsEnvBase<TimeStep<std::vector<real_t>>, 
-                                                       ContinuousVectorStateDiscreteActionEnv<2, // the state space has size 2 
+                                                       ContinuousVectorStateDiscreteActionEnv<3, // the state space has size 3 
 											  1, // the action space ends at 1
 											  0, // the action space starts at 0
 											  real_t
@@ -56,7 +58,7 @@ public:
 	///
 	typedef WebotsEnvBase<TimeStep<state_type>,
 						  envs::ContinuousVectorStateDiscreteActionEnv<
-										 2, // the state space has size 2 
+										 3, // the state space has size 2 
 										 1, // the action space ends at 1
 										 0, // the action space starts at 0
 										 real_t
@@ -88,6 +90,11 @@ public:
 	/// \brief The type of the state
 	///
 	typedef typename base_type::state_type state_type;
+	
+	///
+	/// \brief Expose base class functionality
+	///
+	using base_type::reset;
 
 	///
 	/// \brief Constructor
@@ -125,16 +132,6 @@ public:
     virtual time_step_type reset(uint_t /*seed*/,
                                  const std::unordered_map<std::string, std::any>& /*options*/)override final;
 								 
-	///
-	/// \brief Reset the environment always using the same seed
-	/// TODO: For some real the webots simulator does not see this
-	/// from the base class so I have to copy it here
-	///
-    time_step_type reset(){
-        return reset( this -> base_type::DEFAULT_ENV_SEED, std::unordered_map<std::string, std::any>());
-	}
-					  
-					  
 	///
     /// \brief step. Step in the environment following the given action.
 	/// action = 1 means move whilst action = 0 means stop

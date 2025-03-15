@@ -51,7 +51,7 @@ struct  MultiArmedBanditsSpace
 /// The bandits are represented as Bernoulli distribution. At each step
 /// only one bandit can be executed
 ///
-class MultiArmedBandits final: public EnvBase<TimeStep<Null>, MultiArmedBanditsSpace>{
+class MultiArmedBandits final: public EnvBase<TimeStep<bool>, MultiArmedBanditsSpace>{
 	
 public:
 	
@@ -63,7 +63,7 @@ public:
 	///
 	/// \brief The base type
 	///
-	typedef EnvBase<TimeStep<Null>, MultiArmedBanditsSpace> base_type;
+	typedef EnvBase<TimeStep<bool>, MultiArmedBanditsSpace> base_type;
 	
 	///
 	/// \brief The time step type we return every time a step in the
@@ -91,6 +91,7 @@ public:
 	///
     typedef typename base_type::state_type state_type;
 
+	using base_type::reset;
 	
 	///
 	/// \brief MultiArmedBandits Constructor
@@ -119,11 +120,27 @@ public:
     virtual time_step_type reset(uint_t seed,
                                  const std::unordered_map<std::string, std::any>& options)override final;
 								 
+
 	///
 	/// \brief step in the environment by performing the given action
     /// \param action. The action to execute in the environment 
 	/// \return An instance of time_step_type 
     virtual time_step_type step(const action_type& action)override final;
+	
+	///
+	/// \brief Return the number of actions
+	///
+	uint_t n_actions()const noexcept{return bandits_.size();}
+	
+	///
+	/// \brief Returns the sucees reward
+	///
+	real_t success_reward()const noexcept{return success_reward_;}
+	
+	///
+	/// \brief Returns the fail reward
+	///
+	real_t fail_reward()const noexcept{return fail_reward_;}
 	
 private:
 	
@@ -147,7 +164,6 @@ private:
 	/// \brief Every bandit is represented as a Bernoulli distribution
 	///
 	std::vector<utils::maths::stats::BernoulliDist> bandits_;
-	
 	
 };
 	
