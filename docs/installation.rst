@@ -15,30 +15,24 @@ The library has the following general dependencies
 - `Eigen3 <https://eigen.tuxfamily.org/index.php?title=Main_Page>`_
 
 
-``rlenvscpp`` also incorporates, see ``(src/extern)``, the following libraries
+``rlenvscpp`` also incorporates, see ``(src/extern)``, the following libraries:
 
 - `HTTPRequest <https://github.com/elnormous/HTTPRequest>`_
 - `nlohmann/json <https://github.com/nlohmann/json>`_
 
+.. note::
 
-Using the Gymnasium environments requires `Gymnasium <https://github.com/Farama-Foundation/Gymnasium/tree/main>`_ 
-installed on your machine. In addition, you need to install
+	Using the Gymnasium environments requires `Gymnasium <https://github.com/Farama-Foundation/Gymnasium/tree/main>`_ 
+	installed on your machine. In addition, you need to install
 
-- `FastAPI <https://fastapi.tiangolo.com/>`_
-- `Uvicorn <https://www.uvicorn.org/>`_
-- `Pydantic <a href="https://docs.pydantic.dev/latest/>`_
+	- `FastAPI <https://fastapi.tiangolo.com/>`_
+	- `Uvicorn <https://www.uvicorn.org/>`_
+	- `Pydantic <a href="https://docs.pydantic.dev/latest/>`_
 
-By installing the requirement under ``requirements.txt`` should set your Python environment  up correctly.
+	By installing the requirement under ``requirements.txt`` should set your Python environment  up correctly.
 
-There are extra dependencies if you want to generate the documentation. Namely,
 
-- Doxygen
-- Sphinx
-- sphinx_rtd_theme
-- breathe
-- m2r2
-
-Building the code
+Build the code
 -----------------
 
 The usual CMake based installation process is used. Namely
@@ -56,22 +50,47 @@ You can toggle the following variables
 - ENABLE_EXAMPLES_FLAG (default is OFF)
 - ENABLE_DOC_FLAG (default is OFF)
 
-For example enbling the examples 
+For example enabling the examples: 
 
 .. code-block::
 
 	cmake -DENABLE_EXAMPLES_FLAG=ON ..
 	make install
 
+Run the unit tests
+-------------------
 
-Run the tests
--------------
+You can execute all the tests by running the helper script 
 
-You can execute all the tests by running the helper script ``execute_tests.sh``.
+.. code-block::
+
+	./execute_tests.sh
 
 
 Build the documentation
 -----------------------
+
+Building the documentation is done via `Sphinx <https://www.sphinx-doc.org/en/master/>`_ and there are 
+extra dependencies you need to install. Namely,
+
+- `Doxygen <https://www.doxygen.nl/>`_
+- breathe
+- sphinx==5.0.2
+- breathe==4.35.0
+- exhale==0.3.7
+- sphinx_rtd_theme==3.0.2
+
+In order to build the documentation locally execute:
+
+.. code-block::
+	
+	cd docs
+	sphinx-build -M html . outputdir
+
+
+where ``outputdir`` indicates a path in your system where you want to install the documentation files.
+Check the official Sphinx `Getting started <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_ guide
+for more options.
 
 
 Issues

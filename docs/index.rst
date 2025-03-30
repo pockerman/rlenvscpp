@@ -12,8 +12,9 @@
    
    overview
    how_to_use
-   working_with_webots
    installation
+   working_with_webots
+   working_with_ray
    api/library_root
 
 
