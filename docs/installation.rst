@@ -13,6 +13,7 @@ The library has the following general dependencies
 - `CMake >= 3.10 <https://cmake.org/>`_
 - `Gtest  <https://github.com/google/googletest>`_  (if configured with tests)
 - `Eigen3 <https://eigen.tuxfamily.org/index.php?title=Main_Page>`_
+- `Ray Ray <https://docs.ray.io/en/master/index.html>`_ (if configured with Ray)
 
 
 ``rlenvscpp`` also incorporates, see ``(src/extern)``, the following libraries:
@@ -49,6 +50,8 @@ You can toggle the following variables
 - ENABLE_TESTS_FLAG (default is OFF)
 - ENABLE_EXAMPLES_FLAG (default is OFF)
 - ENABLE_DOC_FLAG (default is OFF)
+- ENABLE_WEBOTS (default OFF)
+- ENABLE_RAY (default OFF)
 
 For example enabling the examples: 
 
@@ -56,6 +59,11 @@ For example enabling the examples:
 
 	cmake -DENABLE_EXAMPLES_FLAG=ON ..
 	make install
+	
+
+.. note::
+
+	If you choose to enable Ray make sure you follow the instructions before building the library.
 
 Run the unit tests
 -------------------

@@ -28,6 +28,7 @@ Assuming that everything has worked fine, let's generate a project template. Thi
 throughout this tutorial.
 
 .. code-block::
+
 	ray cpp --generate-bazel-project-template-to ray-template
 	
 The command above will create a directory called ``ray-template`` with the following structure
@@ -43,17 +44,48 @@ The command above will create a directory called ``ray-template`` with the follo
 Let's now review the core componets of Ray. You can find more information at 
 `Overview of Ray <https://github.com/ray-project/ray-educational-materials/blob/main/Introductory_modules/Overview_of_Ray.ipynb>`_.
 
+
 Ray core components
 --------------------
 
-Ray consists of a number of libraries. Schematically these are shown in the image below
+Ray consists of a number of libraries.
+These are:
+
+- Ray core
+- Ray AIR
+- Ray cluster
+
+
+Schematically these are shown in the image below
 
 .. figure:: ./images/ray_libs.png
 
 	Stack of Ray libraries. Image from [1].
 
+Ray core
+---------
 
-In order to use Ray's C++ API you need to i
+Ray core is a rather low-level distributed computing framework. Its main key abstractions are
+
+- `Tasks <a href="https://docs.ray.io/en/latest/ray-core/tasks.html">`_
+- `Actors <https://docs.ray.io/en/latest/ray-core/actors.html>`_
+- `Objects <https://docs.ray.io/en/latest/ray-core/objects.html>`_
+
+See example 
+
+Ray enables arbitrary functions to be executed asynchronously on separate Python workers. Such functions are called Ray remote functions 
+and their asynchronous invocations are called Ray tasks. Here is an example.
+
+Actors extend the Ray API from functions (tasks) to classes. An actor is essentially a stateful worker (or a service). 
+When a new actor is instantiated, a new worker is created, 
+and methods of the actor are scheduled on that specific worker and can access and mutate the state of that worker.
+
+In Ray, tasks and actors create and compute on objects. We refer to these objects as 
+remote objects because they can be stored anywhere in a Ray cluster, and we use object refs to refer to them. 
+Remote objects are cached in Ray’s distributed shared-memory object store, and there is one object store per 
+node in the cluster. In the cluster setting, 
+a remote object can live on one or many nodes, independent of who holds the object ref(s).
+
 
 
 Running Ray
@@ -70,6 +102,7 @@ which will both start the Ray cluster services and connect to them.
 
 Submitting jobs with the Ray CLI
 ---------------------------------
+
 
 
 

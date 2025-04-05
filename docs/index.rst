@@ -15,6 +15,7 @@
    installation
    working_with_webots
    working_with_ray
+   examples
    api/library_root
 
 
