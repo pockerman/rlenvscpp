@@ -7,7 +7,11 @@
 /*Use PyTorch */
 #cmakedefine USE_PYTORCH
 
+/*Use Webots*/
 #cmakedefine RLENVSCPP_WEBOTS
+
+/*Use Ray*/
+#cmakedefine RLENVSCPP_RAY
 
 #endif
 
