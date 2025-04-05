@@ -37,6 +37,7 @@ using namespace rlenvscpp::rigid_bodies::webots_robots;
 /// "WEBOTS_HOME/projects/robots/gctronic/e-puck/protos/E-puck.proto"
 /// The environment returns the robot translation as an observation
 /// i.e. the (x,y,z) coordinates of the robot position
+/// The maximum reward the robot can achieve
 ///
 class EpuckSimpleGridWorld final: public WebotsEnvBase<TimeStep<std::vector<real_t>>, 
                                                        ContinuousVectorStateDiscreteActionEnv<3, // the state space has size 3 
