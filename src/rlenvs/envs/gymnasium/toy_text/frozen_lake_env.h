@@ -103,7 +103,7 @@ struct frozenlake_state_size<8>
 template<uint_t side_size>
 class FrozenLake final: public ToyTextEnvBase<TimeStep<uint_t>,
                                               frozenlake_state_size<side_size>::size, 
-											  4>
+											  3>
 {
 public:
 	
@@ -128,7 +128,7 @@ public:
 	///
 	typedef typename ToyTextEnvBase<TimeStep<uint_t>,
 									frozenlake_state_size<side_size>::size, 
-									4>::base_type base_type;
+									3>::base_type base_type;
 	
 	///
 	/// \brief The time step type we return every time a step in the

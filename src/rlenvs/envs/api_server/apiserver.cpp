@@ -124,7 +124,8 @@ RESTApiServerWrapper::close(const std::string& env_name,
     http::Request request{url_ + "/close?cidx="+std::to_string(cidx)};
     const auto response = request.send("POST");
     
-	if(response.status.code != 201){
+	
+	if(response.status.code != 202){
         throw std::runtime_error("Could not close environment " + env_name);
     }
 	
