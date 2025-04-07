@@ -26,7 +26,7 @@ FrozenLake<side_size>::FrozenLake(const RESTApiServerWrapper& api_server)
 :
 ToyTextEnvBase<TimeStep<uint_t>,
 			   frozenlake_state_size<side_size>::size, 
-			   4>(api_server, 0, FrozenLake<side_size>::name),
+			   3>(api_server, 0, FrozenLake<side_size>::name),
 is_slippery_(true)
 {
 		this -> get_api_server().register_if_not(FrozenLake<side_size>::name,FrozenLake<side_size>::URI);
@@ -38,7 +38,7 @@ FrozenLake<side_size>::FrozenLake(const RESTApiServerWrapper& api_server,
 		   :
 ToyTextEnvBase<TimeStep<uint_t>,
 			   frozenlake_state_size<side_size>::size, 
-			   4>(api_server, cidx, FrozenLake<side_size>::name),
+			   3>(api_server, cidx, FrozenLake<side_size>::name),
 is_slippery_(slippery)
 {
 	this -> get_api_server().register_if_not(FrozenLake<side_size>::name,FrozenLake<side_size>::URI);
@@ -49,7 +49,7 @@ FrozenLake<side_size>::FrozenLake(const FrozenLake<side_size>& other)
 :
 ToyTextEnvBase<TimeStep<uint_t>,
 			   frozenlake_state_size<side_size>::size, 
-			   4>(other),
+			   3>(other),
 is_slippery_(other.is_slippery_)
 {}		
 			   
