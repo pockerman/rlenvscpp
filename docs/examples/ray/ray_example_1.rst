@@ -1,8 +1,15 @@
-Using Ray core Tasks
-===========================
+Using Ray core Tasks, Actors and Objects
+========================================
 
-This example will show you how to use one of Ray's core abstractions.
-Namely how to create Ray `Tasks <a href="https://docs.ray.io/en/latest/ray-core/tasks.html">`_, 
+This example will show you how to use some of Ray's core abstractions.
+Namely how to create Ray `Tasks <https://docs.ray.io/en/latest/ray-core/tasks.html>`_, 
+Ray `Actors <https://docs.ray.io/en/latest/ray-core/actors.html>`_ and 
+Ray `Objects <https://docs.ray.io/en/latest/ray-core/objects.html>`_ 
+
+In addition we will see how to build and run these examples.
+
+Ray Tasks
+----------
 
 With Ray we can execute arbitrary functions on separate workers.
 These functions are called Ray tasks. The code snippet below shows 
@@ -47,12 +54,15 @@ you how to create a Ray Task:
 		
 		return 0;
 	}
+	
+Build and run the code
+-----------------------
 
 You can build the code using the ``cmake`` toolchain, but Ray favors `Bazel <https://bazel.build/>`_ 
 for building and running jobs. Let's see how we can use this to build the example.
 Copy the following files and directories from ``external/ray`` directory:
 
--	``run.sh``
+-  ``run.sh``
 -  ``BUILD.bazel``
 -  ``WORKSPACE``
 - ``thirdparty`` 
@@ -63,14 +73,6 @@ Edit the ``run.sh`` file and change the line where the ``bazel`` executable is c
 .. code-block::
 
 	bazel build //:ray_example_1
-	
-In addition you need to change where the Ray library is located.
-Edit the line where the ``LD_LIBRARY_PATH`` variable is declared. This should
-point to ``external/ray/thirdparty/lib`` path.
-
-.. code-block::
-
-	LD_LIBRARY_PATH="thirdparty/lib" "${ROOT_DIR}"/bazel-bin/ray_example_1
 
 Edit the ``BUILD.bazel`` file and change accordingly the variables:
 
@@ -117,14 +119,14 @@ Edit the ``BUILD.bazel`` file and change accordingly the variables:
 	)
 
 In order to build and run the example execute the ``run.sh`` script. This should
-produce the following output:
+produce an output similar to the following:
 
 .. code-block::
 
-	INFO: Analyzed target //:ray_example_2 (1 packages loaded, 3440 targets configured).
+	INFO: Analyzed target //:ray_example_1 (1 packages loaded, 3440 targets configured).
 	INFO: Found 1 target...
-	Target //:ray_example_2 up-to-date:
-	bazel-bin/ray_example_2
+	Target //:ray_example_1 up-to-date:
+	bazel-bin/ray_example_1
 	INFO: Elapsed time: 2.509s, Critical Path: 2.15s
 	INFO: 4 processes: 4 linux-sandbox.
 	INFO: Build completed successfully, 6 total actions
@@ -170,6 +172,112 @@ produce the following output:
 	Result is: 1
 	Running normal C++ stuff here...
 	Result is: 1
+	
+	
+Ray Actors
+----------
+
+A Ray task is just a function that is executed asynchronously.
+A function cannot hold any state and this sometimes may be problematic.
+If our application requires stateful computing, we will have to use
+another Ray core abstraction namely an Actor. 
+
+An Actor is sipmply a user defined class. Using Ray's functionality, we can 
+turn a user defined class into an entity suitable for distributed computing
+that we can then deploy on a remote node. 
+
+The code snippet below modifies the snippet above to incorporate a 
+user defined Actor. 
+
+
+
+.. code-block::
+
+	// we need to include the Ray API
+	#include <ray/api.h>
+
+	// msgpack is needed to serialize the RayActor class
+	#include <msgpack.hpp>
+
+
+	// This is the C++ function we want to execute
+	int do_sth() {
+	  return 1;
+	}
+
+	void run_task(){
+		
+		// Invoke the above method as a Ray task.
+		// This will immediately return an object ref (a future) and then create
+		// a task that will be executed on a worker process.
+		auto res = ray::Task(do_sth).Remote();
+		
+		// The result can be retrieved with ``ray::ObjectRef::Get``.
+		auto result = *res.Get();
+		
+		std::cout<<"Result is: "<<result<<std::endl;
+		
+	}
+	
+	// In order to be able to execute this function
+	// we need to register it using `RAY_REMOTE`.
+	RAY_REMOTE(do_sth);
+
+	class RayActor
+	{
+	public:
+		
+		int ray_actor_do_sth(){return 2;}
+		
+		// we need this for msgpack to work
+		template <typename Packer>
+		void msgpack_pack(Packer& pk) const {
+			pk.pack(*this);
+		}
+		
+	};
+
+	RayActor create_actor(){
+		return new RayActor();
+	}
+
+	RAY_REMOTE(create_actor, &RayActor::ray_actor_do_sth);
+
+	void run_actor(){
+		
+		// create the actor and get a handle to it
+		auto actor_handler = ray::Actor(create_actor).Remote();
+		
+		// Call the actor's remote function
+		auto res = actor_handler.Task(&RayActor::ray_actor_do_sth).Remote();
+		
+		// The result can be retrieved with ``ray::ObjectRef::Get``.
+		auto result = *res.Get();
+		
+		std::cout<<"Result is: "<<result<<std::endl;
+	}
+	
+	int main(int argc, char **argv) {
+			
+		// We need to initialize Ray before using it
+		ray::Init();
+		
+		// run the taks remotely
+		run_task();
+		run_actor();
+		
+		ray::Shutdown();
+		
+		std::cout<<"Running normal C++ stuff here..."<<std::endl;
+		auto result = do_sth();
+		std::cout<<"Result is: "<<result<<std::endl;
+		
+		return 0;
+	}
+	
+
+Build and run the new code using the ``run.sh`` script.
+
 
 
 

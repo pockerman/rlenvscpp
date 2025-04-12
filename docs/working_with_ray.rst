@@ -1,8 +1,14 @@
-Working with Ray
-====================
+Short guide for working with Ray
+================================
 
 This section describes how to work with `Ray <https://docs.ray.io/en/master/index.html>`_.
 Specifically, we will discuss how to do distributed computing with the Ray library use the C++ API.
+
+.. note::
+
+	Ray is a Python library aiming at facilitating distributed computing
+	of Python programs. It exposes an API that can be used by C++ programs
+	however, at the time of writing, this API is not as mature as the Python counterpart.
 
 
 Install Ray
@@ -71,40 +77,30 @@ Ray core is a rather low-level distributed computing framework. Its main key abs
 - `Actors <https://docs.ray.io/en/latest/ray-core/actors.html>`_
 - `Objects <https://docs.ray.io/en/latest/ray-core/objects.html>`_
 
-See example 
 
-Ray enables arbitrary functions to be executed asynchronously on separate Python workers. Such functions are called Ray remote functions 
-and their asynchronous invocations are called Ray tasks. Here is an example.
+With Ray we can execute arbitrary functions on separate workers.
+These are called remote functions and asynchronously invocing such a remote
+function is called a Task.
 
-Actors extend the Ray API from functions (tasks) to classes. An actor is essentially a stateful worker (or a service). 
-When a new actor is instantiated, a new worker is created, 
-and methods of the actor are scheduled on that specific worker and can access and mutate the state of that worker.
+
+A Ray task is just a function that is executed asynchronously.
+A function cannot hold any state and this sometimes may be problematic.
+If our application requires stateful computing, we will have to use
+another Ray core abstraction namely an Actor.  A Ray Actor 
+is essentially a worker that can hold state. Every time we create a new
+actor a new worker will be created. 
+The methods of the actor are scheduled on that specific worker and can access and mutate the state of that worker.
+
+
+See example `Using Ray core Tasks, Actors and Objects <examples/ray/ray_example_1.html>`_ 
+about how to use these abstractions in C++. 
+
 
 In Ray, tasks and actors create and compute on objects. We refer to these objects as 
 remote objects because they can be stored anywhere in a Ray cluster, and we use object refs to refer to them. 
 Remote objects are cached in Ray’s distributed shared-memory object store, and there is one object store per 
 node in the cluster. In the cluster setting, 
 a remote object can live on one or many nodes, independent of who holds the object ref(s).
-
-
-
-Running Ray
------------
-
-We will first work using a single-node setting in order to get the basic components. We will then
-move to multi-node setting.
-
-For the multi-node setting, you must first run ray start on the 
-command line to start the Ray cluster services on the machine before ``ray.init`` in Python to connect to the cluster services. 
-On a single machine, you can run ``ray.init()`` without ``ray start``, 
-which will both start the Ray cluster services and connect to them.
-
-
-Submitting jobs with the Ray CLI
----------------------------------
-
-
-
 
 
 References
