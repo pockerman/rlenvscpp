@@ -69,6 +69,9 @@ void test_frozen_lake(const RESTApiServerWrapper& server){
     }
 	
 	action = env.sample_action();
+	
+	std::cout<<"Action sampled: "<<action<<std::endl;
+	
 	new_time_step = env.step(action);
 
     std::cout<<new_time_step<<std::endl;
