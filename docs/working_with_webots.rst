@@ -123,7 +123,7 @@ from ``rlenvscpp`` examples:
 	
 		using namespace webots_example_1;
    
-	ry
+	try
 	
 			// create the environment
 			EpuckSimpleGridWorld env;

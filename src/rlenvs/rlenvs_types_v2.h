@@ -120,7 +120,8 @@ using FloatColVec3d = Eigen::Vector3f;
 
 ///
 /// \struct IntegralRange 
-/// \brief A range of double precision floating point values
+/// \brief A range of integer values in
+/// [s, e]
 ///
 template<uint_t s, uint_t e>
 struct IntegralRange
