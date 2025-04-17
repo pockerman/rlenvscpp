@@ -50,6 +50,9 @@ ADD_SUBDIRECTORY(example_13)
 #	ADD_SUBDIRECTORY(webots/world_1)
 #ENDIF()
 
-IF(RLENVSCPP_RAY)
-	ADD_SUBDIRECTORY(ray/ray_example_2)
-ENDIF()
+
+# We follow a different approach when working with
+# Ray so we don't compile the example with CMake
+#IF(RLENVSCPP_RAY)
+#	ADD_SUBDIRECTORY(ray/ray_example_2)
+#ENDIF()

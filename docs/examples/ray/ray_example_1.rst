@@ -279,5 +279,12 @@ user defined Actor.
 Build and run the new code using the ``run.sh`` script.
 
 
+References
+----------
+
+1. Ray `Tasks <https://docs.ray.io/en/latest/ray-core/tasks.html>`_, 
+2. Ray `Actors <https://docs.ray.io/en/latest/ray-core/actors.html>`_ and 
+3. Ray `Objects <https://docs.ray.io/en/latest/ray-core/objects.html>`_ 
+
 
 

@@ -63,7 +63,8 @@ For example enabling the examples:
 
 .. note::
 
-	If you choose to enable Ray make sure you follow the instructions before building the library.
+	If you choose to enable Ray in your application, you do not have to
+	build the library. Rather follow example `Using ``rlenvscpp`` with Ray <examples/ray_example_2.html>`_
 
 Run the unit tests
 -------------------
