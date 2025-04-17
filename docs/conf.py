@@ -23,7 +23,7 @@ copyright = '2025, Alexandros Giavaras'
 author = 'Alexandros Giavaras'
 
 # The full version, including alpha/beta/rc tags
-release = 'v1.9.0'
+release = 'v1.10.6'
 
 
 # -- General configuration ---------------------------------------------------
