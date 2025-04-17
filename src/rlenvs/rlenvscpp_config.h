@@ -7,7 +7,11 @@
 /*Use PyTorch */
 /* #undef USE_PYTORCH */
 
+/*Use Webots*/
 /* #undef RLENVSCPP_WEBOTS */
+
+/*Use Ray*/
+#define RLENVSCPP_RAY
 
 #endif
 
