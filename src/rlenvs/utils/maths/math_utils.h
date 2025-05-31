@@ -5,6 +5,9 @@
 ///
 
 #include <algorithm>
+#include <cmath>
+#include <vector>
+#include <cassert>
 
 namespace rlenvscpp{
 namespace utils{
@@ -102,6 +105,41 @@ template <typename VectorType>
 typename VectorType::value_type
 min(const VectorType& vec) {
   return *std::min_element(vec.begin(), vec.end());
+}
+
+namespace{
+
+	///
+	/// \brief Return a value in the linear sequence in the range
+	/// [start, stop]. The index parameter is the current number 
+	/// in the sequence of the n total numbers we are about to
+	/// generate
+	///
+	template<typename T>
+	auto lin_value(T start, T stop, uint_t index, uint_t n){
+		
+		assert(n > 1 && index < n);
+		const auto amount = static_cast<T>(index) / (n -1);
+		const auto v = str::lerp(start, stop, amount);
+		return v;
+	}
+	
+}
+
+///
+/// \brief Generate n evenly linearly spaced numbers between
+/// [start, stop]. Analogous to NumPy linspace.
+///
+template<typename T>
+std::vector<T>
+lin_space(T start, T stop, uint_t n){
+	
+	auto v = std::vector<T>{};
+	v.reserve(n);
+	for(auto i=0u; i<n; ++i){
+		v.push_back(lin_value(start, stop, i, n));
+	}
+	return v;
 }
 
 
