@@ -120,7 +120,7 @@ namespace{
 		
 		assert(n > 1 && index < n);
 		const auto amount = static_cast<T>(index) / (n -1);
-		const auto v = str::lerp(start, stop, amount);
+		const auto v = std::lerp(start, stop, amount);
 		return v;
 	}
 	
