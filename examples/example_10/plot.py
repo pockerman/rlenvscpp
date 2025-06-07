@@ -29,7 +29,7 @@ def main(filename):
 			if not row[0].startswith('#'):
 				try:
 
-					assert len(row) == 13
+					assert len(row) == 17
 
 					time.append(float(row[0]))
 					x.append(float(row[1]))

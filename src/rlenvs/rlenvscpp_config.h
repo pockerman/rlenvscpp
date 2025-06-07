@@ -11,7 +11,7 @@
 /* #undef RLENVSCPP_WEBOTS */
 
 /*Use Ray*/
-#define RLENVSCPP_RAY
+/* #undef RLENVSCPP_RAY */
 
 #endif
 
