@@ -5,6 +5,9 @@
 
 namespace rlenvscpp{
 namespace dynamics {
+	
+	
+
 
 
 QuadrotorDynamics::QuadrotorDynamics(QuadrotorDynamicsConfig config,
@@ -97,25 +100,25 @@ QuadrotorDynamics::update_rotation_matrix_(){
 	const auto psi = euler_angles_old[2];
 	
 	
-	auto ctheta = std::cos(theta);
-	auto cpsi = std::cos(psi);
-	auto cphi = std::cos(phi);
+	auto c_theta = std::cos(theta);
+	auto c_psi = std::cos(psi);
+	auto c_phi = std::cos(phi);
 	
-	auto stheta = std::sin(theta);
-	auto spsi = std::sin(psi);
-	auto sphi = std::sin(phi);
+	auto s_theta = std::sin(theta);
+	auto s_psi = std::sin(psi);
+	auto s_phi = std::sin(phi);
 	
-	rotation_mat_(0,0) = ctheta * cpsi;
-	rotation_mat_(0,1) = spsi * stheta * cpsi - cphi * spsi;
-	rotation_mat_(0,2) = cphi * stheta * cpsi + sphi * spsi;
+	rotation_mat_(0,0) = c_theta * c_psi;
+	rotation_mat_(0,1) = s_psi * s_theta * c_psi - c_phi * s_psi;
+	rotation_mat_(0,2) = c_phi * s_theta * c_psi + s_phi * s_psi;
 	
-	rotation_mat_(1,0) = ctheta * spsi;
-	rotation_mat_(1,1) = sphi * stheta * spsi + cphi * cpsi;
-	rotation_mat_(1,2) = cphi * stheta * spsi - sphi * cpsi;
+	rotation_mat_(1,0) = c_theta * s_psi;
+	rotation_mat_(1,1) = s_phi * s_theta * s_psi + c_phi * c_psi;
+	rotation_mat_(1,2) = c_phi * s_theta * s_psi - s_phi * c_psi;
 	
-	rotation_mat_(0,0) = stheta;
-	rotation_mat_(0,1) = -sphi * ctheta;
-	rotation_mat_(0,2) = -cphi * ctheta;
+	rotation_mat_(2,0) = s_theta;
+	rotation_mat_(2,1) = -s_phi * c_theta;
+	rotation_mat_(2,2) = -c_phi * c_theta;
 }
 
 void 
@@ -179,7 +182,14 @@ QuadrotorDynamics::translational_dynamics(const RealVec& motor_w){
 	RealColVec3d fg = RealColVec3d::Zero(3);
 	
 	if(config_.use_gravity){
-		fg[2] = mass * rlenvscpp::consts::maths::G;
+		
+		const auto phi_ = phi();
+		const auto theta_ = theta();
+		
+		// we do not contain the mass constant so don't use it below
+		fg[0] = -rlenvscpp::consts::maths::G * std::sin(theta_);
+		fg[1] =  rlenvscpp::consts::maths::G * std::cos(theta_) * std::sin(phi_);
+		fg[2] =  rlenvscpp::consts::maths::G * std::cos(theta_) * std::cos(phi_);
 	}
 	
 	// compute the total thurst force
@@ -192,8 +202,10 @@ QuadrotorDynamics::translational_dynamics(const RealVec& motor_w){
 	// form the vector ωb/i × v
 	RealColVec3d  omega_cross_v = old_omega.cross(old_v);
 	
-	// compute the velocity increment
-	RealColVec3d v = dt * omega_cross_v  + (1.0 / mass ) * dt *  fg - (1.0 / mass ) * dt * ft - old_v;
+	// compute the velocity increment.
+	// Note that the mass is dropped when accounting for gravity 
+	// as fg does not contain it
+	RealColVec3d v = dt * omega_cross_v  +  dt *  fg - (1.0 / mass ) * dt * ft - old_v;
 	
 	// compute the time velocity derivative
 	v_dot_ = (v - old_v) / dt;

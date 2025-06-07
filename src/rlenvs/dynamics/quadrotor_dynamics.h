@@ -158,7 +158,9 @@ public:
 	void rotational_dynamics(const RealVec& motor_w);
 	
 	///
-	/// \brief Returns the current position NED frame
+	/// \brief Returns the current position NED frame.
+	/// Note that the z-coordinate has to be multiplied with -1
+	/// in order to represent an upwards looking z-axis
 	///
 	RealColVec3d get_position()const{return get_position_from_state_();}
 	
@@ -176,6 +178,21 @@ public:
 	/// \brief Returns the Euler angles (0: phi, 1: theta, 2:psi)
 	///
 	RealColVec3d get_euler_angles()const{return get_euler_angles_from_state_();}
+	
+	///
+	/// \brief The phi Euler angle in rad
+	///
+	real_t phi()const noexcept {return get_euler_angles_from_state_()[0];}
+	
+	///
+	/// \brief The theta Euler angle in rad
+	///
+	real_t theta()const noexcept {return get_euler_angles_from_state_()[1];}
+	
+	///
+	/// \brief The psi Euler angle in rad
+	///
+	real_t psi()const noexcept {return get_euler_angles_from_state_()[2];}
 	
 private:
 	
