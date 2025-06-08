@@ -222,7 +222,7 @@ namespace detail{
         /// either causes the game to be lost (PIT) or is a valid
         /// move i.e. not stepping into the WALL or out of the board
         /// 
-        void check_and_move(uint_t row, uint_t col);
+        void check_and_move(int_t row, int_t col);
 
         ///
         /// \brief validate_move_
@@ -254,7 +254,7 @@ namespace detail{
 		///
 		/// \brief the Action type
 		///
-		typedef typename action_space::space_item_type action_type;
+		typedef action_space::space_item_type action_type;
 	
 	
 		///
@@ -355,8 +355,8 @@ public:
     /// \brief make. Builds the environment. Optionally we can choose if the
     /// environment will be slippery
     ///
-    virtual void make(const std::string& version,
-                      const std::unordered_map<std::string, std::any>& options) override final;
+    void make(const std::string& version,
+              const std::unordered_map<std::string, std::any>& options) override;
 					  
 					  
 	/// 

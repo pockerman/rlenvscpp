@@ -361,7 +361,7 @@ board::validate_move(board_component_type piece, board_position pos)const{
 }
 
  void
- board::check_and_move(uint_t row, uint_t col){
+ board::check_and_move(int_t row, int_t col){
 
     auto position = std::make_pair(row, col);
     auto move_type = validate_move(board_component_type::PLAYER, position);
