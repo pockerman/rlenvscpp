@@ -19,6 +19,7 @@
 #include <cassert>
 #endif
 
+#include <utility>
 #include <vector>
 #include <string>
 #include <utility>
@@ -76,13 +77,12 @@ namespace detail{
     /// 
 	/// \brief Returns the max component of a position
 	/// 
-    uint_t max(const board_position& p);
+    int_t max(const board_position& p);
 
     /// 
 	/// \brief Returns the min component of a position
 	///
-    uint_t min(const board_position& p);
-
+    int_t min(const board_position& p);
 
     ///
     /// \brief The BoardPiece struct
@@ -90,13 +90,9 @@ namespace detail{
     struct board_piece
     {
         ///
-        ///
+        /// \brief Name of the piece
         ///
         std::string name;
-        ///
-        /// n ASCII character to display on the board
-        ///
-        std::string code;
 
         ///
         /// \brief pos 2-tuple e.g. (1,4)
@@ -106,14 +102,12 @@ namespace detail{
         ///
         /// \brief BoardPiece
         /// \param name_
-        /// \param code_
         /// \param pos_
         ///
-        board_piece(std::string name_, std::string code_, board_position pos_)
+        board_piece(std::string name_,  board_position pos_)
             :
-              name(name_),
-              code(code_),
-              pos(pos_)
+              name(std::move(name_)),
+              pos(std::move(pos_))
         {}
 
         ///
@@ -165,6 +159,7 @@ namespace detail{
 		uint_t seed = 42;
         std::map<board_component_type, board_piece> components;
         std::map<std::string, board_mask> masks;
+    	bool is_board_init = {false};
 
         ///
 		/// \brief initialize the board
@@ -222,15 +217,14 @@ namespace detail{
         /// either causes the game to be lost (PIT) or is a valid
         /// move i.e. not stepping into the WALL or out of the board
         /// 
-        void check_and_move(uint_t row, uint_t col);
+        void check_and_move(int_t row, int_t col);
 
         ///
         /// \brief validate_move_
         /// \param piece
-        /// \param row
-        /// \param col
+        /// \param pos
         ///
-        board_move_type validate_move(board_component_type piece, board_position pos)const;
+        [[nodiscard]] board_move_type validate_move(board_component_type piece, board_position pos)const;
     };
 	
 	template<uint_t size_size>
@@ -355,15 +349,15 @@ public:
     /// \brief make. Builds the environment. Optionally we can choose if the
     /// environment will be slippery
     ///
-    virtual void make(const std::string& version,
-                      const std::unordered_map<std::string, std::any>& options) override final;
+    void make(const std::string& version,
+              const std::unordered_map<std::string, std::any>& options) override final;
 					  
 					  
 	/// 
 	/// \brief Reset the environment
 	///
-    virtual time_step_type reset(uint_t /*seed*/,
-                                 const std::unordered_map<std::string, std::any>& /*options*/)override final;
+    time_step_type reset(uint_t /*seed*/,
+                                 const std::unordered_map<std::string, std::any>& /*options*/) override final;
 					  
 					  
 	///
@@ -377,52 +371,52 @@ public:
     /// \param action
     /// \return
     ///
-    virtual time_step_type step(const action_type& action) override final;
+    time_step_type step(const action_type& action) override final;
 
     ///
     /// \brief close
     ///
-    virtual void close()override final;
+    void close()override final;
 
     ///
     /// \brief has_random_state
     /// \return
     ///
-    bool has_random_state()const noexcept{return randomize_state_;}
+    [[nodiscard]] bool has_random_state()const noexcept{return randomize_state_;}
 	
 	///
     /// \brief n_states. Returns the number of states
     ///
-    uint_t n_states()const noexcept{ return side_size_ * side_size_; }
+    [[nodiscard]] uint_t n_states()const noexcept{ return side_size_ * side_size_; }
 
     ///
     /// \brief n_actions. Returns the number of actions
     ///
-    uint_t n_actions()const noexcept{return action_space_type::size;}
+    [[nodiscard]] uint_t n_actions()const noexcept{return action_space_type::size;}
 
     ///
     /// \brief seed
     /// \return
     ///
-    uint_t seed()const noexcept{return seed_;}
+    [[nodiscard]] uint_t seed()const noexcept{return seed_;}
 
     ///
     /// \brief noise_factor
     /// \return
     ///
-    real_t noise_factor()const noexcept{return noise_factor_;}
+    [[nodiscard]] real_t noise_factor()const noexcept{return noise_factor_;}
 
     ///
 	/// \brief Returns true if the PLAYER position is the same
 	///as the PIT position
 	///
-    bool is_game_lost()const;
+    [[nodiscard]] bool is_game_lost()const;
 	
 	///
     /// \brief init_type
     /// \return
     ///
-    GridWorldInitType init_type()const noexcept{return init_mode_;}
+    [[nodiscard]] GridWorldInitType init_type()const noexcept{return init_mode_;}
 	
 private:
 
@@ -463,25 +457,29 @@ const uint_t Gridworld<side_size_>:: n_components = 4;
 
 template<uint_t side_size_>
 Gridworld<side_size_>::Gridworld()
-    :
-EnvBase<TimeStep<detail::board_state_type>,
-		detail::GridWorldEnv<side_size_>>(0, "Gridworld"),
-init_mode_(GridWorldInitType::INVALID_TYPE),
-randomize_state_(false),
-seed_(0),
-noise_factor_(0.0)
-{}
+	:
+	EnvBase<TimeStep<detail::board_state_type>,
+	        detail::GridWorldEnv<side_size_>>(0, "Gridworld"),
+	init_mode_(GridWorldInitType::INVALID_TYPE),
+	randomize_state_(false),
+	seed_(0),
+	noise_factor_(0.0),
+	board_()
+{
+}
 
 template<uint_t side_size_>
 Gridworld<side_size_>::Gridworld(uint_t cidx)
-    :
-EnvBase<TimeStep<detail::board_state_type>,
-		detail::GridWorldEnv<side_size_>>(cidx, "Gridworld"),
-init_mode_(GridWorldInitType::INVALID_TYPE),
-randomize_state_(false),
-seed_(0),
-noise_factor_(0.0)
-{}
+	:
+	EnvBase<TimeStep<detail::board_state_type>,
+	        detail::GridWorldEnv<side_size_>>(cidx, "Gridworld"),
+	init_mode_(GridWorldInitType::INVALID_TYPE),
+	randomize_state_(false),
+	seed_(0),
+	noise_factor_(0.0),
+	board_()
+{
+}
 
 
 template<uint_t side_size_>
@@ -506,28 +504,22 @@ Gridworld<side_size_>::make(const std::string& version,
         return;
     }
 
-    // find the mode
-    auto mode = options.find("mode");
-
-    if(mode != options.end()){
+    if(const auto mode = options.find("mode"); mode != options.end()){
        init_mode_ = std::any_cast<GridWorldInitType>(mode->second);
     }
     else{
        init_mode_ = GridWorldInitType::STATIC;
     }
 
-    auto seed = options.find("seed");
-    if(seed != options.end()){
+    if(const auto seed = options.find("seed"); seed != options.end()){
         seed_ = std::any_cast<uint_t>(seed->second);
     }
 
-    auto noise_factor = options.find("noise_factor");
-    if(noise_factor != options.end()){
+    if(const auto noise_factor = options.find("noise_factor"); noise_factor != options.end()){
         noise_factor_ = std::any_cast<real_t>(noise_factor->second);
     }
 
-    auto randomize_state = options.find("randomize_state");
-    if(randomize_state != options.end()){
+    if(const auto randomize_state = options.find("randomize_state"); randomize_state != options.end()){
         randomize_state_ = std::any_cast<bool>(randomize_state->second);
     }
 

@@ -33,6 +33,12 @@ namespace example_5{
 		std::cout<<"Number of states:  "<<env.n_states()<<std::endl;
 		std::cout<<"Version:  "<<env.version()<<std::endl;
 		std::cout<<"Name:  "<<env.env_name()<<std::endl;
+
+		auto time_step = env.step(0);
+		std::cout<<"Time step:"<<time_step<<std::endl;
+
+		time_step = env.step(1);
+		std::cout<<"Time step:"<<time_step<<std::endl;
 		env.close();
 	}
 	

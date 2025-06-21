@@ -13,7 +13,11 @@ from gymnasium_envs.classic_control.pendulum_env_api import pendulum_router
 from gymnasium_envs.classic_control.acrobot_env_api import acrobot_router
 from gymnasium_envs.classic_control.v.acrobot_v_env_api import acrobot_v_router
 from gdrl.gym_walk_env.gym_walk_env_api import gym_walk_env_router
-from gym_pybullet_drones_env.quadrotor_sim_env_api import quadrotor_sim_router
+
+from gym_pybullet_drones_env.quadrotor_sim_env_api import FOUND_GYM_PYBULLET
+
+if FOUND_GYM_PYBULLET:
+    from gym_pybullet_drones_env.quadrotor_sim_env_api import quadrotor_sim_router
 
 from api_config import get_api_config
 
@@ -45,7 +49,8 @@ app.include_router(gym_walk_env_router, prefix=BASE_URL)
 app.include_router(pendulum_router, prefix=BASE_URL)
 app.include_router(acrobot_router, prefix=BASE_URL)
 app.include_router(acrobot_v_router, prefix=BASE_URL)
-app.include_router(quadrotor_sim_router, prefix=BASE_URL)
+if FOUND_GYM_PYBULLET:
+    app.include_router(quadrotor_sim_router, prefix=BASE_URL)
 
 
 @app.on_event("startup")

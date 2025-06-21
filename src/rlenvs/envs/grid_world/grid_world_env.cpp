@@ -1,15 +1,12 @@
-// SPDX-FileCopyrightText: 2024 <copyright holder> <email>
-// SPDX-License-Identifier: Apache-2.0
-
 #include "rlenvs/envs/grid_world/grid_world_env.h"
+
+#include <iostream>
 #include <string>
 #include <random>
 #include <utility>
 #include <set>
 
-namespace rlenvscpp{
-namespace envs{
-namespace grid_world{
+namespace rlenvscpp::envs::grid_world{
 
 GridWorldInitType
 from_string(const std::string& gw_init_type){
@@ -17,15 +14,16 @@ from_string(const std::string& gw_init_type){
     if(gw_init_type == "STATIC"){
         return rlenvscpp::envs::grid_world::GridWorldInitType::STATIC;
     }
-    else if(gw_init_type == "RANDOM"){
+
+	if(gw_init_type == "RANDOM"){
         return rlenvscpp::envs::grid_world::GridWorldInitType::RANDOM;
     }
-    else if(gw_init_type == "PLAYER"){
+
+	if(gw_init_type == "PLAYER"){
         return rlenvscpp::envs::grid_world::GridWorldInitType::PLAYER;
     }
 
     return rlenvscpp::envs::grid_world::GridWorldInitType::INVALID_TYPE;
-
 }
 
 
@@ -45,17 +43,17 @@ validate_board(const board& b){
 
     auto valid = true;
 
-    auto player_itr = b.components.find(board_component_type::PLAYER);
+    const auto player_itr = b.components.find(board_component_type::PLAYER);
     if(player_itr == b.components.end()){
         throw std::logic_error("PLAYER is missing from the board");
     }
 
-    auto goal_itr = b.components.find(board_component_type::GOAL);
+    const auto goal_itr = b.components.find(board_component_type::GOAL);
     if(goal_itr == b.components.end()){
         throw std::logic_error("GOAL is missing from the board");
     }
 
-    auto pit_itr = b.components.find(board_component_type::PIT);
+    const auto pit_itr = b.components.find(board_component_type::PIT);
      if(pit_itr == b.components.end()){
         throw std::logic_error("PIT is missing from the board");
     }
@@ -140,12 +138,12 @@ operator+(const board_position& p1, const board_position& p2){
     return {p1.first + p2.first, p1.second + p2.second};
 }
 
-uint_t
+int_t
 max(const board_position& p){
     return std::max(p.first, p.second);
 }
 
-uint_t
+int_t
 min(const board_position& p){
     return std::min(p.first, p.second);
 }
@@ -163,10 +161,10 @@ board::init_board(uint_t board_s, GridWorldInitType init_type){
     board_size = board_s;
 
     // add the pieces on the board
-    components[board_component_type::PLAYER] = board_piece("Player", "P", std::make_pair(0, 3));
-    components[board_component_type::GOAL] = board_piece("Goal", "G", std::make_pair(0, 0));
-    components[board_component_type::PIT] = board_piece("Pit", "-", std::make_pair(0, 1));
-    components[board_component_type::WALL] = board_piece("Wall", "W", std::make_pair(1, 1));
+    components[board_component_type::PLAYER] = board_piece("Player", std::make_pair(0, 0));
+    components[board_component_type::GOAL] = board_piece("Goal", std::make_pair(1, 0));
+    components[board_component_type::PIT] = board_piece("Pit", std::make_pair(2, 0));
+    components[board_component_type::WALL] = board_piece("Wall",  std::make_pair(3, 0));
 
     switch (init_type) {
 
@@ -194,11 +192,11 @@ board::init_board(uint_t board_s, GridWorldInitType init_type){
 
     }
 
-    auto is_valid_board = validate_board(*this);
-
-    if(!is_valid_board){
-     throw std::logic_error("The board is invalid");
+    if(const auto is_valid_board = validate_board(*this); !is_valid_board){
+		throw std::logic_error("The board is invalid");
     }
+
+	is_board_init = true;
     return get_state();
 }
 
@@ -206,10 +204,11 @@ board::init_board(uint_t board_s, GridWorldInitType init_type){
 board_state_type
 board::step(GridWorldActionType action){
 
+	//  check if the resulting move is valid and
+	// move the Player there
     switch( action ){
         case GridWorldActionType::UP:
             {
-                // move up
                  check_and_move(-1, 0);
                  break;
             }
@@ -246,9 +245,9 @@ board::step(GridWorldActionType action){
 real_t
 board::get_reward()const{
 
-    auto player_pos = components.find(board_component_type::PLAYER)->second.pos;
-    auto pit_pos = components.find(board_component_type::PIT)->second.pos;
-    auto goal_pos = components.find(board_component_type::GOAL)->second.pos;
+    const auto player_pos = components.find(board_component_type::PLAYER)->second.pos;
+    const auto pit_pos = components.find(board_component_type::PIT)->second.pos;
+    const auto goal_pos = components.find(board_component_type::GOAL)->second.pos;
 
     // check where the player is
     // if the player is at the PIT position
@@ -256,7 +255,8 @@ board::get_reward()const{
     if (player_pos == pit_pos){
         return -10.;
     }
-    else if (player_pos == goal_pos){
+
+	if (player_pos == goal_pos){
         return 10.0;
     }
 
@@ -332,13 +332,14 @@ board::validate_move(board_component_type piece, board_position pos)const{
     // 0 is valid
     //auto outcome = 0 #0 is valid, 1 invalid, 2 lost game
     auto outcome = board_move_type::VALID;
-	
-	auto piece_pos = components.find(piece)->second.pos;
 
-    // get position of pit
-    auto pit_pos = components.find(board_component_type::PIT)->second.pos;
-    auto wall_pos = components.find(board_component_type::WALL)->second.pos;
-    auto new_pos = piece_pos + pos;
+	const auto piece_pos = components.find(piece)->second.pos;
+    const auto pit_pos = components.find(board_component_type::PIT)->second.pos;
+    const auto wall_pos = components.find(board_component_type::WALL)->second.pos;
+	const auto new_pos = piece_pos + pos;
+
+	//  check if the resulting move is valid and
+	// move the Player there
 
      if (new_pos == wall_pos){
          //1 //block move, player can't move to wall
@@ -347,28 +348,33 @@ board::validate_move(board_component_type piece, board_position pos)const{
      else if( max(new_pos) > (board_size - 1 )){
         // #if outside bounds of board
          outcome = board_move_type::INVALID;
-    }
-    else if( min(new_pos) < 0){
+     }
+     else if( min(new_pos) < 0){
         // #if outside bounds
          outcome = board_move_type::INVALID;
-    }
-    else if( new_pos == pit_pos){
+     }
+     else if( new_pos == pit_pos){
          outcome = board_move_type::LOST_GAME;
-    }
+     }
 
     return outcome;
 
 }
 
  void
- board::check_and_move(uint_t row, uint_t col){
+ board::check_and_move(int_t row, int_t col){
 
-    auto position = std::make_pair(row, col);
-    auto move_type = validate_move(board_component_type::PLAYER, position);
+	// create a position object from the
+	// given row, col entries
+    const auto position = std::make_pair(row, col);
 
-    if( move_type == board_move_type::VALID || move_type == board_move_type::LOST_GAME){
+	// if the outcome is we lost the game or
+	// a valid move we calculate the new position
+	// and move the Player there
+    if(const auto move_type = validate_move(board_component_type::PLAYER, position);
+    	move_type == board_move_type::VALID || move_type == board_move_type::LOST_GAME){
 
-        auto new_pos = components[board_component_type::PLAYER].pos + position;
+        const auto new_pos = components[board_component_type::PLAYER].pos + position;
         move_piece(board_component_type::PLAYER, new_pos);
     }
 
@@ -377,8 +383,6 @@ board::validate_move(board_component_type piece, board_position pos)const{
 
 void
 board::build_static_mode(){
-
-    // TODO: Have we called init_board?
 
     // Row, Column
     components[board_component_type::PLAYER].pos = std::make_pair(0,3);
@@ -391,16 +395,13 @@ board::build_static_mode(){
 
 void
 board::build_random_mode(){
-	
+
 	// generate random index
 	std::mt19937 generator(seed);
 	
 	std::vector<real_t> weights(board_size, 1.0/static_cast<real_t>(board_size));
     std::discrete_distribution<int> distribution(weights.begin(), weights.end());
-	
-    //std::discrete_distribution<int> distribution(0, static_cast<int>(board_size));
-	
-	
+
 	components[board_component_type::PLAYER].pos = std::make_pair(distribution(generator),
 																  distribution(generator));
     components[board_component_type::GOAL].pos = std::make_pair(distribution(generator),
@@ -409,13 +410,13 @@ board::build_random_mode(){
 																  distribution(generator));
     components[board_component_type::WALL].pos = std::make_pair(distribution(generator),
 																  distribution(generator));
-																  
-																  
-	const uint_t n_retries = 20;
+
+
+	constexpr uint_t n_retries = 20;
 	uint_t current_n_retries = 0;
 	while(!validate_board(*this) && current_n_retries++ < n_retries){
 		
-		// place player randmly on the grid
+		// place player randomly on the grid
 		components[board_component_type::PLAYER].pos = std::make_pair(distribution(generator),
 																  distribution(generator));
 	}
@@ -423,17 +424,11 @@ board::build_random_mode(){
 }
 
 void
-board::build_player_mode(uint_t seed){
+board::build_player_mode(const uint_t seed){
 
     // height x width x depth (number of pieces)
 	build_static_mode();
-	
-	// get the positions of the
-	// pieces on the board
-	auto goal_pos = components[board_component_type::GOAL].pos;
-	auto pit_pos  = components[board_component_type::PIT].pos;
-	auto wall_pos = components[board_component_type::WALL].pos;
-	
+
 	// generate random index
 	std::mt19937 generator(seed);
 	std::vector<real_t> weights(board_size, 1.0/static_cast<real_t>(board_size));
@@ -445,7 +440,7 @@ board::build_player_mode(uint_t seed){
 	// place player randmly on the grid
 	components[board_component_type::PLAYER].pos = std::pair<int, int>(x, y);
 
-	const uint_t n_retries = 20;
+    constexpr uint_t n_retries = 20;
 	uint_t current_n_retries = 0;
 	while(!validate_board(*this) && current_n_retries++ < n_retries){
 		
@@ -455,14 +450,10 @@ board::build_player_mode(uint_t seed){
 		// place player randmly on the grid
 		components[board_component_type::PLAYER].pos = std::pair<int, int>(x, y);
 	}
-
-        
-
-
 }
 
 }// detail
 
 }
-}
-}
+
+

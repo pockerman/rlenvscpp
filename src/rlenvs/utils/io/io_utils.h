@@ -27,6 +27,27 @@ std::ostream& print_vector(std::ostream& out,
     return out;
 							 
 }
+
+	template<typename T>
+std::ostream& print_vector(std::ostream& out,
+						 const std::vector<std::vector<T>>& obs){
+
+	for(uint_t i=0; i<obs.size(); ++i)
+	{
+		print_vector(out, obs[i]);
+	}
+	return out;
+}
+	template<typename T>
+std::ostream& print_vector(std::ostream& out,
+					 const std::vector<std::vector<std::vector<T>>>& obs){
+
+	for(uint_t i=0; i<obs.size(); ++i)
+	{
+		print_vector(out, obs[i]);
+	}
+	return out;
+}
 			
 template<typename T>
 std::ostream& operator<<(std::ostream& out,

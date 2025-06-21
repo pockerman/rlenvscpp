@@ -9,8 +9,8 @@
 
 #include <any>
 
-namespace rlenvscpp {
-namespace dynamics {
+
+namespace rlenvscpp::dynamics {
 	
 	
 struct QuadrotorDynamicsConfig
@@ -298,6 +298,6 @@ QuadrotorDynamics::get_euler_angles_from_state_()const{
 
 }
 
-}
+
 
 #endif // QUADROTOR_DYNAMICS_H
