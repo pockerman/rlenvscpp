@@ -248,7 +248,7 @@ namespace detail{
 		///
 		/// \brief the Action type
 		///
-		typedef typename action_space::space_item_type action_type;
+		typedef action_space::space_item_type action_type;
 	
 	
 		///
@@ -351,15 +351,13 @@ public:
     ///
     void make(const std::string& version,
               const std::unordered_map<std::string, std::any>& options) override final;
-					  
-					  
+
 	/// 
 	/// \brief Reset the environment
 	///
     time_step_type reset(uint_t /*seed*/,
                                  const std::unordered_map<std::string, std::any>& /*options*/) override final;
-					  
-					  
+
 	///
 	/// \brief Create a new copy of the environment with the given
 	/// copy index
