@@ -138,8 +138,7 @@ struct ContinuousVectorStateContinuousScalarBoundedActionEnv
 	/// \brief the Action type is real valued
 	///
 	typedef typename real_range::value_type action_type;
-	
-	
+
 	///
     /// \brief action space size
     ///

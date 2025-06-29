@@ -147,7 +147,9 @@ FILE(GLOB SRCS src/rlenvs/*.cpp
 			   src/rlenvs/utils/trajectory/*.cpp
    )
 
-ADD_LIBRARY(rlenvscpplib SHARED ${SRCS})
+ADD_LIBRARY(rlenvscpplib SHARED ${SRCS}
+		src/rlenvs/envs/gymnasium/box2d/lunar_lander_env.h
+		src/rlenvs/envs/gymnasium/box2d/lunar_lander_env.cpp)
 
 SET_TARGET_PROPERTIES(rlenvscpplib PROPERTIES LINKER_LANGUAGE CXX)
 INSTALL(TARGETS rlenvscpplib DESTINATION ${CMAKE_INSTALL_PREFIX})
