@@ -10,7 +10,8 @@ from fastapi.responses import JSONResponse
 from fastapi import HTTPException
 from time_step_response import TimeStep, TimeStepType
 
-lunar_lander_router = APIRouter(prefix="/gymnasium/lunar-lander-env", tags=["Lunar Lander API"])
+lunar_lander_discrete_router = APIRouter(prefix="/gymnasium/lunar-lander-discrete-env",
+                                         tags=["Lunar Lander Discrete API"])
 
 ENV_NAME = "LunarLander"
 
@@ -20,18 +21,20 @@ envs = {
 }
 
 # actions that the environment accepts
-ACTIONS_SPACE = {0: "apply -1 torque to the actuated joint",
-                 1: "apply 0 torque to the actuated joint",
-                 2: "apply 1 torque to the actuated joint"}
+ACTIONS_SPACE = {0: "do nothing",
+                 1: "fire left orientation engine",
+                 2: "fire main engine",
+                 3: "fire right orientation engine"
+                 }
 
 
-@lunar_lander_router.get("/action-space")
+@lunar_lander_discrete_router.get("/action-space")
 async def get_action_space() -> JSONResponse:
     return JSONResponse(status_code=status.HTTP_200_OK,
                         content={"action_space": ACTIONS_SPACE})
 
 
-@lunar_lander_router.get("/is-alive")
+@lunar_lander_discrete_router.get("/is-alive")
 async def get_is_alive(cidx: int) -> JSONResponse:
     global envs
     if cidx in envs:
@@ -48,7 +51,7 @@ async def get_is_alive(cidx: int) -> JSONResponse:
                             content={"message": f"Environment {ENV_NAME} and index {cidx} has not been created"})
 
 
-@lunar_lander_router.post("/close")
+@lunar_lander_discrete_router.post("/close")
 async def close(cidx: int) -> JSONResponse:
     global envs
     if cidx in envs:
@@ -64,9 +67,15 @@ async def close(cidx: int) -> JSONResponse:
                         content={"message": f"Environment {ENV_NAME} and index {cidx} has not been created"})
 
 
-@lunar_lander_router.post("/make")
-async def make(version: str = Body(default="v1"), cidx: int = Body(...),
-               options: dict[str, Any] = Body(default={})) -> JSONResponse:
+@lunar_lander_discrete_router.post("/make")
+async def make(version: str = Body(default="v3"), cidx: int = Body(...),
+               options: dict[str, Any] = Body(default={'gravity': -10.0, 'enable_wind': False,
+                                                       'wind_power': 15.0, 'turbulence_power': 1.5})) -> JSONResponse:
+    if version == 'v1' or version == 'v2':
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
+                            detail='Environment version v1 for `LunarLander` '
+                                   'is deprecated. Please use `LunarLander-v3` instead.')
+
     global envs
     env_type = f"{ENV_NAME}-{version}"
     if cidx in envs:
@@ -76,7 +85,7 @@ async def make(version: str = Body(default="v1"), cidx: int = Body(...),
             envs[cidx].close()
 
         try:
-            env = gym.make(env_type)
+            env = gym.make(env_type, continuous=False, **options)
             envs[cidx] = env
         except Exception as e:
             logger.error('An exception was raised')
@@ -98,7 +107,7 @@ async def make(version: str = Body(default="v1"), cidx: int = Body(...),
                         content={"result": True})
 
 
-@lunar_lander_router.post("/reset")
+@lunar_lander_discrete_router.post("/reset")
 async def reset(seed: int = Body(default=42), cidx: int = Body(...),
                 options: dict[str, Any] = Body(default={})) -> JSONResponse:
     """Reset the environment
@@ -131,7 +140,7 @@ async def reset(seed: int = Body(default=42), cidx: int = Body(...),
                                            " Have you called make()?"})
 
 
-@lunar_lander_router.post("/step")
+@lunar_lander_discrete_router.post("/step")
 async def step(action: int = Body(...), cidx: int = Body(...)) -> JSONResponse:
     if action not in ACTIONS_SPACE:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
@@ -167,7 +176,7 @@ async def step(action: int = Body(...), cidx: int = Body(...)) -> JSONResponse:
                         detail=f"Environment {ENV_NAME} is not initialized. Have you called make()?")
 
 
-@lunar_lander_router.post("/sync")
+@lunar_lander_discrete_router.post("/sync")
 async def sync(cidx: int = Body(...), options: dict[str, Any] = Body(default={})) -> JSONResponse:
     return JSONResponse(status_code=status.HTTP_202_ACCEPTED,
                         content={"message": "OK"})

@@ -77,7 +77,7 @@
     * v0: Initial versions release (1.0.0).
   **/
 
-#include "rlenvs/rlenvscpp_config.h"
+
 #include "rlenvs/rlenvs_types_v2.h"
 #include "rlenvs/envs/time_step.h"
 #include "rlenvs/envs/gymnasium/gymnasium_env_base.h"
@@ -91,125 +91,122 @@
 #include <any>
 
 namespace rlenvscpp{
-namespace envs{
-namespace gymnasium{
-
-///
-/// \brief The Pendulum class. Interface for Pendulum environment
-///
-class Pendulum final: public GymnasiumEnvBase<TimeStep<std::vector<real_t>>, 
-                                              ContinuousVectorStateContinuousScalarBoundedActionEnv<3, 
-											                                                        1, 
-											                                                        RealRange<-2.0, 2.0>, 
-																									0, real_t>
-											 >
+namespace envs::gymnasium
 {
 
-public:
+	///
+	/// \brief The Pendulum class. Interface for Pendulum environment
+	///
+	class Pendulum final: public GymnasiumEnvBase<TimeStep<std::vector<real_t>>,
+	                                              ContinuousVectorStateContinuousScalarBoundedActionEnv<3,
+		                                              1,
+		                                              RealRange<-2.0, 2.0>,
+		                                              0, real_t>
+		>
+	{
 
-	///
-    /// \brief name
-    ///
-	static  const std::string name;
-	
-	///
-	/// \brief The URI for accessing the environment
-	///
-	static const std::string URI;
-	
-	
-	///
-	/// \brief Base class type
-	///
-	typedef GymnasiumEnvBase<TimeStep<std::vector<real_t>>, 
-                                              ContinuousVectorStateContinuousScalarBoundedActionEnv<3, 
-											                                                        1, 
-											                                                        RealRange<-2.0, 2.0>, 
-																									0, real_t>
-											 >::base_type base_type;
-	///
-	/// \brief The time step type we return every time a step in the
-	/// environment is performed
-	///
-    typedef typename base_type::time_step_type time_step_type;
-	
-	///
-	/// \brief The type describing the state space for the environment
-	///
-	typedef typename base_type::state_space_type state_space_type;
-	
-	///
-	/// \brief The type of the action space for the environment
-	///
-	typedef typename base_type::action_space_type action_space_type;
+	public:
 
-    ///
-	/// \brief The type of the action to be undertaken in the environment
-	///
-    typedef typename base_type::action_type action_type;
-	
-	///
-	/// \brief The type of the state
-	///
-	typedef typename base_type::state_type state_type;
+		///
+		/// \brief name
+		///
+		static  const std::string name;
 
-    ///
-    /// \brief Pendulum. Constructor
-    ///
-    Pendulum(const RESTApiServerWrapper& api_server );
-	
-	///
-	/// \brief Constructor
-	///
-	Pendulum(const RESTApiServerWrapper& api_server, 
-			 const uint_t cidx);
-			   
-	///
-	/// \brief copy ctor
-	///
-	Pendulum(const Pendulum& other);
+		///
+		/// \brief The URI for accessing the environment
+		///
+		static const std::string URI;
 
-    ///
-    /// \brief ~Pendulum. Destructor
-    ///
-    ~Pendulum()=default;
+		///
+		/// \brief Base class type
+		///
+		typedef GymnasiumEnvBase<TimeStep<std::vector<real_t>>,
+		                         ContinuousVectorStateContinuousScalarBoundedActionEnv<3,
+			                         1,
+			                         RealRange<-2.0, 2.0>,
+			                         0, real_t>
+		>::base_type base_type;
 
-    ///
-    /// \brief make. Build the environment
-    ///
-    virtual void make(const std::string& version,
-                      const std::unordered_map<std::string, std::any>& /*options*/) override final;
-					  
-	///
-    /// \brief step. Step in the environment following the given action
-    ///
-    virtual time_step_type step(const action_type& action)override final;
-	
-	///
-	/// \brief Create a new copy of the environment with the given
-	/// copy index
-	///
-	Pendulum make_copy(uint_t cidx)const;
+		///
+		/// \brief The time step type we return every time a step in the
+		/// environment is performed
+		///
+		typedef typename base_type::time_step_type time_step_type;
 
+		///
+		/// \brief The type describing the state space for the environment
+		///
+		typedef typename base_type::state_space_type state_space_type;
 
-    ///
-    /// \brief n_actions. Returns the number of actions
-    ///
-    uint_t n_actions()const noexcept{return action_space_type::size;}
+		///
+		/// \brief The type of the action space for the environment
+		///
+		typedef typename base_type::action_space_type action_space_type;
 
-    
-protected:
-	
-    ///
+		///
+		/// \brief The type of the action to be undertaken in the environment
+		///
+		typedef typename base_type::action_type action_type;
+
+		///
+		/// \brief The type of the state
+		///
+		typedef typename base_type::state_type state_type;
+
+		///
+		/// \brief Pendulum. Constructor
+		///
+		Pendulum(const RESTApiServerWrapper& api_server );
+
+		///
+		/// \brief Constructor
+		///
+		Pendulum(const RESTApiServerWrapper& api_server,
+		         const uint_t cidx);
+
+		///
+		/// \brief copy ctor
+		///
+		Pendulum(const Pendulum& other);
+
+		///
+		/// \brief ~Pendulum. Destructor
+		///
+		~Pendulum()=default;
+
+		///
+		/// \brief make. Build the environment
+		///
+		virtual void make(const std::string& version,
+		                  const std::unordered_map<std::string, std::any>& /*options*/) override final;
+
+		///
+		/// \brief step. Step in the environment following the given action
+		///
+		virtual time_step_type step(const action_type& action)override final;
+
+		///
+		/// \brief Create a new copy of the environment with the given
+		/// copy index
+		///
+		Pendulum make_copy(uint_t cidx)const;
+
+		///
+		/// \brief n_actions. Returns the number of actions
+		///
+		uint_t n_actions()const noexcept{return action_space_type::size;}
+
+	protected:
+
+		///
     /// \brief Handle the reset response from the environment server
     ///
-    virtual time_step_type create_time_step_from_response_(const nlohmann::json& response) const override final;
+		virtual time_step_type create_time_step_from_response_(const nlohmann::json& response) const override final;
 
-};
+	};
 
 
 
-}
 }
 }
 
