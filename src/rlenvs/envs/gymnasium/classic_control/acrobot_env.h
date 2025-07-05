@@ -119,8 +119,6 @@
 ///    - Sutton, R. S., Barto, A. G. (2018 ). Reinforcement Learning: An Introduction. The MIT Press.
 ///    """
 
-
-#include "rlenvs/rlenvscpp_config.h"
 #include "rlenvs/rlenvs_types_v2.h"
 #include "rlenvs/envs/time_step.h"
 #include "rlenvs/envs/gymnasium/gymnasium_env_base.h"

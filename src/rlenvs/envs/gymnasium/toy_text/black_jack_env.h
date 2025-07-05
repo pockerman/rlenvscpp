@@ -81,8 +81,7 @@ public:
 	///
 	/// \brief Constructor
 	///
-	BlackJack(const RESTApiServerWrapper& api_server, 
-	           const uint_t cidx);
+	BlackJack(const RESTApiServerWrapper& api_server, const uint_t cidx);
 			   
 	///
 	///
