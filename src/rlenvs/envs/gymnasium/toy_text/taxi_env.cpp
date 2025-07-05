@@ -26,9 +26,7 @@ Taxi::Taxi(const RESTApiServerWrapper& api_server)
 	this ->get_api_server().register_if_not(Taxi::name,Taxi::URI); 
 }
 
-
-Taxi::Taxi(const RESTApiServerWrapper& api_server, 
-		   const uint_t cidx)
+Taxi::Taxi(const RESTApiServerWrapper& api_server, const uint_t cidx)
 		   :
 ToyTextEnvBase<TimeStep<uint_t>, 500, 6>(api_server, cidx,Taxi::name)
 {
