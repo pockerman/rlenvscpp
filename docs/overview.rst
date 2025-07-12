@@ -25,7 +25,7 @@ Note that you will need to have Gymnasium installed.
 * Pendulum: `example_1 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_6/example_6.cpp>`_
 * LunarLander: `box2d <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_6/example_6.cpp>`_
 * Acrobot: TODO
-
+* LunarLander: `https://github.com/pockerman/rlenvscpp/blob/master/examples/box2d/box2d_example.cpp`_
 
 The Gymnasium (former OpenAI-Gym) environments utilise a REST API to communicate requests to/from the 
 environment and ``rlenvscpp``.
@@ -38,7 +38,6 @@ environment. Currently, ``rlenvscpp`` provides the following vector environments
 
 * AcrobotV:  `example_8 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_8/example_8.cpp>`_ 
 
-
 Webots environments
 --------------------------
 
@@ -47,7 +46,6 @@ installed on your machine. You also need to set the variable ``ENABLE_WEBOTS`` t
 library.
 
 * EpuckSimpleGridWorld:  `world 1 <https://github.com/pockerman/rlenvscpp/blob/master/examples/webots/world_1/controllers/e_puck_controller/e_puck_controller.cpp>`_ 
-
 
 Working with webots-based environments is a bit different. See the dedicated instructions.
 
