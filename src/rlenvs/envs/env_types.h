@@ -101,6 +101,44 @@ struct ContinuousVectorStateDiscreteActionEnv
     static action_type sample_action(){return action_space::sample();}
 };
 
+	template<uint_t StateSpaceSize,
+			 uint_t ActionSpaceSize,
+			 typename StateSpaceItemType = real_t,
+	         typename ActionSpaceItemType = real_t>
+	struct ContinuousVectorStateContinuousVectorActionEnv
+	{
+		///
+		/// \brief The type of the state space
+		///
+		typedef ContinuousVectorSpace<StateSpaceSize, StateSpaceItemType> state_space;
+
+		///
+		/// \brief state space size
+		///
+		static constexpr uint_t STATE_SPACE_SIZE = state_space::size;
+
+		///
+		/// \brief The type of state
+		///
+		typedef typename state_space::space_item_type state_type;
+
+		///
+		/// \brief The type of the action space
+		///
+		typedef ContinuousVectorSpace<ActionSpaceSize, ActionSpaceItemType> action_space;
+
+		///
+		/// \brief action space size
+		///
+		static constexpr uint_t ACTION_SPACE_SIZE = action_space::size;
+
+		///
+		/// \brief The type of action
+		///
+		typedef typename action_space::space_item_type action_type;
+
+	};
+
 
 template<uint_t StateSpaceSize,
 		 uint_t action_end, 
@@ -146,136 +184,7 @@ struct ContinuousVectorStateContinuousScalarBoundedActionEnv
 	
 };
 
-/*
-template<uint_t StateSpaceSize, 
-		 uint_t ActionSpaceSize,
-		 typename StateSpaceItemType=std::vector<real_t>>
-struct ContinousStateDiscreteActionEnv{
-	
-	///
-    /// \brief the state space type
-    ///
-    typedef ContinuousSpace<StateSpaceSize, StateSpaceItemType> state_space;
-	
-	///
-	/// \brief the State type
-	///
-	typedef typename state_space::space_item_type state_type;
-	
-	///
-    /// \brief state space size
-    ///
-    static constexpr uint_t STATE_SPACE_SIZE = StateSpaceSize;
-	
-	///
-    /// \brief the action space type
-    ///
-    typedef DiscreteSpace<ActionSpaceSize> action_space;
-	
-	///
-	/// \brief the Action type
-	///
-	typedef typename action_space::space_item_type action_type;
-	
-	
-	///
-    /// \brief action space size
-    ///
-    static constexpr uint_t ACTION_SPACE_SIZE = ActionSpaceSize;
-	
-	
-	///
-    /// \brief sample
-    /// \return
-    ///
-    static action_type sample_action(){return action_space::sample();}
 
-    ///
-    /// \brief sample
-    /// \param seed
-    /// \return
-    ///
-    static action_type sample_action(uint_t seed){return action_space::sample();}
-	
-};
-
-template<uint_t StateSpaceSize, 
-		 uint_t ActionSpaceSize,
-		 typename ActionSpaceItemType=std::vector<real_t>>
-struct DisceteStateContinuousActionEnv{
-	
-	///
-    /// \brief the action space type
-    ///
-    typedef DiscreteSpace<StateSpaceSize> state_space;
-	
-	///
-	/// \brief the Action type
-	///
-	typedef typename state_space::space_item_type state_type;
-	
-	///
-    /// \brief state space size
-    ///
-    static constexpr uint_t STATE_SPACE_SIZE = StateSpaceSize;
-	
-	///
-    /// \brief the state space type
-    ///
-    typedef ContinuousSpace<ActionSpaceSize, ActionSpaceItemType> action_space;
-	
-	///
-	/// \brief the State type
-	///
-	typedef typename action_space::space_item_type action_type;
-	
-	///
-    /// \brief state space size
-    ///
-    static constexpr uint_t ACTION_SPACE_SIZE = ActionSpaceSize;
-	
-};
-
-
-template<uint_t StateSpaceSize, 
-		 uint_t ActionSpaceSize,
-		 typename StateSpaceItemType = std::vector<real_t>,
-		 typename ActionSpaceItemType = std::vector<real_t> >
-struct ContinousEnv{
-	
-	
-	///
-    /// \brief the state space type
-    ///
-    typedef ContinuousSpace<StateSpaceSize, StateSpaceItemType> state_space;
-	
-	///
-	/// \brief the State type
-	///
-	typedef typename state_space::space_item_type state_type;
-	
-	///
-    /// \brief state space size
-    ///
-    static constexpr uint_t STATE_SPACE_SIZE = StateSpaceSize;
-	
-	///
-    /// \brief the state space type
-    ///
-    typedef ContinuousSpace<ActionSpaceSize, ActionSpaceItemType> action_space;
-	
-	///
-	/// \brief the State type
-	///
-	typedef typename action_space::space_item_type action_type;
-	
-	///
-    /// \brief state space size
-    ///
-    static constexpr uint_t ACTION_SPACE_SIZE = ActionSpaceSize;
-	
-};
-*/
 template<uint_t StateSpaceSize, 
 		 uint_t AS,
 		 uint_t AE,
