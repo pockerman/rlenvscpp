@@ -1,9 +1,8 @@
+#include "rlenvs/boards/arduino/arduino_connector_usb_base.h"
+
+
 #include <iostream>
 #include <string>
-#include <fcntl.h>      // open
-#include <termios.h>    // POSIX terminal control
-#include <unistd.h>     // read/write/close
-#include <cstring>      // memset
 #include <chrono>
 #include <thread>
 
@@ -35,57 +34,43 @@
     }
  */
 
-void send_command(const std::string& cmd, int serial_port_fd) {
-    std::string to_send = cmd + "\n";
-    write(serial_port_fd, to_send.c_str(), to_send.size());
-    std::cout << "Sent: " << cmd << std::endl;
 
-    char buffer[256];
-    int n = read(serial_port_fd, buffer, sizeof(buffer));
-    if (n > 0) {
-        std::string response(buffer, n);
-        // Remove trailing newline and carriage return
-        response.erase(response.find_last_not_of("\r\n") + 1);
-        std::cout << "Arduino replied: " << response << std::endl;
-    } else {
-        std::cout << "No response from Arduino." << std::endl;
+namespace example
+{
+    using rlenvscpp::boards::arduino::ArduinoCMDBase;
+    using rlenvscpp::boards::arduino::ArduinoConnectorUSBBase;
+
+    struct ArduinoONCMD: public ArduinoCMDBase
+    {
+        virtual std::string get_cmd()const final;
+    };
+
+    std::string ArduinoONCMD::get_cmd() const
+    {
+        return "ON";
+    }
+
+    struct ArduinoOFFCMD: public ArduinoCMDBase
+    {
+        virtual std::string get_cmd()const final;
+    };
+
+    std::string ArduinoOFFCMD::get_cmd() const
+    {
+        return "OFF";
     }
 }
 
+
 int main() {
-    const char* port = "/dev/ttyACM0"; // Change as needed
-    int serial_port = open(port, O_RDWR | O_NOCTTY);
 
-    if (serial_port < 0) {
-        std::cerr << "Failed to open port " << port << std::endl;
-        return 1;
-    }
+    using namespace example;
 
-    // Configure serial port
-    termios tty;
-    memset(&tty, 0, sizeof tty);
-    if (tcgetattr(serial_port, &tty) != 0) {
-        std::cerr << "Error getting termios attributes" << std::endl;
-        return 1;
-    }
+    ArduinoConnectorUSBBase connector("/dev/ttyACM0");
+    connector.connect();
 
-    cfsetispeed(&tty, B9600);
-    cfsetospeed(&tty, B9600);
-    tty.c_cflag |= (CLOCAL | CREAD);    // Enable receiver
-    tty.c_cflag &= ~CSIZE;
-    tty.c_cflag |= CS8;                 // 8-bit characters
-    tty.c_cflag &= ~PARENB;             // No parity
-    tty.c_cflag &= ~CSTOPB;             // One stop bit
-    tty.c_cflag &= ~CRTSCTS;            // No flow control
-
-    tty.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG); // Raw input
-    tty.c_iflag &= ~(IXON | IXOFF | IXANY);         // No flow control
-    tty.c_oflag &= ~OPOST;                          // Raw output
-
-    tcsetattr(serial_port, TCSANOW, &tty);
-
-    // Give the Arduino time to reset
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    ArduinoONCMD on_cmd;
+    ArduinoOFFCMD off_cmd;
 
     std::string user_input;
     while (true) {
@@ -93,14 +78,23 @@ int main() {
         std::getline(std::cin, user_input);
 
         if (user_input == "e") {
-            send_command("OFF", serial_port);
+            connector.send_cmd(off_cmd);
             break;
         }
 
-        send_command(user_input, serial_port);
+        if (user_input == "ON")
+        {
+            connector.send_cmd(on_cmd);
+        }
+
+        if (user_input == "OFF")
+        {
+            connector.send_cmd(off_cmd);
+        }
+
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 
-    close(serial_port);
+    connector.close_connection();
     return 0;
 }
