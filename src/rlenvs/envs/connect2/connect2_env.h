@@ -9,7 +9,6 @@
 #ifndef CONNECT2_ENV_H
 #define CONNECT2_ENV_H
 
-#include "rlenvs/rlenvscpp_config.h"
 #include "rlenvs/rlenvs_types_v2.h"
 #include "rlenvs/envs/time_step.h"
 #include "rlenvs/envs/env_types.h"

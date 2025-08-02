@@ -145,12 +145,16 @@ FILE(GLOB SRCS src/rlenvs/*.cpp
 			   src/rlenvs/utils/geometry/shapes/*.cpp
 			   src/rlenvs/utils/geometry/mesh/*.cpp
 			   src/rlenvs/utils/trajectory/*.cpp
+		       src/rlenvs/boards/arduino/*.cpp
    )
 
 ADD_LIBRARY(rlenvscpplib SHARED ${SRCS}
 		src/rlenvs/envs/gymnasium/box2d/lunar_lander_env.h
 		src/rlenvs/envs/gymnasium/box2d/lunar_lander_env.cpp
-		examples/box2d/box2d_example.cpp)
+		examples/box2d/box2d_example.cpp
+		src/rlenvs/boards/arduino/arduino_connector_base.h
+		src/rlenvs/boards/arduino/arduino_connector_usb_base.h
+		src/rlenvs/boards/arduino/arduino_connector_usb_base.cpp)
 
 SET_TARGET_PROPERTIES(rlenvscpplib PROPERTIES LINKER_LANGUAGE CXX)
 INSTALL(TARGETS rlenvscpplib DESTINATION ${CMAKE_INSTALL_PREFIX})

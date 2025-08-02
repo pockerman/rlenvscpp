@@ -4,19 +4,15 @@
 ///
 /// \file env_base.h
 ///
-
+#include "rlenvs/rlenvs_types_v2.h"
 #include "rlenvs/rlenvs_consts.h"
 #include "rlenvs/envs/synchronized_env_mixin.h"
-#include "rlenvs/rlenvs_consts.h"
-
-#include <boost/noncopyable.hpp>
 
 #include <unordered_map>
 #include <any>
 #include <string>
-#include <memory>
 #include <type_traits>
-#include <exception>
+
 
 namespace rlenvscpp{
 namespace envs{
