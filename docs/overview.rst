@@ -23,6 +23,7 @@ Note that you will need to have Gymnasium installed.
 * MountainCar: TODO
 * Taxi: `example_1 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_1/example_1.cpp>`_ 
 * Pendulum: `example_1 <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_6/example_6.cpp>`_
+* LunarLander: `box2d <https://github.com/pockerman/rlenvscpp/blob/master/examples/example_6/example_6.cpp>`_
 * Acrobot: TODO
 * LunarLander: `https://github.com/pockerman/rlenvscpp/blob/master/examples/box2d/box2d_example.cpp`_
 
