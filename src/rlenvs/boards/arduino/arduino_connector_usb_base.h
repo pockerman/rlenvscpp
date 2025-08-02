@@ -7,8 +7,6 @@
 
 #include "rlenvs/boards/arduino/arduino_connector_base.h"
 
-
-
 namespace rlenvscpp
 {
     namespace boards::arduino
@@ -45,7 +43,15 @@ namespace rlenvscpp
             ///
             /// \brief Send the command
             ///
-            void send_cmd(const ArduinoCMDBase& cmd) override;
+            std::string send_cmd(const ArduinoCMDBase& cmd) override;
+
+            ///
+            /// @return The port id
+            int_t port_id()const noexcept{return port_id_;}
+
+            ///
+            /// @return Trur is the port is open
+            bool is_port_open()const noexcept{return port_id_ > 0;}
 
         protected:
 
@@ -59,9 +65,12 @@ namespace rlenvscpp
             ///
             virtual void configure_port_();
 
+            void set_port_id_(int_t port_id)noexcept{port_id_ = port_id;}
+
         private:
 
             std::string port_name_;
+            int_t port_id_{-1};
 
 
         };

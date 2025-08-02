@@ -82,13 +82,13 @@ namespace rlenvscpp
             std::this_thread::sleep_for(std::chrono::seconds(2));
         }
 
-       void
+        std::string
        ArduinoConnectorUSBBase::send_cmd(const ArduinoCMDBase& cmd)
         {
             if (is_port_open())
             {
                 std::cerr << "Port " << port_name_ <<" is not open" << std::endl;
-                return;
+                return "";
             }
 
             std::string to_send = cmd.get_cmd() + "\n";
@@ -102,7 +102,8 @@ namespace rlenvscpp
                 std::string response(buffer, n);
                 // Remove trailing newline and carriage return
                 response.erase(response.find_last_not_of("\r\n") + 1);
-                std::cout << "Arduino replied: " << response << std::endl;
+                return response;
+                //std::cout << "Arduino replied: " << response << std::endl;
             } else {
                 std::cout << "No response from Arduino." << std::endl;
             }
