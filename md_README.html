@@ -76,115 +76,99 @@ $(function() {
 <h1><a class="anchor" id="autotoc_md0"></a>
 rlenvscpp</h1>
 <div class="fragment"><div class="line"> {rlenvscpp```}</div>
-<div class="line">using  C++. In addition, the library provides various utilities such as experiment tracking,</div>
+<div class="line">using  C++. </div>
+<div class="line"> </div>
+<div class="line">In addition, the library provides various utilities such as experiment tracking,</div>
 <div class="line">representing trajectories  via waypoints and simple implementation of popular dynamics such as </div>
 <div class="line">quadrotor dynamics.</div>
+<div class="line"> </div>
+<div class="line">Furthermore, there is some minimal support for working with Arduino UNO boards over USB or WiFi.</div>
+<div class="line">See also &lt;a href=&quot;https://rlenvscpp.readthedocs.io/en/latest/working_with_webots.html&quot;&gt;Working with Webots&lt;/a&gt;</div>
+<div class="line">for how to integrate ```rlenvscpp``` with &lt;a href=&quot;https://cyberbotics.com/doc/guide/installing-webots&quot;&gt;Webots&lt;/a&gt;.</div>
+<div class="line">Example &lt;a href=&quot;https://rlenvscpp.readthedocs.io/en/latest/examples/ray/ray_example_2.html&quot;&gt;Using rlenvscpp with Ray&lt;/a&gt;</div>
+<div class="line">shows how to use &lt;a href=&quot;https://www.ray.io/&quot;&gt;Ray&lt;/a&gt; with the ```rlenvscpp```.</div>
 <div class="line"> </div>
 <div class="line">Various RL algorithms using the environments can be found at &lt;a href=&quot;https://github.com/pockerman/cuberl/tree/master&quot;&gt;cuberl&lt;/a&gt;.</div>
 <div class="line"> </div>
 <div class="line">The documentation for the library can be found &lt;a href=&quot;https://rlenvscpp.readthedocs.io/en/latest/&quot;&gt;here&lt;/a&gt;.</div>
 <div class="line">The following is an example how to use the </div>
 <div class="line">``FrozenLake``   environment from &lt;a href=&quot;https://github.com/Farama-Foundation/Gymnasium/tree/main&quot;&gt;Gymnasium&lt;/a&gt;.</div>
-</div><!-- fragment --> <pre class="fragment">#include "rlenvs/rlenvs_types_v2.h"
-#include "rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h"
-#include "rlenvs/envs/api_server/apiserver.h"
+</div><!-- fragment --><p>#include "rlenvs/rlenvs_types_v2.h" #include "rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h" #include "rlenvs/envs/api_server/apiserver.h"</p>
+<p>#include &lt;iostream&gt; #include &lt;string&gt; #include &lt;unordered_map&gt; #include &lt;any&gt;</p>
+<p>namespace example_1{ const std::string SERVER_URL = "http://0.0.0.0:8001/api"; using rlenvscpp::envs::gymnasium::FrozenLake; using rlenvscpp::envs::RESTApiServerWrapper;</p>
+<p>void test_frozen_lake(const RESTApiServerWrapper&amp; server){ </p><pre class="fragment">FrozenLake&lt;4&gt; env(server);
 
-#include &lt;iostream&gt;
-#include &lt;string&gt;
-#include &lt;unordered_map&gt;
-#include &lt;any&gt;
+std::cout&lt;&lt;"Environame URL: "&lt;&lt;env.get_url()&lt;&lt;std::endl;
 
-namespace example_1{
+// make the environment
+std::unordered_map&lt;std::string, std::any&gt; options;
+options.insert({"is_slippery", false});
+env.make("v1", options);
 
-const std::string SERVER_URL = "http://0.0.0.0:8001/api";
+std::cout&lt;&lt;"Is environment created? "&lt;&lt;env.is_created()&lt;&lt;std::endl;
+std::cout&lt;&lt;"Is environment alive? "&lt;&lt;env.is_alive()&lt;&lt;std::endl;
+std::cout&lt;&lt;"Number of valid actions? "&lt;&lt;env.n_actions()&lt;&lt;std::endl;
+std::cout&lt;&lt;"Number of states? "&lt;&lt;env.n_states()&lt;&lt;std::endl;
 
-using rlenvscpp::envs::gymnasium::FrozenLake;
-using rlenvscpp::envs::RESTApiServerWrapper;
+// reset the environment
+auto time_step = env.reset(42, std::unordered_map&lt;std::string, std::any&gt;());
 
+std::cout&lt;&lt;"Reward on reset: "&lt;&lt;time_step.reward()&lt;&lt;std::endl;
+std::cout&lt;&lt;"Observation on reset: "&lt;&lt;time_step.observation()&lt;&lt;std::endl;
+std::cout&lt;&lt;"Is terminal state: "&lt;&lt;time_step.done()&lt;&lt;std::endl;
 
-void test_frozen_lake(const RESTApiServerWrapper&amp; server){
+//...print the time_step
+std::cout&lt;&lt;time_step&lt;&lt;std::endl;
 
-    FrozenLake&lt;4&gt; env(server);
+// take an action in the environment
+// 2 = RIGHT
+auto new_time_step = env.step(2);
 
-    std::cout&lt;&lt;"Environame URL: "&lt;&lt;env.get_url()&lt;&lt;std::endl;
+std::cout&lt;&lt;new_time_step&lt;&lt;std::endl;
 
-    // make the environment
-    std::unordered_map&lt;std::string, std::any&gt; options;
-    options.insert({"is_slippery", false});
-    env.make("v1", options);
+// get the dynamics of the environment for the given state and action
+auto state = 0;
+auto action = 1;
+auto dynamics = env.p(state, action);
 
-    std::cout&lt;&lt;"Is environment created? "&lt;&lt;env.is_created()&lt;&lt;std::endl;
-    std::cout&lt;&lt;"Is environment alive? "&lt;&lt;env.is_alive()&lt;&lt;std::endl;
-    std::cout&lt;&lt;"Number of valid actions? "&lt;&lt;env.n_actions()&lt;&lt;std::endl;
-    std::cout&lt;&lt;"Number of states? "&lt;&lt;env.n_states()&lt;&lt;std::endl;
+std::cout&lt;&lt;"Dynamics for state="&lt;&lt;state&lt;&lt;" and action="&lt;&lt;action&lt;&lt;std::endl;
 
-    // reset the environment
-    auto time_step = env.reset(42, std::unordered_map&lt;std::string, std::any&gt;());
+for(auto item:dynamics){
 
-    std::cout&lt;&lt;"Reward on reset: "&lt;&lt;time_step.reward()&lt;&lt;std::endl;
-    std::cout&lt;&lt;"Observation on reset: "&lt;&lt;time_step.observation()&lt;&lt;std::endl;
-    std::cout&lt;&lt;"Is terminal state: "&lt;&lt;time_step.done()&lt;&lt;std::endl;
-
-    //...print the time_step
-    std::cout&lt;&lt;time_step&lt;&lt;std::endl;
-
-    // take an action in the environment
-    // 2 = RIGHT
-    auto new_time_step = env.step(2);
-
-    std::cout&lt;&lt;new_time_step&lt;&lt;std::endl;
-
-    // get the dynamics of the environment for the given state and action
-    auto state = 0;
-    auto action = 1;
-    auto dynamics = env.p(state, action);
-
-    std::cout&lt;&lt;"Dynamics for state="&lt;&lt;state&lt;&lt;" and action="&lt;&lt;action&lt;&lt;std::endl;
-
-    for(auto item:dynamics){
-
-        std::cout&lt;&lt;std::get&lt;0&gt;(item)&lt;&lt;std::endl;
-        std::cout&lt;&lt;std::get&lt;1&gt;(item)&lt;&lt;std::endl;
-        std::cout&lt;&lt;std::get&lt;2&gt;(item)&lt;&lt;std::endl;
-        std::cout&lt;&lt;std::get&lt;3&gt;(item)&lt;&lt;std::endl;
-    }
-
-    action = env.sample_action();
-    new_time_step = env.step(action);
-
-    std::cout&lt;&lt;new_time_step&lt;&lt;std::endl;
-
-    // synchronize the environment
-    env.sync(std::unordered_map&lt;std::string, std::any&gt;());
-
-    auto copy_env = env.make_copy(1);
-    copy_env.reset();
-
-    std::cout&lt;&lt;"Org env cidx: "&lt;&lt;env.cidx()&lt;&lt;std::endl;
-    std::cout&lt;&lt;"Copy env cidx: "&lt;&lt;copy_env.cidx()&lt;&lt;std::endl;
-
-    copy_env.close();
-
-    // close the environment
-    env.close();
-
+    std::cout&lt;&lt;std::get&lt;0&gt;(item)&lt;&lt;std::endl;
+    std::cout&lt;&lt;std::get&lt;1&gt;(item)&lt;&lt;std::endl;
+    std::cout&lt;&lt;std::get&lt;2&gt;(item)&lt;&lt;std::endl;
+    std::cout&lt;&lt;std::get&lt;3&gt;(item)&lt;&lt;std::endl;
 }
 
-}
+action = env.sample_action();
+new_time_step = env.step(action);
 
-int main(){
+std::cout&lt;&lt;new_time_step&lt;&lt;std::endl;
 
-    using namespace example_1;
+// synchronize the environment
+env.sync(std::unordered_map&lt;std::string, std::any&gt;());
 
-    RESTApiServerWrapper server(SERVER_URL, true);
+auto copy_env = env.make_copy(1);
+copy_env.reset();
 
-    std::cout&lt;&lt;"Testing FrozenLake..."&lt;&lt;std::endl;
-    example_1::test_frozen_lake(server);
-    std::cout&lt;&lt;"===================="&lt;&lt;std::endl;
-    return 0;
-}
-</pre><p> ```</p>
-<p>See also <a href="https://rlenvscpp.readthedocs.io/en/latest/working_with_webots.html">Working with Webots</a> for how to integrate <code>rlenvscpp</code> with <a href="https://cyberbotics.com/doc/guide/installing-webots">Webots</a>. Example <a href="https://rlenvscpp.readthedocs.io/en/latest/examples/ray/ray_example_2.html">Using rlenvscpp with Ray</a> shows how to use <a href="https://www.ray.io/">Ray</a> with the <code>rlenvscpp</code>. </p>
+std::cout&lt;&lt;"Org env cidx: "&lt;&lt;env.cidx()&lt;&lt;std::endl;
+std::cout&lt;&lt;"Copy env cidx: "&lt;&lt;copy_env.cidx()&lt;&lt;std::endl;
+
+copy_env.close();
+
+// close the environment
+env.close();
+</pre><p> } }</p>
+<p>int main(){ </p><pre class="fragment">using namespace example_1;
+
+RESTApiServerWrapper server(SERVER_URL, true);
+
+std::cout&lt;&lt;"Testing FrozenLake..."&lt;&lt;std::endl;
+example_1::test_frozen_lake(server);
+std::cout&lt;&lt;"===================="&lt;&lt;std::endl;
+return 0;
+</pre><p> } ``` </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
