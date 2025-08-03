@@ -38,25 +38,25 @@ jobs:
       shell: bash
       run: bash ./execute_tests.sh
       # run: ctest -C ${{env.BUILD_TYPE}}
-  bump-version-and-push-tag:
-      name: Bump version
-      runs-on: ubuntu-latest
-      needs: build
-      steps:
-      - name: Checkout
-        # Step 1: Checkout the repository with full history for tagging
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Fetch the full commit history to ensure proper tagging
-
-      # Step 2: Bump version and create a tag
-      # https://github.com/marketplace/actions/github-tag-bump
-      - name: Create Tag
-        uses: anothrNick/github-tag-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.MERGE_HOT_FIX_SECRET }}
-          WITH_V: true
-          PRERELEASE: false
-          DEFAULT_BUMP: patch
+#  bump-version-and-push-tag:
+#      name: Bump version
+#      runs-on: ubuntu-latest
+#      needs: build
+#      steps:
+#      - name: Checkout
+#        # Step 1: Checkout the repository with full history for tagging
+#        uses: actions/checkout@v4
+#        with:
+#          fetch-depth: 0  # Fetch the full commit history to ensure proper tagging
+#
+#      # Step 2: Bump version and create a tag
+#      # https://github.com/marketplace/actions/github-tag-bump
+#      - name: Create Tag
+#        uses: anothrNick/github-tag-action@v1
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.MERGE_HOT_FIX_SECRET }}
+#          WITH_V: true
+#          PRERELEASE: false
+#          DEFAULT_BUMP: patch
   
       

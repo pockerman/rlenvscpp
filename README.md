@@ -2,9 +2,17 @@
 # rlenvscpp
 
 ```rlenvscpp``` is an effort to provide implementations and wrappers of environments suitable for training reinforcement learning agents
-using  C++. In addition, the library provides various utilities such as experiment tracking,
+using  C++. 
+
+In addition, the library provides various utilities such as experiment tracking,
 representing trajectories  via waypoints and simple implementation of popular dynamics such as 
 quadrotor dynamics.
+
+Furthermore, there is some minimal support for working with Arduino UNO boards over USB or WiFi.
+See also <a href="https://rlenvscpp.readthedocs.io/en/latest/working_with_webots.html">Working with Webots</a>
+for how to integrate ```rlenvscpp``` with <a href="https://cyberbotics.com/doc/guide/installing-webots">Webots</a>.
+Example <a href="https://rlenvscpp.readthedocs.io/en/latest/examples/ray/ray_example_2.html">Using rlenvscpp with Ray</a>
+shows how to use <a href="https://www.ray.io/">Ray</a> with the ```rlenvscpp```.
 
 Various RL algorithms using the environments can be found at <a href="https://github.com/pockerman/cuberl/tree/master">cuberl</a>.
 
@@ -14,22 +22,19 @@ The following is an example how to use the
 
 ```
 
-	#include "rlenvs/rlenvs_types_v2.h"
-	#include "rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h"
-	#include "rlenvs/envs/api_server/apiserver.h"
+#include "rlenvs/rlenvs_types_v2.h"
+#include "rlenvs/envs/gymnasium/toy_text/frozen_lake_env.h"
+#include "rlenvs/envs/api_server/apiserver.h"
 
-	#include <iostream>
-	#include <string>
-	#include <unordered_map>
-	#include <any>
+#include <iostream>
+#include <string>
+#include <unordered_map>
+#include <any>
 
-	namespace example_1{
-
-	const std::string SERVER_URL = "http://0.0.0.0:8001/api";
-
+namespace example_1{
+    const std::string SERVER_URL = "http://0.0.0.0:8001/api";
 	using rlenvscpp::envs::gymnasium::FrozenLake;
 	using rlenvscpp::envs::RESTApiServerWrapper;
-
 
 	void test_frozen_lake(const RESTApiServerWrapper& server){
 
@@ -96,26 +101,18 @@ The following is an example how to use the
 
 		// close the environment
 		env.close();
-
 	}
+}
 
-	}
+int main(){
 
-	int main(){
-
-		using namespace example_1;
+	using namespace example_1;
 		
-		RESTApiServerWrapper server(SERVER_URL, true);
+	RESTApiServerWrapper server(SERVER_URL, true);
 
-		std::cout<<"Testing FrozenLake..."<<std::endl;
-		example_1::test_frozen_lake(server);
-		std::cout<<"===================="<<std::endl;
-		return 0;
-	}
+	std::cout<<"Testing FrozenLake..."<<std::endl;
+	example_1::test_frozen_lake(server);
+	std::cout<<"===================="<<std::endl;
+	return 0;
+}
 ```
-
-
-See also <a href="https://rlenvscpp.readthedocs.io/en/latest/working_with_webots.html">Working with Webots</a>
-for how to integrate ```rlenvscpp``` with <a href="https://cyberbotics.com/doc/guide/installing-webots">Webots</a>. 
-Example <a href="https://rlenvscpp.readthedocs.io/en/latest/examples/ray/ray_example_2.html">Using rlenvscpp with Ray</a>
-shows how to use <a href="https://www.ray.io/">Ray</a> with the ```rlenvscpp```.

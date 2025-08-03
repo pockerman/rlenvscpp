@@ -44,15 +44,9 @@ namespace rlenvscpp
             ///
             /// \brief Send the command
             ///
-            virtual void send_cmd(const ArduinoCMDBase& cmd)=0;
+            virtual std::string send_cmd(const ArduinoCMDBase& cmd)=0;
 
-            ///
-            /// @return The port id
-            int_t port_id()const noexcept{return port_id_;}
 
-            ///
-            /// @return Trur is the port is open
-            bool is_port_open()const noexcept{return port_id_ > 0;}
 
         protected:
 
@@ -60,13 +54,6 @@ namespace rlenvscpp
             /// \brief Constructor
             ///
             ArduinoConnectorBase()=default;
-
-            void set_port_id_(int_t port_id)noexcept{port_id_ = port_id;}
-
-        private:
-
-            int_t port_id_{-1};
-
         };
 
     }
