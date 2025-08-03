@@ -6,14 +6,8 @@
 #include "rlenvs/extern/nlohmann/json/json.hpp"
 #include "rlenvs/extern/HTTPRequest.hpp"
 
-#include <iostream>
+
 #include <string>
-#include <fcntl.h>      // open
-#include <termios.h>    // POSIX terminal control
-#include <unistd.h>     // read/write/close
-#include <cstring>      // memset
-#include <chrono>
-#include <thread>
 
 namespace rlenvscpp
 {
@@ -37,11 +31,11 @@ namespace rlenvscpp
        ArduinoConnectorWIFIBase::send_cmd(const ArduinoCMDBase& cmd)
         {
             http::Request request{arduino_url_};
-
             std::string body_str = cmd.get_cmd();
-            // Send the POST request
+
             const http::Response response = request.send("POST", body_str);
-            return std::string{response.body.begin(), response.body.end()};
+            auto str_response = std::string(response.body.begin(), response.body.end());
+            return str_response;
         }
 
 

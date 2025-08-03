@@ -1,6 +1,5 @@
 #include "rlenvs/boards/arduino/arduino_connector_usb_base.h"
 
-
 #include <iostream>
 #include <string>
 #include <chrono>

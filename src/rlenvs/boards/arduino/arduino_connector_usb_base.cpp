@@ -103,12 +103,11 @@ namespace rlenvscpp
                 // Remove trailing newline and carriage return
                 response.erase(response.find_last_not_of("\r\n") + 1);
                 return response;
-                //std::cout << "Arduino replied: " << response << std::endl;
-            } else {
-                std::cout << "No response from Arduino." << std::endl;
-            }
-        }
 
+            }
+            return "No response from Arduino.";
+
+        }
 
     }
 }
